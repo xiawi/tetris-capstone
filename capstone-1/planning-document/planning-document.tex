@@ -27,14 +27,14 @@
 		
 		\begin{tikzpicture}[remember picture, overlay]
 			\node[xshift=14cm,yshift=-1.8cm,anchor=north west] at (current page.north west){%
-			\includegraphics[height=2.5cm]{logos/sunway}};
+				\includegraphics[height=2.5cm]{logos/sunway}};
 		\end{tikzpicture}
 		
 		\vfill
 		
 		\begin{center}
 			\textbf{\large CAPSTONE PROJECT 1} \\
-			\textbf{\large Activity Log} \\
+			\textbf{\large Planning Document} \\
 			\vspace{1cm}
 			\textbf{\large Evaluation of Nature-inspired Optimization\\Algorithms in Solving Versus Tetris}
 			
@@ -65,16 +65,25 @@
 		
 	\end{titlepage}
 	
+	\pagenumbering{roman} % switch to roman numerals
+	
+	\chapter*{Abstract}
+	
+	\addcontentsline{toc}{chapter}{Abstract}
+	
 	\tableofcontents
 	
-	\chapter{Timeline \& Activities}	
-	\cite{tetris-is-hard-even-to-approx}
-
-	\nocite{*}
-	\printbibliography[heading={bibnumbered}, title={Bibliography \& Annotations}]
+	\chapter{Introduction}
 	
-	\chapter{Supervision Meeting Record}
-		
-		\includepdf[addtotoc={1, section, 1, Template, template1}]{./meeting-records/template/meeting-record-template}
+		\pagenumbering{arabic}
+	
+	\chapter{Literature Review}
+	
+	\chapter{Technical Plan}
+	
+	\chapter{Work Plan}
+	
+	\nocite{tetris-is-hard-even-to-approx}
+	\printbibliography[heading={bibnumbered}, title={References}]
 		
 \end{document}
