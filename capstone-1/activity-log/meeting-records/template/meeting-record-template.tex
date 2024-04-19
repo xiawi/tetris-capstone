@@ -1,19 +1,23 @@
-\documentclass[12pt]{report}
+\documentclass[a4paper, 12pt]{report}
 \usepackage[margin=1in,includefoot]{geometry}
+\usepackage{parskip}
 \usepackage{tikz}
-\usepackage{svg}
+\usepackage{setspace}
+\usepackage{times} 
 \graphicspath{ {../../../images/} }
+\pagestyle{empty}
 
 \begin{document}
 	
-	\linespread{1.25}	% 1.5 spacing
+	\onehalfspacing
 	
 	\begin{center}
 		
 		\textbf{\large SCHOOL OF ENGINEERING AND TECHNOLOGY}	\\
 		\textbf{\small DEPARTMENT OF COMPUTING AND INFORMATION SYSTEMS} \\
 		\vspace{1cm}
-		\textbf{\LARGE SUPERVISION MEETING RECORD}
+		\textbf{\LARGE SUPERVISION MEETING RECORD}\\
+		\textbf{\normalsize Meeting X}	% MEETING #
 		
 	\end{center}
 	
@@ -67,8 +71,8 @@
 		\rule{5cm}{.5pt}
 		\vfill
 		\begin{tikzpicture}[remember picture,overlay]
-			\node[xshift=14cm,yshift=-21.8cm,anchor=north west] at (current page.north west){%
-				\includegraphics[height=3cm]{../../../images/signatures/weixiang}};
+			\node[xshift=13.5cm,yshift=-23.4cm,anchor=north west] at (current page.north west){%
+				\includegraphics[height=3cm]{signatures/weixiang}};
 		\end{tikzpicture}
 	\end{minipage}
 	
