@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  19 APR 2024 22:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  19 APR 2024 22:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -982,7 +982,7 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.70 	\chapter
-              {Timeline \& Activities}	 [1
+              {Timeline}	 [1
 
 ]
 Chapter 1.
@@ -1050,7 +1050,7 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
  ***********
 Package rerunfilecheck Info: File `activity-log.out' has not changed.
-(rerunfilecheck)             Checksum: 35BC23DF59C0D9B87D1C87CDFBFFA746;612.
+(rerunfilecheck)             Checksum: 4FC2460D6F7E27A357B632FA8AB2F868;401.
 Package logreq Info: Writing requests to 'activity-log.run.xml'.
 \openout1 = `activity-log.run.xml'.
 
@@ -1069,7 +1069,7 @@ live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023
 ist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/pub
 lic/cm-super/sfrm1200.pfb>
-Output written on activity-log.pdf (6 pages, 300034 bytes).
+Output written on activity-log.pdf (6 pages, 299633 bytes).
 PDF statistics:
  115 PDF objects out of 1000 (max. 8388607)
  86 compressed objects within 1 object stream
