@@ -3,14 +3,22 @@
 \usepackage{tikz}
 \usepackage{setspace}
 \usepackage{times} 
-\graphicspath{ {../images/} }
-\usepackage[titles]{tocloft}% <- option titles added!
+\graphicspath{ {../../resources/images/} }
+\usepackage[titles]{tocloft}
 \usepackage{titlesec}
 \usepackage[hidelinks]{hyperref}
 \usepackage{pdfpages}
 \titleformat{\chapter}[hang]{\huge\bfseries}{\thechapter}{20pt}{\vspace{0.5em}}
 \titlespacing*{\chapter}{0pt}{-3em}{1.1\parskip}
-\titlelabel{\thetitle\quad}
+\usepackage[backend=biber, style=numeric, sorting=none]{biblatex}
+\usepackage[nottoc,numbib]{tocbibind}
+\renewbibmacro{finentry}{\finentry%
+	\iffieldundef{annotation}
+	{}
+	{\par\medskip\printfield{annotation}\medskip\finentry}}
+
+\addbibresource{../../resources/citation.bib}
+\appto{\bibsetup}{\sloppy}
 
 \begin{document}
 	
@@ -61,8 +69,10 @@
 	\tableofcontents
 	
 	\chapter{Timeline \& Activities}	
-	
-	\chapter{Bibliography \& Annotation}
+	\cite{tetris-is-hard-even-to-approx}
+
+	\nocite{*}
+	\printbibliography[heading={bibnumbered}, title={Bibliography \& Annotations}]
 	
 	\chapter{Supervision Meeting Record}
 		

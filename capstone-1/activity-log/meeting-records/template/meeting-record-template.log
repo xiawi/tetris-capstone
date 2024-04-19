@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  19 APR 2024 18:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  19 APR 2024 20:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -466,17 +466,19 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
 (c:/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<../../../images/signatures/weixiang.pdf, id=4, 162.47371pt x 174.92575pt>
-File: ../../../images/signatures/weixiang.pdf Graphic file (type pdf)
-<use ../../../images/signatures/weixiang.pdf>
-Package pdftex.def Info: ../../../images/signatures/weixiang.pdf  used on input
- line 75.
+<../../../../resources/images/signatures/weixiang.pdf, id=4, 162.47371pt x 174.
+92575pt>
+File: ../../../../resources/images/signatures/weixiang.pdf Graphic file (type p
+df)
+<use ../../../../resources/images/signatures/weixiang.pdf>
+Package pdftex.def Info: ../../../../resources/images/signatures/weixiang.pdf  
+used on input line 75.
 (pdftex.def)             Requested size: 79.28308pt x 85.35826pt.
  [1
 
 {c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/
-texmf-dist/fonts/enc/dvips/base/8r.enc} <../../../images/signatures/weixiang.pd
-f>]
+texmf-dist/fonts/enc/dvips/base/8r.enc} <../../../../resources/images/signature
+s/weixiang.pdf>]
 (./meeting-record-template.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
@@ -485,7 +487,7 @@ L3 programming layer <2023-10-10>
  ) 
 Here is how much of TeX's memory you used:
  13227 strings out of 474504
- 268641 string characters out of 5756725
+ 268732 string characters out of 5756725
  1926043 words of memory out of 5000000
  34976 multiletter control sequences out of 15000+600000
  569208 words of font info for 56 fonts, out of 8000000 for 9000
@@ -493,7 +495,7 @@ Here is how much of TeX's memory you used:
  102i,8n,107p,533b,652s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on meeting-record-template.pdf (1 page, 30475 bytes).
+Output written on meeting-record-template.pdf (1 page, 30488 bytes).
 PDF statistics:
  25 PDF objects out of 1000 (max. 8388607)
  16 compressed objects within 1 object stream

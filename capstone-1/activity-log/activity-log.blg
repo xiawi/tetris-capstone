@@ -1,0 +1,15 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'activity-log.blg'
+[98] biber-MSWIN64:340> INFO - === 
+[136] Biber.pm:419> INFO - Reading 'activity-log.bcf'
+[223] Biber.pm:976> INFO - Using all citekeys in bib section 0
+[234] Biber.pm:4419> INFO - Processing section 0
+[243] Biber.pm:4610> INFO - Looking for bibtex file '../../resources/citation.bib' for section 0
+[300] bibtex.pm:1713> INFO - LaTeX decoding ...
+[306] bibtex.pm:1519> INFO - Found BibTeX data source '../../resources/citation.bib'
+[347] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[347] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[347] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[347] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[348] bbl.pm:660> INFO - Writing 'activity-log.bbl' with encoding 'UTF-8'
+[349] bbl.pm:763> INFO - Output to activity-log.bbl

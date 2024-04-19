@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  19 APR 2024 19:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  19 APR 2024 21:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -589,38 +589,283 @@ File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count303
 \AM@templatesizebox=\box64
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-5.
+(c:/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
 
-(c:/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ptm.fd
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+(c:/texlive/2023/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count304
+
+(c:/texlive/2023/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@tabx@nest=\count305
+\c@listtotal=\count306
+\c@listcount=\count307
+\c@liststart=\count308
+\c@liststop=\count309
+\c@citecount=\count310
+\c@citetotal=\count311
+\c@multicitecount=\count312
+\c@multicitetotal=\count313
+\c@instcount=\count314
+\c@maxnames=\count315
+\c@minnames=\count316
+\c@maxitems=\count317
+\c@minitems=\count318
+\c@citecounter=\count319
+\c@maxcitecounter=\count320
+\c@savedcitecounter=\count321
+\c@uniquelist=\count322
+\c@uniquename=\count323
+\c@refsection=\count324
+\c@refsegment=\count325
+\c@maxextratitle=\count326
+\c@maxextratitleyear=\count327
+\c@maxextraname=\count328
+\c@maxextradate=\count329
+\c@maxextraalpha=\count330
+\c@abbrvpenalty=\count331
+\c@highnamepenalty=\count332
+\c@lownamepenalty=\count333
+\c@maxparens=\count334
+\c@parenlevel=\count335
+\blx@tempcnta=\count336
+\blx@tempcntb=\count337
+\blx@tempcntc=\count338
+\c@blx@maxsection=\count339
+\blx@maxsegment@0=\count340
+\blx@notetype=\count341
+\blx@parenlevel@text=\count342
+\blx@parenlevel@foot=\count343
+\blx@sectionciteorder@0=\count344
+\blx@sectionciteorderinternal@0=\count345
+\blx@entrysetcounter=\count346
+\blx@biblioinstance=\count347
+\labelnumberwidth=\skip90
+\labelalphawidth=\skip91
+\biblabelsep=\skip92
+\bibitemsep=\skip93
+\bibnamesep=\skip94
+\bibinitsep=\skip95
+\bibparsep=\skip96
+\bibhang=\skip97
+\blx@bcfin=\read3
+\blx@bcfout=\write4
+\blx@langwohyphens=\language89
+\c@mincomprange=\count348
+\c@maxcomprange=\count349
+\c@mincompwidth=\count350
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(c:/texlive/2023/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count351
+\c@savedafterword=\count352
+\c@annotator=\count353
+\c@savedannotator=\count354
+\c@author=\count355
+\c@savedauthor=\count356
+\c@bookauthor=\count357
+\c@savedbookauthor=\count358
+\c@commentator=\count359
+\c@savedcommentator=\count360
+\c@editor=\count361
+\c@savededitor=\count362
+\c@editora=\count363
+\c@savededitora=\count364
+\c@editorb=\count365
+\c@savededitorb=\count366
+\c@editorc=\count367
+\c@savededitorc=\count368
+\c@foreword=\count369
+\c@savedforeword=\count370
+\c@holder=\count371
+\c@savedholder=\count372
+\c@introduction=\count373
+\c@savedintroduction=\count374
+\c@namea=\count375
+\c@savednamea=\count376
+\c@nameb=\count377
+\c@savednameb=\count378
+\c@namec=\count379
+\c@savednamec=\count380
+\c@translator=\count381
+\c@savedtranslator=\count382
+\c@shortauthor=\count383
+\c@savedshortauthor=\count384
+\c@shorteditor=\count385
+\c@savedshorteditor=\count386
+\c@labelname=\count387
+\c@savedlabelname=\count388
+\c@institution=\count389
+\c@savedinstitution=\count390
+\c@lista=\count391
+\c@savedlista=\count392
+\c@listb=\count393
+\c@savedlistb=\count394
+\c@listc=\count395
+\c@savedlistc=\count396
+\c@listd=\count397
+\c@savedlistd=\count398
+\c@liste=\count399
+\c@savedliste=\count400
+\c@listf=\count401
+\c@savedlistf=\count402
+\c@location=\count403
+\c@savedlocation=\count404
+\c@organization=\count405
+\c@savedorganization=\count406
+\c@origlocation=\count407
+\c@savedoriglocation=\count408
+\c@origpublisher=\count409
+\c@savedorigpublisher=\count410
+\c@publisher=\count411
+\c@savedpublisher=\count412
+\c@language=\count413
+\c@savedlanguage=\count414
+\c@origlanguage=\count415
+\c@savedoriglanguage=\count416
+\c@pageref=\count417
+\c@savedpageref=\count418
+\shorthandwidth=\skip98
+\shortjournalwidth=\skip99
+\shortserieswidth=\skip100
+\shorttitlewidth=\skip101
+\shortauthorwidth=\skip102
+\shorteditorwidth=\skip103
+\locallabelnumberwidth=\skip104
+\locallabelalphawidth=\skip105
+\localshorthandwidth=\skip106
+\localshortjournalwidth=\skip107
+\localshortserieswidth=\skip108
+\localshorttitlewidth=\skip109
+\localshortauthorwidth=\skip110
+\localshorteditorwidth=\skip111
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(c:/texlive/2023/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(c:/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+\c@textcitecount=\count419
+\c@textcitetotal=\count420
+\c@textcitemaxnames=\count421
+\c@biburlbigbreakpenalty=\count422
+\c@biburlbreakpenalty=\count423
+\c@biburlnumpenalty=\count424
+\c@biburlucpenalty=\count425
+\c@biburllcpenalty=\count426
+\biburlbigskip=\muskip17
+\biburlnumskip=\muskip18
+\biburlucskip=\muskip19
+\biburllcskip=\muskip20
+\c@smartand=\count427
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(c:/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(c:/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count428
+\c@bbx:relatedtotal=\count429
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+(c:/texlive/2023/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(c:/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(c:/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2023-10-10 L3 programming layer (loader) 
+
 (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-10-10 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count304
+\l__color_backend_stack_int=\count430
 \l__pdf_internal_box=\box65
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2023-10-10 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(c:/texlive/2023/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+(c:/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2023-10-10 L3 Experimental document command parser
 )
-(./activity-log.aux)
+Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
+))
+(c:/texlive/2023/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
+)
+\@quotelevel=\count431
+\@quotereset=\count432
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
+3.
+ (c:/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+) (./activity-log.aux)
 \openout1 = `activity-log.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -658,31 +903,39 @@ LaTeX Font Info:    ... okay on input line 15.
 
 (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count305
+\scratchcounter=\count433
 \scratchdimen=\dimen274
 \scratchbox=\box66
-\nofMPsegments=\count306
-\nofMParguments=\count307
+\nofMPsegments=\count434
+\nofMParguments=\count435
 \everyMPshowfont=\toks35
-\MPscratchCnt=\count308
+\MPscratchCnt=\count436
 \MPscratchDim=\dimen275
-\MPnumerator=\count309
-\makeMPintoPDFobject=\count310
+\MPnumerator=\count437
+\makeMPintoPDFobject=\count438
 \everyMPtoPDFconversion=\toks36
 ) (c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(c:/texlive/2023/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (c:/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 15.
+Package hyperref Info: Link coloring OFF on input line 23.
 
 (./activity-log.out) (./activity-log.out)
-\@outlinefile=\write4
-\openout4 = `activity-log.out'.
+\@outlinefile=\write5
+\openout5 = `activity-log.out'.
 
 
 (c:/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape.sty
@@ -697,28 +950,46 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-<../images/logos/sunway.jpg, id=27, 1400.23125pt x 597.73312pt>
-File: ../images/logos/sunway.jpg Graphic file (type jpg)
-<use ../images/logos/sunway.jpg>
-Package pdftex.def Info: ../images/logos/sunway.jpg  used on input line 23.
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(c:/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout4 = `activity-log.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'activity-log.bbl' found.
+
+(./activity-log.bbl)
+Package biblatex Info: Reference section=0 on input line 23.
+Package biblatex Info: Reference segment=0 on input line 23.
+<../../resources/images/logos/sunway.jpg, id=23, 1400.23125pt x 597.73312pt>
+File: ../../resources/images/logos/sunway.jpg Graphic file (type jpg)
+<use ../../resources/images/logos/sunway.jpg>
+Package pdftex.def Info: ../../resources/images/logos/sunway.jpg  used on input
+ line 31.
 (pdftex.def)             Requested size: 166.63171pt x 71.13188pt.
  [1
 
 {c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/
-texmf-dist/fonts/enc/dvips/base/8r.enc} <../images/logos/sunway.jpg>] (./activi
-ty-log.toc
+texmf-dist/fonts/enc/dvips/base/8r.enc} <../../resources/images/logos/sunway.jp
+g>] (./activity-log.toc
 LaTeX Font Info:    External font `cmex7' loaded for size
 (Font)              <6> on input line 1.
 )
-\tf@toc=\write5
-\openout5 = `activity-log.toc'.
+\tf@toc=\write6
+\openout6 = `activity-log.toc'.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.63 	\chapter
+l.71 	\chapter
               {Timeline \& Activities}	 [1
 
 ]
@@ -731,33 +1002,33 @@ Chapter 2.
 
 ]
 Chapter 3.
-<./meeting-records/template/meeting-record-template.pdf, id=52, 597.50829pt x 8
+<./meeting-records/template/meeting-record-template.pdf, id=50, 597.50829pt x 8
 45.0471pt>
 File: ./meeting-records/template/meeting-record-template.pdf Graphic file (type
  pdf)
 <use ./meeting-records/template/meeting-record-template.pdf>
 Package pdftex.def Info: ./meeting-records/template/meeting-record-template.pdf
-  used on input line 69.
+  used on input line 79.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: ./meeting-records/template/meeting-record-template.pdf Graphic file (type
  pdf)
 <use ./meeting-records/template/meeting-record-template.pdf>
 Package pdftex.def Info: ./meeting-records/template/meeting-record-template.pdf
-  used on input line 69.
+  used on input line 79.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<./meeting-records/template/meeting-record-template.pdf, id=55, page=1, 597.508
+<./meeting-records/template/meeting-record-template.pdf, id=53, page=1, 597.508
 29pt x 845.0471pt>
 File: ./meeting-records/template/meeting-record-template.pdf Graphic file (type
  pdf)
 <use ./meeting-records/template/meeting-record-template.pdf, page 1>
 Package pdftex.def Info: ./meeting-records/template/meeting-record-template.pdf
- , page1 used on input line 69.
+ , page1 used on input line 79.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: ./meeting-records/template/meeting-record-template.pdf Graphic file (type
  pdf)
 <use ./meeting-records/template/meeting-record-template.pdf, page 1>
 Package pdftex.def Info: ./meeting-records/template/meeting-record-template.pdf
- , page1 used on input line 69.
+ , page1 used on input line 79.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 [4
 
@@ -766,19 +1037,19 @@ File: ./meeting-records/template/meeting-record-template.pdf Graphic file (type
  pdf)
 <use ./meeting-records/template/meeting-record-template.pdf, page 1>
 Package pdftex.def Info: ./meeting-records/template/meeting-record-template.pdf
- , page1 used on input line 69.
+ , page1 used on input line 79.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ./meeting-records/template/meeting-record-template.pdf Graphic file (type
  pdf)
 <use ./meeting-records/template/meeting-record-template.pdf, page 1>
 Package pdftex.def Info: ./meeting-records/template/meeting-record-template.pdf
- , page1 used on input line 69.
+ , page1 used on input line 79.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ./meeting-records/template/meeting-record-template.pdf Graphic file (type
  pdf)
 <use ./meeting-records/template/meeting-record-template.pdf, page 1>
 Package pdftex.def Info: ./meeting-records/template/meeting-record-template.pdf
- , page1 used on input line 69.
+ , page1 used on input line 79.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [5 <./meeting-records/template/meeting-record-template.pdf>]
 (./activity-log.aux)
@@ -786,34 +1057,27 @@ Package pdftex.def Info: ./meeting-records/template/meeting-record-template.pdf
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
  ***********
+Package rerunfilecheck Info: File `activity-log.out' has not changed.
+(rerunfilecheck)             Checksum: 35BC23DF59C0D9B87D1C87CDFBFFA746;612.
+Package logreq Info: Writing requests to 'activity-log.run.xml'.
+\openout1 = `activity-log.run.xml'.
 
-
-Package rerunfilecheck Warning: File `activity-log.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `activity-log.out':
-(rerunfilecheck)             Before: 669E0470F5F9EA4E3A1BFE88401988E0;701
-(rerunfilecheck)             After:  2325A3C5CC7532ACAADD11184BE6D01E;607.
  ) 
 Here is how much of TeX's memory you used:
- 20931 strings out of 474504
- 390222 string characters out of 5756725
- 1925043 words of memory out of 5000000
- 42543 multiletter control sequences out of 15000+600000
- 570034 words of font info for 59 fonts, out of 8000000 for 9000
+ 28250 strings out of 474504
+ 537801 string characters out of 5756725
+ 1926043 words of memory out of 5000000
+ 49798 multiletter control sequences out of 15000+600000
+ 573442 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,17n,107p,414b,598s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{section.3.2} has been referenced but does not exist
-, replaced by a fixed one
-
-<c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/t
-exmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on activity-log.pdf (6 pages, 254683 bytes).
+ 102i,17n,107p,1163b,1249s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023
+/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/
+type1/urw/times/utmri8a.pfb>
+Output written on activity-log.pdf (6 pages, 266162 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
+ 97 PDF objects out of 1000 (max. 8388607)
  74 compressed objects within 1 object stream
  12 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 70 words of extra memory for PDF output out of 10000 (max. 10000000)
 
