@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  19 APR 2024 22:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  21 APR 2024 12:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -660,7 +660,7 @@ Package biblatex Info: ... file 'blx-dm.def' found.
 File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: ... file 'ieee.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@afterword=\count351
@@ -770,6 +770,16 @@ File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 \biburllcskip=\muskip20
 \c@smartand=\count427
 )
+Package biblatex Info: Trying to load bibliography style 'ieee'...
+Package biblatex Info: ... file 'ieee.bbx' found.
+
+(c:/texlive/2023/texmf-dist/tex/latex/biblatex-ieee/ieee.bbx
+File: ieee.bbx 2021/12/06 v1.3f biblatex bibliography style
+Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.bbx' found.
+
+(c:/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/numeric-comp.bbx
+File: numeric-comp.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
@@ -782,12 +792,21 @@ Package biblatex Info: ... file 'standard.bbx' found.
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count428
 \c@bbx:relatedtotal=\count429
-))
-Package biblatex Info: Trying to load citation style 'numeric'...
-Package biblatex Info: ... file 'numeric.cbx' found.
+))))
+Package biblatex Info: Trying to load citation style 'ieee'...
+Package biblatex Info: ... file 'ieee.cbx' found.
 
-(c:/texlive/2023/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
-File: numeric.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
+(c:/texlive/2023/texmf-dist/tex/latex/biblatex-ieee/ieee.cbx
+File: ieee.cbx 2021/12/06 v1.3f biblatex citation style
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+
+(c:/texlive/2023/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
+File: numeric-comp.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
+\c@cbx@tempcnta=\count430
+\c@cbx@tempcntb=\count431
+\c@cbx@tempcntc=\count432
+\c@cbx@tempcntd=\count433
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -799,6 +818,10 @@ Package biblatex Info: Redefining '\textcites'.
 Package biblatex Info: Redefining '\cites'.
 Package biblatex Info: Redefining '\parencites'.
 Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\cites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
@@ -814,7 +837,7 @@ Package: expl3 2023-10-10 L3 programming layer (loader)
 
 (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-10-10 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count430
+\l__color_backend_stack_int=\count434
 \l__pdf_internal_box=\box65
 ))
 Package biblatex Info: ... and expl3
@@ -836,8 +859,8 @@ Package tocbibind Info: The document has chapter divisions on input line 50.
 Package tocbibind Note: Using chapter style headings, unless overridden.
 
 )
-\@quotelevel=\count431
-\@quotereset=\count432
+\@quotelevel=\count435
+\@quotereset=\count436
  (./planning-document.aux)
 \openout1 = `planning-document.aux'.
 
@@ -896,16 +919,16 @@ LaTeX Font Info:    ... okay on input line 22.
 
 (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count433
+\scratchcounter=\count437
 \scratchdimen=\dimen274
 \scratchbox=\box66
-\nofMPsegments=\count434
-\nofMParguments=\count435
+\nofMPsegments=\count438
+\nofMParguments=\count439
 \everyMPshowfont=\toks35
-\MPscratchCnt=\count436
+\MPscratchCnt=\count440
 \MPscratchDim=\dimen275
-\MPnumerator=\count437
-\makeMPintoPDFobject=\count438
+\MPnumerator=\count441
+\makeMPintoPDFobject=\count442
 \everyMPtoPDFconversion=\toks36
 ) (c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -960,7 +983,7 @@ Package biblatex Info: ... file 'planning-document.bbl' found.
 (./planning-document.bbl)
 Package biblatex Info: Reference section=0 on input line 22.
 Package biblatex Info: Reference segment=0 on input line 22.
-<../../resources/images/logos/sunway.jpg, id=31, 1400.23125pt x 597.73312pt>
+<../../resources/images/logos/sunway.jpg, id=47, 1400.23125pt x 597.73312pt>
 File: ../../resources/images/logos/sunway.jpg Graphic file (type jpg)
 <use ../../resources/images/logos/sunway.jpg>
 Package pdftex.def Info: ../../resources/images/logos/sunway.jpg  used on input
@@ -988,7 +1011,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.80 	\chapter
+l.93 	\chapter
               {Literature Review} [1
 
 ]
@@ -1001,11 +1024,10 @@ Chapter 3.
 
 ]
 Chapter 4.
-[4
 
-]
-Chapter 5.
-[5
+LaTeX Warning: Empty bibliography on input line 114.
+
+[4
 
 ] (./planning-document.aux)
  ***********
@@ -1013,27 +1035,25 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
  ***********
 Package rerunfilecheck Info: File `planning-document.out' has not changed.
-(rerunfilecheck)             Checksum: A834F45B879E79D58941F232D4BBFBEC;618.
+(rerunfilecheck)             Checksum: 189028D0216B39E1319109303A1A7CC5;1067.
 Package logreq Info: Writing requests to 'planning-document.run.xml'.
 \openout1 = `planning-document.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28182 strings out of 474504
- 536252 string characters out of 5756725
+ 28082 strings out of 474504
+ 534492 string characters out of 5756725
  1926043 words of memory out of 5000000
- 49740 multiletter control sequences out of 15000+600000
- 563645 words of font info for 55 fonts, out of 8000000 for 9000
+ 49631 multiletter control sequences out of 15000+600000
+ 563603 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,6n,107p,1168b,1253s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,6n,107p,1075b,805s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
-live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/202
-3/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on planning-document.pdf (8 pages, 271912 bytes).
+live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+Output written on planning-document.pdf (7 pages, 251142 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 107 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
+ 18 named destinations out of 1000 (max. 500000)
+ 98 words of extra memory for PDF output out of 10000 (max. 10000000)
 
