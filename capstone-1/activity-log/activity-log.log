@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  21 APR 2024 17:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  21 APR 2024 18:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1055,7 +1055,7 @@ Package biblatex Info: ... file 'activity-log.bbl' found.
 (./activity-log.bbl)
 Package biblatex Info: Reference section=0 on input line 25.
 Package biblatex Info: Reference segment=0 on input line 25.
-<../../resources/images/logos/sunway.jpg, id=43, 1400.23125pt x 597.73312pt>
+<../../resources/images/logos/sunway.jpg, id=51, 1400.23125pt x 597.73312pt>
 File: ../../resources/images/logos/sunway.jpg Graphic file (type jpg)
 <use ../../resources/images/logos/sunway.jpg>
 Package pdftex.def Info: ../../resources/images/logos/sunway.jpg  used on input
@@ -1080,84 +1080,84 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.113 ...ding={bibnumbered}, title={Bibliography}]
+l.117 ...ding={bibnumbered}, title={Bibliography}]
                                                    [1
 
-]
+] [2]
 Chapter 2.
-[2
+[3
 
 ]
 Chapter 3.
-<./meeting-records/template/meeting-record-template.pdf, id=80, 597.50829pt x 8
+<./meeting-records/template/meeting-record-template.pdf, id=97, 597.50829pt x 8
 45.0471pt>
 File: ./meeting-records/template/meeting-record-template.pdf Graphic file (type
  pdf)
 <use ./meeting-records/template/meeting-record-template.pdf>
 Package pdftex.def Info: ./meeting-records/template/meeting-record-template.pdf
-  used on input line 122.
+  used on input line 126.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: ./meeting-records/template/meeting-record-template.pdf Graphic file (type
  pdf)
 <use ./meeting-records/template/meeting-record-template.pdf>
 Package pdftex.def Info: ./meeting-records/template/meeting-record-template.pdf
-  used on input line 122.
+  used on input line 126.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<./meeting-records/template/meeting-record-template.pdf, id=83, page=1, 597.508
-29pt x 845.0471pt>
+<./meeting-records/template/meeting-record-template.pdf, id=100, page=1, 597.50
+829pt x 845.0471pt>
 File: ./meeting-records/template/meeting-record-template.pdf Graphic file (type
  pdf)
 <use ./meeting-records/template/meeting-record-template.pdf, page 1>
 Package pdftex.def Info: ./meeting-records/template/meeting-record-template.pdf
- , page1 used on input line 122.
+ , page1 used on input line 126.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: ./meeting-records/template/meeting-record-template.pdf Graphic file (type
  pdf)
 <use ./meeting-records/template/meeting-record-template.pdf, page 1>
 Package pdftex.def Info: ./meeting-records/template/meeting-record-template.pdf
- , page1 used on input line 122.
+ , page1 used on input line 126.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-[3
+[4
 
 ]
 File: ./meeting-records/template/meeting-record-template.pdf Graphic file (type
  pdf)
 <use ./meeting-records/template/meeting-record-template.pdf, page 1>
 Package pdftex.def Info: ./meeting-records/template/meeting-record-template.pdf
- , page1 used on input line 122.
+ , page1 used on input line 126.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ./meeting-records/template/meeting-record-template.pdf Graphic file (type
  pdf)
 <use ./meeting-records/template/meeting-record-template.pdf, page 1>
 Package pdftex.def Info: ./meeting-records/template/meeting-record-template.pdf
- , page1 used on input line 122.
+ , page1 used on input line 126.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ./meeting-records/template/meeting-record-template.pdf Graphic file (type
  pdf)
 <use ./meeting-records/template/meeting-record-template.pdf, page 1>
 Package pdftex.def Info: ./meeting-records/template/meeting-record-template.pdf
- , page1 used on input line 122.
+ , page1 used on input line 126.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [4 <./meeting-records/template/meeting-record-template.pdf>]
+ [5 <./meeting-records/template/meeting-record-template.pdf>]
 (./activity-log.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
  ***********
 Package rerunfilecheck Info: File `activity-log.out' has not changed.
-(rerunfilecheck)             Checksum: B753306A329838D1D4F654A9574AC674;1461.
+(rerunfilecheck)             Checksum: EB94FF85AAF91B3B667CFCDBF3EE0961;1444.
 Package logreq Info: Writing requests to 'activity-log.run.xml'.
 \openout1 = `activity-log.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30529 strings out of 474504
- 598537 string characters out of 5756725
- 1933043 words of memory out of 5000000
- 52037 multiletter control sequences out of 15000+600000
+ 30545 strings out of 474504
+ 599044 string characters out of 5756725
+ 1932043 words of memory out of 5000000
+ 52048 multiletter control sequences out of 15000+600000
  564720 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,17n,107p,1201b,1286s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,17n,107p,1201b,1321s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2023/texmf-d
@@ -1166,10 +1166,10 @@ type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmtt12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm12
 00.pfb>
-Output written on activity-log.pdf (6 pages, 325838 bytes).
+Output written on activity-log.pdf (7 pages, 328704 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
- 19 named destinations out of 1000 (max. 500000)
- 110 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 174 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 500000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

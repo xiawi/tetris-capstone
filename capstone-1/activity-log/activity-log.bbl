@@ -99,6 +99,62 @@
       \field{pages}{351\bibrangedash 363}
       \range{pages}{13}
     \endentry
+    \entry{can-you-win-at-tetris}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=bc0594e03b378190296ddb3795a8e375}{%
+           family={Brzustowski},
+           familyi={B\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Waterloo}%
+      }
+      \strng{namehash}{bc0594e03b378190296ddb3795a8e375}
+      \strng{fullhash}{bc0594e03b378190296ddb3795a8e375}
+      \strng{bibnamehash}{bc0594e03b378190296ddb3795a8e375}
+      \strng{authorbibnamehash}{bc0594e03b378190296ddb3795a8e375}
+      \strng{authornamehash}{bc0594e03b378190296ddb3795a8e375}
+      \strng{authorfullhash}{bc0594e03b378190296ddb3795a8e375}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Can you win at Tetris?}
+      \field{type}{phdthesis}
+      \field{year}{1988}
+      \true{nocite}
+    \endentry
+    \entry{how-to-lose-at-tetris}{article}{}
+      \name{author}{1}{}{%
+        {{hash=71bf737350bf70e772cabcf129eca809}{%
+           family={Burgiel},
+           familyi={B\bibinitperiod},
+           given={Heidi},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{71bf737350bf70e772cabcf129eca809}
+      \strng{fullhash}{71bf737350bf70e772cabcf129eca809}
+      \strng{bibnamehash}{71bf737350bf70e772cabcf129eca809}
+      \strng{authorbibnamehash}{71bf737350bf70e772cabcf129eca809}
+      \strng{authornamehash}{71bf737350bf70e772cabcf129eca809}
+      \strng{authorfullhash}{71bf737350bf70e772cabcf129eca809}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Mathematical Gazette}
+      \field{number}{491}
+      \field{title}{How to lose at Tetris}
+      \field{volume}{81}
+      \field{year}{1997}
+      \true{nocite}
+      \field{pages}{194\bibrangedash 200}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.2307/3619195
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
