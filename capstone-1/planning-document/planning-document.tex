@@ -10,14 +10,11 @@
 \titleformat{\chapter}[hang]{\huge\bfseries}{\thechapter}{20pt}{\vspace{0.5em}}
 \titlespacing*{\chapter}{0pt}{-3em}{1.1\parskip}
 \usepackage[backend=biber, style=ieee]{biblatex}
+\usepackage{parskip}
+\setlength{\parindent}{1cm}
+\setlength{\parskip}{.5\baselineskip}
 \usepackage[nottoc,numbib]{tocbibind}
-\renewbibmacro{finentry}{\finentry%
-	\iffieldundef{annotation}
-	{}
-	{\par\medskip\printfield{annotation}\medskip\finentry}}
-
 \addbibresource{../../resources/citation.bib}
-\appto{\bibsetup}{\sloppy}
 
 \begin{document}
 	
@@ -36,7 +33,7 @@
 			\textbf{\large CAPSTONE PROJECT 1} \\
 			\textbf{\large Planning Document} \\
 			\vspace{1cm}
-			\textbf{\large Evaluation of Nature-inspired Optimization\\Algorithms in Solving Versus Tetris}
+			\textbf{\large Evaluation of Nature-inspired Optimisation\\Algorithms in Solving Versus Tetris}
 			
 			\vspace{1cm}
 			
@@ -77,8 +74,14 @@
 	
 		\pagenumbering{arabic}
 		
-		% What is Tetris
-		% What is Versus Tetris
+		% What is Tetris		
+		Tetris is a popular video game created in 1984 by computer programmer Alexey Pajitnov  \cite{about-tetris}. It is a puzzle game that requires players to strategically place sequences of pieces known as "Tetriminos" into a rectangular Matrix. In the classic game, players attempt to clear as many lines as possible by completing horizontal rows of blocks without empty space, but if the Tetriminos surpass the top of the Matrix, the game is over.
+		
+		% Tetris and research
+		
+		% Tetris and computer science
+		
+		% Versus Tetris
 		
 		\section{Motivation}
 		

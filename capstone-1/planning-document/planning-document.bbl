@@ -16,5 +16,31 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{about-tetris}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=62c6ec64255fa6912c7988d73cfb96bc}{%
+           family={{Tetris Inc.}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{62c6ec64255fa6912c7988d73cfb96bc}
+      \strng{fullhash}{62c6ec64255fa6912c7988d73cfb96bc}
+      \strng{bibnamehash}{62c6ec64255fa6912c7988d73cfb96bc}
+      \strng{authorbibnamehash}{62c6ec64255fa6912c7988d73cfb96bc}
+      \strng{authornamehash}{62c6ec64255fa6912c7988d73cfb96bc}
+      \strng{authorfullhash}{62c6ec64255fa6912c7988d73cfb96bc}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{In this webpage, the game of Tetris is described as an addictive puzzle game, there are references to some rules of the game, which includes the clearing of lines and the losing condition. There is also a section on the creator of Tetris as well as a section on the psychological event deemed the 'Tetris Effect'. As this is the 'About Us' page of the official Tetris website, this is treated as a credible source. This source will be used to introduce the Tetris game. It gives readers a good amount of information without being too overwhelming.}
+      \field{howpublished}{\url{https://tetris.com/about-us}}
+      \field{note}{[accessed Apr. 22, 2024]}
+      \field{title}{{A}bout {T}etris}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

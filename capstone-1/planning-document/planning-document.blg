@@ -1,9 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'planning-document.blg'
-[102] biber-MSWIN64:340> INFO - === 
-[150] Biber.pm:419> INFO - Reading 'planning-document.bcf'
-[250] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
-[261] bbl.pm:660> INFO - Writing 'planning-document.bbl' with encoding 'UTF-8'
-[262] bbl.pm:763> INFO - Output to planning-document.bbl
-[262] Biber.pm:131> WARN - The file 'planning-document.bcf' does not contain any citations!
-[262] Biber.pm:133> INFO - WARNINGS: 1
+[93] biber-MSWIN64:340> INFO - === 
+[131] Biber.pm:419> INFO - Reading 'planning-document.bcf'
+[218] Biber.pm:979> INFO - Found 1 citekeys in bib section 0
+[229] Biber.pm:4419> INFO - Processing section 0
+[238] Biber.pm:4610> INFO - Looking for bibtex file '../../resources/citation.bib' for section 0
+[294] bibtex.pm:1713> INFO - LaTeX decoding ...
+[300] bibtex.pm:1519> INFO - Found BibTeX data source '../../resources/citation.bib'
+[308] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[308] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[308] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[308] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[309] bbl.pm:660> INFO - Writing 'planning-document.bbl' with encoding 'UTF-8'
+[310] bbl.pm:763> INFO - Output to planning-document.bbl

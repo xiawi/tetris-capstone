@@ -1,5 +1,8 @@
 \documentclass[a4paper, 12pt]{extreport}
 \usepackage[margin=1in]{geometry}
+\usepackage{parskip}
+\setlength{\parindent}{1cm}
+\setlength{\parskip}{.5\baselineskip}
 \usepackage{tikz}
 \usepackage{setspace}
 \graphicspath{ {../../resources/images/} }
@@ -9,15 +12,15 @@
 \usepackage{pdfpages}
 \titleformat{\chapter}[hang]{\huge\bfseries}{\thechapter}{20pt}{\vspace{0.5em}}
 \titlespacing*{\chapter}{0pt}{-3em}{1.1\parskip}
-\usepackage[backend=biber, style=numeric, sorting=none]{biblatex}
+\usepackage[backend=biber, style=ieee]{biblatex}
 \usepackage[nottoc,numbib]{tocbibind}
+\usepackage{pgfgantt}
 \renewbibmacro{finentry}{\finentry%
 	\iffieldundef{annotation}
 	{}
 	{\par\medskip\printfield{annotation}\medskip\finentry}}
 
 \addbibresource{../../resources/citation.bib}
-\appto{\bibsetup}{\sloppy}
 
 \begin{document}
 	
@@ -36,7 +39,7 @@
 			\textbf{\large CAPSTONE PROJECT 1} \\
 			\textbf{\large Activity Log} \\
 			\vspace{1cm}
-			\textbf{\large Evaluation of Nature-inspired Optimization\\Algorithms in Solving Versus Tetris}
+			\textbf{\large Evaluation of Nature-inspired Optimisation\\Algorithms in Solving Versus Tetris}
 			
 			\vspace{1cm}
 			
@@ -70,13 +73,42 @@
 	
 	\chapter{Timeline}
 	
-	\pagenumbering{arabic}
-	
-	% Project is split into critical stages. Brief description is provided for each stage of the project on the processes to be executed.
-	% Time allocated for each stage is justified by student assessment of own workload, ability and work to be done to deliver.
+		\pagenumbering{arabic}
+		
+		% Project is split into critical stages. Brief description is provided for each stage of the project on the processes to be executed.
+		% Time allocated for each stage is justified by student assessment of own workload, ability and work to be done to deliver.
+		
+		In this chapter, the project's progression is meticulously documented. In these pages, the critical stages of the project are depicted, each accompanied by a concise description illuminating the strategies and rationales behind the allocated times.
+		
+		Furthermore, the week-by-week tasks undertaken are outlined within these sections. Thus, offering a granular insight into the day-to-day endeavours taken to propel the project towards its culmination.
+		
+		\begin{figure}[h]
+			\noindent
+			\begin{ganttchart}[
+				expand chart=\textwidth, 
+				time slot format = isodate]{2024-04-22}{2024-08-22}
+				\gantttitlecalendar{year, month=name}\\
+				\ganttgroup{Introduction}{2024-04-22}{2024-05-03}\\
+				\ganttbar{Research}{2024-04-22}{2024-04-26}\\
+				\ganttbar{Writing}{2024-04-22}{2024-05-03}\\
+			\end{ganttchart}
+			\caption{Gantt Chart of Timeline}
+		\end{figure}
+		
+		\section{Writing an Introduction}
+		
+			The introduction serves as the project's foundation, providing essential background information, introducing the topic, and articulating the project's objectives. Recognizing its pivotal role, a generous time span of \textbf{up to two weeks} was allocated for its composition. This deliberate time-frame aimed to allow ample time for thoroughness, ensuring no essential elements were overlooked in writing a comprehensive and compelling introduction.
+			
+			\subsection{Week 1}
+		
+		\section{Conducting the Literature Review}
+		
+		\section{Coming Up With a Technical Plan}
+		
+		\section{Making Revisions}
 		
 		
-
+	% Bibliography
 	\nocite{*}
 	\printbibliography[heading={bibnumbered}, title={Bibliography}]
 	
