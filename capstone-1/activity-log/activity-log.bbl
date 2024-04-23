@@ -91,6 +91,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In the popular computer game of Tetris, the player is given a sequence of tetromino pieces and must pack them into a rectangular gameboard initially occupied by a given configuration of filled squares; any completely filled row of the gameboard is cleared and all pieces above it drop by one row. We prove that in the offline version of Tetris, it is NP-complete to maximize the number of cleared rows, maximize the number of tetrises (quadruples of rows simultaneously filled and cleared), minimize the maximum height of an occupied square, or maximize the number of pieces placed before the game ends. We furthermore show the extreme inapproximability of the first and last of these objectives to within a factor of p1−ɛ, when given a sequence of p pieces, and the inapproximability of the third objective to within a factor of 2−$\epsilon$, for any $\epsilon$ > 0. Our results hold under several variations on the rules of Tetris, including different models of rotation, limitations on player agility, and restricted piecesets.}
+      \field{annotation}{In their paper, Demaine et al. mathematically proves that the natural objectives of Tetris - minimising the height of an occupied square, maximising the number of pieces placed, maximising the number of cleared rows and maximising the number of Tetrises (clearing four lines in a row) are NP-complete. This paper is credible because rigorous mathematical proof is used to come to its conclusions. This source will be used to introduce the NP-completeness of Tetris, a central motivation behind the project.}
       \field{booktitle}{Computing and Combinatorics}
       \field{isbn}{978-3-540-45071-9}
       \field{title}{Tetris is Hard, Even to Approximate}
@@ -110,6 +111,9 @@
       \list{institution}{1}{%
         {University of Waterloo}%
       }
+      \list{location}{1}{%
+        {200 University Ave W, Waterloo, ON N2L 3G1, Canada}%
+      }
       \strng{namehash}{bc0594e03b378190296ddb3795a8e375}
       \strng{fullhash}{bc0594e03b378190296ddb3795a8e375}
       \strng{bibnamehash}{bc0594e03b378190296ddb3795a8e375}
@@ -121,7 +125,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Can you win at Tetris?}
-      \field{type}{phdthesis}
+      \field{type}{Master's Thesis}
       \field{year}{1988}
       \true{nocite}
     \endentry

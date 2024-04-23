@@ -85,7 +85,7 @@
 		\end{figure}
 		
 		% Tetris and computer science
-		Since its release, mathematicians and computer scientists have been intrigued by the game of Tetris, leading to a diverse array of research endeavours exploring the various facets of the game, including its complexity \cite{tetris-is-hard-even-to-approx}, and its possibility of being won \cite{can-you-win-at-tetris} \cite{how-to-lose-at-tetris}.
+		Since its release, mathematicians and computer scientists have been intrigued by the game of Tetris, leading to a diverse array of research endeavours exploring the various facets of the game, including its computational complexity \cite{tetris-is-hard-even-to-approx}, and its possibility of being won \cite{can-you-win-at-tetris} \cite{how-to-lose-at-tetris}.
 		
 		\section{Motivation}
 		
@@ -94,11 +94,15 @@
 			% You might also highlight any personal or professional experiences that motivated your interest in the topic.
 			
 			% why is this project important and relevant?
-			While Tetris has been the subject of numerous research papers and academic studies, te majority of these have been focused on the classic single-player variant of the game. However, there has been limited research conducted on the other variants of the game, such as its multiplayer versus variant.
 			
-			The computational complexity of classic Tetris has been proven to be NP-complete \cite{tetris-is-hard-even-to-approx}, which are a set of problems where no simple algorithm can solve SOURCE. Since  
-			
-			While Tetris has been the subject of numerous research papers and academic studies, the majority of these have been focused on the classic single-player variant of the game. However, the emergence of multiplayer gaming introduces a novel dimension to Tetris gameplay that remains largely unexplored in academic research. Furthermore, the computational complexity of classic Tetris is proven to be NP-complete \cite{tetris-is-hard-even-to-approx}, underscores the necessity of innovative approaches, such as nature-inspired optimization algorithms, in tackling its challenges.
+			% Tetris is NP-complete --> There are no optimal solutions 
+	 		%						--> The problem is too complex --> Traditional non-heuristic approaches can take more overall resources
+	 		%						--> Hence the use of nature-inspired algorithms
+	 		% This area of resesarch has been explored before cite papers, but not with the versus tetris variant.
+	 		
+	 		In \citeyear{tetris-is-hard-even-to-approx}, \citeauthor{tetris-is-hard-even-to-approx} demonstrated the computational complexity of Tetris by framing it as an NP-complete objective function \cite{tetris-is-hard-even-to-approx}. This complexity underscores the challenge of optimally playing Tetris to achieve its natural objectives. Research in optimisation has shown the effectiveness of nature-inspired algorithms in tackling complex objective functions \cite{classical-nia-for-optimisation}.
+	 		
+	 		While there have been studies that explored the use of nature-inspired algorithms in Tetris, the majority of these have focused on the classic single-player variant of the game. However, the emergence of multiplayer gaming introduces a dimension of Tetris gameplay that remains largely unexplored in academic research.
 		
 		\section{Problem Statement}
 			
@@ -145,7 +149,7 @@
 			% Discuss any limitations or constraints that may impact the scope of your project, such as time, resources, or access to data.
 			% Clarify what readers can expect to find within the scope of your project and what may fall outside its boundaries.
 			
-			This project will focus specifically on the evaluation of nature-inspired optimisation algorithms in the context of multiplayer versus Tetris. It will entail the development of a playable Tetris game capable of simulating gameplay and the training of algorithms. This simulation environment will facilitate in the analysis and evaluation of these algorithms' performances. The scope includes the exploring a range of nature-inspired algorithms to address the unique challenges inherent in Versus Tetris.
+			This project will focus specifically on the evaluation of nature-inspired optimisation algorithms in the context of multiplayer versus Tetris. It will entail the development of a playable Tetris game capable of simulating gameplay and the training of algorithms. This simulation environment will facilitate in the analysis and evaluation of these algorithms' performances. The scope includes the exploring of a range of nature-inspired algorithms to address the unique challenges inherent in Versus Tetris.
 			
 		
 		% Exceptional overview of the proposed project.
@@ -158,6 +162,9 @@
 		% Exceptional discussion that summarizes the body of review, highlights the most important findings (in your opinion) and its implication to the direction of the project.
 		% Section is very well organized.
 		% The review has clarity, simplicity, parsimony, which includes clear transitions and systematic use of headings and subheadings.
+		
+		% wtf is np-complete
+		% 
 		
 		\section{What is Versus Tetris?}
 	
