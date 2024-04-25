@@ -2371,8 +2371,11 @@
     <bcf:citekey order="4" intorder="1">how-to-lose-at-tetris</bcf:citekey>
     <bcf:citekey order="5" intorder="1">tetris-is-hard-even-to-approx</bcf:citekey>
     <bcf:citekey order="6" intorder="1">tetris-is-hard-even-to-approx</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">tetris-is-hard-even-to-approx</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">classical-nia-for-optimisation</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">npcomplete</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">npcomplete</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">route-optimisation-np-complete</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">job-scheduling-np-complete</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">medical-diagnosis-np-complete</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

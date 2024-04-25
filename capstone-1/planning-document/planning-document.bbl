@@ -155,42 +155,136 @@
       \verb 10.2307/3619195
       \endverb
     \endentry
-    \entry{classical-nia-for-optimisation}{article}{}
+    \entry{npcomplete}{incollection}{}
       \name{author}{1}{}{%
-        {{hash=3e154cfeaf5392bb518298e2cb88ae09}{%
-           family={Mandal},
-           familyi={M\bibinitperiod},
-           given={Pawan\bibnamedelima Kumar},
-           giveni={P\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=13b9c16a9de2bb891eb8aa2a768eb2a8}{%
+           family={Sipser},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
       }
-      \strng{namehash}{3e154cfeaf5392bb518298e2cb88ae09}
-      \strng{fullhash}{3e154cfeaf5392bb518298e2cb88ae09}
-      \strng{bibnamehash}{3e154cfeaf5392bb518298e2cb88ae09}
-      \strng{authorbibnamehash}{3e154cfeaf5392bb518298e2cb88ae09}
-      \strng{authornamehash}{3e154cfeaf5392bb518298e2cb88ae09}
-      \strng{authorfullhash}{3e154cfeaf5392bb518298e2cb88ae09}
+      \list{publisher}{1}{%
+        {Cengage Learning}%
+      }
+      \strng{namehash}{13b9c16a9de2bb891eb8aa2a768eb2a8}
+      \strng{fullhash}{13b9c16a9de2bb891eb8aa2a768eb2a8}
+      \strng{bibnamehash}{13b9c16a9de2bb891eb8aa2a768eb2a8}
+      \strng{authorbibnamehash}{13b9c16a9de2bb891eb8aa2a768eb2a8}
+      \strng{authornamehash}{13b9c16a9de2bb891eb8aa2a768eb2a8}
+      \strng{authorfullhash}{13b9c16a9de2bb891eb8aa2a768eb2a8}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Introduction to the Theory of Computation}
+      \field{title}{NP-completeness}
+      \field{year}{2013}
+    \endentry
+    \entry{route-optimisation-np-complete}{article}{}
+      \name{author}{5}{}{%
+        {{hash=9eebcd271dac7fd923cdacc1f7d6fe7c}{%
+           family={Lesch},
+           familyi={L\bibinitperiod},
+           given={Veronika},
+           giveni={V\bibinitperiod}}}%
+        {{hash=ff1793eb75a8f4bc53b9d2ed5e58c990}{%
+           family={König},
+           familyi={K\bibinitperiod},
+           given={Maximilian},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4de0f4299be144a65505410b920314e7}{%
+           family={Kounev},
+           familyi={K\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9eef3925293975496994a6983265805e}{%
+           family={Stein},
+           familyi={S\bibinitperiod},
+           given={Anthony},
+           giveni={A\bibinitperiod}}}%
+        {{hash=491e46d64e49aa197ff7c9cbf04f120a}{%
+           family={Krupitzer},
+           familyi={K\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{0b9d9d0cfcaa05065c6311f99f6996a5}
+      \strng{fullhash}{8051c7ddecff3544ef2881175b9d6fb4}
+      \strng{bibnamehash}{8051c7ddecff3544ef2881175b9d6fb4}
+      \strng{authorbibnamehash}{8051c7ddecff3544ef2881175b9d6fb4}
+      \strng{authornamehash}{0b9d9d0cfcaa05065c6311f99f6996a5}
+      \strng{authorfullhash}{8051c7ddecff3544ef2881175b9d6fb4}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Optimization techniques are among the most promising methods to deal with real-world problems, consisting of several objective functions and constraints. Over the decades, many methods have come into existence to solve optimization problems. However, the complexity of these problems is increasing over time. Thereby, it opens up a field of research in developing a robust procedure compatible with such complex optimization problems that provide optimal solutions best suited to the needs of the decision-makers. This review paper presents a survey of the recent use of classical methods and Nature-Inspired Algorithms (NIAs) to solve single and multiple objective problems of optimization in diverse application areas. Moreover, this study briefly describes these widely used solution methods based on the classification of classical approaches and NIAs. Recently published articles based on real-world applications have been included to demonstrate the advantages of each solution technique. In addition, research gaps involving various techniques and future prospects within this field are discussed.}
-      \field{issn}{2666-7207}
-      \field{journaltitle}{Results in Control and Optimization}
-      \field{title}{A review of classical methods and Nature-Inspired Algorithms (NIAs) for optimization problems}
-      \field{volume}{13}
-      \field{year}{2023}
-      \field{pages}{100315}
-      \range{pages}{1}
+      \field{journaltitle}{CoRR}
+      \field{title}{A Case Study of Vehicle Route Optimization}
+      \field{volume}{abs/2111.09087}
+      \field{year}{2021}
+    \endentry
+    \entry{job-scheduling-np-complete}{article}{}
+      \name{author}{1}{}{%
+        {{hash=cafe1d770c56825ebccdb81e9f7c9b3b}{%
+           family={Ullman},
+           familyi={U\bibinitperiod},
+           given={Jeffrey\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press}%
+      }
+      \strng{namehash}{cafe1d770c56825ebccdb81e9f7c9b3b}
+      \strng{fullhash}{cafe1d770c56825ebccdb81e9f7c9b3b}
+      \strng{bibnamehash}{cafe1d770c56825ebccdb81e9f7c9b3b}
+      \strng{authorbibnamehash}{cafe1d770c56825ebccdb81e9f7c9b3b}
+      \strng{authornamehash}{cafe1d770c56825ebccdb81e9f7c9b3b}
+      \strng{authorfullhash}{cafe1d770c56825ebccdb81e9f7c9b3b}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Computer and System sciences}
+      \field{number}{3}
+      \field{title}{NP-complete scheduling problems}
+      \field{volume}{10}
+      \field{year}{1975}
+      \field{pages}{384\bibrangedash 393}
+      \range{pages}{10}
+    \endentry
+    \entry{medical-diagnosis-np-complete}{article}{}
+      \name{author}{2}{}{%
+        {{hash=310ef37eb9a0a51bbf650a6b6207dba2}{%
+           family={Arle},
+           familyi={A\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1e27a52b5437e6bbd9d0c4b66e0e49c8}{%
+           family={Carlson},
+           familyi={C\bibinitperiod},
+           given={Kristen},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{3fe430a820b241269854da252069074d}
+      \strng{fullhash}{3fe430a820b241269854da252069074d}
+      \strng{bibnamehash}{3fe430a820b241269854da252069074d}
+      \strng{authorbibnamehash}{3fe430a820b241269854da252069074d}
+      \strng{authornamehash}{3fe430a820b241269854da252069074d}
+      \strng{authorfullhash}{3fe430a820b241269854da252069074d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Experimental \& Theoretical Artificial Intelligence}
+      \field{month}{03}
+      \field{title}{Medical diagnosis and treatment is NP-complete}
+      \field{volume}{33}
+      \field{year}{2020}
+      \field{pages}{1\bibrangedash 16}
+      \range{pages}{16}
       \verb{doi}
-      \verb https://doi.org/10.1016/j.rico.2023.100315
+      \verb 10.1080/0952813X.2020.1737581
       \endverb
-      \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/S2666720723001170
-      \endverb
-      \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/S2666720723001170
-      \endverb
-      \keyw{Classical optimization methods,Nature-Inspired Algorithms (NIAs),Evolutionary Algorithms (EAs),Swarm Intelligence (SI) based algorithms,Linear Progrmming (LP),Mixed Integer Programming (MIP),Quadratic Programming (QP)}
     \endentry
   \enddatalist
 \endrefsection
