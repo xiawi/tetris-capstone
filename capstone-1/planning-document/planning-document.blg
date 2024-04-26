@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'planning-document.blg'
-[107] biber-MSWIN64:340> INFO - === 
-[150] Biber.pm:419> INFO - Reading 'planning-document.bcf'
-[265] Biber.pm:979> INFO - Found 5 citekeys in bib section 0
-[280] Biber.pm:4419> INFO - Processing section 0
-[293] Biber.pm:4610> INFO - Looking for bibtex file '../../resources/citation.bib' for section 0
-[353] bibtex.pm:1713> INFO - LaTeX decoding ...
-[363] bibtex.pm:1519> INFO - Found BibTeX data source '../../resources/citation.bib'
-[412] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[412] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[412] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[412] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[418] bbl.pm:660> INFO - Writing 'planning-document.bbl' with encoding 'UTF-8'
-[420] bbl.pm:763> INFO - Output to planning-document.bbl
+[128] biber-MSWIN64:340> INFO - === 
+[175] Biber.pm:419> INFO - Reading 'planning-document.bcf'
+[299] Biber.pm:979> INFO - Found 12 citekeys in bib section 0
+[314] Biber.pm:4419> INFO - Processing section 0
+[327] Biber.pm:4610> INFO - Looking for bibtex file '../../resources/citation.bib' for section 0
+[395] bibtex.pm:1713> INFO - LaTeX decoding ...
+[412] bibtex.pm:1519> INFO - Found BibTeX data source '../../resources/citation.bib'
+[506] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[506] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[506] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[506] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[514] bbl.pm:660> INFO - Writing 'planning-document.bbl' with encoding 'UTF-8'
+[520] bbl.pm:763> INFO - Output to planning-document.bbl
