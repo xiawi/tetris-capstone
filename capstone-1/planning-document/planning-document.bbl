@@ -214,8 +214,8 @@
       \strng{authorbibnamehash}{8051c7ddecff3544ef2881175b9d6fb4}
       \strng{authornamehash}{0b9d9d0cfcaa05065c6311f99f6996a5}
       \strng{authorfullhash}{8051c7ddecff3544ef2881175b9d6fb4}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{CoRR}
@@ -240,8 +240,8 @@
       \strng{authorbibnamehash}{cafe1d770c56825ebccdb81e9f7c9b3b}
       \strng{authornamehash}{cafe1d770c56825ebccdb81e9f7c9b3b}
       \strng{authorfullhash}{cafe1d770c56825ebccdb81e9f7c9b3b}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Computer and System sciences}
@@ -285,6 +285,122 @@
       \verb{doi}
       \verb 10.1080/0952813X.2020.1737581
       \endverb
+    \endentry
+    \entry{job-shop-ga}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=7ba97d0451d256e105b6c0c7a99b8481}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Lawrence},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{7ba97d0451d256e105b6c0c7a99b8481}
+      \strng{fullhash}{7ba97d0451d256e105b6c0c7a99b8481}
+      \strng{bibnamehash}{7ba97d0451d256e105b6c0c7a99b8481}
+      \strng{authorbibnamehash}{7ba97d0451d256e105b6c0c7a99b8481}
+      \strng{authornamehash}{7ba97d0451d256e105b6c0c7a99b8481}
+      \strng{authorfullhash}{7ba97d0451d256e105b6c0c7a99b8481}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the First International Conference on Genetic Algorithms and Their Applications}
+      \field{title}{Job Shop Scheduling with Genetic Algorithms}
+      \field{year}{1985}
+      \field{pages}{136\bibrangedash 140}
+      \range{pages}{5}
+    \endentry
+    \entry{review-nia-wael}{article}{}
+      \name{author}{2}{}{%
+        {{hash=cd83e1fbd82941b3923abf46aeec6ef6}{%
+           family={Korani},
+           familyi={K\bibinitperiod},
+           given={Wael},
+           giveni={W\bibinitperiod}}}%
+        {{hash=a6e8be40c65d68ae1f885077b64b3d86}{%
+           family={Mouhoub},
+           familyi={M\bibinitperiod},
+           given={Malek},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ffb18453e2090386c78f7a9ae7a8a360}
+      \strng{fullhash}{ffb18453e2090386c78f7a9ae7a8a360}
+      \strng{bibnamehash}{ffb18453e2090386c78f7a9ae7a8a360}
+      \strng{authorbibnamehash}{ffb18453e2090386c78f7a9ae7a8a360}
+      \strng{authornamehash}{ffb18453e2090386c78f7a9ae7a8a360}
+      \strng{authorfullhash}{ffb18453e2090386c78f7a9ae7a8a360}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Operations Research Forum}
+      \field{month}{07}
+      \field{title}{Review on Nature-Inspired Algorithms}
+      \field{volume}{2}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.1007/s43069-021-00068-x
+      \endverb
+    \endentry
+    \entry{tetris-ga-lewis}{article}{}
+      \name{author}{1}{}{%
+        {{hash=dde5585e8915314a0096798ebfe150bf}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{dde5585e8915314a0096798ebfe150bf}
+      \strng{fullhash}{dde5585e8915314a0096798ebfe150bf}
+      \strng{bibnamehash}{dde5585e8915314a0096798ebfe150bf}
+      \strng{authorbibnamehash}{dde5585e8915314a0096798ebfe150bf}
+      \strng{authornamehash}{dde5585e8915314a0096798ebfe150bf}
+      \strng{authorfullhash}{dde5585e8915314a0096798ebfe150bf}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Playing Tetris with Genetic Algorithms}
+    \endentry
+    \entry{swarm-tetris}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=fec7eeb6018d762c5a19e50eb6e7ac15}{%
+           family={Langenhoven},
+           familyi={L\bibinitperiod},
+           given={Leo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=53f755062621ffbedb37d5a19fb83eec}{%
+           family={Heerden},
+           familyi={H\bibinitperiod},
+           given={Willem\bibnamedelima S.},
+           giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=cdfa42fa0d55ed542c98192ec849360f}{%
+           family={Engelbrecht},
+           familyi={E\bibinitperiod},
+           given={Andries\bibnamedelima P.},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{1baeccf6bfd1450c998050be2b66038b}
+      \strng{fullhash}{1baeccf6bfd1450c998050be2b66038b}
+      \strng{bibnamehash}{1baeccf6bfd1450c998050be2b66038b}
+      \strng{authorbibnamehash}{1baeccf6bfd1450c998050be2b66038b}
+      \strng{authornamehash}{1baeccf6bfd1450c998050be2b66038b}
+      \strng{authorfullhash}{1baeccf6bfd1450c998050be2b66038b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE Congress on Evolutionary Computation}
+      \field{title}{Swarm Tetris: Applying particle swarm optimization to tetris}
+      \field{year}{2010}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/CEC.2010.5586033
+      \endverb
+      \keyw{Games;Shape;Neurons;Artificial neural networks;Training;Equations;Mathematical model}
     \endentry
   \enddatalist
 \endrefsection

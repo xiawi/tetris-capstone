@@ -2376,6 +2376,10 @@
     <bcf:citekey order="9" intorder="1">route-optimisation-np-complete</bcf:citekey>
     <bcf:citekey order="10" intorder="1">job-scheduling-np-complete</bcf:citekey>
     <bcf:citekey order="11" intorder="1">medical-diagnosis-np-complete</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">job-shop-ga</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">review-nia-wael</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">tetris-ga-lewis</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">swarm-tetris</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

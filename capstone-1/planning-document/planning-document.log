@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  25 APR 2024 15:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  26 APR 2024 17:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1022,11 +1022,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.102 		\section{Problem Statement}
-                                    [1
+l.99 			
+         [1
 
  <../../resources/images//cp1/typical_tetris_game.pdf>]
-<../../resources/images//cp1/tetrio.png, id=116, 767.86874pt x 382.42876pt>
+<../../resources/images//cp1/tetrio.png, id=120, 767.86874pt x 382.42876pt>
 File: ../../resources/images//cp1/tetrio.png Graphic file (type png)
 <use ../../resources/images//cp1/tetrio.png>
 Package pdftex.def Info: ../../resources/images//cp1/tetrio.png  used on input 
@@ -1060,10 +1060,10 @@ Package logreq Info: Writing requests to 'planning-document.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28420 strings out of 474504
- 542616 string characters out of 5756725
- 1928043 words of memory out of 5000000
- 49942 multiletter control sequences out of 15000+600000
+ 28437 strings out of 474504
+ 543343 string characters out of 5756725
+ 1931043 words of memory out of 5000000
+ 49955 multiletter control sequences out of 15000+600000
  564420 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,7n,107p,1206b,1320s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1072,10 +1072,10 @@ live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/202
 3/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on planning-document.pdf (10 pages, 964680 bytes).
+Output written on planning-document.pdf (10 pages, 968063 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
- 163 compressed objects within 2 object streams
- 39 named destinations out of 1000 (max. 500000)
+ 204 PDF objects out of 1000 (max. 8388607)
+ 174 compressed objects within 2 object streams
+ 43 named destinations out of 1000 (max. 500000)
  124 words of extra memory for PDF output out of 10000 (max. 10000000)
 
