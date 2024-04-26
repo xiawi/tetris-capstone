@@ -2,7 +2,7 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Problem Statement}{2}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Aim}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.3}Aim}{3}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Objectives}{3}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Project Scope}{3}{section.1.5}%
 \contentsline {chapter}{\numberline {2}Literature Review}{4}{chapter.2}%
