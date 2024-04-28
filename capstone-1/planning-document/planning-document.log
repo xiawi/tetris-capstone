@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  26 APR 2024 23:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  28 APR 2024 13:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1053,22 +1053,15 @@ Chapter 5.
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
  ***********
-
-
-Package rerunfilecheck Warning: File `planning-document.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `planning-document.out':
-(rerunfilecheck)             Before: 01F2E3AB683A221D1BDCCBB431CC44CD;1347
-(rerunfilecheck)             After:  37261ECD5988E838A296BD7929D9BF53;1335.
+Package rerunfilecheck Info: File `planning-document.out' has not changed.
+(rerunfilecheck)             Checksum: 37261ECD5988E838A296BD7929D9BF53;1335.
 Package logreq Info: Writing requests to 'planning-document.run.xml'.
 \openout1 = `planning-document.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
  28437 strings out of 474504
- 543343 string characters out of 5756725
+ 543351 string characters out of 5756725
  1931043 words of memory out of 5000000
  49955 multiletter control sequences out of 15000+600000
  564420 words of font info for 58 fonts, out of 8000000 for 9000
