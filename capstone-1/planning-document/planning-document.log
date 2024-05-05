@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  28 APR 2024 13:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  3 MAY 2024 18:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1060,8 +1060,8 @@ Package logreq Info: Writing requests to 'planning-document.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28437 strings out of 474504
- 543351 string characters out of 5756725
+ 28438 strings out of 474504
+ 543357 string characters out of 5756725
  1931043 words of memory out of 5000000
  49955 multiletter control sequences out of 15000+600000
  564420 words of font info for 58 fonts, out of 8000000 for 9000
@@ -1072,10 +1072,10 @@ live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/202
 3/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on planning-document.pdf (10 pages, 968030 bytes).
+Output written on planning-document.pdf (10 pages, 968073 bytes).
 PDF statistics:
- 204 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
- 43 named destinations out of 1000 (max. 500000)
+ 205 PDF objects out of 1000 (max. 8388607)
+ 175 compressed objects within 2 object streams
+ 44 named destinations out of 1000 (max. 500000)
  124 words of extra memory for PDF output out of 10000 (max. 10000000)
 
