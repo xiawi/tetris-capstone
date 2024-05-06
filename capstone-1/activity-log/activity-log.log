@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  6 MAY 2024 08:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  6 MAY 2024 11:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1055,7 +1055,7 @@ Package biblatex Info: ... file 'activity-log.bbl' found.
 (./activity-log.bbl)
 Package biblatex Info: Reference section=0 on input line 25.
 Package biblatex Info: Reference segment=0 on input line 25.
-<../../resources/images/logos/sunway.jpg, id=51, 1400.23125pt x 597.73312pt>
+<../../resources/images/logos/sunway.jpg, id=55, 1400.23125pt x 597.73312pt>
 File: ../../resources/images/logos/sunway.jpg Graphic file (type jpg)
 <use ../../resources/images/logos/sunway.jpg>
 Package pdftex.def Info: ../../resources/images/logos/sunway.jpg  used on input
@@ -1089,28 +1089,28 @@ Chapter 2.
 
 ] [5] [6]
 Chapter 3.
-<./meeting-records/meeting-1/meeting-1.pdf, id=126, 597.50829pt x 845.0471pt>
+<./meeting-records/meeting-1/meeting-1.pdf, id=133, 597.50829pt x 845.0471pt>
 File: ./meeting-records/meeting-1/meeting-1.pdf Graphic file (type pdf)
 <use ./meeting-records/meeting-1/meeting-1.pdf>
 Package pdftex.def Info: ./meeting-records/meeting-1/meeting-1.pdf  used on inp
-ut line 143.
+ut line 145.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: ./meeting-records/meeting-1/meeting-1.pdf Graphic file (type pdf)
 <use ./meeting-records/meeting-1/meeting-1.pdf>
 Package pdftex.def Info: ./meeting-records/meeting-1/meeting-1.pdf  used on inp
-ut line 143.
+ut line 145.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<./meeting-records/meeting-1/meeting-1.pdf, id=129, page=1, 597.50829pt x 845.0
+<./meeting-records/meeting-1/meeting-1.pdf, id=136, page=1, 597.50829pt x 845.0
 471pt>
 File: ./meeting-records/meeting-1/meeting-1.pdf Graphic file (type pdf)
 <use ./meeting-records/meeting-1/meeting-1.pdf, page 1>
 Package pdftex.def Info: ./meeting-records/meeting-1/meeting-1.pdf , page1 used
- on input line 143.
+ on input line 145.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: ./meeting-records/meeting-1/meeting-1.pdf Graphic file (type pdf)
 <use ./meeting-records/meeting-1/meeting-1.pdf, page 1>
 Package pdftex.def Info: ./meeting-records/meeting-1/meeting-1.pdf , page1 used
- on input line 143.
+ on input line 145.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 [7
 
@@ -1118,17 +1118,17 @@ Package pdftex.def Info: ./meeting-records/meeting-1/meeting-1.pdf , page1 used
 File: ./meeting-records/meeting-1/meeting-1.pdf Graphic file (type pdf)
 <use ./meeting-records/meeting-1/meeting-1.pdf, page 1>
 Package pdftex.def Info: ./meeting-records/meeting-1/meeting-1.pdf , page1 used
- on input line 143.
+ on input line 145.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ./meeting-records/meeting-1/meeting-1.pdf Graphic file (type pdf)
 <use ./meeting-records/meeting-1/meeting-1.pdf, page 1>
 Package pdftex.def Info: ./meeting-records/meeting-1/meeting-1.pdf , page1 used
- on input line 143.
+ on input line 145.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ./meeting-records/meeting-1/meeting-1.pdf Graphic file (type pdf)
 <use ./meeting-records/meeting-1/meeting-1.pdf, page 1>
 Package pdftex.def Info: ./meeting-records/meeting-1/meeting-1.pdf , page1 used
- on input line 143.
+ on input line 145.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [8 <./meeting-records/meeting-1/meeting-1.pdf>] (./activity-log.aux)
  ***********
@@ -1136,19 +1136,19 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
  ***********
 Package rerunfilecheck Info: File `activity-log.out' has not changed.
-(rerunfilecheck)             Checksum: 8F5709AA6AA333E4DFBAA214D067F686;1452.
+(rerunfilecheck)             Checksum: 35E63EF1BBD27E47BC1429345218E77D;1616.
 Package logreq Info: Writing requests to 'activity-log.run.xml'.
 \openout1 = `activity-log.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30619 strings out of 474504
- 601211 string characters out of 5756725
+ 30622 strings out of 474504
+ 601291 string characters out of 5756725
  1934043 words of memory out of 5000000
- 52110 multiletter control sequences out of 15000+600000
+ 52112 multiletter control sequences out of 15000+600000
  564720 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,17n,107p,1201b,1513s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,17n,107p,1201b,1518s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2023/texmf-d
@@ -1157,10 +1157,10 @@ type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmtt12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm12
 00.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on activity-log.pdf (10 pages, 343808 bytes).
+Output written on activity-log.pdf (10 pages, 346372 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
- 171 compressed objects within 2 object streams
- 36 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 221 PDF objects out of 1000 (max. 8388607)
+ 181 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 134 words of extra memory for PDF output out of 10000 (max. 10000000)
 
