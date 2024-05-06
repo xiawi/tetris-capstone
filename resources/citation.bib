@@ -78,7 +78,7 @@
 	pages={384--393},
 	year={1975},
 	publisher={Academic Press},
-	annotation=""
+	annotation="In this article, Ullman demonstrates that several scheduling problems including single execution time scheduling and two processor scheduling are NP-complete. This source will be used to introduce job scheduling as a proven NP-complete problem."
 }
 
 @article{medical-diagnosis-np-complete,
@@ -89,7 +89,8 @@
 	title = "Medical diagnosis and treatment is NP-complete",
 	volume = "33",
 	journal = "Journal of Experimental \& Theoretical Artificial Intelligence",
-	doi = "10.1080/0952813X.2020.1737581"
+	doi = "10.1080/0952813X.2020.1737581",
+	annotation="In this article, Arle and Carlson show that medical diagnosis and treatment (MDT) is NP-complete. This is done by reducing the travelling salesman problem and set-cover problems to MDT. This source will be used to show that NP-complete problems also exist within the field of medicine."
 }
 
 @InProceedings{job-shop-ga,
@@ -97,7 +98,8 @@
 	title = "Job Shop Scheduling with Genetic Algorithms",
 	booktitle = "Proceedings of the First International Conference on Genetic Algorithms and Their Applications",
 	year = "1985",
-	pages = {136--140}
+	pages = {136--140},
+	annotation="In this paper, Davis highlights the limitations of deterministic scheduling algorithms and introduces genetic algorithms as a non-deterministic approach to solving the job shop scheduling problem. Through a series of experiments, he demonstrates the efficacy of genetic algorithms in generating schedules that optimize profit, even in the face of changing constraints and uncertainties typical of real-world job shops. This paper provides valuable insights into the application of a nature-inspired algorithm, genetic algorithms, in solving NP-complete problems."
 }
 
 @article{review-nia-wael,
@@ -107,12 +109,16 @@
 	title = {Review on Nature-Inspired Algorithms},
 	volume = {2},
 	journal = {Operations Research Forum},
-	doi = {10.1007/s43069-021-00068-x}
+	doi = {10.1007/s43069-021-00068-x},
+	annotation="This paper is a review of nature-inspired algorithms, focusing on their performance analysis, reporting of experimental evaluation results, and guidelines for proposing new nature-inspired techniques. This source will be used to demonstrate the effectiveness of using nature-inspired algorithms over traditional exact methods."
 }
 
-@article{tetris-ga-lewis,
+@inproceedings{tetris-ga-lewis,
 	title={Playing Tetris with Genetic Algorithms},
-	author={Lewis, Jason}
+	author={Jason Lewis},
+	year={2015},
+	url={https://api.semanticscholar.org/CorpusID:17416568},
+	annotation="In this paper, Lewis explores the application of genetic algorithms to optimise Tetris gameplay. It delves into representing Tetris states using features such as game score and board configuration, with moves selected based on weighted feature sums. Through a genetic algorithm framework involving population-based selection, mutation, and crossover, the paper demonstrates the evolution of Tetris-playing strategies over 30 generations. Results indicate significant improvements in gameplay efficiency, with optimised players achieving an average game length of 179,531 moves and an average score efficiency of 2.5. This paper will be used as an example of using nature-inspired algorithms in tackling Tetris."
 }
 
 @INPROCEEDINGS{swarm-tetris,
@@ -123,10 +129,11 @@
 	volume={},
 	number={},
 	pages={1-8},
+	annotation="This paper investigates the use of particle swarm optimization (PSO) to train neural network agents for playing the game of Tetris. The experimental results show the learning progress of the algorithm and compare it to a hand-optimized Tetris playing algorithm. The study concludes that a swarm-based approach is feasible for Tetris and suggests avenues for future work to further optimize the training algorithm parameters and improve the performance of the neural agents. The paper provides valuable insights into the application of computational intelligence techniques to game-playing agents.",
 	keywords={Games;Shape;Neurons;Artificial neural networks;Training;Equations;Mathematical model},
-	doi={10.1109/CEC.2010.5586033}}
+	doi={10.1109/CEC.2010.5586033}},
 	
-@article{article,
+@article{tetris-o1-np-hard,
 	author = {Asif, Sualeh and Coulombe, Michael and Demaine, Erik and Demaine, Martin and Hesterberg, Adam and Lynch, Jayson and Singhal, Mihir},
 	year = {2020},
 	month = {01},
