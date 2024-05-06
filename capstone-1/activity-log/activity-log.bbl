@@ -254,6 +254,7 @@
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In this article, Ullman demonstrates that several scheduling problems including single execution time scheduling and two processor scheduling are NP-complete. This source will be used to introduce job scheduling as a proven NP-complete problem.}
       \field{journaltitle}{Journal of Computer and System sciences}
       \field{number}{3}
       \field{title}{NP-complete scheduling problems}
@@ -286,6 +287,7 @@
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In this article, Arle and Carlson show that medical diagnosis and treatment (MDT) is NP-complete. This is done by reducing the travelling salesman problem and set-cover problems to MDT. This source will be used to show that NP-complete problems also exist within the field of medicine.}
       \field{journaltitle}{Journal of Experimental \& Theoretical Artificial Intelligence}
       \field{month}{03}
       \field{title}{Medical diagnosis and treatment is NP-complete}
@@ -316,6 +318,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In this paper, Davis highlights the limitations of deterministic scheduling algorithms and introduces genetic algorithms as a non-deterministic approach to solving the job shop scheduling problem. Through a series of experiments, he demonstrates the efficacy of genetic algorithms in generating schedules that optimize profit, even in the face of changing constraints and uncertainties typical of real-world job shops. This paper provides valuable insights into the application of a nature-inspired algorithm, genetic algorithms, in solving NP-complete problems.}
       \field{booktitle}{Proceedings of the First International Conference on Genetic Algorithms and Their Applications}
       \field{title}{Job Shop Scheduling with Genetic Algorithms}
       \field{year}{1985}

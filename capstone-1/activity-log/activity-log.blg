@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'activity-log.blg'
-[141] biber-MSWIN64:340> INFO - === 
-[193] Biber.pm:419> INFO - Reading 'activity-log.bcf'
-[336] Biber.pm:976> INFO - Using all citekeys in bib section 0
-[358] Biber.pm:4419> INFO - Processing section 0
-[374] Biber.pm:4610> INFO - Looking for bibtex file '../../resources/citation.bib' for section 0
-[452] bibtex.pm:1713> INFO - LaTeX decoding ...
-[481] bibtex.pm:1519> INFO - Found BibTeX data source '../../resources/citation.bib'
-[604] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[604] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[604] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[604] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[614] bbl.pm:660> INFO - Writing 'activity-log.bbl' with encoding 'UTF-8'
-[622] bbl.pm:763> INFO - Output to activity-log.bbl
+[108] biber-MSWIN64:340> INFO - === 
+[164] Biber.pm:419> INFO - Reading 'activity-log.bcf'
+[267] Biber.pm:976> INFO - Using all citekeys in bib section 0
+[278] Biber.pm:4419> INFO - Processing section 0
+[290] Biber.pm:4610> INFO - Looking for bibtex file '../../resources/citation.bib' for section 0
+[361] bibtex.pm:1713> INFO - LaTeX decoding ...
+[380] bibtex.pm:1519> INFO - Found BibTeX data source '../../resources/citation.bib'
+[463] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[464] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[464] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[464] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[470] bbl.pm:660> INFO - Writing 'activity-log.bbl' with encoding 'UTF-8'
+[477] bbl.pm:763> INFO - Output to activity-log.bbl
