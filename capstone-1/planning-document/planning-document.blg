@@ -1,15 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'planning-document.blg'
-[121] biber-MSWIN64:340> INFO - === 
-[189] Biber.pm:419> INFO - Reading 'planning-document.bcf'
-[306] Biber.pm:979> INFO - Found 12 citekeys in bib section 0
-[320] Biber.pm:4419> INFO - Processing section 0
-[333] Biber.pm:4610> INFO - Looking for bibtex file '../../resources/citation.bib' for section 0
-[402] bibtex.pm:1713> INFO - LaTeX decoding ...
-[421] bibtex.pm:1519> INFO - Found BibTeX data source '../../resources/citation.bib'
-[516] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[517] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[517] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[517] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[524] bbl.pm:660> INFO - Writing 'planning-document.bbl' with encoding 'UTF-8'
-[530] bbl.pm:763> INFO - Output to planning-document.bbl
+[110] biber-MSWIN64:340> INFO - === 
+[161] Biber.pm:419> INFO - Reading 'planning-document.bcf'
+[268] Biber.pm:979> INFO - Found 12 citekeys in bib section 0
+[279] Biber.pm:4419> INFO - Processing section 0
+[290] Biber.pm:4610> INFO - Looking for bibtex file '../../resources/citation.bib' for section 0
+[374] bibtex.pm:1713> INFO - LaTeX decoding ...
+[402] bibtex.pm:1519> INFO - Found BibTeX data source '../../resources/citation.bib'
+[480] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[480] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[480] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[480] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[490] bbl.pm:660> INFO - Writing 'planning-document.bbl' with encoding 'UTF-8'
+[496] bbl.pm:763> INFO - Output to planning-document.bbl
+[497] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\Admin\AppData\Local\Temp\biber_tmp_eVx5\79acecc52ff72f017f31533f617ffb0e_23424.utf8, line 136, warning: 1 characters of junk seen at toplevel
+[497] Biber.pm:133> INFO - WARNINGS: 1
