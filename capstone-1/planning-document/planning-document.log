@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  7 MAY 2024 16:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  6 MAY 2024 11:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -986,7 +986,7 @@ Package biblatex Info: ... file 'planning-document.bbl' found.
 (./planning-document.bbl)
 Package biblatex Info: Reference section=0 on input line 19.
 Package biblatex Info: Reference segment=0 on input line 19.
-<../../resources/images/logos/sunway.jpg, id=75, 1400.23125pt x 597.73312pt>
+<../../resources/images/logos/sunway.jpg, id=51, 1400.23125pt x 597.73312pt>
 File: ../../resources/images/logos/sunway.jpg Graphic file (type jpg)
 <use ../../resources/images/logos/sunway.jpg>
 Package pdftex.def Info: ../../resources/images/logos/sunway.jpg  used on input
@@ -1009,8 +1009,8 @@ LaTeX Font Info:    External font `cmex7' loaded for size
 
 ]
 Chapter 1.
-<../../resources/images//cp1/typical_tetris_game.pdf, id=111, 216.81pt x 397.48
-5pt>
+<../../resources/images//cp1/typical_tetris_game.pdf, id=81, 216.81pt x 397.485
+pt>
 File: ../../resources/images//cp1/typical_tetris_game.pdf Graphic file (type pd
 f)
 <use ../../resources/images//cp1/typical_tetris_game.pdf>
@@ -1026,7 +1026,7 @@ l.99
          [1
 
  <../../resources/images//cp1/typical_tetris_game.pdf>]
-<../../resources/images//cp1/tetrio.png, id=145, 767.86874pt x 382.42876pt>
+<../../resources/images//cp1/tetrio.png, id=115, 767.86874pt x 382.42876pt>
 File: ../../resources/images//cp1/tetrio.png Graphic file (type png)
 <use ../../resources/images//cp1/tetrio.png>
 Package pdftex.def Info: ../../resources/images//cp1/tetrio.png  used on input 
@@ -1034,11 +1034,6 @@ line 111.
 (pdftex.def)             Requested size: 452.9679pt x 225.60182pt.
  [2 <../../resources/images//cp1/tetrio.png>] [3]
 Chapter 2.
-
-Overfull \hbox (18.34387pt too wide) in paragraph at lines 168--168
-|[]\OT1/cmr/bx/n/17.28 Optimising Tetris with Nature-inspired Al-go-rithms| 
- []
-
 [4
 
 ]
@@ -1059,16 +1054,16 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
  ***********
 Package rerunfilecheck Info: File `planning-document.out' has not changed.
-(rerunfilecheck)             Checksum: 1F35A2564132E85FC269C00F7D5E38F7;2418.
+(rerunfilecheck)             Checksum: 8ABD1FA5B6D1AEB552ADAFF5ADFD5962;1161.
 Package logreq Info: Writing requests to 'planning-document.run.xml'.
 \openout1 = `planning-document.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28449 strings out of 474504
- 543493 string characters out of 5756725
+ 28437 strings out of 474504
+ 543349 string characters out of 5756725
  1931043 words of memory out of 5000000
- 49961 multiletter control sequences out of 15000+600000
+ 49955 multiletter control sequences out of 15000+600000
  564420 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,7n,107p,1206b,1322s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1077,10 +1072,10 @@ live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/202
 3/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on planning-document.pdf (10 pages, 970299 bytes).
+Output written on planning-document.pdf (10 pages, 968580 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 203 compressed objects within 3 object streams
- 49 named destinations out of 1000 (max. 500000)
- 164 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 202 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 
