@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  8 MAY 2024 16:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  8 MAY 2024 17:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1016,13 +1016,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.131 	 		
+l.132 	 		
            [1
 
 ] [2] [3]
 Chapter 2.
 
-Overfull \hbox (18.34387pt too wide) in paragraph at lines 246--246
+Overfull \hbox (18.34387pt too wide) in paragraph at lines 249--249
 |[]\OT1/cmr/bx/n/17.28 Optimising Tetris with Nature-inspired Al-go-rithms| 
  []
 

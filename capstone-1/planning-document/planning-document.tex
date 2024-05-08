@@ -113,6 +113,7 @@
 					\node at ($(ne) + (1,-8)$){\opiece};
 					\node at ($(ne) + (1,-11)$){\ipiece};
 					\node at ($(ne) + (1,-14)$){\tpiece};
+					\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
 				\end{tikzpicture}
 			\caption{\centering A typical modern Tetris game where four lines are about to be cleared. The Tetrimino on the left of the matrix is the \textit{Hold} piece and the pieces to the right of the matrix are collectively known as the \textit{Queue}.}
 			\label{fig:tetrisgame}
@@ -162,6 +163,7 @@
 						\node at ($(ne) + (1,-8)$){\tpiece};
 						\node at ($(ne) + (1,-11)$){\ipiece};
 						\node at ($(ne) + (1,-14)$){\tpiece};
+						\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
 					\end{tikzpicture}
 				\end{minipage} \hspace{3cm}
 				\begin{minipage}{.4\textwidth}
@@ -183,6 +185,7 @@
 						\node at ($(ne) + (1,-8)$){\lpiece};
 						\node at ($(ne) + (1,-11)$){\jpiece};
 						\node at ($(ne) + (1,-14)$){\spiece};
+						\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
 					\end{tikzpicture}
 				\end{minipage}
 				\caption{\centering A typical game of Versus Tetris. Both players are trying to send lines to each other. The grey lines are \textit{Garbage Lines} sent from player 2 (right) to player 1 (left).}
