@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  7 MAY 2024 16:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  8 MAY 2024 16:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -353,10 +353,12 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 brarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
-(c:/texlive/2023/texmf-dist/tex/latex/setspace/setspace.sty
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2023/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
-)
-(c:/texlive/2023/texmf-dist/tex/latex/tocloft/tocloft.sty
+) (c:/texlive/2023/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 51.
 \cftparskip=\skip50
@@ -867,24 +869,24 @@ Package tocbibind Note: Using chapter style headings, unless overridden.
  (./planning-document.aux)
 \openout1 = `planning-document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -950,7 +952,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 19.
+Package hyperref Info: Link coloring OFF on input line 20.
 
 (./planning-document.out) (./planning-document.out)
 \@outlinefile=\write5
@@ -984,13 +986,13 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'planning-document.bbl' found.
 
 (./planning-document.bbl)
-Package biblatex Info: Reference section=0 on input line 19.
-Package biblatex Info: Reference segment=0 on input line 19.
-<../../resources/images/logos/sunway.jpg, id=75, 1400.23125pt x 597.73312pt>
+Package biblatex Info: Reference section=0 on input line 20.
+Package biblatex Info: Reference segment=0 on input line 20.
+<../../resources/images/logos/sunway.jpg, id=79, 1400.23125pt x 597.73312pt>
 File: ../../resources/images/logos/sunway.jpg Graphic file (type jpg)
 <use ../../resources/images/logos/sunway.jpg>
 Package pdftex.def Info: ../../resources/images/logos/sunway.jpg  used on input
- line 27.
+ line 38.
 (pdftex.def)             Requested size: 166.63171pt x 71.13188pt.
  [1
 
@@ -1009,33 +1011,18 @@ LaTeX Font Info:    External font `cmex7' loaded for size
 
 ]
 Chapter 1.
-<../../resources/images//cp1/typical_tetris_game.pdf, id=111, 216.81pt x 397.48
-5pt>
-File: ../../resources/images//cp1/typical_tetris_game.pdf Graphic file (type pd
-f)
-<use ../../resources/images//cp1/typical_tetris_game.pdf>
-Package pdftex.def Info: ../../resources/images//cp1/typical_tetris_game.pdf  u
-sed on input line 82.
-(pdftex.def)             Requested size: 108.40472pt x 198.742pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.99 			
-         [1
+l.131 	 		
+           [1
 
- <../../resources/images//cp1/typical_tetris_game.pdf>]
-<../../resources/images//cp1/tetrio.png, id=145, 767.86874pt x 382.42876pt>
-File: ../../resources/images//cp1/tetrio.png Graphic file (type png)
-<use ../../resources/images//cp1/tetrio.png>
-Package pdftex.def Info: ../../resources/images//cp1/tetrio.png  used on input 
-line 111.
-(pdftex.def)             Requested size: 452.9679pt x 225.60182pt.
- [2 <../../resources/images//cp1/tetrio.png>] [3]
+] [2] [3]
 Chapter 2.
 
-Overfull \hbox (18.34387pt too wide) in paragraph at lines 168--168
+Overfull \hbox (18.34387pt too wide) in paragraph at lines 246--246
 |[]\OT1/cmr/bx/n/17.28 Optimising Tetris with Nature-inspired Al-go-rithms| 
  []
 
@@ -1059,28 +1046,28 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
  ***********
 Package rerunfilecheck Info: File `planning-document.out' has not changed.
-(rerunfilecheck)             Checksum: 1F35A2564132E85FC269C00F7D5E38F7;2418.
+(rerunfilecheck)             Checksum: A5AF99E747D829278BDF4568372B632E;2586.
 Package logreq Info: Writing requests to 'planning-document.run.xml'.
 \openout1 = `planning-document.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28449 strings out of 474504
- 543493 string characters out of 5756725
- 1931043 words of memory out of 5000000
- 49961 multiletter control sequences out of 15000+600000
+ 28587 strings out of 474504
+ 545546 string characters out of 5756725
+ 1944043 words of memory out of 5000000
+ 50095 multiletter control sequences out of 15000+600000
  564420 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,7n,107p,1206b,1322s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,10n,107p,1206b,1322s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/202
 3/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on planning-document.pdf (10 pages, 970299 bytes).
+Output written on planning-document.pdf (10 pages, 303935 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 203 compressed objects within 3 object streams
- 49 named destinations out of 1000 (max. 500000)
- 164 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 228 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 162 words of extra memory for PDF output out of 10000 (max. 10000000)
 

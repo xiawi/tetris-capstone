@@ -1,6 +1,7 @@
 \documentclass[a4paper, 12pt]{extreport}
 \usepackage[margin=1in]{geometry}
 \usepackage{tikz}
+\usetikzlibrary{calc}
 \usepackage{setspace}
 \graphicspath{ {../../resources/images/} }
 \usepackage[titles]{tocloft}
@@ -17,6 +18,16 @@
 \addbibresource{../../resources/citation.bib}
 
 \begin{document}
+	
+	% defining pieces for figures
+	\def\opiece{\tikz{\draw[fill=yellow](0,0) rectangle (2,2);}}
+	\def\ipiece{\tikz{\draw[fill=cyan](0,0) rectangle (4,1);}}
+	\def\tpiece{\tikz{\draw[fill=violet](0,0) -- (3,0) -- (3,1) -- (2,1) -- (2,2) -- (1,2) -- (1,1) -- (0, 1) -- cycle;}}
+	\def\zpiece{\tikz{\draw[fill=red](0,1) -- (1,1) -- (1,0) -- (3,0) -- (3,1) -- (2,1) -- (2,2) -- (0,2) -- cycle;}}
+	\def\spiece{\tikz{\draw[fill=green](0,0) -- (2,0) -- (2,1) -- (3,1) -- (3,2) -- (1,2) -- (1,1) -- (0,1) -- cycle;}}
+	\def\jpiece{\tikz{\draw[fill=blue](0,0) -- (3,0) -- (3,1) -- (1,1) -- (1,2) -- (0,2) -- cycle;}}
+	\def\lpiece{\tikz{\draw[fill=orange](0,0) -- (3,0) -- (3,2) -- (2,2) -- (2,1) -- (0,1) -- cycle;}}
+	\def\garbage#1#2{\tikz{\draw[fill=black!40!white](0,0) -- (0,#1) -- (#2-1,#1) -- (#2-1,0) -- cycle; \draw[fill=black!40!white](#2, 0) -- (10,0) -- (10,#1) -- (#2,#1) -- cycle}}
 
 	\onehalfspacing
 	
@@ -79,8 +90,31 @@
 		
 		\begin{figure}[h]
 			\centering
-			\includegraphics[scale=0.5]{/cp1/typical_tetris_game}
-			\caption{A Typical Tetris Game}
+				\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.4},scale=.4]
+					\coordinate (sw) at (5,0);
+					\coordinate (nw) at (5,20);
+					\coordinate (se) at (15,0);
+					\coordinate (ne) at (15,20);
+					\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+					\node at ($(nw) - (4,5)$){\spiece};	
+					\node at (sw){\ipiece};
+					\node at ($(sw) + (4,0)$){\opiece};
+					\node at ($(sw) + (2,1)$){\spiece};
+					\node at ($(sw) + (1,1)$){\rotatebox{90}{\zpiece}};
+					\node at ($(sw) + (0,1)$){\rotatebox{-90}{\jpiece}};
+					\node at ($(sw) + (6,0)$){\tpiece};
+					\node at ($(sw) + (7,1)$){\rotatebox{90}{\lpiece}};
+					\node at ($(sw) + (5,1)$){\rotatebox{180}{\tpiece}};
+					\node at ($(sw) + (2,3)$){\zpiece};
+					\node at ($(sw) + (5,3)$){\opiece};
+					\node at ($(se) - (1,-5)$){\rotatebox{90}{\ipiece}};
+					\node at ($(ne) + (1,-2)$){\lpiece};
+					\node at ($(ne) + (1,-5)$){\jpiece};
+					\node at ($(ne) + (1,-8)$){\opiece};
+					\node at ($(ne) + (1,-11)$){\ipiece};
+					\node at ($(ne) + (1,-14)$){\tpiece};
+				\end{tikzpicture}
+			\caption{\centering A typical modern Tetris game where four lines are about to be cleared. The Tetrimino on the left of the matrix is the \textit{Hold} piece and the pieces to the right of the matrix are collectively known as the \textit{Queue}.}
 			\label{fig:tetrisgame}
 		\end{figure}
 		
@@ -105,12 +139,54 @@
 			
 			% Despite the extensive research on classic Tetris, there is a significant gap in the literature regarding its multiplayer versus variant (refer to Figure \ref{tetrio}). This gap presents an intriguing problem within the field of computational gaming, as understanding the optimal strategies, challenges, and computational complexities unique to multiplayer versus Tetris remains largely uncharted territory.
 			
-			\textit{Versus Tetris} (refer to Figure \ref{fig:tetrio}) presents a unique challenge in computational gaming due to its complex dynamics and real-time competitive nature. While previous research regarding the use of nature-inspired algorithms for Tetris optimisation have focused on single-player scenarios, the effectiveness of these algorithms in the multiplayer context remains largely unexplored. Despite the demonstrated success of these algorithms in improving single-player Tetris gameplay, their application to the multiplayer variant poses distinct challenges due to a different rule set and differing objectives that require further investigation.
+			\textit{Versus Tetris} (refer to Figure \ref{fig:versus-example}) presents a unique challenge in computational gaming due to its complex dynamics and real-time competitive nature. While previous research regarding the use of nature-inspired algorithms for Tetris optimisation have focused on single-player scenarios, the effectiveness of these algorithms in the multiplayer context remains largely unexplored. Despite the demonstrated success of these algorithms in improving single-player Tetris gameplay, their application to the multiplayer variant poses distinct challenges due to a different rule set and differing objectives that require further investigation.
 			
 			\begin{figure}
-				\includegraphics[width=\textwidth]{/cp1/tetrio}
-				\caption{A Screenshot of a Game of Tetr.io, a Fan-made Versus Tetris Game}
-				\label{fig:tetrio}
+					\begin{minipage}{.4\textwidth}
+					\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+						\coordinate (sw) at (5,0);
+						\coordinate (nw) at (5,20);
+						\coordinate (se) at (15,0);
+						\coordinate (ne) at (15,20);
+						\coordinate (gar) at (5,6);
+						\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+						\node at ($(nw) - (3,5)$){\opiece};	
+						\node at (sw){\garbage{2}{3}};
+						\node at ($(sw) + (0,2)$){\garbage{4}{10}};
+						\node at (gar){\jpiece};
+						\node at ($(gar) + (3,0)$){\lpiece};
+						\node at ($(gar) + (6,0)$){\opiece};
+						\node at ($(gar) + (9,3)$){\rotatebox{90}{\ipiece}};
+						\node at ($(ne) + (1,-2)$){\spiece};
+						\node at ($(ne) + (1,-5)$){\zpiece};
+						\node at ($(ne) + (1,-8)$){\tpiece};
+						\node at ($(ne) + (1,-11)$){\ipiece};
+						\node at ($(ne) + (1,-14)$){\tpiece};
+					\end{tikzpicture}
+				\end{minipage} \hspace{3cm}
+				\begin{minipage}{.4\textwidth}
+					\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+						\coordinate (sw) at (5,0);
+						\coordinate (nw) at (5,20);
+						\coordinate (se) at (15,0);
+						\coordinate (ne) at (15,20);
+						\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+						\node at ($(nw) - (4,5)$){\jpiece};	% HOLD
+						\node at (sw){\rotatebox{-90}{\lpiece}}; 
+						\node at ($(sw) + (3,0)$){\ipiece};
+						\node at ($(sw) + (3,1)$){\zpiece};
+						\node at ($(sw) + (6,0)$){\rotatebox{90}{\spiece}};
+						\node at ($(sw) + (8,0)$){\opiece};
+						\node at ($(nw) + (1,-13)$){\rotatebox{90}{\tpiece}};
+						\node at ($(ne) + (1,-2)$){\ipiece}; % LOOKAHEAD
+						\node at ($(ne) + (1,-5)$){\tpiece};
+						\node at ($(ne) + (1,-8)$){\lpiece};
+						\node at ($(ne) + (1,-11)$){\jpiece};
+						\node at ($(ne) + (1,-14)$){\spiece};
+					\end{tikzpicture}
+				\end{minipage}
+				\caption{\centering A typical game of Versus Tetris. Both players are trying to send lines to each other. The grey lines are \textit{Garbage Lines} sent from player 2 (right) to player 1 (left).}
+				\label{fig:versus-example}
 			\end{figure}
 		
 		\section{Aim}
@@ -160,6 +236,8 @@
 		% The review has clarity, simplicity, parsimony, which includes clear transitions and systematic use of headings and subheadings.
 		
 		\section{Tetris is NP-complete}
+		
+			\subsection{What is NP-complete?}
 		
 		\section{Addressing NP-complete Problems}
 		
