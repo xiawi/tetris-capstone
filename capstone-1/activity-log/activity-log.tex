@@ -83,16 +83,22 @@
 		Furthermore, the week-by-week tasks undertaken are outlined within these sections. Thus, offering a granular insight into the day-to-day endeavours taken to propel the project towards its culmination.
 		
 		\begin{figure}[h]
-			\noindent
+			\centering
 			\begin{ganttchart}[
 				expand chart = \textwidth, 
-				time slot format = isodate]{2024-04-21}{2024-07-31}
+				time slot format = isodate,
+				vgrid = {*6{draw=none}, dotted}
+				]{2024-04-21}{2024-07-31}
 				\gantttitlecalendar{year, month=shortname}\\
 				\ganttgroup{\hyperref[sec:intro]{Introduction}}{2024-04-21}{2024-04-27}\\
 				\ganttbar{Research}{2024-04-21}{2024-04-25}\\
 				\ganttbar{Writing}{2024-04-22}{2024-04-27}\\
 				\ganttgroup{\hyperref[sec:litrev]{Lit Review}}{2024-04-24}{2024-06-01}\\
-				\ganttbar{Research}{2024-04-24}{2024-05-05}
+				\ganttbar{Research}{2024-04-24}{2024-05-04}\\
+				\ganttbar{Writing}{2024-05-05}{2024-05-12}\\
+				\ganttmilestone{\hyperref[subsec:litrevw3]{Structuring Lit Review}}{2024-05-11}\\
+				\ganttgroup{Revision}{2024-05-10}{2024-05-12}\\
+				\ganttbar{\hyperref[subsec:revw3]{Figures}}{2024-05-10}{2024-05-11}\\
 			\end{ganttchart}
 			\caption{Gantt Chart of Timeline}
 		\end{figure}
@@ -124,12 +130,20 @@
 				As more time goes by, the semester naturally gets heavier. All practical classes started this week. Subsequently, more time was allocated to my other subjects. I took this week to get accustomed to managing my time, balancing my lectures, practicals as well as research.
 				
 				When I did have time this week, I read up on the articles and papers that I have found in Week 1 (refer to Subsection \ref{subsec:litrevw2}) and began writing annotations for the bibliography. I tried to digest what I read and create atomic notes on ideas that could help when writing the literature review.
+				
+			\subsection{Week 3}\label{subsec:litrevw3}
+			
+				Most of this week was dedicated to structuring the literature review. I tried to think of a flow that would help the reader understand as much as possible. I knew that I wanted to delve into the mathematics of NP-completeness, argue why I chose to use nature-inspired algorithms, and eventually divert attention back to optimising Tetris.
 		
 		\section{Coming Up With a Technical Plan}
 		
 		\section{Creating a Work Plan}
 		
 		\section{Making Revisions}
+		
+			\subsection{Week 3}\label{subsec:revw3}
+				
+				Besides working on the literature review this week (refer to Subsection \ref{subsec:litrevw3}), I also spent some time refining the figures used in the introduction. With the help of Dr Richard, I learnt to use the tikz \LaTeX package in order to draw better figures. This was also done to achieve more consistent figures, as I found having screenshots and images from different sources led to a messier paper.
 		
 	% Bibliography
 	\nocite{*}
