@@ -1,17 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'activity-log.blg'
-[126] biber-MSWIN64:340> INFO - === 
-[180] Biber.pm:419> INFO - Reading 'activity-log.bcf'
-[300] Biber.pm:976> INFO - Using all citekeys in bib section 0
-[314] Biber.pm:4419> INFO - Processing section 0
-[327] Biber.pm:4610> INFO - Looking for bibtex file '../../resources/citation.bib' for section 0
-[401] bibtex.pm:1713> INFO - LaTeX decoding ...
-[419] bibtex.pm:1519> INFO - Found BibTeX data source '../../resources/citation.bib'
-[518] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[518] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[518] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[518] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[531] bbl.pm:660> INFO - Writing 'activity-log.bbl' with encoding 'UTF-8'
-[539] bbl.pm:763> INFO - Output to activity-log.bbl
-[539] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\Admin\AppData\Local\Temp\biber_tmp_kKDv\79acecc52ff72f017f31533f617ffb0e_15600.utf8, line 136, warning: 1 characters of junk seen at toplevel
-[539] Biber.pm:133> INFO - WARNINGS: 1
+[107] biber-MSWIN64:340> INFO - === 
+[158] Biber.pm:419> INFO - Reading 'activity-log.bcf'
+[261] Biber.pm:976> INFO - Using all citekeys in bib section 0
+[273] Biber.pm:4419> INFO - Processing section 0
+[283] Biber.pm:4610> INFO - Looking for bibtex file '../../resources/citation.bib' for section 0
+[360] bibtex.pm:1713> INFO - LaTeX decoding ...
+[376] bibtex.pm:1519> INFO - Found BibTeX data source '../../resources/citation.bib'
+[462] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[463] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[463] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[463] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[474] bbl.pm:660> INFO - Writing 'activity-log.bbl' with encoding 'UTF-8'
+[481] bbl.pm:763> INFO - Output to activity-log.bbl
+[481] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\Admin\AppData\Local\Temp\biber_tmp_zrFn\79acecc52ff72f017f31533f617ffb0e_16652.utf8, line 136, warning: 1 characters of junk seen at toplevel
+[482] Biber.pm:133> INFO - WARNINGS: 1

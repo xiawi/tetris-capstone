@@ -2380,6 +2380,8 @@
     <bcf:citekey order="13" intorder="1">review-nia-wael</bcf:citekey>
     <bcf:citekey order="14" intorder="1">tetris-ga-lewis</bcf:citekey>
     <bcf:citekey order="15" intorder="1">swarm-tetris</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">tetris-is-hard-even-to-approx</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">tetris-is-hard-even-to-approx</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

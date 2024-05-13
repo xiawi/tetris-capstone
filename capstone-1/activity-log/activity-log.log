@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  13 MAY 2024 08:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  13 MAY 2024 10:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1077,11 +1077,6 @@ LaTeX Font Info:    External font `cmex7' loaded for size
 Chapter 1.
 Missing character: There is no , in font nullfont!
 
-Overfull \hbox (18.8884pt too wide) in paragraph at lines 102--103
- [][] 
- []
-
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -1095,7 +1090,7 @@ Chapter 2.
 
 ] [5] [6]
 Chapter 3.
-<./meeting-records/meeting-1/meeting-1.pdf, id=148, 597.50829pt x 845.0471pt>
+<./meeting-records/meeting-1/meeting-1.pdf, id=149, 597.50829pt x 845.0471pt>
 File: ./meeting-records/meeting-1/meeting-1.pdf Graphic file (type pdf)
 <use ./meeting-records/meeting-1/meeting-1.pdf>
 Package pdftex.def Info: ./meeting-records/meeting-1/meeting-1.pdf  used on inp
@@ -1106,7 +1101,7 @@ File: ./meeting-records/meeting-1/meeting-1.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./meeting-records/meeting-1/meeting-1.pdf  used on inp
 ut line 159.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<./meeting-records/meeting-1/meeting-1.pdf, id=151, page=1, 597.50829pt x 845.0
+<./meeting-records/meeting-1/meeting-1.pdf, id=152, page=1, 597.50829pt x 845.0
 471pt>
 File: ./meeting-records/meeting-1/meeting-1.pdf Graphic file (type pdf)
 <use ./meeting-records/meeting-1/meeting-1.pdf, page 1>
@@ -1148,10 +1143,10 @@ Package logreq Info: Writing requests to 'activity-log.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30716 strings out of 474504
- 603281 string characters out of 5756725
+ 30721 strings out of 474504
+ 603459 string characters out of 5756725
  1938043 words of memory out of 5000000
- 52204 multiletter control sequences out of 15000+600000
+ 52208 multiletter control sequences out of 15000+600000
  564720 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,17n,107p,1201b,1516s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1164,10 +1159,10 @@ ic/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt1
 2.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/
 texlive/2023/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on activity-log.pdf (10 pages, 356832 bytes).
+Output written on activity-log.pdf (10 pages, 357412 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
- 39 named destinations out of 1000 (max. 500000)
+ 240 PDF objects out of 1000 (max. 8388607)
+ 198 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
  150 words of extra memory for PDF output out of 10000 (max. 10000000)
 

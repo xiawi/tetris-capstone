@@ -491,6 +491,38 @@
       \verb 10.2197/ipsjjip.28.942
       \endverb
     \endentry
+    \entry{garey1979computers}{book}{}
+      \name{author}{2}{}{%
+        {{hash=50556c80ab8b9d3acdb773d66b18a466}{%
+           family={Garey},
+           familyi={G\bibinitperiod},
+           given={M.\bibnamedelimi R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=21d5b87b854f14113dbb3442620163df}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={D.\bibnamedelimi S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {W. H. Freeman}%
+      }
+      \strng{namehash}{77ecb2e0f6439810a8a7f12f0b76f9ac}
+      \strng{fullhash}{77ecb2e0f6439810a8a7f12f0b76f9ac}
+      \strng{bibnamehash}{77ecb2e0f6439810a8a7f12f0b76f9ac}
+      \strng{authorbibnamehash}{77ecb2e0f6439810a8a7f12f0b76f9ac}
+      \strng{authornamehash}{77ecb2e0f6439810a8a7f12f0b76f9ac}
+      \strng{authorfullhash}{77ecb2e0f6439810a8a7f12f0b76f9ac}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{First Edition}
+      \field{isbn}{0716710455}
+      \field{title}{Computers and Intractability: A Guide to the Theory of NP-Completeness}
+      \field{year}{1979}
+      \true{nocite}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
