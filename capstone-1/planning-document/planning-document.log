@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  16 MAY 2024 14:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  16 MAY 2024 18:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1001,7 +1001,7 @@ Package biblatex Info: ... file 'planning-document.bbl' found.
 (./planning-document.bbl)
 Package biblatex Info: Reference section=0 on input line 21.
 Package biblatex Info: Reference segment=0 on input line 21.
-<../../resources/images/logos/sunway.jpg, id=95, 1400.23125pt x 597.73312pt>
+<../../resources/images/logos/sunway.jpg, id=91, 1400.23125pt x 597.73312pt>
 File: ../../resources/images/logos/sunway.jpg Graphic file (type jpg)
 <use ../../resources/images/logos/sunway.jpg>
 Package pdftex.def Info: ../../resources/images/logos/sunway.jpg  used on input
@@ -1047,14 +1047,10 @@ l.137
 
 ] [2] [3]
 Chapter 2.
-LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <7> on input line 261.
-LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <5> on input line 261.
 [4
 
 ]
-Overfull \hbox (1.68333pt too wide) in paragraph at lines 299--299
+Overfull \hbox (1.68333pt too wide) in paragraph at lines 303--303
  \OT1/cmr/m/n/12 centuries| 
  []
 
@@ -1076,34 +1072,31 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
  ***********
 Package rerunfilecheck Info: File `planning-document.out' has not changed.
-(rerunfilecheck)             Checksum: D321D46BEE3AA15F00D34EFFF05003F0;2973.
+(rerunfilecheck)             Checksum: EBCC27CA1C17F80F9AF770E59B57938C;2988.
 Package logreq Info: Writing requests to 'planning-document.run.xml'.
 \openout1 = `planning-document.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28742 strings out of 474504
- 548478 string characters out of 5756725
- 1945043 words of memory out of 5000000
- 50222 multiletter control sequences out of 15000+600000
+ 28738 strings out of 474504
+ 548427 string characters out of 5756725
+ 1944043 words of memory out of 5000000
+ 50220 multiletter control sequences out of 15000+600000
  564420 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,11n,107p,1710b,1468s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,10n,107p,1710b,1466s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/202
-3/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
-.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/te
-xlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/202
-3/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on planning-document.pdf (15 pages, 381874 bytes).
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
+2.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on planning-document.pdf (15 pages, 351834 bytes).
 PDF statistics:
- 355 PDF objects out of 1000 (max. 8388607)
- 309 compressed objects within 4 object streams
- 71 named destinations out of 1000 (max. 500000)
- 194 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 333 PDF objects out of 1000 (max. 8388607)
+ 294 compressed objects within 3 object streams
+ 69 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

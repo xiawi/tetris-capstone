@@ -63,7 +63,7 @@
 			\vspace{1cm}
 			
 			\normalsize Semester: April 2024 \\
-			Date: % DATE OF SUBMISSION
+			Date: % TODO: DATE OF SUBMISSION
 			
 			\vfill
 			
@@ -218,7 +218,7 @@
 				\item Research and implement a variety of nature-inspired optimisation algorithms to determine their suitability for optimising gameplay strategies in Versus Tetris.
 				\item Design a comprehensive framework for objectively evaluating and comparing the performance of the algorithms.
 				\item Develop a playable game of Tetris that simulates gameplay and training.
-				\item Using the game, do comparative analyses with the designed framework to assess the effectiveness and efficiency of each algorithms.
+				\item Using the game, do comparative analyses with the designed framework to assess the effectiveness and efficiency of each algorithm.
 				\item Summarize findings from the comparative analyses.
 				\item Share the software with Tetris players of varying aptitudes to find the level of play for each algorithm.
 			\end{enumerate}
@@ -243,9 +243,12 @@
 		% Section is very well organized.
 		% The review has clarity, simplicity, parsimony, which includes clear transitions and systematic use of headings and subheadings.
 		
-		\section{NP-completeness}
+		\section{Tetris is NP-complete}
+		
+%			TODO: REWRITE THIS
+			In \citeyear{tetris-is-hard-even-to-approx}, \citeauthor{tetris-is-hard-even-to-approx} proved that Tetris is NP-complete \cite{tetris-is-hard-even-to-approx}. More than anything, this article shows that Tetris is difficult, but what does difficulty actually mean? The study of computational complexity asks questions about the intrinsic difficulty of computational problems \cite{cc:conceptual-perspective}. This section aims to briefly elucidate some key concepts of computational complexity, including complexity classes, \textit{P}, \textit{NP}, and reductions, before taking a closer look at \citeauthor{tetris-is-hard-even-to-approx}'s proof.
 			
-			\subsection{Complexity Classes}
+			\subsection{Complexity Classes}\label{subsec:compclass}
 				
 				In computational complexity theory, complexity classes are sets of computational problems that are defined by fixing three parameters \cite{cc:conceptual-perspective}:
 				\begin{enumerate}
@@ -254,13 +257,13 @@
 					\item The complexity measure and limiting function
 				\end{enumerate}
 				
-				The complexity class is then defined as the set of all problems that can be solved by the appropriate computational model, and such that for any input of a problem, the machine expends at most $f(|x|)$ units of a specified resource, $x$ \cite{comp-complexity-papa}.
+				A complexity class is then defined as the set of all problems solvable by the appropriate computational model, ensuring that for any input, the machine expends at most $f(|x|)$ units of a specified resource $x$ \cite{comp-complexity-papa}.
 				
-				Before proceeding further, let us fix two of the three parameters. Firstly, we will adopt time as the measure of complexity. Secondly, we will exclusively focus on decision problems. Most common complexity classes refer to decision problems \cite{goldreich-p-np-np-comp}.	As described by \citeauthor{goldreich-p-np-np-comp}, these computational tasks involve determining if a given instance belongs in some predefined set \cite{goldreich-p-np-np-comp}.
+				Before proceeding further, let us fix two of the three parameters. Firstly, we will adopt time as the measure of complexity. Secondly, we will exclusively focus on decision problems, as they form the foundation of most common complexity classes \cite{goldreich-p-np-np-comp}.	As described by \citeauthor{goldreich-p-np-np-comp}, decision problems involve determining if a given instance belongs in a predefined set. \cite{goldreich-p-np-np-comp}.
 				
-				Here, we introduce our first complexity class: \textit{P}. \textit{P} is defined by \citeauthor{sipser-intro-to-computation} as the class of problems that are decidable in polynomial time on a deterministic single-tape Turing machine \cite{sipser-intro-to-computation}. For this complexity class, the model of computation is deterministic.\footnote{Deterministic refers to the fact that for any given input $x$, the machine's computation can proceed in exactly one way \cite{sipser-intro-to-computation}.}
+				Here, we introduce our first complexity class: \textit{P}. \textit{P} is defined by \citeauthor{sipser-intro-to-computation} as the class of problems that are decidable in polynomial time on a deterministic single-tape Turing machine \cite{sipser-intro-to-computation}. In this complexity class, the model of computation is deterministic, meaning that for any given input $x$, the machine's computation follows a single predetermined path \cite{sipser-intro-to-computation}.
 				
-				The complexity class \textit{NP} is defined by \citeauthor{computers-and-intractability} as the class of all decision problems that can be solved in polynomial time by a nondeterministic algorithm \cite{computers-and-intractability}. The model of computation in this class is nondeterministic, which is an unrealistic model of computation \cite{comp-complexity-papa}. This is because nondeterminism refers to the fact that a solution can be guessed out of polynomially many options in O(1) time \cite{npcompleteness}. Another characteristic of the \textit{NP} class is that its solution can be verified in deterministic polynomial time \cite{sipser-intro-to-computation}.
+				The complexity class \textit{NP} is defined by \citeauthor{computers-and-intractability} as the class of all decision problems that can be solved in polynomial time by a nondeterministic algorithm \cite{computers-and-intractability}. Unlike deterministic computation, nondeterminism allows for guessing the correct solution out of polynomially many options in constant time \cite{npcompleteness}. Moreover, solutions in \textit{NP} can be verified in deterministic polynomial time \cite{sipser-intro-to-computation}.
 				
 				Another complexity class to take note of is \textit{NP-hard}. A problem is \textit{NP-hard} if all problems in NP are polynomial time reducible to it \cite{sipser-intro-to-computation}. A problem that is both \textit{NP} and \textit{NP-hard} is called \textit{NP-complete} (refer to Figure \ref{fig:p,np,npcomplete}) \cite{npcompleteness}.
 				
@@ -279,31 +282,33 @@
 					\label{fig:p,np,npcomplete}
 				\end{figure}
 				
-				Since all problems in \textit{NP} can be reduced to any \textit{NP-complete} problem, if a deterministic polynomial time algorithm can be found for an \textit{NP-complete} problem, it would also mean that the set \textit{NP} and \textit{P} are equal sets. This problem was famously immortalised as one of the millennium prize problems from the Clay Institute of Mathematics \cite{claymathMillenniumPrize}.
+				Since all problems in \textit{NP} can be reduced to any \textit{NP-complete} problem, if a deterministic polynomial time algorithm can be found for an \textit{NP-complete} problem, it would also mean that the set \textit{NP} is polynomial-time solvable, proving \textit{NP} and \textit{P} are equal sets. The question of whether \textit{P = NP} has famously been immortalised as one of the millennium prize problems from the Clay Institute of Mathematics \cite{claymathMillenniumPrize}.
 				
 %				Polynomial and exponential
-				Polynomial-time algorithms are defined as algorithms whose time complexity is $O(p(n))$ for some polynomial function, $p$, where $n$ is the input size \cite{computers-and-intractability}. Any algorithm that cannot be so bounded is known as an exponential-time algorithm \cite{computers-and-intractability}. The distinction between these two algorithms become much more apparent as input sizes increase \cite{computers-and-intractability}. Table \ref{compare-2n-n2} shows why polynomial-time algorithms are more desirable when compared to exponential-time algorithms.
 				
-				\begin{table}[h]
-					\caption{\centering Comparison between (polynomial) $n^2$ and (exponential) $2^n$ as input size, $n$ increases}
-					\label{compare-2n-n2}
+				Polynomial-time algorithms have time complexities bounded by $O(p(n))$, where $p$ is a polynomial function and $n$ is the input size \cite{computers-and-intractability}. Conversely, algorithms whose time complexity cannot be so bounded are deemed exponential-time algorithms \cite{computers-and-intractability}. The distinction between these two becomes more apparent as input sizes increase. Table \ref{tab:compare-2n-n2} illustrates why polynomial-time algorithms are preferred over exponential-time algorithms.
+				
+				\begin{table}
+					\caption{\centering Comparison between (polynomial) $n^2$ algorithm and (exponential) $2^n$ algorithm as input size, $n$ increases}
+					\label{tab:compare-2n-n2}
 					\begin{center}
-						\begin{tabularx}{\linewidth}{|X|*{6}{>{\centering\arraybackslash}X|}}
+						\begin{tabularx}{\linewidth}{|c|*{6}{>{\centering\arraybackslash}X|}}
 							\hline
 							\multicolumn{1}{|c|}{\textbf{Time Complexity}} & \multicolumn{1}{c|}{\textbf{10}} & \multicolumn{1}{c|}{\textbf{20}} & \multicolumn{1}{c|}{\textbf{30}} & \multicolumn{1}{c|}{\textbf{40}} & \multicolumn{1}{c|}{\textbf{50}} & \multicolumn{1}{c|}{\textbf{60}} \\
 							\hline
-							\textit{$n^2$} & .0001 \newline seconds & .0004 \newline seconds & .0009 \newline seconds & .0016 \newline seconds & .0025 \newline seconds & .0036 \newline seconds \\
+							\textit{$n^2$} & .0001\newline seconds & .0004\newline seconds & .0009\newline seconds & .0016\newline seconds & .0025\newline seconds & .0036\newline seconds \\
 							\hline
-							\textit{$2^n$} & .001 \newline seconds & 1.0 \newline seconds & 17.9 \newline minutes & 12.7 \newline days & 35.7 \newline years & 366 \newline centuries \\
+							\textit{$2^n$} & .001\newline seconds & 1.0\newline seconds & 17.9\newline minutes & 12.7\newline days & 35.7\newline years & 366\newline centuries \\
 							\hline
 						\end{tabularx}
 					\end{center}
 				\end{table}
 				
-			\subsection{Reductions}
+			\subsection{Understanding the Proof}
 			
-			\subsection{Tetris}
+				Proving that a problem is NP-complete involves reductions. As mentioned in Subsection \ref{subsec:compclass}, if all problems in NP can be reduced to problem $X$, $X$ is said to be NP-hard. Similarly, proving a problem is NP-complete involves reducing a known NP-complete problem to the problem itself. If problem A is NP-complete and can be reduced to problem B, problem B is NP-complete.
 				
+				% 
 		
 		\section{Addressing NP-complete Problems}
 		
