@@ -16,6 +16,7 @@
 \setlength{\parskip}{.5\baselineskip}
 \usepackage[nottoc,numbib]{tocbibind}
 \addbibresource{../../resources/citation.bib}
+\usepackage{tabularx}
 
 \begin{document}
 	
@@ -132,7 +133,7 @@
 			% Consider discussing the broader significance of your research topic, such as its potential impact on society, industry, or academia. Why should readers care about your project?
 			% You might also highlight any personal or professional experiences that motivated your interest in the topic.
 	 		
-	 		In their paper, \citeauthor{tetris-is-hard-even-to-approx} showed that it is NP-complete to optimise several natural objective functions of Tetris \cite{tetris-is-hard-even-to-approx}. NP-completeness poses a significant challenge in computational problem-solving, as it denotes the absence of polynomial-time algorithms for efficient solutions \cite{npcomplete}. Moreover, the discovery of a polynomial-time algorithm for any NP-complete problem implies that any problem in the set of NP, encompassing efficiently verifiable but potentially difficult problems, could be solved in polynomial time \cite{npcomplete}. NP-completeness extends beyond Tetris, with real-life instances of NP-complete arising in diverse fields such as route optimisation \cite{route-optimisation-np-complete}, job scheduling \cite{job-scheduling-np-complete}, and medicine \cite{medical-diagnosis-np-complete}.
+	 		In their paper, \citeauthor{tetris-is-hard-even-to-approx} showed that it is NP-complete to optimise several natural objective functions of Tetris \cite{tetris-is-hard-even-to-approx}. NP-completeness poses a significant challenge in computational problem-solving, as it denotes the absence of polynomial-time algorithms for efficient solutions \cite{sipser-intro-to-computation}. Moreover, the discovery of a polynomial-time algorithm for any NP-complete problem implies that any problem in the set of NP, encompassing efficiently verifiable but potentially difficult problems, could be solved in polynomial time \cite{sipser-intro-to-computation}. NP-completeness extends beyond Tetris, with real-life instances of NP-complete arising in diverse fields such as route optimisation \cite{route-optimisation-np-complete}, job scheduling \cite{job-scheduling-np-complete}, and medicine \cite{medical-diagnosis-np-complete}.
 	 		
 	 		To address these challenges, researchers have explored alternative approaches to tackle NP-complete problems, including the use of nature-inspired algorithms \cite{job-shop-ga}. Although they might fail at finding optimal solutions, nature-inspired algorithms are able to return acceptable solutions in shorter running times \cite{review-nia-wael}. In the context of optimising Tetris gameplay, studies have shown the effectiveness of using nature-inspired algorithms in playing the classic single-player game \cite{tetris-ga-lewis} \cite{swarm-tetris}. However, there remains limited research on the effectiveness of nature-inspired optimisation algorithms in the multiplayer versus variant of the game.
 			
@@ -242,34 +243,67 @@
 		% Section is very well organized.
 		% The review has clarity, simplicity, parsimony, which includes clear transitions and systematic use of headings and subheadings.
 		
-		\section{Tetris is NP-complete}
-		
-			To better explain NP-completeness, it is paramount to have a solid comprehension of  complexity classes. Thus, the first half of this section will be dedicated to explaining NP-completeness in terms of complexity classes. The second half of this section will delve into the proof that optimally playing Tetris is NP-complete.
+		\section{NP-completeness}
 			
 			\subsection{Complexity Classes}
-			% Explain complexity classes in detail
+				
+				In computational complexity theory, complexity classes are sets of computational problems that are defined by fixing three parameters \cite{cc:conceptual-perspective}:
+				\begin{enumerate}
+					\item The type of computational problem
+					\item The model of computation
+					\item The complexity measure and limiting function
+				\end{enumerate}
+				
+				The complexity class is then defined as the set of all problems that can be solved by the appropriate computational model, and such that for any input of a problem, the machine expends at most $f(|x|)$ units of a specified resource, $x$ \cite{comp-complexity-papa}.
+				
+				Before proceeding further, let us fix two of the three parameters. Firstly, we will adopt time as the measure of complexity. Secondly, we will exclusively focus on decision problems. Most common complexity classes refer to decision problems \cite{goldreich-p-np-np-comp}.	As described by \citeauthor{goldreich-p-np-np-comp}, these computational tasks involve determining if a given instance belongs in some predefined set \cite{goldreich-p-np-np-comp}.
+				
+				Here, we introduce our first complexity class: \textit{P}. \textit{P} is defined by \citeauthor{sipser-intro-to-computation} as the class of problems that are decidable in polynomial time on a deterministic single-tape Turing machine \cite{sipser-intro-to-computation}. For this complexity class, the model of computation is deterministic.\footnote{Deterministic refers to the fact that for any given input $x$, the machine's computation can proceed in exactly one way \cite{sipser-intro-to-computation}.}
+				
+				The complexity class \textit{NP} is defined by \citeauthor{computers-and-intractability} as the class of all decision problems that can be solved in polynomial time by a nondeterministic algorithm \cite{computers-and-intractability}. The model of computation in this class is nondeterministic, which is an unrealistic model of computation \cite{comp-complexity-papa}. This is because nondeterminism refers to the fact that a solution can be guessed out of polynomially many options in O(1) time \cite{npcompleteness}. Another characteristic of the \textit{NP} class is that its solution can be verified in deterministic polynomial time \cite{sipser-intro-to-computation}.
+				
+				Another complexity class to take note of is \textit{NP-hard}. A problem is \textit{NP-hard} if all problems in NP are polynomial time reducible to it \cite{sipser-intro-to-computation}. A problem that is both \textit{NP} and \textit{NP-hard} is called \textit{NP-complete} (refer to Figure \ref{fig:p,np,npcomplete}) \cite{npcompleteness}.
+				
+				\begin{figure}
+					\centering
+					\begin{tikzpicture}
+						\draw[ultra thick] (0,0) circle (3cm);
+						\node at (current bounding box.center) {\textbf{NP-hard}};
+						\draw[ultra thick] (0,-4) circle (3cm);
+						\node at (current bounding box.center) {\textbf{NP-complete}};
+						\node at ($(current bounding box.center) - (0, 1.8)$) {\textbf{NP}};
+						\draw[ultra thick] (0,-5.5) circle(1cm);
+						\node at ($(current bounding box.center) - (0, 3.5)$) {\textbf{P}};
+					\end{tikzpicture}
+					\caption{\centering Visualisation of the sets P, NP, NP-hard and NP-complete.}
+					\label{fig:p,np,npcomplete}
+				\end{figure}
+				
+				Since all problems in \textit{NP} can be reduced to any \textit{NP-complete} problem, if a deterministic polynomial time algorithm can be found for an \textit{NP-complete} problem, it would also mean that the set \textit{NP} and \textit{P} are equal sets. This problem was famously immortalised as one of the millennium prize problems from the Clay Institute of Mathematics \cite{claymathMillenniumPrize}.
+				
+%				Polynomial and exponential
+				Polynomial-time algorithms are defined as algorithms whose time complexity is $O(p(n))$ for some polynomial function, $p$, where $n$ is the input size \cite{computers-and-intractability}. Any algorithm that cannot be so bounded is known as an exponential-time algorithm \cite{computers-and-intractability}. The distinction between these two algorithms become much more apparent as input sizes increase \cite{computers-and-intractability}. Table \ref{compare-2n-n2} shows why polynomial-time algorithms are more desirable when compared to exponential-time algorithms.
+				
+				\begin{table}[h]
+					\caption{\centering Comparison between (polynomial) $n^2$ and (exponential) $2^n$ as input size, $n$ increases}
+					\label{compare-2n-n2}
+					\begin{center}
+						\begin{tabularx}{\linewidth}{|X|*{6}{>{\centering\arraybackslash}X|}}
+							\hline
+							\multicolumn{1}{|c|}{\textbf{Time Complexity}} & \multicolumn{1}{c|}{\textbf{10}} & \multicolumn{1}{c|}{\textbf{20}} & \multicolumn{1}{c|}{\textbf{30}} & \multicolumn{1}{c|}{\textbf{40}} & \multicolumn{1}{c|}{\textbf{50}} & \multicolumn{1}{c|}{\textbf{60}} \\
+							\hline
+							\textit{$n^2$} & .0001 \newline seconds & .0004 \newline seconds & .0009 \newline seconds & .0016 \newline seconds & .0025 \newline seconds & .0036 \newline seconds \\
+							\hline
+							\textit{$2^n$} & .001 \newline seconds & 1.0 \newline seconds & 17.9 \newline minutes & 12.7 \newline days & 35.7 \newline years & 366 \newline centuries \\
+							\hline
+						\end{tabularx}
+					\end{center}
+				\end{table}
+				
+			\subsection{Reductions}
 			
-			
-			\subsection{NP-completeness}
-			% Explain what NP-completeness is
-			
-			% Explain the significance of NP-complete
-				% P vs NP
-			
-			% Explain reductions (cook theorem)
-				% What does a reduction necessarily prove?
-			
-			% Explain the Tetris reduction
-			\subsection{The Tetris Reduction}
-			
-			In their paper, \citeauthor{tetris-is-hard-even-to-approx} defined four natural objectives of Tetris \cite{tetris-is-hard-even-to-approx}:
-			
-			\begin{enumerate}
-				\item maximising the number of rows cleared,
-				\item maximising the number of pieces placed,
-				\item maximising the number of Tetrises, and
-				\item minimising the height of the stack.
-			\end{enumerate}
+			\subsection{Tetris}
+				
 		
 		\section{Addressing NP-complete Problems}
 		

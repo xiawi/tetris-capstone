@@ -491,7 +491,7 @@
       \verb 10.2197/ipsjjip.28.942
       \endverb
     \endentry
-    \entry{garey1979computers}{book}{}
+    \entry{computers-and-intractability}{book}{}
       \name{author}{2}{}{%
         {{hash=50556c80ab8b9d3acdb773d66b18a466}{%
            family={Garey},
@@ -521,6 +521,60 @@
       \field{isbn}{0716710455}
       \field{title}{Computers and Intractability: A Guide to the Theory of NP-Completeness}
       \field{year}{1979}
+      \true{nocite}
+    \endentry
+    \entry{cc:conceptual-perspective}{article}{}
+      \name{author}{1}{}{%
+        {{hash=66aba379c7d3adb8af5b662a65c4c140}{%
+           family={Goldreich},
+           familyi={G\bibinitperiod},
+           given={Oded},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{66aba379c7d3adb8af5b662a65c4c140}
+      \strng{fullhash}{66aba379c7d3adb8af5b662a65c4c140}
+      \strng{bibnamehash}{66aba379c7d3adb8af5b662a65c4c140}
+      \strng{authorbibnamehash}{66aba379c7d3adb8af5b662a65c4c140}
+      \strng{authornamehash}{66aba379c7d3adb8af5b662a65c4c140}
+      \strng{authorfullhash}{66aba379c7d3adb8af5b662a65c4c140}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This book is rooted in the thesis that complexity theory is extremely rich in conceptual content, and that this contents should be explicitly communicated in expositions and courses on the subject. The desire to provide a corresponding textbook is indeed the motivation for writing the current book and its main governing principle.The book offers a conceptual perspective on complexity theory, and the presentation is designed to highlight this perspective. It is intended mainly for students that wish to learn complexity theory and for educators that intend to teach a course on complexity theory. The book is also intended to promote interest in complexity theory and make it acccessible to general readers with adequate background (which is mainly being comfortable with abstract discussions, definitions and proofs). We expect most readers to have a basic knowledge of algorithms, or at least be fairly comfortable with the notion of an algorithm.The book focuses on several sub-areas of complexity theory (including, e.g., pseudorandomness and probabilistic proof systems). In each case, the exposition starts from the intuitive questions addresses by the sub-area, as embodied in the concepts that it studies. The exposition discusses the fundamental importance of these questions, the choices made in the actual formulation of these questions and notions, the approaches that underly the answers, and the ideas that are embedded in these answers. Our view is that these (non-technical") aspects are the core of the field, and the presentation attempts to re ect this view.}
+      \field{issn}{0163-5700}
+      \field{journaltitle}{SIGACT News}
+      \field{month}{9}
+      \field{number}{3}
+      \field{title}{Computational complexity: a conceptual perspective}
+      \field{volume}{39}
+      \field{year}{2008}
+      \true{nocite}
+      \field{pages}{35\bibrangedash 39}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1145/1412700.1412710
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/1412700.1412710
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/1412700.1412710
+      \endverb
+    \endentry
+    \entry{claymathMillenniumPrize}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.claymath.org/millennium-problems/}}
+      \field{note}{[Accessed 15-05-2024]}
+      \field{title}{{T}he {M}illennium {P}rize {P}roblems - {C}lay {M}athematics {I}nstitute --- claymath.org}
       \true{nocite}
     \endentry
   \enddatalist

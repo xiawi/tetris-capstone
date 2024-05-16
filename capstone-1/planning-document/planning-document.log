@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  13 MAY 2024 10:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  16 MAY 2024 14:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -863,30 +863,51 @@ Package tocbibind Info: The document has chapter divisions on input line 50.
 
 Package tocbibind Note: Using chapter style headings, unless overridden.
 
+) (c:/texlive/2023/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+
+(c:/texlive/2023/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen274
+\ar@mcellbox=\box66
+\extrarowheight=\dimen275
+\NC@list=\toks35
+\extratabsurround=\skip112
+\backup@length=\skip113
+\ar@cellbox=\box67
 )
-\@quotelevel=\count435
-\@quotereset=\count436
- (./planning-document.aux)
+\TX@col@width=\dimen276
+\TX@old@table=\dimen277
+\TX@old@col=\dimen278
+\TX@target=\dimen279
+\TX@delta=\dimen280
+\TX@cols=\count435
+\TX@ftn=\toks36
+)
+\@quotelevel=\count436
+\@quotereset=\count437
+
+(./planning-document.aux)
 \openout1 = `planning-document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -924,35 +945,27 @@ LaTeX Font Info:    ... okay on input line 20.
 
 (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count437
-\scratchdimen=\dimen274
-\scratchbox=\box66
-\nofMPsegments=\count438
-\nofMParguments=\count439
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count440
-\MPscratchDim=\dimen275
-\MPnumerator=\count441
-\makeMPintoPDFobject=\count442
-\everyMPtoPDFconversion=\toks36
+\scratchcounter=\count438
+\scratchdimen=\dimen281
+\scratchbox=\box68
+\nofMPsegments=\count439
+\nofMParguments=\count440
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count441
+\MPscratchDim=\dimen282
+\MPnumerator=\count442
+\makeMPintoPDFobject=\count443
+\everyMPtoPDFconversion=\toks38
 ) (c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-
-(c:/texlive/2023/texmf-dist/tex/latex/grfext/grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (c:/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 20.
+Package hyperref Info: Link coloring OFF on input line 21.
 
 (./planning-document.out) (./planning-document.out)
 \@outlinefile=\write5
@@ -986,13 +999,13 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'planning-document.bbl' found.
 
 (./planning-document.bbl)
-Package biblatex Info: Reference section=0 on input line 20.
-Package biblatex Info: Reference segment=0 on input line 20.
+Package biblatex Info: Reference section=0 on input line 21.
+Package biblatex Info: Reference segment=0 on input line 21.
 <../../resources/images/logos/sunway.jpg, id=95, 1400.23125pt x 597.73312pt>
 File: ../../resources/images/logos/sunway.jpg Graphic file (type jpg)
 <use ../../resources/images/logos/sunway.jpg>
 Package pdftex.def Info: ../../resources/images/logos/sunway.jpg  used on input
- line 38.
+ line 39.
 (pdftex.def)             Requested size: 166.63171pt x 71.13188pt.
  [1
 
@@ -1029,60 +1042,68 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.136 	 		
+l.137 	 		
            [1
 
 ] [2] [3]
 Chapter 2.
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <7> on input line 261.
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <5> on input line 261.
 [4
 
 ]
+Overfull \hbox (1.68333pt too wide) in paragraph at lines 299--299
+ \OT1/cmr/m/n/12 centuries| 
+ []
+
+[5] [6]
 Chapter 3.
-[5
+[7
 
 ]
 Chapter 4.
-[6
+[8
 
 ]
 Chapter 5.
-[7
+[9
 
-] (./planning-document.aux)
+] [10] (./planning-document.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
  ***********
-
-
-Package rerunfilecheck Warning: File `planning-document.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `planning-document.out':
-(rerunfilecheck)             Before: 17772D56998916B33CE26617706F59FD;3221
-(rerunfilecheck)             After:  BB02521C10A9E112B57E5162C16CBB88;3110.
+Package rerunfilecheck Info: File `planning-document.out' has not changed.
+(rerunfilecheck)             Checksum: D321D46BEE3AA15F00D34EFFF05003F0;2973.
 Package logreq Info: Writing requests to 'planning-document.run.xml'.
 \openout1 = `planning-document.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28615 strings out of 474504
- 545983 string characters out of 5756725
+ 28742 strings out of 474504
+ 548478 string characters out of 5756725
  1945043 words of memory out of 5000000
- 50107 multiletter control sequences out of 15000+600000
+ 50222 multiletter control sequences out of 15000+600000
  564420 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,10n,107p,1206b,1324s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,11n,107p,1710b,1468s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/202
-3/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on planning-document.pdf (12 pages, 306651 bytes).
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
+.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/te
+xlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/202
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on planning-document.pdf (15 pages, 381874 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
- 240 compressed objects within 3 object streams
- 60 named destinations out of 1000 (max. 500000)
+ 355 PDF objects out of 1000 (max. 8388607)
+ 309 compressed objects within 4 object streams
+ 71 named destinations out of 1000 (max. 500000)
  194 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2,6 +2,7 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces \centering A typical modern Tetris game where four lines are about to be cleared. The Tetrimino on the left of the matrix is the \textit {Hold} piece and the pieces to the right of the matrix are collectively known as the \textit {Queue}.}}{1}{figure.1.1}%
 \contentsline {figure}{\numberline {1.2}{\ignorespaces \centering A typical game of Versus Tetris. Both players are trying to send lines to each other. The grey blocks are \textit {Garbage Lines} sent from Player 2 (right) to Player 1 (left).}}{2}{figure.1.2}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \centering Visualisation of the sets P, NP, NP-hard and NP-complete.}}{5}{figure.2.1}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
