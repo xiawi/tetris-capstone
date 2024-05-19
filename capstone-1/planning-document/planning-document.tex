@@ -17,6 +17,7 @@
 \usepackage[nottoc,numbib]{tocbibind}
 \addbibresource{../../resources/citation.bib}
 \usepackage{tabularx}
+\usepackage{multirow}
 
 \begin{document}
 	
@@ -284,9 +285,9 @@
 				
 				Since all problems in \textit{NP} can be reduced to any \textit{NP-complete} problem, if a deterministic polynomial time algorithm can be found for an \textit{NP-complete} problem, it would also mean that the set \textit{NP} is polynomial-time solvable, proving \textit{NP} and \textit{P} are equal sets. The question of whether \textit{P = NP} has famously been immortalised as one of the millennium prize problems from the Clay Institute of Mathematics \cite{claymathMillenniumPrize}.
 				
-%				Polynomial and exponential
+%				why polynomial > exponential
 				
-				Polynomial-time algorithms have time complexities bounded by $O(p(n))$, where $p$ is a polynomial function and $n$ is the input size \cite{computers-and-intractability}. Conversely, algorithms whose time complexity cannot be so bounded are deemed exponential-time algorithms \cite{computers-and-intractability}. The distinction between these two becomes more apparent as input sizes increase. Table \ref{tab:compare-2n-n2} illustrates why polynomial-time algorithms are preferred over exponential-time algorithms.
+				The reason polynomial-time algorithms are so important is because these algorithms have time complexities bounded by $O(p(n))$, where $p$ is a polynomial function and $n$ is the input size \cite{computers-and-intractability}. Conversely, algorithms whose time complexity cannot be so bounded are deemed exponential-time algorithms \cite{computers-and-intractability}. The distinction between these two becomes more apparent as input sizes increase. Table \ref{tab:compare-2n-n2} illustrates why polynomial-time algorithms are preferred over exponential-time algorithms.
 				
 				\begin{table}
 					\caption{\centering Comparison between (polynomial) $n^2$ algorithm and (exponential) $2^n$ algorithm as input size, $n$ increases}
@@ -294,7 +295,8 @@
 					\begin{center}
 						\begin{tabularx}{\linewidth}{|c|*{6}{>{\centering\arraybackslash}X|}}
 							\hline
-							\multicolumn{1}{|c|}{\textbf{Time Complexity}} & \multicolumn{1}{c|}{\textbf{10}} & \multicolumn{1}{c|}{\textbf{20}} & \multicolumn{1}{c|}{\textbf{30}} & \multicolumn{1}{c|}{\textbf{40}} & \multicolumn{1}{c|}{\textbf{50}} & \multicolumn{1}{c|}{\textbf{60}} \\
+							\multirow{2}{*}{\textbf{Time Complexity}} & \multicolumn{6}{c|}{\textbf{$n$}}\\ \cline{2-7}
+							 & \multicolumn{1}{c|}{\textbf{10}} & \multicolumn{1}{c|}{\textbf{20}} & \multicolumn{1}{c|}{\textbf{30}} & \multicolumn{1}{c|}{\textbf{40}} & \multicolumn{1}{c|}{\textbf{50}} & \multicolumn{1}{c|}{\textbf{60}} \\
 							\hline
 							\textit{$n^2$} & .0001\newline seconds & .0004\newline seconds & .0009\newline seconds & .0016\newline seconds & .0025\newline seconds & .0036\newline seconds \\
 							\hline
@@ -312,7 +314,7 @@
 		
 		\section{Addressing NP-complete Problems}
 		
-			% Explain the different approaches taken to solving NP-complete problems
+			% Explain the different appro\part{title}aches taken to solving NP-complete problems
 		
 		\section{Nature-inspired Algorithms}
 		

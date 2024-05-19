@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  16 MAY 2024 18:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  17 MAY 2024 12:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -884,30 +884,37 @@ Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 \TX@cols=\count435
 \TX@ftn=\toks36
 )
-\@quotelevel=\count436
-\@quotereset=\count437
+(c:/texlive/2023/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip114
+\multirow@cntb=\count436
+\multirow@dima=\skip115
+\bigstrutjot=\dimen281
+)
+\@quotelevel=\count437
+\@quotereset=\count438
 
 (./planning-document.aux)
 \openout1 = `planning-document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -945,16 +952,16 @@ LaTeX Font Info:    ... okay on input line 21.
 
 (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count438
-\scratchdimen=\dimen281
+\scratchcounter=\count439
+\scratchdimen=\dimen282
 \scratchbox=\box68
-\nofMPsegments=\count439
-\nofMParguments=\count440
+\nofMPsegments=\count440
+\nofMParguments=\count441
 \everyMPshowfont=\toks37
-\MPscratchCnt=\count441
-\MPscratchDim=\dimen282
-\MPnumerator=\count442
-\makeMPintoPDFobject=\count443
+\MPscratchCnt=\count442
+\MPscratchDim=\dimen283
+\MPnumerator=\count443
+\makeMPintoPDFobject=\count444
 \everyMPtoPDFconversion=\toks38
 ) (c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -965,7 +972,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 21.
+Package hyperref Info: Link coloring OFF on input line 22.
 
 (./planning-document.out) (./planning-document.out)
 \@outlinefile=\write5
@@ -999,13 +1006,13 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'planning-document.bbl' found.
 
 (./planning-document.bbl)
-Package biblatex Info: Reference section=0 on input line 21.
-Package biblatex Info: Reference segment=0 on input line 21.
+Package biblatex Info: Reference section=0 on input line 22.
+Package biblatex Info: Reference segment=0 on input line 22.
 <../../resources/images/logos/sunway.jpg, id=91, 1400.23125pt x 597.73312pt>
 File: ../../resources/images/logos/sunway.jpg Graphic file (type jpg)
 <use ../../resources/images/logos/sunway.jpg>
 Package pdftex.def Info: ../../resources/images/logos/sunway.jpg  used on input
- line 39.
+ line 40.
 (pdftex.def)             Requested size: 166.63171pt x 71.13188pt.
  [1
 
@@ -1042,7 +1049,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.137 	 		
+l.138 	 		
            [1
 
 ] [2] [3]
@@ -1050,7 +1057,7 @@ Chapter 2.
 [4
 
 ]
-Overfull \hbox (1.68333pt too wide) in paragraph at lines 303--303
+Overfull \hbox (1.68333pt too wide) in paragraph at lines 305--305
  \OT1/cmr/m/n/12 centuries| 
  []
 
@@ -1078,10 +1085,10 @@ Package logreq Info: Writing requests to 'planning-document.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28738 strings out of 474504
- 548427 string characters out of 5756725
- 1944043 words of memory out of 5000000
- 50220 multiletter control sequences out of 15000+600000
+ 28806 strings out of 474504
+ 549608 string characters out of 5756725
+ 1945043 words of memory out of 5000000
+ 50284 multiletter control sequences out of 15000+600000
  564420 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,10n,107p,1710b,1466s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1093,7 +1100,7 @@ type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
 2.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on planning-document.pdf (15 pages, 351834 bytes).
+Output written on planning-document.pdf (15 pages, 351955 bytes).
 PDF statistics:
  333 PDF objects out of 1000 (max. 8388607)
  294 compressed objects within 3 object streams
