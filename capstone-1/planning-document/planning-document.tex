@@ -313,7 +313,7 @@
 				
 				\begin{enumerate}
 					\item Show that $X \in $ \textit{NP} by finding a nondeterministic algorithm or giving a polynomial-time verifying algorithm.
-					\item Show that $X \in$ \textit{NP-complete} by reducing a known \textit{NP-hard} problem to $X$.
+					\item Show that $X \in$ \textit{NP-complete} by reducing a known \textit{NP-complete} problem to $X$, this is sufficient since problems in \textit{NP-complete} are also inherently \textit{NP-hard}.
 				\end{enumerate} 
 
 %				REDUCTIONS
@@ -344,7 +344,7 @@
 				
 				\noindent \textbf{Output}: Can $\{a_1,...,a_3s\}$ be partitioned into $s$ disjoint subsets $A_1,...,A_s$ so that for all $1 \le j \le s$, we have $\sum_{a_i \in A_j}a_i = T$?
 				
-				With special initial matrices, \citeauthor{tetris-is-hard-even-to-approx} were able to prove that instances of 3-PARTITION can be mapped to instances of the 4 objective functions \cite{tetris-is-hard-even-to-approx}.
+				With special initial matrices, \citeauthor{tetris-is-hard-even-to-approx} were able to prove that instances of 3-PARTITION can be mapped to instances of the 4 objective functions \cite{tetris-is-hard-even-to-approx}. In \citeyear{tetris-o1-np-hard}, \citeauthor{tetris-o1-np-hard} also proved that Tetris is NP-hard even when restricted to constant-sized rows or columns \cite{tetris-o1-np-hard}.
 			
 		\section{Addressing NP-complete Problems}
 		
