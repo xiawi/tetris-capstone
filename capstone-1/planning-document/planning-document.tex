@@ -261,13 +261,13 @@
 				
 				A complexity class is then defined as the set of all problems solvable by the appropriate computational model, ensuring that for any input, the machine expends at most $f(|x|)$ units of a specified resource $x$ \cite{comp-complexity-papa}.
 				
-				Before proceeding further, let us fix two of the three parameters. Firstly, we will adopt time as the measure of complexity. Secondly, we will exclusively focus on decision problems, as they form the foundation of most common complexity classes \cite{goldreich-p-np-np-comp}.	As described by \citeauthor{goldreich-p-np-np-comp}, decision problems involve determining if a given instance belongs in a predefined set. \cite{goldreich-p-np-np-comp}.
+				Before proceeding further, let us fix two of the three parameters. Firstly, we will adopt time as the measure of complexity. Secondly, we will exclusively focus on decision problems, as they form the foundation of most common complexity classes \cite{goldreich-p-np-np-comp}.	As described by \citeauthor{goldreich-p-np-np-comp}, decision problems involve determining if a given instance belongs in a predefined set \cite{goldreich-p-np-np-comp}.
 				
 				Here, we introduce our first complexity class: \textit{P}. \textit{P} is defined by \citeauthor{sipser-intro-to-computation} as the class of problems that are decidable in polynomial time on a deterministic single-tape Turing machine \cite{sipser-intro-to-computation}. In this complexity class, the model of computation is deterministic, meaning that for any given input $x$, the machine's computation follows a single predetermined path \cite{sipser-intro-to-computation}.
 				
 				The complexity class \textit{NP} is defined by \citeauthor{computers-and-intractability} as the class of all decision problems that can be solved in polynomial time by a nondeterministic algorithm \cite{computers-and-intractability}. Unlike deterministic computation, nondeterminism allows for guessing the correct solution out of polynomially many options in constant time \cite{npcompleteness}. Moreover, solutions in \textit{NP} can be verified in deterministic polynomial time \cite{sipser-intro-to-computation}.
 				
-				Another complexity class to take note of is \textit{NP-hard}. A problem is \textit{NP-hard} if all problems in NP are polynomial time reducible to it (refer to Subsection  \ref{subsec:understanding-proof})\cite{sipser-intro-to-computation}. A problem that is both \textit{NP} and \textit{NP-hard} is called \textit{NP-complete} (refer to Figure \ref{fig:p,np,npcomplete}) \cite{npcompleteness}.
+				Another complexity class to take note of is \textit{NP-hard}. A problem is \textit{NP-hard} if all problems in \textit{NP} are polynomial time reducible to it (refer to Subsection  \ref{subsec:understanding-proof})\cite{sipser-intro-to-computation}. A problem that is both \textit{NP} and \textit{NP-hard} is called \textit{NP-complete} (refer to Figure \ref{fig:p,np,npcomplete}) \cite{npcompleteness}.
 				
 				\begin{figure}
 					\centering
