@@ -658,6 +658,37 @@
       \verb https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/resources/mit6_046js15_lec16/
       \endverb
     \endentry
+    \entry{cc:modern}{book}{}
+      \name{author}{2}{}{%
+        {{hash=e705e3c227df3ea5f063273e80a8711a}{%
+           family={Arora},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=909bf04d3ddf4b0531fdbcfed494d4b4}{%
+           family={Barak},
+           familyi={B\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{b4c57797cd110914d1cad12fe98cf427}
+      \strng{fullhash}{b4c57797cd110914d1cad12fe98cf427}
+      \strng{bibnamehash}{b4c57797cd110914d1cad12fe98cf427}
+      \strng{authorbibnamehash}{b4c57797cd110914d1cad12fe98cf427}
+      \strng{authornamehash}{b4c57797cd110914d1cad12fe98cf427}
+      \strng{authorfullhash}{b4c57797cd110914d1cad12fe98cf427}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780521424264}
+      \field{title}{Computational Complexity: A Modern Approach}
+      \field{year}{2009}
+      \true{nocite}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

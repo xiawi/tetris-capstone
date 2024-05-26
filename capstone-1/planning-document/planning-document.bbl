@@ -479,8 +479,8 @@
       \strng{authorbibnamehash}{b3b407bb63367a850366076095ee1970}
       \strng{authornamehash}{b3b407bb63367a850366076095ee1970}
       \strng{authorfullhash}{b3b407bb63367a850366076095ee1970}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-0-201-53082-7}
@@ -508,8 +508,8 @@
       \strng{authornamehash}{66aba379c7d3adb8af5b662a65c4c140}
       \strng{authorfullhash}{66aba379c7d3adb8af5b662a65c4c140}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{P, NP, and NP-Completeness: The Basics of Computational Complexity}
@@ -558,8 +558,8 @@
       \strng{authorbibnamehash}{c8f17b9639fd4046dd85c2daf62d2605}
       \strng{authornamehash}{c8f17b9639fd4046dd85c2daf62d2605}
       \strng{authorfullhash}{c8f17b9639fd4046dd85c2daf62d2605}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{6.046J: Design and Analysis on Algorithms, Massachusetts Institute of Technology}
@@ -573,12 +573,42 @@
       \endverb
     \endentry
     \entry{claymathMillenniumPrize}{misc}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.claymath.org/millennium-problems/}}
       \field{note}{[Accessed 15-05-2024]}
       \field{title}{{T}he {M}illennium {P}rize {P}roblems - {C}lay {M}athematics {I}nstitute --- claymath.org}
+    \endentry
+    \entry{cc:modern}{book}{}
+      \name{author}{2}{}{%
+        {{hash=e705e3c227df3ea5f063273e80a8711a}{%
+           family={Arora},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=909bf04d3ddf4b0531fdbcfed494d4b4}{%
+           family={Barak},
+           familyi={B\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{b4c57797cd110914d1cad12fe98cf427}
+      \strng{fullhash}{b4c57797cd110914d1cad12fe98cf427}
+      \strng{bibnamehash}{b4c57797cd110914d1cad12fe98cf427}
+      \strng{authorbibnamehash}{b4c57797cd110914d1cad12fe98cf427}
+      \strng{authornamehash}{b4c57797cd110914d1cad12fe98cf427}
+      \strng{authorfullhash}{b4c57797cd110914d1cad12fe98cf427}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780521424264}
+      \field{title}{Computational Complexity: A Modern Approach}
+      \field{year}{2009}
     \endentry
   \enddatalist
 \endrefsection
