@@ -157,7 +157,7 @@
       \verb 10.2307/3619195
       \endverb
     \endentry
-    \entry{npcomplete}{incollection}{}
+    \entry{sipser-intro-to-computation}{incollection}{}
       \name{author}{1}{}{%
         {{hash=13b9c16a9de2bb891eb8aa2a768eb2a8}{%
            family={Sipser},
@@ -177,10 +177,8 @@
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{annotation}{In this section of the textbook, Sipser describes NP-completeness and shares some characteristics of NP-complete problems. Sipser is an American theoretical computer scientist who made many contributions in the field of computational complexity. This source will be used to describe the properties of NP-complete problems.}
+      \field{annotation}{In a of theis textbook, Sipser describes NP-completeness and shares some characteristics of NP-complete problems. Sipser is an American theoretical computer scientist who made many contributions in the field of computational complexity. This source will be used to describe the properties of NP-complete problems.}
       \field{booktitle}{Introduction to the Theory of Computation}
-      \field{title}{NP-completeness}
       \field{year}{2013}
     \endentry
     \entry{route-optimisation-np-complete}{article}{}
@@ -418,6 +416,258 @@
       \verb 10.1109/CEC.2010.5586033
       \endverb
       \keyw{Games;Shape;Neurons;Artificial neural networks;Training;Equations;Mathematical model}
+    \endentry
+    \entry{cc:conceptual-perspective}{article}{}
+      \name{author}{1}{}{%
+        {{hash=66aba379c7d3adb8af5b662a65c4c140}{%
+           family={Goldreich},
+           familyi={G\bibinitperiod},
+           given={Oded},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{66aba379c7d3adb8af5b662a65c4c140}
+      \strng{fullhash}{66aba379c7d3adb8af5b662a65c4c140}
+      \strng{bibnamehash}{66aba379c7d3adb8af5b662a65c4c140}
+      \strng{authorbibnamehash}{66aba379c7d3adb8af5b662a65c4c140}
+      \strng{authornamehash}{66aba379c7d3adb8af5b662a65c4c140}
+      \strng{authorfullhash}{66aba379c7d3adb8af5b662a65c4c140}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This book is rooted in the thesis that complexity theory is extremely rich in conceptual content, and that this contents should be explicitly communicated in expositions and courses on the subject. The desire to provide a corresponding textbook is indeed the motivation for writing the current book and its main governing principle.The book offers a conceptual perspective on complexity theory, and the presentation is designed to highlight this perspective. It is intended mainly for students that wish to learn complexity theory and for educators that intend to teach a course on complexity theory. The book is also intended to promote interest in complexity theory and make it acccessible to general readers with adequate background (which is mainly being comfortable with abstract discussions, definitions and proofs). We expect most readers to have a basic knowledge of algorithms, or at least be fairly comfortable with the notion of an algorithm.The book focuses on several sub-areas of complexity theory (including, e.g., pseudorandomness and probabilistic proof systems). In each case, the exposition starts from the intuitive questions addresses by the sub-area, as embodied in the concepts that it studies. The exposition discusses the fundamental importance of these questions, the choices made in the actual formulation of these questions and notions, the approaches that underly the answers, and the ideas that are embedded in these answers. Our view is that these (non-technical") aspects are the core of the field, and the presentation attempts to re ect this view.}
+      \field{issn}{0163-5700}
+      \field{journaltitle}{SIGACT News}
+      \field{month}{9}
+      \field{number}{3}
+      \field{title}{Computational complexity: a conceptual perspective}
+      \field{volume}{39}
+      \field{year}{2008}
+      \field{pages}{35\bibrangedash 39}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1145/1412700.1412710
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/1412700.1412710
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/1412700.1412710
+      \endverb
+    \endentry
+    \entry{comp-complexity-papa}{book}{}
+      \name{author}{1}{}{%
+        {{hash=b3b407bb63367a850366076095ee1970}{%
+           family={Papadimitriou},
+           familyi={P\bibinitperiod},
+           given={Christos\bibnamedelima H.},
+           giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{b3b407bb63367a850366076095ee1970}
+      \strng{fullhash}{b3b407bb63367a850366076095ee1970}
+      \strng{bibnamehash}{b3b407bb63367a850366076095ee1970}
+      \strng{authorbibnamehash}{b3b407bb63367a850366076095ee1970}
+      \strng{authornamehash}{b3b407bb63367a850366076095ee1970}
+      \strng{authorfullhash}{b3b407bb63367a850366076095ee1970}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-201-53082-7}
+      \field{title}{Computational complexity.}
+      \field{year}{1994}
+      \field{pages}{I\bibrangedash XV\bibrangessep 1\bibrangedash 523}
+      \range{pages}{538}
+      \keyw{complexity computational}
+    \endentry
+    \entry{goldreich-p-np-np-comp}{book}{}
+      \name{author}{1}{}{%
+        {{hash=66aba379c7d3adb8af5b662a65c4c140}{%
+           family={Goldreich},
+           familyi={G\bibinitperiod},
+           given={Oded},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{66aba379c7d3adb8af5b662a65c4c140}
+      \strng{fullhash}{66aba379c7d3adb8af5b662a65c4c140}
+      \strng{bibnamehash}{66aba379c7d3adb8af5b662a65c4c140}
+      \strng{authorbibnamehash}{66aba379c7d3adb8af5b662a65c4c140}
+      \strng{authornamehash}{66aba379c7d3adb8af5b662a65c4c140}
+      \strng{authorfullhash}{66aba379c7d3adb8af5b662a65c4c140}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{P, NP, and NP-Completeness: The Basics of Computational Complexity}
+      \field{year}{2010}
+    \endentry
+    \entry{computers-and-intractability}{book}{}
+      \name{author}{2}{}{%
+        {{hash=50556c80ab8b9d3acdb773d66b18a466}{%
+           family={Garey},
+           familyi={G\bibinitperiod},
+           given={M.\bibnamedelimi R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=21d5b87b854f14113dbb3442620163df}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={D.\bibnamedelimi S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {W. H. Freeman}%
+      }
+      \strng{namehash}{77ecb2e0f6439810a8a7f12f0b76f9ac}
+      \strng{fullhash}{77ecb2e0f6439810a8a7f12f0b76f9ac}
+      \strng{bibnamehash}{77ecb2e0f6439810a8a7f12f0b76f9ac}
+      \strng{authorbibnamehash}{77ecb2e0f6439810a8a7f12f0b76f9ac}
+      \strng{authornamehash}{77ecb2e0f6439810a8a7f12f0b76f9ac}
+      \strng{authorfullhash}{77ecb2e0f6439810a8a7f12f0b76f9ac}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{First Edition}
+      \field{isbn}{0716710455}
+      \field{title}{Computers and Intractability: A Guide to the Theory of NP-Completeness}
+      \field{year}{1979}
+    \endentry
+    \entry{npcompleteness}{online}{}
+      \name{author}{1}{}{%
+        {{hash=c8f17b9639fd4046dd85c2daf62d2605}{%
+           family={{MIT OpenCourseWare}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{c8f17b9639fd4046dd85c2daf62d2605}
+      \strng{fullhash}{c8f17b9639fd4046dd85c2daf62d2605}
+      \strng{bibnamehash}{c8f17b9639fd4046dd85c2daf62d2605}
+      \strng{authorbibnamehash}{c8f17b9639fd4046dd85c2daf62d2605}
+      \strng{authornamehash}{c8f17b9639fd4046dd85c2daf62d2605}
+      \strng{authorfullhash}{c8f17b9639fd4046dd85c2daf62d2605}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{6.046J: Design and Analysis on Algorithms, Massachusetts Institute of Technology}
+      \field{title}{NP-Completeness}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/resources/mit6_046js15_lec16/
+      \endverb
+      \verb{url}
+      \verb https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/resources/mit6_046js15_lec16/
+      \endverb
+    \endentry
+    \entry{claymathMillenniumPrize}{misc}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.claymath.org/millennium-problems/}}
+      \field{note}{[Accessed 15-05-2024]}
+      \field{title}{{T}he {M}illennium {P}rize {P}roblems - {C}lay {M}athematics {I}nstitute --- claymath.org}
+    \endentry
+    \entry{cc:modern}{book}{}
+      \name{author}{2}{}{%
+        {{hash=e705e3c227df3ea5f063273e80a8711a}{%
+           family={Arora},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=909bf04d3ddf4b0531fdbcfed494d4b4}{%
+           family={Barak},
+           familyi={B\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{b4c57797cd110914d1cad12fe98cf427}
+      \strng{fullhash}{b4c57797cd110914d1cad12fe98cf427}
+      \strng{bibnamehash}{b4c57797cd110914d1cad12fe98cf427}
+      \strng{authorbibnamehash}{b4c57797cd110914d1cad12fe98cf427}
+      \strng{authornamehash}{b4c57797cd110914d1cad12fe98cf427}
+      \strng{authorfullhash}{b4c57797cd110914d1cad12fe98cf427}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780521424264}
+      \field{title}{Computational Complexity: A Modern Approach}
+      \field{year}{2009}
+    \endentry
+    \entry{tetris-o1-np-hard}{article}{}
+      \name{author}{7}{}{%
+        {{hash=6d48a40035585a818c9a6e9cfade40a9}{%
+           family={Asif},
+           familyi={A\bibinitperiod},
+           given={Sualeh},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9ce3a87fdbfeeb08ce3f80735e47d5b1}{%
+           family={Coulombe},
+           familyi={C\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9c5f2582dbb7a35c5ef1021b9360a788}{%
+           family={Demaine},
+           familyi={D\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+        {{hash=519dae378cfc826e8c39c976dfbd4ec7}{%
+           family={Demaine},
+           familyi={D\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=28808ade4be36c90b2bb5b0bdadbebdc}{%
+           family={Hesterberg},
+           familyi={H\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f48b29551be1a56fdd94795daac6b045}{%
+           family={Lynch},
+           familyi={L\bibinitperiod},
+           given={Jayson},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b432c09efa042aa8ad7710135d75a970}{%
+           family={Singhal},
+           familyi={S\bibinitperiod},
+           given={Mihir},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ca711c277fef4261f5d82957753fe10f}
+      \strng{fullhash}{e99b645f1d33d9fdc8e5590ce45f72bf}
+      \strng{bibnamehash}{ca711c277fef4261f5d82957753fe10f}
+      \strng{authorbibnamehash}{ca711c277fef4261f5d82957753fe10f}
+      \strng{authornamehash}{ca711c277fef4261f5d82957753fe10f}
+      \strng{authorfullhash}{e99b645f1d33d9fdc8e5590ce45f72bf}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Information Processing}
+      \field{month}{01}
+      \field{title}{Tetris is NP-hard even with O(1) Rows or Columns}
+      \field{volume}{28}
+      \field{year}{2020}
+      \field{pages}{942\bibrangedash 958}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.2197/ipsjjip.28.942
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

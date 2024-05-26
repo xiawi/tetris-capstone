@@ -1,4 +1,6 @@
 \contentsline {chapter}{Abstract}{i}{chapter*.1}%
+\contentsline {chapter}{List of Tables}{iii}{chapter*.3}%
+\contentsline {chapter}{List of Figures}{iv}{chapter*.4}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Problem Statement}{2}{section.1.2}%
@@ -7,12 +9,13 @@
 \contentsline {section}{\numberline {1.5}Project Scope}{3}{section.1.5}%
 \contentsline {chapter}{\numberline {2}Literature Review}{4}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Tetris is NP-complete}{4}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}What is NP-complete?}{4}{subsection.2.1.1}%
-\contentsline {section}{\numberline {2.2}Addressing NP-complete Problems}{4}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Nature-inspired Algorithms}{4}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Optimising Tetris with Nature-inspired Algorithms}{4}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Identifying the Research Gaps}{4}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Concluding the Review}{4}{section.2.6}%
-\contentsline {chapter}{\numberline {3}Technical Plan}{5}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Work Plan}{6}{chapter.4}%
-\contentsline {chapter}{\numberline {5}References}{7}{chapter.5}%
+\contentsline {subsection}{\numberline {2.1.1}Complexity Classes}{4}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Understanding the Proof}{6}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Addressing NP-complete Problems}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Nature-inspired Algorithms}{7}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Playing Tetris with Nature-inspired Algorithms}{7}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Identifying the Research Gaps}{7}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Concluding the Review}{7}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Technical Plan}{8}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Work Plan}{9}{chapter.4}%
+\contentsline {chapter}{\numberline {5}References}{10}{chapter.5}%
