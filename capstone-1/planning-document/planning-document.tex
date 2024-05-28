@@ -245,10 +245,15 @@
 		% Section is very well organized.
 		% The review has clarity, simplicity, parsimony, which includes clear transitions and systematic use of headings and subheadings.
 		
-		\section{Tetris is NP-complete}
+		% Background information: versus and regular tetris, differences, similarities, randomness
+		% Justify why the literature review is about Tetris and not Versus Tetris
+		
+		\section{The Difficulty of Tetris}
+		
+			% On the complexity of Tetris, brief introduction of complexity classes and the implications of NP-completeness.
 		
 %			TODO: REWRITE THIS
-			In \citeyear{tetris-is-hard-even-to-approx}, \citeauthor{tetris-is-hard-even-to-approx} proved that Tetris is NP-complete \cite{tetris-is-hard-even-to-approx}. More than anything, this article shows that Tetris is difficult, but what does difficulty actually mean? The study of computational complexity asks questions about the intrinsic difficulty of computational problems \cite{cc:conceptual-perspective}. This section aims to briefly elucidate some key concepts of computational complexity, including complexity classes, \textit{P}, \textit{NP}, and reductions, before taking a closer look at \citeauthor{tetris-is-hard-even-to-approx}'s proof.
+			In \citeyear{tetris-is-hard-even-to-approx}, \citeauthor{tetris-is-hard-even-to-approx} proved that even with a finite deterministic piece sequence, optimally playing Tetris is NP-complete \cite{tetris-is-hard-even-to-approx}. More than anything, this article shows that Tetris is difficult, but what does difficulty actually mean? The study of computational complexity asks questions about the intrinsic difficulty of computational problems \cite{cc:conceptual-perspective}. This section aims to briefly elucidate some key concepts of computational complexity, including complexity classes, \textit{P}, \textit{NP}, \textit{NP-complete} and the implications of a problem being in \textit{NP-complete}.
 			
 			\subsection{Complexity Classes}\label{subsec:compclass}
 				
@@ -261,7 +266,7 @@
 				
 				A complexity class is then defined as the set of all problems solvable by the appropriate computational model, ensuring that for any input, the machine expends at most $f(|x|)$ units of a specified resource $x$ \cite{comp-complexity-papa}.
 				
-				Before proceeding further, let us fix two of the three parameters. Firstly, we will adopt time as the measure of complexity. Secondly, we will exclusively focus on decision problems, as they form the foundation of most common complexity classes \cite{goldreich-p-np-np-comp}.	As described by \citeauthor{goldreich-p-np-np-comp}, decision problems involve determining if a given instance belongs in a predefined set \cite{goldreich-p-np-np-comp}.
+				Before proceeding further, let us fix two of the three parameters. Firstly, we will adopt time as the measure of complexity. Secondly, we will exclusively focus on decision problems, as they form the foundation of most common complexity classes \cite{goldreich-p-np-np-comp}. As described by \citeauthor{goldreich-p-np-np-comp}, decision problems involve determining if a given instance belongs in a predefined set \cite{goldreich-p-np-np-comp}.
 				
 				Here, we introduce our first complexity class: \textit{P}. \textit{P} is defined by \citeauthor{sipser-intro-to-computation} as the class of problems that are decidable in polynomial time on a deterministic single-tape Turing machine \cite{sipser-intro-to-computation}. In this complexity class, the model of computation is deterministic, meaning that for any given input $x$, the machine's computation follows a single predetermined path \cite{sipser-intro-to-computation}.
 				
@@ -348,11 +353,13 @@
 			
 		\section{Addressing NP-complete Problems}
 		
-			% Explain the different approaches taken to solving NP-complete problems
+			% Explain the different approaches taken to solving NP-complete problems, more specfically on Tetris
+			
+			
 		
 		\section{Nature-inspired Algorithms}
 		
-			% Explain reasoning behind choosing nature-inspired algorithms
+			% Explain reasoning behind choosing nature-inspired algorithms, nature-inspired for tetris
 		
 		\section{Playing Tetris with Nature-inspired Algorithms}
 		
