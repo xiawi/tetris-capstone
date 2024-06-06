@@ -2400,6 +2400,13 @@
     <bcf:citekey order="33" intorder="1">cc:modern</bcf:citekey>
     <bcf:citekey order="34" intorder="1">claymathMillenniumPrize</bcf:citekey>
     <bcf:citekey order="35" intorder="1">cc:modern</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">tetris-is-hard-even-to-approx</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">tetris-is-hard-even-to-approx</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">tetris-is-hard-even-to-approx</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">tetris-is-hard-even-to-approx</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">tetris-is-hard-even-to-approx</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">tetris-o1-np-hard</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">cc:conceptual-perspective</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

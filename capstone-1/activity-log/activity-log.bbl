@@ -689,6 +689,54 @@
       \field{year}{2009}
       \true{nocite}
     \endentry
+    \entry{uniform-cc}{article}{}
+      \name{author}{3}{}{%
+        {{hash=bf548d53325530139be1bf265f542f48}{%
+           family={Bovet},
+           familyi={B\bibinitperiod},
+           given={Daniel\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=24b611db6ccecd8c9f138bfb5dd34488}{%
+           family={Crescenzi},
+           familyi={C\bibinitperiod},
+           given={Pierluigi},
+           giveni={P\bibinitperiod}}}%
+        {{hash=ea841106419d9411d1468212b67279a0}{%
+           family={Silvestri},
+           familyi={S\bibinitperiod},
+           given={Riccardo},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{322e57aa97e1a2f13d269d09b82c9fe8}
+      \strng{fullhash}{322e57aa97e1a2f13d269d09b82c9fe8}
+      \strng{bibnamehash}{322e57aa97e1a2f13d269d09b82c9fe8}
+      \strng{authorbibnamehash}{322e57aa97e1a2f13d269d09b82c9fe8}
+      \strng{authornamehash}{322e57aa97e1a2f13d269d09b82c9fe8}
+      \strng{authorfullhash}{322e57aa97e1a2f13d269d09b82c9fe8}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Complexity classes are usually defined by referring to computation models and by putting suitable restrictions on them. Following this approach, many proofs of results are tightly bound to the characteristics of the computation model and of its restrictions and, therefore, they sometimes hide the essential properties which insure the obtained results. In order to obtain more general results, a uniform family of computation models which encompasses most of the complexity classes of interest is introduced. As a first initial set of results derivable from the proposed approach, we will give a sufficient and necessary condition for proving separations of relativized complexity classes, a characterization of complexity classes with complete languages and a sufficient condition for proving strong separations of relativized complexity classes. Examples of applications of these results to some specific complexity classes are then given. Additional results related to separations by sparse oracles can be found in Bovet (1991).}
+      \field{issn}{0304-3975}
+      \field{journaltitle}{Theoretical Computer Science}
+      \field{number}{2}
+      \field{title}{A uniform approach to define complexity classes}
+      \field{volume}{104}
+      \field{year}{1992}
+      \true{nocite}
+      \field{pages}{263\bibrangedash 283}
+      \range{pages}{21}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0304-3975(92)90125-Y
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/030439759290125Y
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/030439759290125Y
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
