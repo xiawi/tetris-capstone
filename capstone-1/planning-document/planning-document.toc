@@ -12,10 +12,9 @@
 \contentsline {subsection}{\numberline {2.1.1}Complexity Classes}{4}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Justifying Non-traditional Algorithmic Approaches}{5}{subsection.2.1.2}%
 \contentsline {section}{\numberline {2.2}Addressing NP-complete Problems}{6}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Nature-inspired Algorithms}{6}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Playing Tetris with Nature-inspired Algorithms}{6}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Identifying the Research Gaps}{6}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Concluding the Review}{6}{section.2.6}%
+\contentsline {section}{\numberline {2.3}Playing Tetris with Nature-inspired Algorithms}{6}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Identifying the Research Gaps}{6}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Concluding the Review}{6}{section.2.5}%
 \contentsline {chapter}{\numberline {3}Technical Plan}{7}{chapter.3}%
 \contentsline {chapter}{\numberline {4}Work Plan}{8}{chapter.4}%
 \contentsline {chapter}{\numberline {5}References}{9}{chapter.5}%

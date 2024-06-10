@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  6 JUN 2024 11:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  10 JUN 2024 11:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1130,7 +1130,7 @@ Package biblatex Info: ... file 'planning-document.bbl' found.
 (./planning-document.bbl)
 Package biblatex Info: Reference section=0 on input line 24.
 Package biblatex Info: Reference segment=0 on input line 24.
-<../../resources/images/logos/sunway.jpg, id=91, 1400.23125pt x 597.73312pt>
+<../../resources/images/logos/sunway.jpg, id=87, 1400.23125pt x 597.73312pt>
 File: ../../resources/images/logos/sunway.jpg Graphic file (type jpg)
 <use ../../resources/images/logos/sunway.jpg>
 Package pdftex.def Info: ../../resources/images/logos/sunway.jpg  used on input
@@ -1193,19 +1193,19 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
  ***********
 Package rerunfilecheck Info: File `planning-document.out' has not changed.
-(rerunfilecheck)             Checksum: 1F8220C102BE927F1E6715E4C21E9296;3139.
+(rerunfilecheck)             Checksum: 9F67F84871FD4F8EDBCB5B05220BE4A5;2951.
 Package logreq Info: Writing requests to 'planning-document.run.xml'.
 \openout1 = `planning-document.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30586 strings out of 474504
- 577903 string characters out of 5756725
+ 30584 strings out of 474504
+ 577879 string characters out of 5756725
  1945043 words of memory out of 5000000
- 52013 multiletter control sequences out of 15000+600000
+ 52012 multiletter control sequences out of 15000+600000
  564420 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,10n,107p,1710b,1517s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,10n,107p,1710b,1515s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/202
 3/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-d
@@ -1213,10 +1213,10 @@ ist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmtt12.pfb>
-Output written on planning-document.pdf (15 pages, 335547 bytes).
+Output written on planning-document.pdf (15 pages, 335385 bytes).
 PDF statistics:
- 330 PDF objects out of 1000 (max. 8388607)
- 295 compressed objects within 3 object streams
- 70 named destinations out of 1000 (max. 500000)
- 186 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 325 PDF objects out of 1000 (max. 8388607)
+ 290 compressed objects within 3 object streams
+ 69 named destinations out of 1000 (max. 500000)
+ 178 words of extra memory for PDF output out of 10000 (max. 10000000)
 
