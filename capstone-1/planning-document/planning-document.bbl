@@ -662,6 +662,45 @@
       \field{note}{[Accessed 15-05-2024]}
       \field{title}{{T}he {M}illennium {P}rize {P}roblems - {C}lay {M}athematics {I}nstitute --- claymath.org}
     \endentry
+    \entry{tetris-ai}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=1dbf6a7228c9eb0b7e21295370457953}{%
+           family={Tsai},
+           familyi={T\bibinitperiod},
+           given={Wei-Tze},
+           giveni={W\bibinithyphendelim T\bibinitperiod}}}%
+        {{hash=8a567de140d6359fd6e412b7b45e7498}{%
+           family={Yen},
+           familyi={Y\bibinitperiod},
+           given={Chi-Hsien},
+           giveni={C\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=0511fb75e5ce544a640045d206e06e9a}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Wei-Chiu},
+           giveni={W\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=4f71be0e36e0c1448852a51ed843bc85}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Tian-Li},
+           giveni={T\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {National Taiwan University}%
+      }
+      \strng{namehash}{89ce63ba109848ce11e706c7097a96e8}
+      \strng{fullhash}{078c9879645d31fe7e8ff4e250974dfe}
+      \strng{bibnamehash}{078c9879645d31fe7e8ff4e250974dfe}
+      \strng{authorbibnamehash}{078c9879645d31fe7e8ff4e250974dfe}
+      \strng{authornamehash}{89ce63ba109848ce11e706c7097a96e8}
+      \strng{authorfullhash}{078c9879645d31fe7e8ff4e250974dfe}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[Online; Accessed 19-June-2024]}
+      \field{title}{Tetris Artificial Intelligence}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

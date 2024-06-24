@@ -251,7 +251,7 @@
 				
 		\section{The Difficulty of Tetris} \label{sec:diff-of-tetris}
 		
-			In their article, \citeauthor{tetris-is-hard-even-to-approx} \cite{tetris-is-hard-even-to-approx} proved that optimising several natural objectives of Tetris is NP-complete, even with a deterministic finite piece sequence . The authors defined the natural objectives of the game as follows \cite{tetris-is-hard-even-to-approx}:
+			In their article, \citeauthor{tetris-is-hard-even-to-approx} \cite{tetris-is-hard-even-to-approx} proved that optimising several natural objectives of Tetris is NP-complete, even with a deterministic finite piece sequence. A deterministic finite piece sequence refers to a game at which the player knows every single piece in the sequence, and where there are finite pieces in the sequence, i.e. the game can end without the player losing. The authors defined the natural objectives of the game as follows \cite{tetris-is-hard-even-to-approx}:
 			
 			\begin{enumerate}
 				\item maximising the number of rows cleared;
@@ -300,27 +300,36 @@
 %			Since even in with less randomised rules, Tetris is NP-complete, we should turn our attention to non-traditional algorithmic approaches, but first, we should show why we shouldn't be looking into traditional approaches in the first place.
 %			We should mention in this section that Versus Tetris has different rules compared to the ones studied by Demaine et al. Demain et al: The difficulty of the offline version should imply the difficulty of the online version. Despite this difference, the game 
 				
-				It is important to note that even though \citeauthor{tetris-is-hard-even-to-approx}'s \cite{tetris-is-hard-even-to-approx} proof is based on a variant of Tetris that is quite different from Versus Tetris, the difficulty of this Versus Tetris can be implied from the proof. Versus Tetris introduces additional gameplay factors, such as the competitive aspect where players can send "garbage" lines to their opponents, adding layers of complexity.Versus Tetris introduces additional gameplay factors, such as the competitive aspect where players can send "garbage" lines to their opponents, adding layers of complexity. As such, Versus Tetris is arguably more difficult than its classic variant, or \citeauthor{tetris-is-hard-even-to-approx}'s variant \cite{tetris-is-hard-even-to-approx}.
+				It is important to note that even though \citeauthor{tetris-is-hard-even-to-approx}'s \cite{tetris-is-hard-even-to-approx} proof is based on a variant of Tetris that is quite different from Versus Tetris, the difficulty of this Versus Tetris can be implied from the proof. Versus Tetris introduces additional gameplay factors, such as the competitive aspect where players can send ``garbage'' lines to their opponents, adding layers of complexity. As such, Versus Tetris is arguably more difficult than its classic variant, or  \citeauthor{tetris-is-hard-even-to-approx}'s variant \cite{tetris-is-hard-even-to-approx}.
 				
-				Given the NP-completeness of Tetris \cite{tetris-is-hard-even-to-approx} \cite{tetris-o1-np-hard}, it is evident that traditional deterministic algorithmic approaches would face significant challenges in efficiently solving the game. The NP-completeness of the game implies that obtaining exact solutions are computationally intractable within a reasonable time frame.
+				Given the NP-completeness of Tetris \cite{tetris-is-hard-even-to-approx} \cite{tetris-o1-np-hard}, it is evident that traditional deterministic algorithmic approaches would face significant challenges in efficiently solving the game \cite{cc:conceptual-perspective}. The NP-completeness of the game implies that obtaining exact solutions are computationally intractable within a reasonable time frame.
 				
-				To address this, we relax the requirements for a solution. This can be done by either broadening the set of acceptable solutions or focusing on average-case scenarios instead of worst-case scenarios \cite{cc:conceptual-perspective}. This shift in focus allows the use of more practical, non-traditional algorithms that provide acceptable solutions within a reasonable time, even if they are not optimal. In the subsequent section, we will highlight some of the approaches taken to tackle NP-complete problems.
+				To address this, we may relax the requirements for a solution. This can be done by either broadening the set of acceptable solutions or focusing on average-case scenarios instead of worst-case scenarios \cite{cc:conceptual-perspective}. This shift in focus allows the use of more practical, non-traditional algorithms that provide acceptable solutions within a reasonable time, even if they are not optimal. 
 							
-		\section{Addressing NP-completeness}
+		\section{Some Approaches Taken to Solve Tetris}
 		
-			% Explain the different approaches taken to solving NP-complete problems, more specfically on Tetris
+			% Explain the approaches taken to tackle the Tetris problem
+			% Should define each approach, and probably mention why the the algorithms were chosen.
 			
-			Now that the difficulty of Tetris has been established, this section aims to showcase some of the approaches taken to address NP-complete problems.
+			Given the established difficulty of Tetris, exploring alternative strategies that can handle the game's complexity becomes a necessity. In this section, we will delve into several innovative approaches that have been employed to tackle the challenges of Tetris.
 			
+			\subsection{Guided Randomisation}
 			
-		
+				% Bandit-based Monte Carlo
+			
+			\subsection{Reinforcement Learning}
+			
+				
+				
+			\subsection{Meta-heuristic Algorithms}
+				
+				% MVP Algorithm and Harmony Search Algorithm
+				
+					
+						
 		\section{Playing Tetris with Nature-inspired Algorithms}
 		
 			% Show examples of other work that has attempted to play Tetris with NIA
-		
-		\section{Identifying the Research Gaps}
-		
-			% No Versus
 		
 		\section{Concluding the Review}
 	

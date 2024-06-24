@@ -2407,6 +2407,7 @@
     <bcf:citekey order="40" intorder="1">tetris-is-hard-even-to-approx</bcf:citekey>
     <bcf:citekey order="41" intorder="1">tetris-o1-np-hard</bcf:citekey>
     <bcf:citekey order="42" intorder="1">cc:conceptual-perspective</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">cc:conceptual-perspective</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
