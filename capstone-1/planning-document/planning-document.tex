@@ -1,7 +1,7 @@
 \documentclass[a4paper, 12pt]{extreport}
 \usepackage[margin=1in]{geometry}
 \usepackage{tikz}
-\usetikzlibrary{calc}
+\usetikzlibrary{calc, shapes.geometric, arrows.meta, positioning}
 \usepackage{setspace}
 \graphicspath{ {../../resources/images/} }
 \usepackage[titles]{tocloft}
@@ -300,7 +300,7 @@
 %			Since even in with less randomised rules, Tetris is NP-complete, we should turn our attention to non-traditional algorithmic approaches, but first, we should show why we shouldn't be looking into traditional approaches in the first place.
 %			We should mention in this section that Versus Tetris has different rules compared to the ones studied by Demaine et al. Demain et al: The difficulty of the offline version should imply the difficulty of the online version. Despite this difference, the game 
 				
-				It is important to note that even though \citeauthor{tetris-is-hard-even-to-approx}'s \cite{tetris-is-hard-even-to-approx} proof is based on a variant of Tetris that is quite different from Versus Tetris, the difficulty of this Versus Tetris can be implied from the proof. Versus Tetris introduces additional gameplay factors, such as the competitive aspect where players can send ``garbage'' lines to their opponents, adding layers of complexity. As such, Versus Tetris is arguably more difficult than its classic variant, or  \citeauthor{tetris-is-hard-even-to-approx}'s variant \cite{tetris-is-hard-even-to-approx}.
+				It is important to note that even though \citeauthor{tetris-is-hard-even-to-approx}'s \cite{tetris-is-hard-even-to-approx} proof is based on a variant of Tetris that is quite different from Versus Tetris, the difficulty of Versus Tetris can be implied from the proof. Versus Tetris introduces additional gameplay factors, such as the competitive aspect where players can send ``garbage'' lines to their opponents, adding layers of complexity. As such, Versus Tetris is arguably more difficult than its classic variant, or  \citeauthor{tetris-is-hard-even-to-approx}'s variant \cite{tetris-is-hard-even-to-approx}.
 				
 				Given the NP-completeness of Tetris \cite{tetris-is-hard-even-to-approx} \cite{tetris-o1-np-hard}, it is evident that traditional deterministic algorithmic approaches would face significant challenges in efficiently solving the game \cite{cc:conceptual-perspective}. The NP-completeness of the game implies that obtaining exact solutions are computationally intractable within a reasonable time frame.
 				
@@ -311,8 +311,48 @@
 			% Explain the approaches taken to tackle the Tetris problem
 			% Should define each approach, and probably mention why the the algorithms were chosen.
 			
-			Given the established difficulty of Tetris, exploring alternative strategies that can handle the game's complexity becomes a necessity. In this section, we will delve into several innovative approaches that have been employed to tackle the challenges of Tetris.
+			Now that the difficulty of Tetris has been established, we turn our attention to potential strategies that can be used to handle the game's complexity. In this section, we explore some of the innovative approaches that have been utilised to tackle the game of Tetris.
 			
+			\subsection{Learning by Imitation}
+			
+				In \citeyear{tetris-learning-by-imitation}, \citeauthor{tetris-learning-by-imitation} \cite{tetris-learning-by-imitation} employed a learning by imitation approach to the game of Tetris. Imitation learning aims to mimic human behaviour in some given task by learning a mapping between observations of demonstrations \cite{imitation-learning}.
+				
+				In their approach, played Tetris games were fed into a machine learning model as inputs, where the model would receive positive feedback when a decision matched that of the imitated system, and negative feedback otherwise \cite{tetris-learning-by-imitation}. The learning is deemed successful if the trained model maintains similarity even when faced with data outside of the training set.
+				
+				The learning system consists of several components, including filters, pattern calculators, and support vector machines (SVMs) (refer to Figure \ref{fig:syscomponents-learning-by-imitation}) \cite{tetris-learning-by-imitation}. Because of the time consuming nature of training SVMs, each Tetrimino had its own dedicated filters, pattern calculators and SVMs, i.e. seven SVMs \footnote{Seven SVMs for the seven Tetriminos.} are working together in the artificial player. The output of any particular SVM describes how similar a candidate move is to the choice of the imitated player.
+				
+				\begin{figure}
+					\tikzstyle{block} = [rectangle, draw, 
+					text width=6em, text centered, rounded corners, minimum height=4em]
+					\tikzstyle{arrow} = [thick,->,>=stealth]
+					\tikzstyle{connector} = [circle, draw, fill=red!20, minimum size=4mm, inner sep=0pt]
+					\centering
+					
+					\begin{tikzpicture}[node distance=2cm, auto]
+						
+						% Nodes
+						\node [block] (input) {Input: Tetris Game State};
+						\node [block, below of=input] (filters) {Filters};
+						\node [block, below of=filters] (pattern_calculators) {Pattern Calculators};
+						\node [block, right=1cm of pattern_calculators] (features) {Hand-coded Features};
+						\node [block, below of=pattern_calculators, right=.5cm of pattern_calculators.center] (svm) {Support Vector Machine};
+						\node [block, below of=svm] (output) {Output: Move Decision};
+						
+						% Arrows
+						\draw [arrow] (input) -- (filters);
+						\draw [arrow] (filters) -- (pattern_calculators);
+						\draw [arrow] (pattern_calculators) -- (svm);
+						\draw [arrow] (features) -- (svm);
+						\draw [arrow] (svm) -- (output);
+					\end{tikzpicture}
+					\caption{Abstraction of \citeauthor{tetris-learning-by-imitation}'s System Components}
+					\label{fig:syscomponents-learning-by-imitation}
+				\end{figure}
+				
+				Filters are made up of a multitude of patterns, which can be thought of as specific configurations in the playing field that the model uses to recognise and evaluate different game states \cite{tetris-learning-by-imitation}. Patterns do not take into account the whole matrix, but only a small area in the playing field. Thus, the authors included a list of 19 hand-coded features that takes a more global look at the game, some notable features include the number of holes that will be created after the current placement, and the number of removed lines after the current placement. Both the activated patterns and the features are passed into the support vector machine, and the move that is calculated to be the most similar is played.
+				
+				To evaluate their approach, \citeauthor{tetris-learning-by-imitation} used a human player as well as Fahey's artificial player \cite{fahey-ai} as systems for their model to imitate \cite{tetris-learning-by-imitation}. The outcome shows that their model can learn different styles of gameplay based on the imitated player, which is to be expected. When pitting the two learned models against each other in their variant of two-player Tetris \footnote{In \citeauthor{tetris-learning-by-imitation}'s variant of two-player Tetris, clearing $n$ lines sends $n-1$ attack rows to the opponent, with each attack row containing $n-1$ empty cells \cite{tetris-learning-by-imitation}.}, they found that the human imitated machine performed better than the one imitated from Fahey's AI. However, The system imitated from Fahey's AI outperformed that of the human imitated system in single player games. 
+				
 			\subsection{Guided Randomisation}
 			
 				% Bandit-based Monte Carlo
