@@ -541,7 +541,6 @@
       \strng{authorbibnamehash}{66aba379c7d3adb8af5b662a65c4c140}
       \strng{authornamehash}{66aba379c7d3adb8af5b662a65c4c140}
       \strng{authorfullhash}{66aba379c7d3adb8af5b662a65c4c140}
-      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -576,61 +575,6 @@
       \field{title}{{T}he {M}illennium {P}rize {P}roblems - {C}lay {M}athematics {I}nstitute --- claymath.org}
       \true{nocite}
     \endentry
-    \entry{comp-complexity-papa}{book}{}
-      \name{author}{1}{}{%
-        {{hash=b3b407bb63367a850366076095ee1970}{%
-           family={Papadimitriou},
-           familyi={P\bibinitperiod},
-           given={Christos\bibnamedelima H.},
-           giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Addison-Wesley}%
-      }
-      \strng{namehash}{b3b407bb63367a850366076095ee1970}
-      \strng{fullhash}{b3b407bb63367a850366076095ee1970}
-      \strng{bibnamehash}{b3b407bb63367a850366076095ee1970}
-      \strng{authorbibnamehash}{b3b407bb63367a850366076095ee1970}
-      \strng{authornamehash}{b3b407bb63367a850366076095ee1970}
-      \strng{authorfullhash}{b3b407bb63367a850366076095ee1970}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-0-201-53082-7}
-      \field{title}{Computational complexity.}
-      \field{year}{1994}
-      \true{nocite}
-      \field{pages}{I\bibrangedash XV\bibrangessep 1\bibrangedash 523}
-      \range{pages}{538}
-      \keyw{complexity computational}
-    \endentry
-    \entry{goldreich-p-np-np-comp}{book}{}
-      \name{author}{1}{}{%
-        {{hash=66aba379c7d3adb8af5b662a65c4c140}{%
-           family={Goldreich},
-           familyi={G\bibinitperiod},
-           given={Oded},
-           giveni={O\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Cambridge University Press}%
-      }
-      \strng{namehash}{66aba379c7d3adb8af5b662a65c4c140}
-      \strng{fullhash}{66aba379c7d3adb8af5b662a65c4c140}
-      \strng{bibnamehash}{66aba379c7d3adb8af5b662a65c4c140}
-      \strng{authorbibnamehash}{66aba379c7d3adb8af5b662a65c4c140}
-      \strng{authornamehash}{66aba379c7d3adb8af5b662a65c4c140}
-      \strng{authorfullhash}{66aba379c7d3adb8af5b662a65c4c140}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{P, NP, and NP-Completeness: The Basics of Computational Complexity}
-      \field{year}{2010}
-      \true{nocite}
-    \endentry
     \entry{npcompleteness}{online}{}
       \name{author}{1}{}{%
         {{hash=c8f17b9639fd4046dd85c2daf62d2605}{%
@@ -643,8 +587,8 @@
       \strng{authorbibnamehash}{c8f17b9639fd4046dd85c2daf62d2605}
       \strng{authornamehash}{c8f17b9639fd4046dd85c2daf62d2605}
       \strng{authorfullhash}{c8f17b9639fd4046dd85c2daf62d2605}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{6.046J: Design and Analysis on Algorithms, Massachusetts Institute of Technology}
@@ -680,8 +624,8 @@
       \strng{authorbibnamehash}{b4c57797cd110914d1cad12fe98cf427}
       \strng{authornamehash}{b4c57797cd110914d1cad12fe98cf427}
       \strng{authorfullhash}{b4c57797cd110914d1cad12fe98cf427}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780521424264}
@@ -689,92 +633,143 @@
       \field{year}{2009}
       \true{nocite}
     \endentry
-    \entry{uniform-cc}{article}{}
+    \entry{tetris-learning-by-imitation}{inproceedings}{}
       \name{author}{3}{}{%
-        {{hash=bf548d53325530139be1bf265f542f48}{%
-           family={Bovet},
-           familyi={B\bibinitperiod},
-           given={Daniel\bibnamedelima P.},
-           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-        {{hash=24b611db6ccecd8c9f138bfb5dd34488}{%
-           family={Crescenzi},
+        {{hash=23fb077af0dc1ee0a605944188c1191c}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Dapeng},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ff9a161a4242ac863aa56ad95da97e84}{%
+           family={Cai},
            familyi={C\bibinitperiod},
-           given={Pierluigi},
-           giveni={P\bibinitperiod}}}%
-        {{hash=ea841106419d9411d1468212b67279a0}{%
-           family={Silvestri},
-           familyi={S\bibinitperiod},
-           given={Riccardo},
-           giveni={R\bibinitperiod}}}%
+           given={Zhongjie},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=ea3c99f847e19974acae14650e2c41f0}{%
+           family={Nebel},
+           familyi={N\bibinitperiod},
+           given={Bernhard},
+           giveni={B\bibinitperiod}}}%
       }
-      \strng{namehash}{322e57aa97e1a2f13d269d09b82c9fe8}
-      \strng{fullhash}{322e57aa97e1a2f13d269d09b82c9fe8}
-      \strng{bibnamehash}{322e57aa97e1a2f13d269d09b82c9fe8}
-      \strng{authorbibnamehash}{322e57aa97e1a2f13d269d09b82c9fe8}
-      \strng{authornamehash}{322e57aa97e1a2f13d269d09b82c9fe8}
-      \strng{authorfullhash}{322e57aa97e1a2f13d269d09b82c9fe8}
+      \strng{namehash}{023ab39e9bd6b5a0fa66b0a3212a2e15}
+      \strng{fullhash}{023ab39e9bd6b5a0fa66b0a3212a2e15}
+      \strng{bibnamehash}{023ab39e9bd6b5a0fa66b0a3212a2e15}
+      \strng{authorbibnamehash}{023ab39e9bd6b5a0fa66b0a3212a2e15}
+      \strng{authornamehash}{023ab39e9bd6b5a0fa66b0a3212a2e15}
+      \strng{authorfullhash}{023ab39e9bd6b5a0fa66b0a3212a2e15}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Complexity classes are usually defined by referring to computation models and by putting suitable restrictions on them. Following this approach, many proofs of results are tightly bound to the characteristics of the computation model and of its restrictions and, therefore, they sometimes hide the essential properties which insure the obtained results. In order to obtain more general results, a uniform family of computation models which encompasses most of the complexity classes of interest is introduced. As a first initial set of results derivable from the proposed approach, we will give a sufficient and necessary condition for proving separations of relativized complexity classes, a characterization of complexity classes with complete languages and a sufficient condition for proving strong separations of relativized complexity classes. Examples of applications of these results to some specific complexity classes are then given. Additional results related to separations by sparse oracles can be found in Bovet (1991).}
-      \field{issn}{0304-3975}
-      \field{journaltitle}{Theoretical Computer Science}
-      \field{number}{2}
-      \field{title}{A uniform approach to define complexity classes}
-      \field{volume}{104}
-      \field{year}{1992}
+      \field{title}{PLAYING TETRIS USING LEARNING BY IMITATION}
+      \field{year}{2010}
       \true{nocite}
-      \field{pages}{263\bibrangedash 283}
-      \range{pages}{21}
-      \verb{doi}
-      \verb https://doi.org/10.1016/0304-3975(92)90125-Y
-      \endverb
       \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/030439759290125Y
+      \verb https://api.semanticscholar.org/CorpusID:10668262
       \endverb
       \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/030439759290125Y
+      \verb https://api.semanticscholar.org/CorpusID:10668262
       \endverb
     \endentry
-    \entry{tetris-ai}{misc}{}
+    \entry{imitation-learning}{article}{}
       \name{author}{4}{}{%
-        {{hash=1dbf6a7228c9eb0b7e21295370457953}{%
-           family={Tsai},
-           familyi={T\bibinitperiod},
-           given={Wei-Tze},
-           giveni={W\bibinithyphendelim T\bibinitperiod}}}%
-        {{hash=8a567de140d6359fd6e412b7b45e7498}{%
-           family={Yen},
-           familyi={Y\bibinitperiod},
-           given={Chi-Hsien},
-           giveni={C\bibinithyphendelim H\bibinitperiod}}}%
-        {{hash=0511fb75e5ce544a640045d206e06e9a}{%
-           family={Ma},
-           familyi={M\bibinitperiod},
-           given={Wei-Chiu},
-           giveni={W\bibinithyphendelim C\bibinitperiod}}}%
-        {{hash=4f71be0e36e0c1448852a51ed843bc85}{%
-           family={Yu},
-           familyi={Y\bibinitperiod},
-           given={Tian-Li},
-           giveni={T\bibinithyphendelim L\bibinitperiod}}}%
+        {{hash=eaf6c67e979a8ffb4cf1a087a4b76e56}{%
+           family={Hussein},
+           familyi={H\bibinitperiod},
+           given={Ahmed},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4ae93acfe7753c434ba98d1cca2121a9}{%
+           family={Gaber},
+           familyi={G\bibinitperiod},
+           given={{Mohamed Medhat}},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8ee870839373bdec087796433d91b98e}{%
+           family={Elyan},
+           familyi={E\bibinitperiod},
+           given={Eyad},
+           giveni={E\bibinitperiod}}}%
+        {{hash=5be1d96df47e9680d491d156aaeaa1c5}{%
+           family={Jayne},
+           familyi={J\bibinitperiod},
+           given={Chrisina},
+           giveni={C\bibinitperiod}}}%
       }
-      \list{institution}{1}{%
-        {National Taiwan University}%
+      \list{language}{1}{%
+        {English}%
       }
-      \strng{namehash}{89ce63ba109848ce11e706c7097a96e8}
-      \strng{fullhash}{078c9879645d31fe7e8ff4e250974dfe}
-      \strng{bibnamehash}{078c9879645d31fe7e8ff4e250974dfe}
-      \strng{authorbibnamehash}{078c9879645d31fe7e8ff4e250974dfe}
-      \strng{authornamehash}{89ce63ba109848ce11e706c7097a96e8}
-      \strng{authorfullhash}{078c9879645d31fe7e8ff4e250974dfe}
+      \list{publisher}{1}{%
+        {Association for Computing Machinery (ACM)}%
+      }
+      \strng{namehash}{509cb3544df15b81f5316861f64c3280}
+      \strng{fullhash}{3e394505e66fbe500b9b1dbff63f64b0}
+      \strng{bibnamehash}{3e394505e66fbe500b9b1dbff63f64b0}
+      \strng{authorbibnamehash}{3e394505e66fbe500b9b1dbff63f64b0}
+      \strng{authornamehash}{509cb3544df15b81f5316861f64c3280}
+      \strng{authorfullhash}{3e394505e66fbe500b9b1dbff63f64b0}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{[Online; Accessed 19-June-2024]}
-      \field{title}{Tetris Artificial Intelligence}
+      \field{abstract}{Imitation learning techniques aim to mimic human behavior in a given task. An agent (a learning machine) is trained to perform a task from demonstrations by learning a mapping between observations and actions. The idea of teaching by imitation has been around for many years; however, the field is gaining attention recently due to advances in computing and sensing as well as rising demand for intelligent applications. The paradigm of learning by imitation is gaining popularity because it facilitates teaching complex tasks with minimal expert knowledge of the tasks. Generic imitation learning methods could potentially reduce the problem of teaching a task to that of providing demonstrations, without the need for explicit programming or designing reward functions specific to the task. Modern sensors are able to collect and transmit high volumes of data rapidly, and processors with high computational power allow fast processing that maps the sensory data to actions in a timely manner. This opens the door for many potential AI applications that require real-time perception and reaction such as humanoid robots, self-driving vehicles, human computer interaction, and computer games, to name a few. However, specialized algorithms are needed to effectively and robustly learn models as learning by imitation poses its own set of challenges. In this article, we survey imitation learning methods and present design options in different steps of the learning process. We introduce a background and motivation for the field as well as highlight challenges specific to the imitation problem. Methods for designing and evaluating imitation learning tasks are categorized and reviewed. Special attention is given to learning methods in robotics and games as these domains are the most popular in the literature and provide a wide array of problems and methodologies. We extensively discuss combining imitation learning approaches using different sources and methods, as well as incorporating other motion learning methods to enhance imitation. We also discuss the potential impact on industry, present major applications, and highlight current and future research directions.}
+      \field{issn}{0360-0300}
+      \field{journaltitle}{ACM Computing Surveys}
+      \field{month}{4}
+      \field{number}{2}
+      \field{title}{Imitation Learning: A Survey of Learning Methods}
+      \field{volume}{50}
+      \field{year}{2017}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1145/3071073
+      \endverb
+    \endentry
+    \entry{fahey-ai}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{note}{[accessed Jun. 23, 2024]}
+      \field{title}{{Tetris AI}}
+      \field{year}{2003}
+      \true{nocite}
+      \verb{urlraw}
+      \verb http://www.colinfahey.com/tetris/
+      \endverb
+      \verb{url}
+      \verb http://www.colinfahey.com/tetris/
+      \endverb
+    \endentry
+    \entry{tetris-bb-mc-planning}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=66dc93f12e8692b59e4adbaf5641288f}{%
+           family={Zhongjie},
+           familyi={Z\bibinitperiod},
+           given={Cai},
+           giveni={C\bibinitperiod}}}%
+        {{hash=23fb077af0dc1ee0a605944188c1191c}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Dapeng},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ea3c99f847e19974acae14650e2c41f0}{%
+           family={Nebel},
+           familyi={N\bibinitperiod},
+           given={Bernhard},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{3d15911aea904f4323f61b07c4fcbcaf}
+      \strng{fullhash}{3d15911aea904f4323f61b07c4fcbcaf}
+      \strng{bibnamehash}{3d15911aea904f4323f61b07c4fcbcaf}
+      \strng{authorbibnamehash}{3d15911aea904f4323f61b07c4fcbcaf}
+      \strng{authornamehash}{3d15911aea904f4323f61b07c4fcbcaf}
+      \strng{authorfullhash}{3d15911aea904f4323f61b07c4fcbcaf}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{AISB 2011: AI and Games}
+      \field{month}{01}
+      \field{title}{Playing Tetris Using Bandit-Based Monte-Carlo Planning}
+      \field{year}{2011}
       \true{nocite}
     \endentry
   \enddatalist

@@ -2421,6 +2421,20 @@
     <bcf:citekey order="55" intorder="1">tetris-learning-by-imitation</bcf:citekey>
     <bcf:citekey order="56" intorder="1">tetris-learning-by-imitation</bcf:citekey>
     <bcf:citekey order="57" intorder="1">tetris-learning-by-imitation</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">mcts</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">tetris-bb-mc-planning</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">mcts</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">bandit-based-mcts</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">bandit-based-mcts</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">bandit-based-mcts</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">tetris-bb-mc-planning</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">tetris-bb-mc-planning</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">tetris-bb-mc-planning</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">tetris-bb-mc-planning</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">fahey-ai</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">tetris-bb-mc-planning</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">tetris-bb-mc-planning</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">tetris-learning-by-imitation</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

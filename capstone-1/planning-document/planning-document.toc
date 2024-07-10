@@ -13,11 +13,11 @@
 \contentsline {subsection}{\numberline {2.1.2}Justifying Non-traditional Algorithmic Approaches}{6}{subsection.2.1.2}%
 \contentsline {section}{\numberline {2.2}Some Approaches Taken to Solve Tetris}{6}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Learning by Imitation}{6}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Guided Randomisation}{8}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Reinforcement Learning}{8}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Meta-heuristic Algorithms}{8}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Playing Tetris with Nature-inspired Algorithms}{8}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Concluding the Review}{8}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Technical Plan}{9}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Work Plan}{10}{chapter.4}%
-\contentsline {chapter}{\numberline {5}References}{11}{chapter.5}%
+\contentsline {subsection}{\numberline {2.2.2}Upper Confidence Bounds for Trees}{8}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Reinforcement Learning}{9}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Meta-heuristic Algorithms}{9}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Playing Tetris with Nature-inspired Algorithms}{9}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Technical Plan}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Defining the Rules}{10}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Work Plan}{11}{chapter.4}%
+\contentsline {chapter}{\numberline {5}References}{12}{chapter.5}%

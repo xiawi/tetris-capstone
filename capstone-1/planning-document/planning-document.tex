@@ -313,7 +313,7 @@
 			
 			Now that the difficulty of Tetris has been established, we turn our attention to potential strategies that can be used to handle the game's complexity. In this section, we explore some of the innovative approaches that have been utilised to tackle the game of Tetris.
 			
-			\subsection{Learning by Imitation}
+			\subsection{Learning by Imitation} \label{subsec:imit-learning}
 			
 				In \citeyear{tetris-learning-by-imitation}, \citeauthor{tetris-learning-by-imitation} \cite{tetris-learning-by-imitation} employed a learning by imitation approach to the game of Tetris. Imitation learning aims to mimic human behaviour in some given task by learning a mapping between observations of demonstrations \cite{imitation-learning}.
 				
@@ -351,11 +351,45 @@
 				
 				Filters are made up of a multitude of patterns, which can be thought of as specific configurations in the playing field that the model uses to recognise and evaluate different game states \cite{tetris-learning-by-imitation}. Patterns do not take into account the whole matrix, but only a small area in the playing field. Thus, the authors included a list of 19 hand-coded features that takes a more global look at the game, some notable features include the number of holes that will be created after the current placement, and the number of removed lines after the current placement. Both the activated patterns and the features are passed into the support vector machine, and the move that is calculated to be the most similar is played.
 				
-				To evaluate their approach, \citeauthor{tetris-learning-by-imitation} used a human player as well as Fahey's artificial player \cite{fahey-ai} as systems for their model to imitate \cite{tetris-learning-by-imitation}. The outcome shows that their model can learn different styles of gameplay based on the imitated player, which is to be expected. When pitting the two learned models against each other in their variant of two-player Tetris \footnote{In \citeauthor{tetris-learning-by-imitation}'s variant of two-player Tetris, clearing $n$ lines sends $n-1$ attack rows to the opponent, with each attack row containing $n-1$ empty cells \cite{tetris-learning-by-imitation}.}, they found that the human imitated machine performed better than the one imitated from Fahey's AI. However, The system imitated from Fahey's AI outperformed that of the human imitated system in single player games. 
+				To evaluate their approach, \citeauthor{tetris-learning-by-imitation} used a human player as well as Fahey's artificial player \cite{fahey-ai} as systems for their model to imitate \cite{tetris-learning-by-imitation}. The outcome shows that their model can learn different styles of gameplay based on the imitated player, which is to be expected. When pitting the two learned models against each other in their variant of multiplayer Tetris \footnote{In \citeauthor{tetris-learning-by-imitation}'s variant of multiplayer Tetris, clearing $n$ lines sends $n-1$ attack rows to the opponent, with each attack row containing $n-1$ empty cells \cite{tetris-learning-by-imitation}. Attack rows are added to the bottom of the opponent's matrix.}, they found that the human imitated machine performed better than the one imitated from Fahey's AI. However, The system imitated from Fahey's AI outperformed that of the human imitated system in single player games. 
 				
-			\subsection{Guided Randomisation}
+			\subsection{Upper Confidence Bounds for Trees}
 			
 				% Bandit-based Monte Carlo
+				Monte-Carlo Tree Search (MCTS) is a best-first search method that is based on a randomised exploration of the search space \cite{mcts}. The algorithm evaluates states to determine the most rewarding actions, with rewards being calculated from the leaf to the root \cite{tetris-bb-mc-planning}. MCTS has the added benefit of learning from previous explorations, gradually building a game tree in memory, resulting in more accurate estimation of the most promising moves \cite{mcts}. In \citeyear{bandit-based-mcts}, \citeauthor{bandit-based-mcts} \cite{bandit-based-mcts} proposed a method, which was deemed Upper Confidence Bound for Trees (UCT), to improve the performance of the algorithm by applying a bandit algorithm known as UCB1\footnote{UCB stands for Upper Confidence Bound} to Monte-Carlo Planning. 
+				
+				The UCB1 formula is employed to balance the exploration-exploitation trade-offs during the search \cite{tetris-bb-mc-planning}. It helps prioritise actions that are either promising or under-explored, which effectively prunes less promising branches of the search tree. This results in a more efficient search process and a smaller, more focused tree.
+				
+				In \citeyear{tetris-bb-mc-planning}, \citeauthor{tetris-bb-mc-planning} \cite{tetris-bb-mc-planning} employed this approach to the game of Tetris. In their approach, the authors considered each state of the matrix, along with a given piece as a single node in the planning tree (refer to Figure \ref{fig:bbmcts-single-node}). After an action is taken, if any number of rows are cleared, a predefined reward is given to the action and the most rewarding action is selected as the resulting move. The authors also pruned the tree to remove actions that resulted in holes in the field, to further improve efficiency.
+				
+				\begin{figure}[h]
+					\centering
+					\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+						\coordinate (sw) at (5,0);
+						\coordinate (nw) at (5,10);
+						\coordinate (se) at (15,0);
+						\coordinate (ne) at (15,10);
+						\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+						\node at (sw){\ipiece};
+						\node at ($(sw) + (4,0)$){\opiece};
+						\node at ($(sw) + (2,1)$){\spiece};
+						\node at ($(sw) + (1,1)$){\rotatebox{90}{\zpiece}};
+						\node at ($(sw) + (0,1)$){\rotatebox{-90}{\jpiece}};
+						\node at ($(sw) + (6,0)$){\tpiece};
+						\node at ($(sw) + (7,1)$){\rotatebox{90}{\lpiece}};
+						\node at ($(sw) + (5,1)$){\rotatebox{180}{\tpiece}};
+						\node at ($(sw) + (2,3)$){\zpiece};
+						\node at ($(sw) + (5,3)$){\opiece};
+						\node at ($(ne) + (1,-2)$){\ipiece};
+						\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+					\end{tikzpicture}
+					\caption{\centering An example of a single node of the matrix state and piece in the planning tree.}
+					\label{fig:bbmcts-single-node}
+				\end{figure}
+				
+				Experimental results show that the artificial player shows promise, beating Fahey's AI \cite{fahey-ai} 91 times out of 100 games using the multiplayer Tetris rules mentioned in subsection \ref{subsec:imit-learning} \cite{tetris-bb-mc-planning}. The results also show that the artificial player outperformed the SVM based pattern player from \citeauthor{tetris-bb-mc-planning}'s previous work, where they approached the game with imitation learning \cite{tetris-learning-by-imitation}.
+				
+				% TODO may need better visualisation
 			
 			\subsection{Reinforcement Learning}
 			
@@ -370,8 +404,6 @@
 		\section{Playing Tetris with Nature-inspired Algorithms}
 		
 			% Show examples of other work that has attempted to play Tetris with NIA
-		
-		\section{Concluding the Review}
 	
 	\chapter{Technical Plan}
 	
@@ -381,6 +413,7 @@
 		% All documents provided are well-drawn/well-written, complete and correct. The purpose and role of each document in the project is stated clearly.
 		
 		% Defining rules
+		\section{Defining the Rules}
 	
 	\chapter{Work Plan}
 		
