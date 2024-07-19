@@ -738,13 +738,50 @@
       \verb http://www.colinfahey.com/tetris/
       \endverb
     \endentry
+    \entry{mcts}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=9ab03b6560824b5e37050acfc18272e9}{%
+           family={Chaslot},
+           familyi={C\bibinitperiod},
+           given={{Guillaume Maurice Jean-Bernard Chaslot}},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Maastricht University}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Maastricht University}%
+      }
+      \strng{namehash}{9ab03b6560824b5e37050acfc18272e9}
+      \strng{fullhash}{9ab03b6560824b5e37050acfc18272e9}
+      \strng{bibnamehash}{9ab03b6560824b5e37050acfc18272e9}
+      \strng{authorbibnamehash}{9ab03b6560824b5e37050acfc18272e9}
+      \strng{authornamehash}{9ab03b6560824b5e37050acfc18272e9}
+      \strng{authorfullhash}{9ab03b6560824b5e37050acfc18272e9}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9789085590996}
+      \field{series}{Siks Dissertation Series}
+      \field{title}{Monte-Carlo Tree Search}
+      \field{type}{phdthesis}
+      \field{year}{2010}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.26481/dis.20100930gc
+      \endverb
+    \endentry
     \entry{tetris-bb-mc-planning}{inproceedings}{}
       \name{author}{3}{}{%
-        {{hash=66dc93f12e8692b59e4adbaf5641288f}{%
-           family={Zhongjie},
-           familyi={Z\bibinitperiod},
-           given={Cai},
-           giveni={C\bibinitperiod}}}%
+        {{hash=ff9a161a4242ac863aa56ad95da97e84}{%
+           family={Cai},
+           familyi={C\bibinitperiod},
+           given={Zhongjie},
+           giveni={Z\bibinitperiod}}}%
         {{hash=23fb077af0dc1ee0a605944188c1191c}{%
            family={Zhang},
            familyi={Z\bibinitperiod},
@@ -756,12 +793,12 @@
            given={Bernhard},
            giveni={B\bibinitperiod}}}%
       }
-      \strng{namehash}{3d15911aea904f4323f61b07c4fcbcaf}
-      \strng{fullhash}{3d15911aea904f4323f61b07c4fcbcaf}
-      \strng{bibnamehash}{3d15911aea904f4323f61b07c4fcbcaf}
-      \strng{authorbibnamehash}{3d15911aea904f4323f61b07c4fcbcaf}
-      \strng{authornamehash}{3d15911aea904f4323f61b07c4fcbcaf}
-      \strng{authorfullhash}{3d15911aea904f4323f61b07c4fcbcaf}
+      \strng{namehash}{ed33bd45e4e39a57c0ace10f6610657c}
+      \strng{fullhash}{ed33bd45e4e39a57c0ace10f6610657c}
+      \strng{bibnamehash}{ed33bd45e4e39a57c0ace10f6610657c}
+      \strng{authorbibnamehash}{ed33bd45e4e39a57c0ace10f6610657c}
+      \strng{authornamehash}{ed33bd45e4e39a57c0ace10f6610657c}
+      \strng{authorfullhash}{ed33bd45e4e39a57c0ace10f6610657c}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -771,6 +808,64 @@
       \field{title}{Playing Tetris Using Bandit-Based Monte-Carlo Planning}
       \field{year}{2011}
       \true{nocite}
+    \endentry
+    \entry{bandit-based-mcts}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=38e4d8f3816645f33342266d60a42d10}{%
+           family={Kocsis},
+           familyi={K\bibinitperiod},
+           given={Levente},
+           giveni={L\bibinitperiod}}}%
+        {{hash=98b0d29966f947460b3eb25590bfa7b5}{%
+           family={Szepesvári},
+           familyi={S\bibinitperiod},
+           given={Csaba},
+           giveni={C\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=e6019b2c2378860e64064fa7db22d500}{%
+           family={Fürnkranz},
+           familyi={F\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3a954fc182e5a18b0900ce293c0401ea}{%
+           family={Scheffer},
+           familyi={S\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6a34223729914e9e416bbcfb542d18af}{%
+           family={Spiliopoulou},
+           familyi={S\bibinitperiod},
+           given={Myra},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{d2a501acf3375269bdf09c94a3f59cae}
+      \strng{fullhash}{d2a501acf3375269bdf09c94a3f59cae}
+      \strng{bibnamehash}{d2a501acf3375269bdf09c94a3f59cae}
+      \strng{authorbibnamehash}{d2a501acf3375269bdf09c94a3f59cae}
+      \strng{authornamehash}{d2a501acf3375269bdf09c94a3f59cae}
+      \strng{authorfullhash}{d2a501acf3375269bdf09c94a3f59cae}
+      \strng{editorbibnamehash}{93f2322aa4992a73dacbfa4489aa7cbf}
+      \strng{editornamehash}{93f2322aa4992a73dacbfa4489aa7cbf}
+      \strng{editorfullhash}{93f2322aa4992a73dacbfa4489aa7cbf}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{For large state-space Markovian Decision Problems Monte-Carlo planning is one of the few viable approaches to find near-optimal solutions. In this paper we introduce a new algorithm, UCT, that applies bandit ideas to guide Monte-Carlo planning. In finite-horizon or discounted MDPs the algorithm is shown to be consistent and finite sample bounds are derived on the estimation error due to sampling. Experimental results show that in several domains, UCT is significantly more efficient than its alternatives.}
+      \field{booktitle}{Machine Learning: ECML 2006}
+      \field{isbn}{978-3-540-46056-5}
+      \field{title}{Bandit Based Monte-Carlo Planning}
+      \field{year}{2006}
+      \true{nocite}
+      \field{pages}{282\bibrangedash 293}
+      \range{pages}{12}
     \endentry
   \enddatalist
 \endrefsection

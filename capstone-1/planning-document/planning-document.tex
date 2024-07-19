@@ -18,8 +18,11 @@
 \addbibresource{../../resources/citation.bib}
 \usepackage{tabularx}
 \usepackage{multirow}
-\usepackage{amsmath}
+\usepackage{amsmath,amssymb}
 \usepackage{adjustbox}
+\usepackage[T1]{fontenc}
+\usepackage[final]{microtype}
+
 
 \begin{document}
 	
@@ -37,12 +40,13 @@
 	
 	\begin{titlepage}
 		
-		\begin{tikzpicture}[remember picture, overlay]
-			\node[xshift=14cm,yshift=-1.8cm,anchor=north west] at (current page.north west){%
-				\includegraphics[height=2.5cm]{logos/sunway}};
+		\centering
+		\begin{tikzpicture}
+			\node[] at (current page.north west){%
+				\includegraphics[height=3.5cm]{logos/sunway-set}};
 		\end{tikzpicture}
 		
-		\vfill
+		\vspace{.5cm}
 		
 		\begin{center}
 			\textbf{\large CAPSTONE PROJECT 1} \\
@@ -58,6 +62,10 @@
 			
 			\large Yap Wei Xiang \\
 			21067939
+			
+			\vspace{1cm}
+			
+			Bachelor of Science (Honours) in Computer Science
 			
 			\vspace{1cm}
 			
@@ -354,15 +362,16 @@
 				To evaluate their approach, \citeauthor{tetris-learning-by-imitation} used a human player as well as Fahey's artificial player \cite{fahey-ai} as systems for their model to imitate \cite{tetris-learning-by-imitation}. The outcome shows that their model can learn different styles of gameplay based on the imitated player, which is to be expected. When pitting the two learned models against each other in their variant of multiplayer Tetris \footnote{In \citeauthor{tetris-learning-by-imitation}'s variant of multiplayer Tetris, clearing $n$ lines sends $n-1$ attack rows to the opponent, with each attack row containing $n-1$ empty cells \cite{tetris-learning-by-imitation}. Attack rows are added to the bottom of the opponent's matrix.}, they found that the human imitated machine performed better than the one imitated from Fahey's AI. However, The system imitated from Fahey's AI outperformed that of the human imitated system in single player games. 
 				
 			\subsection{Upper Confidence Bounds for Trees}
-			
+				% TODO may need revision
 				% Bandit-based Monte Carlo
 				Monte-Carlo Tree Search (MCTS) is a best-first search method that is based on a randomised exploration of the search space \cite{mcts}. The algorithm evaluates states to determine the most rewarding actions, with rewards being calculated from the leaf to the root \cite{tetris-bb-mc-planning}. MCTS has the added benefit of learning from previous explorations, gradually building a game tree in memory, resulting in more accurate estimation of the most promising moves \cite{mcts}. In \citeyear{bandit-based-mcts}, \citeauthor{bandit-based-mcts} \cite{bandit-based-mcts} proposed a method, which was deemed Upper Confidence Bound for Trees (UCT), to improve the performance of the algorithm by applying a bandit algorithm known as UCB1\footnote{UCB stands for Upper Confidence Bound} to Monte-Carlo Planning. 
 				
 				The UCB1 formula is employed to balance the exploration-exploitation trade-offs during the search \cite{tetris-bb-mc-planning}. It helps prioritise actions that are either promising or under-explored, which effectively prunes less promising branches of the search tree. This results in a more efficient search process and a smaller, more focused tree.
 				
-				In \citeyear{tetris-bb-mc-planning}, \citeauthor{tetris-bb-mc-planning} \cite{tetris-bb-mc-planning} employed this approach to the game of Tetris. In their approach, the authors considered each state of the matrix, along with a given piece as a single node in the planning tree (refer to Figure \ref{fig:bbmcts-single-node}). After an action is taken, if any number of rows are cleared, a predefined reward is given to the action and the most rewarding action is selected as the resulting move. The authors also pruned the tree to remove actions that resulted in holes in the field, to further improve efficiency.
+				In \citeyear{tetris-bb-mc-planning}, \citeauthor{tetris-bb-mc-planning} \cite{tetris-bb-mc-planning} employed this approach to the game of Tetris. In their approach, the authors considered each state of the matrix, along with a given piece as a single node in the planning tree (refer to Figure \ref{fig:bbmcts-single-node}). After an action is taken, if any number of rows are cleared, a predefined reward is given to the action and the most rewarding action is selected as the resulting move. To further improve efficiency, the authors pruned the search tree further, removing actions that resulted in disadvantageous holes in the field.
 				
 				\begin{figure}[h]
+					
 					\centering
 					\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
 						\coordinate (sw) at (5,0);
@@ -392,14 +401,86 @@
 				% TODO may need better visualisation
 			
 			\subsection{Reinforcement Learning}
-			
 				
+				In \citeyear{tetris-drl}, \citeauthor{tetris-drl} \cite{tetris-drl} adopted a deep reinforcement approach to the game of Tetris, using a convolutional neural network to approximate a Q function, which reflects the maximum predicted discounted sum of future rewards possible by following a given policy from states to actions (refer to Equation \ref{eq:q-func}) .
+				
+				\begin{equation}\label{eq:q-func}
+					Q^* (s,a) = \max \mathbb{E}[r_t + \gamma r_{t+1} + \gamma^2 r_{t+2} + ... | s_t = s, a_t = a, \pi] 
+				\end{equation}
+				
+				Where $s_t$ is the state at time $t$, $a_t$ is the action taken at time $t$, $\pi$ is a policy function indicating what action to take in the current state, and is followed at every step from $t+1$ onwards, $r_t$ is the reward obtained by taking action $a_t$ at state $s_t$, and $\gamma$ is a discount factor \cite{tetris-drl}.
+				
+				The authors defined a state as an image of the current game screen \cite{tetris-drl}. Actions were defined in two ways, single actions, where a single input used to move a piece is considered an action, and grouped actions, where an entire sequence of actions is considered that takes a piece from its initial point at the top of the matrix to the bottom. They also used two different types of rewards, the first being the scores given from the emulator used, which was defined as the number of lines cleared. The second type of reward was defined as a heuristic function proposed by \citeauthor{lee-ai} \cite{lee-ai} (refer to Equation \ref{eq:drl-heuristic}).
+				
+				\begin{equation}\label{eq:drl-heuristic}
+					-0.51 \times Height + 0.76 \times Lines - 0.36 \times Holes - 0.18 \times Bumpiness
+				\end{equation}
+				
+				This heuristic takes into account the sum of the heights of every column, the number of cleared lines, the number of holes in the matrix, and the ``bumpiness'' - sum of the absolute differences in height between adjacent columns \cite{lee-ai}. Interestingly, the weights of the heuristic were calculated by using a genetic algorithm. 
+				
+				The training process was further improved by using an epsilon-greedy policy, where the agent takes the best known move most of the time, but has a small probability $\epsilon$ to take a random action \cite{tetris-drl}. They also tried a novel approach where an agent that was already trained to play well could suggest moves to the algorithm. In this approach, a random action is selected with probability $\epsilon_{rand}$, an action suggested by the transferred agent is selected with probability $\epsilon_{agent}$, and the best known action to the machine is selected otherwise.
+				
+				Other than that, a method known as experience replay was used to create a memory for the neural network to train on. This memory consisted of every ``experience'' that the network had encountered, and was sampled when training the network. Prioritised sweeping was also utilised, where the priorities were placed on experiences which had the greatest error, and therefore the most room to improve.
+				
+				From the experimental results, one of the agents showed the most potential. This agent utilised a standard greedy-epsilon policy - no trained agent was used to suggest moves, grouped actions over single ones, heuristic rewards and random sampling over prioritised sweeping. It outperformed the other agents proposed in this paper, with an average score of 18. However, its capabilities were far inferior to that of \citeauthor{lee-ai}'s bot, which had an average score of 200.
+				
+				Later in \citeyear{tetris-drl-2}, \citeauthor{tetris-drl-2} \cite{tetris-drl-2} used a modified version of \citeauthor{tetris-drl}'s algorithm as a baseline, and proposed several different approaches taken to further optimise the algorithm. The variant of the game used to test the author's algorithms has similar rules to that of modern Tetris games, where the system will generate bags containing a piece sequence with all 7 pieces, and bags are given to the player in sequence. This piece generation system ensures that the player will not need to experience a piece drought, since a piece is guaranteed to be given in the current or next bag. The game also has a hold feature, where the player has the option to hold on to a piece for future use, and swap it out for the piece in play.
+				
+				\citeauthor{tetris-drl-2} proposed that the quadratic rewards from the emulator scores in \citeauthor{tetris-drl}'s paper might encourage the agent to take riskier moves, since clearing multiple lines would greatly increase the rewards given. However, this resulted in shorter survival times, as the agent waits for particular pieces. Knowing this, the author proposed utilising a linear reward function instead of a quadratic one. Comparing the results of both approaches, the authors found that the agent trained with a linear reward function outperformed that of a quadratic one, in both the survival time aspect, and the game score aspect. However, it should be noted that the quadratic models have higher points per piece dropped, meaning that they were much more efficient than the linear ones.
+				
+				\citeauthor{tetris-drl-2} also proposed the use of a ``harder'' Tetris game, which had a higher probability for Z and S pieces (refer to Figure \ref{fig:z-s-pieces}). The author set the probability of each piece as shown in Table \ref{tab:tet-hard-mode}. Doing this significantly decreased training time, reducing it from 3 days to a mere 6 hours.
+				
+				\begin{figure}
+					\centering
+					\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.5},scale=.5]
+						\node at (0,0) {\zpiece};
+						\node at (6,0) {\spiece};
+					\end{tikzpicture}
+					\caption{Z and S pieces.} \label{fig:z-s-pieces}
+				\end{figure}
+				
+				\begin{table}
+					\caption{Probability of each piece in \citeauthor{tetris-drl-2}'s ``hard'' mode.}
+					\label{tab:tet-hard-mode}
+					\centering
+					\begin{tabular}{ c c c c c c c c }
+						\hline
+						& Z & S & I & J & L & O & T \\
+						\hline
+						Probability & 0.25 & 0.25 & 0.1 & 0.1 & 0.1 & 0.1 & 0.1\\
+						\hline
+					\end{tabular}
+				\end{table}
+				
+				Finally, \citeauthor{tetris-drl-2} proposed an update rule that takes the probability of each piece into account (refer to Equation \ref{eq:q-ex-pieces}). This idea emerged from the observation that the only randomness found in a Tetris game is from piece generation. The training process involved enumerating all possible next pieces and actions to find the best action, storing the expected reward and Q-value for each state to a replay buffer and randomly sampling from the replay buffer to update the Q-network. Result of this change showed that the models trained under these update rules performed consistently better than the original models.
+				
+				\begin{equation} \label{eq:q-ex-pieces}
+					Q(s) \leftarrow Q(s) + \alpha [\mathbb{E}_{allPossiblePieces}[r + \gamma \max Q(s') - Q(s)]]
+				\end{equation}
+				
+				Experimental results show that \citeauthor{tetris-drl}'s model \cite{tetris-drl} scored an average of 704.68 with modern rules in place, but \citeauthor{tetris-drl-2}'s model significantly outperformed it, with an average score of 40163.58, increasing almost 57-fold.
 				
 			\subsection{Meta-heuristic Algorithms}
 				
 				% MVP Algorithm and Harmony Search Algorithm
 				
-					
+				According to \citeauthor{yang2020nature} \cite{yang2020nature}, the term ``meta-heuristic'' does not have any agreed upon definitions, with some scholars even using the term interchangeably with the word ``heuristic''. Even so, most definitions agree on the same things. \citeauthor{metaheuristic} \cite{metaheuristic} consolidated some of the properties that characterise most meta-heuristics as follows:
+				
+				\begin{enumerate}
+					\item Meta-heuristics are strategies that guide the search process.
+					\item The goal is to efficiently explore the search space in order to find near-optimal solutions.
+					\item Meta-heuristic algorithm techniques range from simple local search procedures to complex learning processes.
+					\item Meta-heuristic algorithms are non-deterministic and approximate in nature.
+					\item Meta-heuristic algorithms are not designed to solve a specific problem.
+				\end{enumerate}
+				
+				In this subsection, we will look into two works of literature that cover the use of meta-heuristic algorithms in optimising Tetris agents.
+				
+				\subsubsection{Harmony Search Algorithm}
+				
+					The harmony search algorithm is a meta-heuristic algorithm that mimics the improvisation of music players \cite{harmony-search}.
+				
+				\subsubsection{Most Valuable Player}
 						
 		\section{Playing Tetris with Nature-inspired Algorithms}
 		
@@ -414,6 +495,10 @@
 		
 		% Defining rules
 		\section{Defining the Rules}
+		
+		\section{Algorithm Selection}
+		
+		\section{}
 	
 	\chapter{Work Plan}
 		

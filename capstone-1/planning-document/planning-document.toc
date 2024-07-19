@@ -15,9 +15,13 @@
 \contentsline {subsection}{\numberline {2.2.1}Learning by Imitation}{6}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Upper Confidence Bounds for Trees}{8}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Reinforcement Learning}{9}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Meta-heuristic Algorithms}{9}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Playing Tetris with Nature-inspired Algorithms}{9}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Technical Plan}{10}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Defining the Rules}{10}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Work Plan}{11}{chapter.4}%
-\contentsline {chapter}{\numberline {5}References}{12}{chapter.5}%
+\contentsline {subsection}{\numberline {2.2.4}Meta-heuristic Algorithms}{11}{subsection.2.2.4}%
+\contentsline {subsubsection}{Harmony Search Algorithm}{12}{subsubsection*.5}%
+\contentsline {subsubsection}{Most Valuable Player}{12}{subsubsection*.6}%
+\contentsline {section}{\numberline {2.3}Playing Tetris with Nature-inspired Algorithms}{12}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Technical Plan}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Defining the Rules}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Algorithm Selection}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.3}}{13}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Work Plan}{14}{chapter.4}%
+\contentsline {chapter}{\numberline {5}References}{15}{chapter.5}%
