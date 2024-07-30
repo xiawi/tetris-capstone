@@ -150,7 +150,18 @@
 	isbn = {0716710455},
 	publisher = {W. H. Freeman},
 	title = {Computers and Intractability: A Guide to the Theory of NP-Completeness},
-	year = 1979
+	year = {1979}
+}
+
+@article{uniform-cc,
+	title={A uniform approach to define complexity classes},
+	author={Bovet, Daniel P and Crescenzi, Pierluigi and Silvestri, Riccardo},
+	journal={Theoretical Computer Science},
+	volume={104},
+	number={2},
+	pages={263--283},
+	year={1992},
+	publisher={Elsevier}
 }
 
 @article{cc:conceptual-perspective,
@@ -179,28 +190,6 @@
 	year = {},
 	note = {[Accessed 15-05-2024]},
 }
-
-@book{comp-complexity-papa,
-	added-at = {2012-03-20T05:17:52.000+0100},
-	author = {Papadimitriou, Christos H.},
-	biburl = {https://www.bibsonomy.org/bibtex/29ec33cbfc3c548ef2289e634b570837f/alessandropinto},
-	interhash = {a44fa77e3ab4efefa4a6a851afa4952f},
-	intrahash = {9ec33cbfc3c548ef2289e634b570837f},
-	isbn = {978-0-201-53082-7},
-	keywords = {complexity computational},
-	pages = {I-XV, 1-523},
-	publisher = {Addison-Wesley},
-	timestamp = {2012-03-20T05:17:53.000+0100},
-	title = {Computational complexity.},
-	year = 1994
-}
-
-@book{goldreich-p-np-np-comp, 
-	place={Cambridge}, 
-	title={P, NP, and NP-Completeness: The Basics of Computational Complexity}, publisher={Cambridge University Press}, 
-	author={Goldreich, Oded}, 
-	year={2010}
-	}
 	
 @online{npcompleteness,
 	author = {{MIT OpenCourseWare}},
@@ -219,16 +208,206 @@
 	publisher={Cambridge University Press}
 }
 
-@article{uniform-cc,
-	title = {A uniform approach to define complexity classes},
-	journal = {Theoretical Computer Science},
-	volume = {104},
-	number = {2},
-	pages = {263-283},
-	year = {1992},
-	issn = {0304-3975},
-	doi = {https://doi.org/10.1016/0304-3975(92)90125-Y},
-	url = {https://www.sciencedirect.com/science/article/pii/030439759290125Y},
-	author = {Daniel P. Bovet and Pierluigi Crescenzi and Riccardo Silvestri},
-	abstract = {Complexity classes are usually defined by referring to computation models and by putting suitable restrictions on them. Following this approach, many proofs of results are tightly bound to the characteristics of the computation model and of its restrictions and, therefore, they sometimes hide the essential properties which insure the obtained results. In order to obtain more general results, a uniform family of computation models which encompasses most of the complexity classes of interest is introduced. As a first initial set of results derivable from the proposed approach, we will give a sufficient and necessary condition for proving separations of relativized complexity classes, a characterization of complexity classes with complete languages and a sufficient condition for proving strong separations of relativized complexity classes. Examples of applications of these results to some specific complexity classes are then given. Additional results related to separations by sparse oracles can be found in Bovet (1991).}
+@inproceedings{tetris-learning-by-imitation,
+	title={PLAYING TETRIS USING LEARNING BY IMITATION},
+	author={Dapeng Zhang and Zhongjie Cai and Bernhard Nebel},
+	year={2010},
+	url={https://api.semanticscholar.org/CorpusID:10668262}
+}
+
+@article{imitation-learning,
+	title = "Imitation Learning: A Survey of Learning Methods",
+	abstract = "Imitation learning techniques aim to mimic human behavior in a given task. An agent (a learning machine) is trained to perform a task from demonstrations by learning a mapping between observations and actions. The idea of teaching by imitation has been around for many years; however, the field is gaining attention recently due to advances in computing and sensing as well as rising demand for intelligent applications. The paradigm of learning by imitation is gaining popularity because it facilitates teaching complex tasks with minimal expert knowledge of the tasks. Generic imitation learning methods could potentially reduce the problem of teaching a task to that of providing demonstrations, without the need for explicit programming or designing reward functions specific to the task. Modern sensors are able to collect and transmit high volumes of data rapidly, and processors with high computational power allow fast processing that maps the sensory data to actions in a timely manner. This opens the door for many potential AI applications that require real-time perception and reaction such as humanoid robots, self-driving vehicles, human computer interaction, and computer games, to name a few. However, specialized algorithms are needed to effectively and robustly learn models as learning by imitation poses its own set of challenges. In this article, we survey imitation learning methods and present design options in different steps of the learning process. We introduce a background and motivation for the field as well as highlight challenges specific to the imitation problem. Methods for designing and evaluating imitation learning tasks are categorized and reviewed. Special attention is given to learning methods in robotics and games as these domains are the most popular in the literature and provide a wide array of problems and methodologies. We extensively discuss combining imitation learning approaches using different sources and methods, as well as incorporating other motion learning methods to enhance imitation. We also discuss the potential impact on industry, present major applications, and highlight current and future research directions.",
+	author = "Ahmed Hussein and Gaber, {Mohamed Medhat} and Eyad Elyan and Chrisina Jayne",
+	year = "2017",
+	month = apr,
+	day = "6",
+	doi = "10.1145/3071073",
+	language = "English",
+	volume = "50",
+	journal = "ACM Computing Surveys",
+	issn = "0360-0300",
+	publisher = "Association for Computing Machinery (ACM)",
+	number = "2",
+}
+
+@misc{
+	fahey-ai,
+	title = "{Tetris AI}",
+	author = {Colin Fahey},
+	url = "http://www.colinfahey.com/tetris/",
+	year = "2003",
+	note="[accessed Jun. 23, 2024]",
+}
+
+@phdthesis{mcts,
+	title = "Monte-Carlo Tree Search",
+	author = "Chaslot, {Guillaume Maurice Jean-Bernard Chaslot}",
+	year = "2010",
+	doi = "10.26481/dis.20100930gc",
+	language = "English",
+	isbn = "9789085590996",
+	series = "Siks Dissertation Series",
+	publisher = "Maastricht University",
+	school = "Maastricht University",
+}
+
+@inproceedings{tetris-bb-mc-planning,
+author = {Cai, Zhongjie and Zhang, Dapeng and Nebel, Bernhard},
+year = {2011},
+month = {01},
+pages = {},
+title = {Playing Tetris Using Bandit-Based Monte-Carlo Planning},
+journal = {AISB 2011: AI and Games}
+}
+
+@InProceedings{bandit-based-mcts,
+	author="Kocsis, Levente
+	and Szepesv{\'a}ri, Csaba",
+	editor="F{\"u}rnkranz, Johannes
+	and Scheffer, Tobias
+	and Spiliopoulou, Myra",
+	title="Bandit Based Monte-Carlo Planning",
+	booktitle="Machine Learning: ECML 2006",
+	year="2006",
+	publisher="Springer Berlin Heidelberg",
+	address="Berlin, Heidelberg",
+	pages="282--293",
+	abstract="For large state-space Markovian Decision Problems Monte-Carlo planning is one of the few viable approaches to find near-optimal solutions. In this paper we introduce a new algorithm, UCT, that applies bandit ideas to guide Monte-Carlo planning. In finite-horizon or discounted MDPs the algorithm is shown to be consistent and finite sample bounds are derived on the estimation error due to sampling. Experimental results show that in several domains, UCT is significantly more efficient than its alternatives.",
+	isbn="978-3-540-46056-5"
+}
+
+@article{tetris-drl,
+	title={Playing tetris with deep reinforcement learning},
+	author={Stevens, Matt and Pradhan, Sabeek},
+	journal={Convolutional Neural Networks for Visual Recognition CS23, Stanford Univ., Stanford, CA, USA, Tech. Rep},
+	year={2016}
+}
+
+@misc{lee-ai,
+	title="{T}etris {AI} - {T}he ({N}ear) {P}erfect {B}ot",
+	author={Lee, Yiyuan},
+	howpublished="\url{https://codemyroad.wordpress.com/2013/04/14/tetris-ai-the-near-perfect-player/}",
+	note="[accessed Jul. 17, 2024]",
+}
+
+@phdthesis{tetris-drl-2,
+	title={Playing Tetris with deep reinforcement learning},
+	author={Chen, Ziao},
+	type="Master's Thesis",
+	year={2021},
+	school={University of Illinois at Urbana-Champaign}
+}
+
+@book{yang2020nature,
+	title={Nature-inspired optimization algorithms},
+	author={Yang, Xin-She},
+	year={2020},
+	publisher={Academic Press}
+}
+
+@article{metaheuristic,
+	author = {Almufti, Saman and Shaban, Awaz and Ali, Rasan and Fuente, Jayson},
+	year = {2023},
+	month = {04},
+	pages = {10-32},
+	title = {Overview of Metaheuristic Algorithms},
+	volume = {2},
+	journal = {Polaris Global Journal of Scholarly Research and Trends},
+	doi = {10.58429/pgjsrt.v2n2a144}
+}
+
+@article{harmony-search,
+	title={A new heuristic optimization algorithm: harmony search},
+	author={Geem, Zong Woo and Kim, Joong Hoon and Loganathan, Gobichettipalayam Vasudevan},
+	journal={simulation},
+	volume={76},
+	number={2},
+	pages={60--68},
+	year={2001},
+	publisher={Sage Publications Sage CA: Thousand Oaks, CA}
+}
+
+@article{tetris-harmony-search,
+	title={Tetris agent optimization using harmony search algorithm},
+	author={Romero, Victor II M and Tomes, Leonel L and Yusiong, John Paul T},
+	journal={International Journal of Computer Science Issues (IJCSI)},
+	volume={8},
+	number={1},
+	pages={22},
+	year={2011},
+	publisher={International Journal of Computer Science Issues (IJCSI)}
+}
+
+@article{mvpa,
+	author = {Bouchekara, Houssem},
+	year = {2020},
+	month = {03},
+	pages = {1-57},
+	title = {Most Valuable Player Algorithm: a novel optimization algorithm inspired from sport},
+	volume = {20},
+	journal = {Operational Research},
+	doi = {10.1007/s12351-017-0320-y}
+}
+
+@article{tetris-mvpa-ga,
+	title={MVPA and GA Comparison for State Space Optimization at Classic Tetris Game Agent Problem},
+	author={Armanto, Hendrawan and Putra, Ronal Dwi and Pickerling, C},
+	journal={Inform: Jurnal Ilmiah Bidang Teknologi Informasi dan Komunikasi},
+	volume={7},
+	number={1},
+	pages={73--80},
+	year={2022}
+}
+
+@book{nia-soft-computing,
+	title={Nature-inspired Optimization Algorithms and Soft Computing: Methods, Technology and Applications for IoTs, Smart Cities, Healthcare and Industrial Automation},
+	author={Arya, R. and Singh, S. and Singh, M.P. and Iyer, B.R. and Gudivada, V.N.},
+	isbn={9781839535161},
+	series={Computing and Networks},
+	url={https://books.google.com.my/books?id=lTjhEAAAQBAJ},
+	year={2023},
+	publisher={Institution of Engineering and Technology}
+}
+
+@inproceedings{tetris-ga-flom-robinson,
+	title={Using a Genetic Algorithm to Weight an Evaluation Function for Tetris},
+	author={Landon Flom and Cliff Robinson},
+	year={2005},
+	url={https://api.semanticscholar.org/CorpusID:18453509}
+}
+
+@article{genitor,
+	title={Genitor II: A distributed genetic algorithm},
+	author={Whitley, Darrell and Starkweather, Timothy},
+	journal={Journal of Experimental \& Theoretical Artificial Intelligence},
+	volume={2},
+	number={3},
+	pages={189--214},
+	year={1990},
+	publisher={Taylor \& Francis}
+}
+
+@inproceedings{uniform-crossover,
+	author = {Syswerda, Gilbert},
+	year = {1989},
+	month = {01},
+	pages = {},
+	title = {Uniform Crossover in Genetic Algorithms},
+	journal = {Proc. 3rd Intl Conference on Genetic Algorithms 1989}
+}
+
+@inproceedings{tetris-aco,
+	author = {Chen, Xingguo and Wang, Hao and Wang, Weiwei and Shi, Yinghuan and Gao, Yang},
+	year = {2009},
+	month = {07},
+	pages = {1741-1742},
+	title = {Apply Ant Colony Optimization to Tetris},
+	doi = {10.1145/1569901.1570136}
+}
+
+@misc{harddrop,
+	title="{Hard Drop - Tetris Community}",
+	howpublished="\url{https://harddrop.com/}",
+	note="[accessed Jul. 27, 2024]"
 }

@@ -1,7 +1,7 @@
 \documentclass[a4paper, 12pt]{extreport}
 \usepackage[margin=1in]{geometry}
 \usepackage{tikz}
-\usetikzlibrary{calc}
+\usetikzlibrary{calc, shapes.geometric, arrows.meta, positioning}
 \usepackage{setspace}
 \graphicspath{ {../../resources/images/} }
 \usepackage[titles]{tocloft}
@@ -16,10 +16,16 @@
 \setlength{\parskip}{.5\baselineskip}
 \usepackage[nottoc,numbib]{tocbibind}
 \addbibresource{../../resources/citation.bib}
-\usepackage{tabularx}
+%\usepackage{tabularx}
+\usepackage{tabularray}
 \usepackage{multirow}
-\usepackage{amsmath}
+\usepackage{amsmath,amssymb}
 \usepackage{adjustbox}
+\usepackage[T1]{fontenc}
+\usepackage[final]{microtype}
+\usepackage{subcaption}
+\usepackage[bottom]{footmisc}
+
 
 \begin{document}
 	
@@ -37,18 +43,19 @@
 	
 	\begin{titlepage}
 		
-		\begin{tikzpicture}[remember picture, overlay]
-			\node[xshift=14cm,yshift=-1.8cm,anchor=north west] at (current page.north west){%
-				\includegraphics[height=2.5cm]{logos/sunway}};
+		\centering
+		\begin{tikzpicture}
+			\node[] at (current page.north west){%
+				\includegraphics[height=3.5cm]{logos/sunway-set}};
 		\end{tikzpicture}
 		
-		\vfill
+		\vspace{.5cm}
 		
 		\begin{center}
 			\textbf{\large CAPSTONE PROJECT 1} \\
 			\textbf{\large Planning Document} \\
 			\vspace{1cm}
-			\textbf{\large Evaluation of Nature-inspired Optimisation\\Algorithms in Solving Versus Tetris}
+			\textbf{\large Playing Versus Tetris with Nature-inspired Optimisation Algorithms}
 			
 			\vspace{1cm}
 			
@@ -58,6 +65,10 @@
 			
 			\large Yap Wei Xiang \\
 			21067939
+			
+			\vspace{1cm}
+			
+			Bachelor of Science (Honours) in Computer Science
 			
 			\vspace{1cm}
 			
@@ -206,7 +217,7 @@
 			% Summarize the main purpose of your project in a single sentence or paragraph. This should provide a clear, concise statement of what you intend to accomplish.
 			% Your aim should align closely with the problem statement and reflect the broader motivation for your research.
 			
-			The aim of this capstone project is to assess the effectiveness of nature-inspired optimisation algorithms in solving the game of Versus Tetris. By integrating insights from nature-inspired algorithms, the project seeks to create a robust and adaptable Tetris-playing software capable of competing against human players or other Tetris-playing programs. Through this endeavour, the project aims to contribute valuable insights into the application of nature-inspired algorithms in addressing computationally complex problems.
+			The aim of this capstone project is to assess the effectiveness of nature-inspired optimisation algorithms in playing the game of Versus Tetris. By integrating insights from nature-inspired algorithms, the project seeks to create a robust and adaptable Tetris-playing software capable of competing against human players or other Tetris-playing programs. Through this endeavour, the project aims to contribute valuable insights into the application of nature-inspired algorithms in addressing computationally complex problems.
 		
 		\section{Objectives}
 		
@@ -248,10 +259,14 @@
 		
 		% Background information: versus and regular tetris, differences, similarities, randomness
 		% Justify why the literature review is about Tetris and not Versus Tetris
+		
+		Tetris, a timeless puzzle game created by Alexey Pajitnov in 1984, has captivated players and researchers alike with its engaging gameplay and complex strategic elements. The game challenges players to manipulate sequences of geometric shapes known as "Tetriminos" to clear horizontal lines within a confined space. Despite its simple premise, Tetris has inspired extensive research in computational complexity and artificial intelligence due to its inherent difficulty.
+		
+		This review will cover the fundamental challenges of Tetris, explore existing approaches, and assess the potential of nature-inspired algorithms to enhance gameplay strategies.	
 				
 		\section{The Difficulty of Tetris} \label{sec:diff-of-tetris}
 		
-			In their article, \citeauthor{tetris-is-hard-even-to-approx} \cite{tetris-is-hard-even-to-approx} proved that optimising several natural objectives of Tetris is NP-complete, even with a deterministic finite piece sequence . The authors defined the natural objectives of the game as follows \cite{tetris-is-hard-even-to-approx}:
+			In their article, \citeauthor{tetris-is-hard-even-to-approx} \cite{tetris-is-hard-even-to-approx} proved that optimising several natural objectives of Tetris is NP-complete, even with a deterministic finite piece sequence. A deterministic finite piece sequence refers to a game at which the player knows every single piece in the sequence, and where there are finite pieces in the sequence, i.e. the game can end without the player losing. The authors defined the natural objectives of the game as follows \cite{tetris-is-hard-even-to-approx}:
 			
 			\begin{enumerate}
 				\item maximising the number of rows cleared;
@@ -300,31 +315,290 @@
 %			Since even in with less randomised rules, Tetris is NP-complete, we should turn our attention to non-traditional algorithmic approaches, but first, we should show why we shouldn't be looking into traditional approaches in the first place.
 %			We should mention in this section that Versus Tetris has different rules compared to the ones studied by Demaine et al. Demain et al: The difficulty of the offline version should imply the difficulty of the online version. Despite this difference, the game 
 				
-				It is important to note that even though \citeauthor{tetris-is-hard-even-to-approx}'s \cite{tetris-is-hard-even-to-approx} proof is based on a variant of Tetris that is quite different from Versus Tetris, the difficulty of this Versus Tetris can be implied from the proof. Versus Tetris introduces additional gameplay factors, such as the competitive aspect where players can send "garbage" lines to their opponents, adding layers of complexity.Versus Tetris introduces additional gameplay factors, such as the competitive aspect where players can send "garbage" lines to their opponents, adding layers of complexity. As such, Versus Tetris is arguably more difficult than its classic variant, or \citeauthor{tetris-is-hard-even-to-approx}'s variant \cite{tetris-is-hard-even-to-approx}.
+				It is important to note that even though \citeauthor{tetris-is-hard-even-to-approx}'s \cite{tetris-is-hard-even-to-approx} proof is based on a variant of Tetris that is quite different from Versus Tetris, the difficulty of Versus Tetris can be implied from the proof. Versus Tetris introduces additional gameplay factors, such as the competitive aspect where players can send ``garbage'' lines to their opponents, adding layers of complexity. As such, Versus Tetris is arguably more difficult than its classic variant, or  \citeauthor{tetris-is-hard-even-to-approx}'s variant \cite{tetris-is-hard-even-to-approx}.
 				
-				Given the NP-completeness of Tetris \cite{tetris-is-hard-even-to-approx} \cite{tetris-o1-np-hard}, it is evident that traditional deterministic algorithmic approaches would face significant challenges in efficiently solving the game. The NP-completeness of the game implies that obtaining exact solutions are computationally intractable within a reasonable time frame.
+				Given the NP-completeness of Tetris \cite{tetris-is-hard-even-to-approx} \cite{tetris-o1-np-hard}, it is evident that traditional deterministic algorithmic approaches would face significant challenges in efficiently playing the game \cite{cc:conceptual-perspective}. The NP-completeness of the game implies that obtaining exact solutions are computationally intractable within a reasonable time frame.
 				
-				To address this, we relax the requirements for a solution. This can be done by either broadening the set of acceptable solutions or focusing on average-case scenarios instead of worst-case scenarios \cite{cc:conceptual-perspective}. This shift in focus allows the use of more practical, non-traditional algorithms that provide acceptable solutions within a reasonable time, even if they are not optimal. In the subsequent section, we will highlight some of the approaches taken to tackle NP-complete problems.
+				To address this, we may relax the requirements for a solution. This can be done by either broadening the set of acceptable solutions or focusing on average-case scenarios instead of worst-case scenarios \cite{cc:conceptual-perspective}. This shift in focus allows the use of more practical, non-traditional algorithms that provide acceptable solutions within a reasonable time, even if they are not optimal. 
 							
-		\section{Addressing NP-completeness}
+		\section{Approaches to Tetris}
 		
-			% Explain the different approaches taken to solving NP-complete problems, more specfically on Tetris
+			% Explain the approaches taken to tackle the Tetris problem
+			% Should define each approach, and probably mention why the the algorithms were chosen.
 			
-			Now that the difficulty of Tetris has been established, this section aims to showcase some of the approaches taken to address NP-complete problems.
+			Now that the difficulty of Tetris has been established, we turn our attention to potential strategies that can be used to handle the game's complexity. In this section, we explore some of the innovative approaches that have been utilised to tackle the game of Tetris, such as imitation learning, upper confidence bound fort trees, deep reinforcement learning, and meta-heuristic algorithms.
 			
+			\subsection{Learning by Imitation} \label{subsec:imit-learning}
 			
+				In \citeyear{tetris-learning-by-imitation}, \citeauthor{tetris-learning-by-imitation} \cite{tetris-learning-by-imitation} employed a learning by imitation approach to the game of Tetris. Imitation learning aims to mimic human behaviour in some given task by learning a mapping between observations of demonstrations \cite{imitation-learning}.
+				
+				In their approach, played Tetris games were fed into a machine learning model as inputs, where the model would receive positive feedback when a decision matched that of the imitated system, and negative feedback otherwise \cite{tetris-learning-by-imitation}. The learning is deemed successful if the trained model maintains similarity even when faced with data outside of the training set.
+				
+				The learning system consists of several components, including filters, pattern calculators, and support vector machines (SVMs) (refer to Figure \ref{fig:syscomponents-learning-by-imitation}) \cite{tetris-learning-by-imitation}. Because of the time consuming nature of training SVMs, each Tetrimino had its own dedicated filters, pattern calculators and SVMs, i.e. seven SVMs \footnote{Seven SVMs for the seven Tetriminos.} are working together in the artificial player. The output of any particular SVM describes how similar a candidate move is to the choice of the imitated player.
+				
+				\begin{figure}
+					\tikzstyle{block} = [rectangle, draw, 
+					text width=6em, text centered, rounded corners, minimum height=4em]
+					\tikzstyle{arrow} = [thick,->,>=stealth]
+					\tikzstyle{connector} = [circle, draw, fill=red!20, minimum size=4mm, inner sep=0pt]
+					\centering
+					
+					\begin{tikzpicture}[node distance=2cm, auto]
+						
+						% Nodes
+						\node [block] (input) {Input: Tetris Game State};
+						\node [block, below of=input] (filters) {Filters};
+						\node [block, below of=filters] (pattern_calculators) {Pattern Calculators};
+						\node [block, right=1cm of pattern_calculators] (features) {Hand-coded Features};
+						\node [block, below of=pattern_calculators, right=.5cm of pattern_calculators.center] (svm) {Support Vector Machine};
+						\node [block, below of=svm] (output) {Output: Move Decision};
+						
+						% Arrows
+						\draw [arrow] (input) -- (filters);
+						\draw [arrow] (filters) -- (pattern_calculators);
+						\draw [arrow] (pattern_calculators) -- (svm);
+						\draw [arrow] (features) -- (svm);
+						\draw [arrow] (svm) -- (output);
+					\end{tikzpicture}
+					\caption{Abstraction of \citeauthor{tetris-learning-by-imitation}'s System Components}
+					\label{fig:syscomponents-learning-by-imitation}
+				\end{figure}
+				
+				Filters are made up of a multitude of patterns, which can be thought of as specific configurations in the playing field that the model uses to recognise and evaluate different game states \cite{tetris-learning-by-imitation}. Patterns do not take into account the whole matrix, but only a small area in the playing field. Thus, the authors included a list of 19 hand-coded features that takes a more global look at the game, some notable features include the number of holes that will be created after the current placement, and the number of removed lines after the current placement. Both the activated patterns and the features are passed into the support vector machine, and the move that is calculated to be the most similar is played.
+				
+				To evaluate their approach, \citeauthor{tetris-learning-by-imitation} used a human player as well as Fahey's artificial player \cite{fahey-ai} as systems for their model to imitate \cite{tetris-learning-by-imitation}. The outcome shows that their model can learn different styles of gameplay based on the imitated player, which is to be expected. When pitting the two learned models against each other in their variant of multiplayer Tetris \footnote{In \citeauthor{tetris-learning-by-imitation}'s variant of multiplayer Tetris, clearing $n$ lines sends $n-1$ attack rows to the opponent, with each attack row containing $n-1$ empty cells \cite{tetris-learning-by-imitation}. Attack rows are added to the bottom of the opponent's matrix.}, they found that the human imitated machine performed better than the one imitated from Fahey's AI. However, The system imitated from Fahey's AI outperformed that of the human imitated system in single player games. 
+				
+			\subsection{Upper Confidence Bounds for Trees}
+				% TODO may need revision
+				% Bandit-based Monte Carlo
+				Monte-Carlo Tree Search (MCTS) is a best-first search method that is based on a randomised exploration of the search space \cite{mcts}. The algorithm evaluates states to determine the most rewarding actions, with rewards being calculated from the leaf to the root \cite{tetris-bb-mc-planning}. MCTS has the added benefit of learning from previous explorations, gradually building a game tree in memory, resulting in more accurate estimation of the most promising moves \cite{mcts}. In \citeyear{bandit-based-mcts}, \citeauthor{bandit-based-mcts} \cite{bandit-based-mcts} proposed a method, which was deemed Upper Confidence Bound for Trees (UCT), to improve the performance of the algorithm by applying a bandit algorithm known as UCB1\footnote{UCB stands for Upper Confidence Bound} to Monte-Carlo Planning. 
+				
+				The UCB1 formula is employed to balance the exploration-exploitation trade-offs during the search \cite{tetris-bb-mc-planning}. It helps prioritise actions that are either promising or under-explored, which effectively prunes less promising branches of the search tree. This results in a more efficient search process and a smaller, more focused tree.
+				
+				In \citeyear{tetris-bb-mc-planning}, \citeauthor{tetris-bb-mc-planning} \cite{tetris-bb-mc-planning} employed this approach to the game of Tetris. In their approach, the authors considered each state of the matrix, along with a given piece as a single node in the planning tree (refer to Figure \ref{fig:bbmcts-single-node}). After an action is taken, if any number of rows are cleared, a predefined reward is given to the action and the most rewarding action is selected as the resulting move. To further improve efficiency, the authors pruned the search tree further, removing actions that resulted in disadvantageous holes in the field.
+				
+				\begin{figure}[h]
+					
+					\centering
+					\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+						\coordinate (sw) at (5,0);
+						\coordinate (nw) at (5,10);
+						\coordinate (se) at (15,0);
+						\coordinate (ne) at (15,10);
+						\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+						\node at (sw){\ipiece};
+						\node at ($(sw) + (4,0)$){\opiece};
+						\node at ($(sw) + (2,1)$){\spiece};
+						\node at ($(sw) + (1,1)$){\rotatebox{90}{\zpiece}};
+						\node at ($(sw) + (0,1)$){\rotatebox{-90}{\jpiece}};
+						\node at ($(sw) + (6,0)$){\tpiece};
+						\node at ($(sw) + (7,1)$){\rotatebox{90}{\lpiece}};
+						\node at ($(sw) + (5,1)$){\rotatebox{180}{\tpiece}};
+						\node at ($(sw) + (2,3)$){\zpiece};
+						\node at ($(sw) + (5,3)$){\opiece};
+						\node at ($(ne) + (1,-2)$){\ipiece};
+						\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+					\end{tikzpicture}
+					\caption{\centering An example of a single node of the matrix state and piece in the planning tree.}
+					\label{fig:bbmcts-single-node}
+				\end{figure}
+				
+				Experimental results show that the artificial player shows promise, beating Fahey's AI \cite{fahey-ai} 91 times out of 100 games using the multiplayer Tetris rules mentioned in subsection \ref{subsec:imit-learning} \cite{tetris-bb-mc-planning}. The results also show that the artificial player outperformed the SVM based pattern player from \citeauthor{tetris-bb-mc-planning}'s previous work, where they approached the game with imitation learning \cite{tetris-learning-by-imitation}.
+				
+				% TODO may need better visualisation
+			
+			\subsection{Deep Reinforcement Learning}
+				
+				In \citeyear{tetris-drl}, \citeauthor{tetris-drl} \cite{tetris-drl} adopted a deep reinforcement approach to the game of Tetris, using a convolutional neural network to approximate a Q function, which reflects the maximum predicted discounted sum of future rewards possible by following a given policy from states to actions (refer to Equation \ref{eq:q-func}).
+				\begin{equation}\label{eq:q-func}
+					Q^* (s,a) = \max \mathbb{E}[r_t + \gamma r_{t+1} + \gamma^2 r_{t+2} + ... | s_t = s, a_t = a, \pi] 
+				\end{equation}
+				
+				\noindent where $s_t$ is the state at time $t$, $a_t$ is the action taken at time $t$, $\pi$ is a policy function indicating what action to take in the current state, and is followed at every step from $t+1$ onwards, $r_t$ is the reward obtained by taking action $a_t$ at state $s_t$, and $\gamma$ is a discount factor \cite{tetris-drl}.
+				
+				The authors defined a state as an image of the current game screen \cite{tetris-drl}. Actions were defined in two ways, single actions, where a single input used to move a piece is considered an action, and grouped actions, where an entire sequence of actions is considered that takes a piece from its initial point at the top of the matrix to the bottom. They also used two different types of rewards, the first being the scores given from the emulator used, which was defined as the number of lines cleared. The second type of reward was defined as a heuristic function proposed by \citeauthor{lee-ai} \cite{lee-ai} (refer to Equation \ref{eq:drl-heuristic}).
+				%
+				\begin{equation}\label{eq:drl-heuristic}
+					-0.51 \times Height + 0.76 \times Lines - 0.36 \times Holes - 0.18 \times Bumpiness
+				\end{equation}
+				
+				This heuristic takes into account the sum of the heights of every column, the number of cleared lines, the number of holes in the matrix, and the ``bumpiness'' - sum of the absolute differences in height between adjacent columns \cite{lee-ai}. Interestingly, the weights of the heuristic were calculated by using a genetic algorithm. 
+				
+				The training process was further improved by using an epsilon-greedy policy, where the agent takes the best known move most of the time, but has a small probability $\epsilon$ to take a random action \cite{tetris-drl}. They also tried a novel approach where an agent that was already trained to play well could suggest moves to the algorithm. In this approach, a random action is selected with probability $\epsilon_{rand}$, an action suggested by the transferred agent is selected with probability $\epsilon_{agent}$, and the best known action to the machine is selected otherwise.
+				
+				Other than that, a method known as experience replay was used to create a memory for the neural network to train on. This memory consisted of every ``experience'' that the network had encountered, and was sampled when training the network. Prioritised sweeping was also utilised, where the priorities were placed on experiences which had the greatest error, and therefore the most room to improve.
+				
+				From the experimental results, one of the agents showed the most potential. This agent utilised a standard greedy-epsilon policy - no trained agent was used to suggest moves, grouped actions over single ones, heuristic rewards and random sampling over prioritised sweeping. It outperformed the other agents proposed in this paper, with an average score of 18. However, its capabilities were far inferior to that of \citeauthor{lee-ai}'s bot, which had an average score of 200.
+				
+				Later in \citeyear{tetris-drl-2}, \citeauthor{tetris-drl-2} \cite{tetris-drl-2} used a modified version of \citeauthor{tetris-drl}'s algorithm as a baseline, and proposed several different approaches taken to further optimise the algorithm. The variant of the game used to test the author's algorithms has similar rules to that of modern Tetris games, where the system will generate bags containing a piece sequence with all 7 pieces, and bags are given to the player in sequence. This piece generation system ensures that the player will not need to experience a piece drought, since a piece is guaranteed to be given in the current or next bag. The game also has a hold feature, where the player has the option to hold on to a piece for future use, and swap it out for the piece in play.
+				
+				\citeauthor{tetris-drl-2} proposed that the quadratic rewards from the emulator scores in \citeauthor{tetris-drl}'s paper might encourage the agent to take riskier moves, since clearing multiple lines would greatly increase the rewards given. However, this resulted in shorter survival times, as the agent waits for particular pieces. Knowing this, the author proposed utilising a linear reward function instead of a quadratic one. Comparing the results of both approaches, the authors found that the agent trained with a linear reward function outperformed that of a quadratic one, in both the survival time aspect, and the game score aspect. However, it should be noted that the quadratic models have higher points per piece dropped, meaning that they were much more efficient than the linear ones.
+				
+				\citeauthor{tetris-drl-2} also proposed the use of a ``harder'' Tetris game, which had a higher probability for Z and S pieces (refer to Figure \ref{fig:z-s-pieces}). The author set the probability of each piece as shown in Table \ref{tab:tet-hard-mode}. Doing this significantly decreased training time, reducing it from 3 days to a mere 6 hours.
+				
+				\begin{figure}
+					\centering
+					\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.5},scale=.5]
+						\node at (0,0) {\zpiece};
+						\node at (6,0) {\spiece};
+					\end{tikzpicture}
+					\caption{Z and S pieces.} \label{fig:z-s-pieces}
+				\end{figure}
+				
+				\begin{table}
+					\caption{Probability of each piece in \citeauthor{tetris-drl-2}'s ``hard'' mode.}
+					\label{tab:tet-hard-mode}
+					\centering
+					\begin{tblr}{ c c c c c c c c }
+						\hline
+						& Z & S & I & J & L & O & T \\
+						\hline
+						Probability & 0.25 & 0.25 & 0.1 & 0.1 & 0.1 & 0.1 & 0.1\\
+						\hline
+					\end{tblr}
+				\end{table}
+				
+				Finally, \citeauthor{tetris-drl-2} proposed an update rule that takes the probability of each piece into account (refer to Equation \ref{eq:q-ex-pieces}). This idea emerged from the observation that the only randomness found in a Tetris game is from piece generation. The training process involved enumerating all possible next pieces and actions to find the best action, storing the expected reward and Q-value for each state to a replay buffer and randomly sampling from the replay buffer to update the Q-network. Result of this change showed that the models trained under these update rules performed consistently better than the original models.
+				%
+				\begin{equation} \label{eq:q-ex-pieces}
+					Q(s) \leftarrow Q(s) + \alpha [\mathbb{E}_{allPossiblePieces}[r + \gamma \max Q(s') - Q(s)]]
+				\end{equation}
+				
+				Experimental results show that \citeauthor{tetris-drl}'s model \cite{tetris-drl} scored an average of 704.68 with modern rules in place, but \citeauthor{tetris-drl-2}'s model significantly outperformed it, with an average score of 40163.58, increasing almost 57-fold.
+				
+			\subsection{Meta-heuristic Algorithms} \label{subsec:metaheuristic}
+				
+				% MVP Algorithm and Harmony Search Algorithm
+				
+				According to \citeauthor{yang2020nature} \cite{yang2020nature}, the term ``meta-heuristic'' does not have any agreed upon definitions, with some scholars even using the term interchangeably with the word ``heuristic''. Even so, most definitions agree on the same things. \citeauthor{metaheuristic} \cite{metaheuristic} consolidated some of the properties that characterise most meta-heuristics as follows:
+				
+				\begin{enumerate}
+					\item Meta-heuristics are strategies that guide the search process.
+					\item The goal is to efficiently explore the search space in order to find near-optimal solutions.
+					\item Meta-heuristic algorithm techniques range from simple local search procedures to complex learning processes.
+					\item Meta-heuristic algorithms are non-deterministic and approximate in nature.
+					\item Meta-heuristic algorithms are not designed to solve a specific problem.
+				\end{enumerate}
+				
+				In this subsection, we will look into two works of literature that cover the use of two distinct meta-heuristic algorithms, namely, the harmony search algorithm, and the most valuable player algorithm, in optimising Tetris agents.
+				
+				\subsubsection{Harmony Search Algorithm}
+					
+					In \citeyear{tetris-harmony-search}, \citeauthor{tetris-harmony-search} utilised the harmony search algorithm, a meta-heuristic algorithm that mimics the improvisation of music players \cite{harmony-search}, to approach Tetris \cite{tetris-harmony-search}. In the context of the algorithm, harmonies are solution vectors containing potential weights of solutions. The algorithm can be described in the following steps \cite{tetris-harmony-search}:
+					
+					\begin{enumerate}
+						\item \textbf{Initialisation}: Program parameters are defined and the harmony memory is filled with random harmonies; each harmony is evaluated using a set objective function.
+						\item \textbf{Harmony Improvisation}: A new solution is created utilising these three methods:
+						\begin{enumerate}
+							\item \textbf{Creation of a new solution}: A new solution is created randomly with a probability of $1 - r_{accept}$, or an existing solution in the harmony memory is selected with a probability of $1 - r_{accept}$.
+							\item \textbf{Pitch adjustment}: The elements of the new harmony are modified with a probability of $r_{pa}$
+							\item \textbf{Evaluation}: The new harmony is evaluated using the objective function defined.
+						\end{enumerate}
+						\item \textbf{Selection}: When a terminating condition is met, the best harmony in the harmony memory is selected.
+					\end{enumerate}
+					
+					In their approach, \citeauthor{tetris-harmony-search} \cite{tetris-harmony-search} used a list of 19 feature functions, assigning numerical weights to each function. The best move for a current piece is chosen using a linear summation of these feature functions with their corresponding weights:
+					
+					\begin{equation}
+						V(s) = \sum_{i=1}^{19}w_{i}f_{i}(s)
+					\end{equation}
+					
+					\noindent where $s$ is the current state (board configuration), $w_i$ represents each of the weights of the $i^{th}$ feature function $f_i(s)$ and $f_i(s)$ is a function that maps a state to a real value. The objective of the optimisation process is to find an optimal set of weights that result in the most number of cleared rows. Since 19 feature functions were defined, the solutions generated by the program came in the form of a vector of 19 weights.
+					
+					In each iteration of the algorithm, when a set of harmonies (in the form of weights) are generated, \citeauthor{tetris-harmony-search} \cite{tetris-harmony-search} then passed the weights to their own Tetris simulator, which plays a complete game of Tetris, utilising the weights provided to decide on piece placements. After playing the game, the simulator then returns the number of rows cleared by the agent. This serves as the objective function, where more cleared rows means better agent performance. When a termination condition has been met, the program then outputs the best solution created so far.
+					
+					To evaluate their performance, \citeauthor{tetris-harmony-search} \cite{tetris-harmony-search} used the spawned piece to cleared rows ratio as a metric. The lower this metric was, the better the performance of the algorithm. After letting the algorithm run for two weeks straight, the program was almost able to achieve the theoretical best case, which was derived by \citeauthor{fahey-ai} \cite{fahey-ai} to be 2.5.
 		
+				\subsubsection{Most Valuable Player Algorithm}
+				
+					The most valuable player algorithm (MVPA) is a meta-heuristic algorithm inspired from sport where players form teams and compete collectively to win championship games, and individually amongst each other to win the MVP trophy \cite{mvpa}. In \citeyear{tetris-mvpa-ga}, \citeauthor{tetris-mvpa-ga} \cite{tetris-mvpa-ga} compared the use of this algorithm with the genetic algorithm (GA) in a classic Tetris environment. This algorithm can be described in the following steps:
+					
+					\begin{enumerate}
+						\item \textbf{Initialisation}: Program parameters are defined; candidate solutions are generated.
+						\item \textbf{Team Formation}: A number of teams are determined and players are divided evenly throughout the different teams.
+						\item \textbf{Individual Competition}: Each player tries to develop their skills based on the existing franchise players and MVP.
+						\item \textbf{Team Competition}: Two teams are selected at random to compete with one another, where the game cannot result in a loss.
+						\item \textbf{Application of Greediness}: After several competitions, individual player skills are evaluated to see if any improvements were made after the games. If a player is better after the games, it will be used for the next iteration.
+						\item \textbf{Application of Elitism}: 1/3 of all players with the worst skills will be replaced by 1/3 of the players with the best skills.
+						\item \textbf{Remove Duplicates}: If there are individuals who are identical to one another, one of these individuals will be updated randomly.
+					\end{enumerate}
+					
+					Similar to harmony search, a list of features are selected, and both the MVPA and GA are used to optimise the weights for each feature.
+					
+					Experimental results show that MVPA proved to optimise the game better than GA in terms of score and speed. In an endless game, MVPA managed to reach a score of 249 million while the GA only reached 68 million. The MVPA was also shown to find an acceptable solution faster than the GA in trials where the authors limited the spawn pieces. They observed that the MVPA converged much faster.
+						
 		\section{Playing Tetris with Nature-inspired Algorithms}
 		
+			Nature-inspired optimisation algorithms are a class of meta-heuristic algorithms. These algorithms are based on natural phenomena and biological systems, borrowing ideas like natural selection and evolution to converge on acceptable solutions \cite{nia-soft-computing}. In this section, we will highlight three such algorithms that have been adopted to attempt to tackle the game of Tetris, specifically, the aforementioned genetic algorithm (GA), ant colony optimisation (ACO), particle swarm optimisation (PSO).
+			
+			All these works are similar to the ones mentioned in Subsection \ref{subsec:metaheuristic}, in the sense that they all utilise a list of features from the board state and that they all utilise these algorithms to optimise the weights for said features to be used in a state evaluation function.
+		
 			% Show examples of other work that has attempted to play Tetris with NIA
-		
-		\section{Identifying the Research Gaps}
-		
-			% No Versus
-		
-		\section{Concluding the Review}
+			\subsection{Genetic Algorithm}
+			
+				In \citeyear{tetris-ga-flom-robinson}, \citeauthor{tetris-ga-flom-robinson} \cite{tetris-ga-flom-robinson} utilised a Genetic Algorithm (GA) to weight an evaluation function for Tetris. In their work, a variation of the genetic algorithm known as GENITOR was used. In a standard GA, the parents are replaced by their offspring after recombination \cite{genitor}. The GENITOR approach differs in the sense that the offspring do not replace parents, but rather replace low ranking individuals in the population.
+				
+				An agent's fitness was determined by the rank of the utility that the agent returned \cite{tetris-ga-flom-robinson}. \citeauthor{tetris-ga-flom-robinson} experimented with two different ways to calculate this utility. The first was to calculate the number of rows cleared by the agent before a game ends (either by losing, or by using up a finite number of pieces). The second way was to use the ratio of cleared rows per piece played. They found that both determiners had no noticeable difference in learning rate, and ultimately chose to use the first metric for the rest of their experimentation.
+				
+				They also experimented with different crossover operations to find out which would have the biggest positive impact on learning rate. This resulted in them using a uniform crossover approach. In their work, binary representations of the weights were used as chromosomes. Every generation, two parents were selected completely at random and recombined to make one child. With uniform crossover, a crossover mask with equally distributed 1-bits is used in the recombination process \cite{uniform-crossover}. For example,
+				
+				\begin{quote}
+					Parent 1:\verb| 001111|\\
+					Parent 2:\verb| 111100|\\
+					Mask:\hspace{4pt}\verb|   010101|\\
+					Child 1:\hspace{6pt}\verb| 011110|\\
+					Child 2:\hspace{6pt}\verb| 101101|
+				\end{quote}
+				
+				\noindent Child 1 is parent 1 with some bits replaced as specified by the mask and child 2 is parent 2 with some bits replaced as specified by the mask.
+				
+				Results show that the agents were able to continue learning each generation, and that even after 1000 runs, the agents have yet to breed into convergence  \cite{tetris-ga-flom-robinson}. \citeauthor{tetris-ga-flom-robinson} concluded that genetic algorithms work very well at searching for good weights for the evaluation function used to allow an agent to play Tetris.
+				
+				Later in \citeyear{tetris-ga-lewis}, \citeauthor{tetris-ga-lewis} \cite{tetris-ga-lewis} also used GA to attempt playing Tetris. In his implementation of the game, the agent was awarded a score after a line clear occurred (refer to Table \ref{tab:lewis-scores}). 
+				
+				\begin{table}[h]
+					\caption{Score table for lines cleared in \citeauthor{tetris-ga-lewis}' Tetris game \cite{tetris-ga-lewis}.}
+					\label{tab:lewis-scores}
+					\centering
+					\begin{tblr}{c c}
+						\hline
+						Lines Cleared & Score \\
+						\hline
+						1 & 2 \\
+						2 & 5 \\
+						3 & 15 \\
+						4 & 60 \\
+						\hline
+					\end{tblr}
+				\end{table}
+				
+				The metric used to calculate the fitness of a candidate is the score efficiency, which is defined as the average score per pieces played. that a player earns during a game of Tetris. A 4-line clear requires at least 10 Tetrominos. Thus, the theoretical maximum for this metric is 60 score $\div$ 10 pieces = 6. Experimental results show that under this metric, the algorithm mostly converged after 30 generations with a minimum scoring efficiency of 2.4, which is equivalent to 20\% of the theoretical maximum.
+				
+			\subsection{Ant Colony Optimisation}
+				
+				In \citeyear{tetris-aco}, \citeauthor{tetris-aco} \cite{tetris-aco} applied Ant Colony Optimization (ACO) to optimize the weights of a linear value function in the game of Tetris. The value function evaluates possible game states based on 16 feature functions, where each feature is scaled between 0 and 1.
+				
+				The weight vector, represented as $w$, is encoded into a 16-bit vector, forming a weight graph with 256 edges, where each edge corresponds to a bit value of '0' or '1'. Ants traverse this graph to find the optimal path, which corresponded to the optimal weight vector for the Tetris agent. This approach allowed the ACO algorithm to systematically explore different weight configurations and identify the most effective one for gameplay.
+				
+				The performance of the ACO algorithm was compared with various reinforcement learning methods. Initially, when no heuristic was applied, the ACO algorithm converged prematurely to a suboptimal solution, resulting in an average of about 7,000 lines removed. This premature convergence highlighted the limitations of ACO without additional guidance mechanisms.
+				
+				To address the issue of premature convergence, the researchers introduced a dynamic heuristic. This modification significantly enhanced the algorithm's performance. With the dynamic heuristic in place, the ACO algorithm's average lines removed exceeded 17,000. Moreover, the best weight configuration discovered by the algorithm achieved an impressive performance of over 23,700 lines removed. This marked improvement demonstrated the effectiveness of incorporating dynamic heuristics to guide the ants towards better solutions and avoid local optima.
+				
+				The results of this study were further compared to those of other traditional reinforcement learning techniques. The ACO with dynamic heuristic outperformed most of these methods, including hand-coded approaches and Genetic Algorithms (GA). The superior performance of the ACO approach, particularly with the dynamic heuristic, underscored its potential in optimizing Tetris gameplay and surpassing the effectiveness of many conventional methods.
+				
+			\subsection{Particle Swarm Optimisation}
+			
+				In \citeauthor{swarm-tetris}'s \cite{swarm-tetris} paper, the authors investigate the application of Particle Swarm Optimization (PSO) in training neural networks to play Tetris. The algorithm was used to optimize the weight values of neural networks. Unlike traditional hand-coded heuristic approaches, PSO enables the automatic discovery of effective gameplay strategies. By treating each neural network as a particle within the swarm, the algorithm iteratively improves the network's performance based on a fitness function, which in this case is the game score achieved by the Tetris-playing agent.
+				
+				The use of PSO for training neural networks in this context represents a significant shift from conventional methods. Traditional approaches rely heavily on hand-coded heuristics, which require extensive domain knowledge and manual tuning. PSO, on the other hand, automates the discovery process, allowing the neural networks to evolve and adapt their strategies over time. This automatic optimization is achieved through the collective behavior of the swarm, where each particle adjusts its position based on both its own experience and the experience of neighboring particles.
+				
+				In the experiments conducted, neural networks were trained using PSO over multiple iterations. The results indicated a continuous improvement in the performance of the agents as they learned to play Tetris more effectively. Initially, the PSO-trained agents displayed suboptimal performance compared to traditional hand-coded heuristics. However, over time and with more iterations, the agents began to exhibit increasingly sophisticated gameplay strategies. Despite these advancements, the PSO-trained agents have not yet surpassed the performance of the best hand-coded algorithms, suggesting room for further optimization and refinement in the training process.
+				
+				Despite these advancements, the PSO-trained agents have not yet surpassed the performance of the best hand-coded algorithms. This outcome suggests that while PSO is effective in automating the training process and uncovering new strategies, it still requires further optimization. The iterative nature of PSO allows for gradual improvement, but achieving human-level performance in Tetris remains a challenge that necessitates ongoing refinement and experimentation.
+				
+				The experimental results demonstrate the potential of PSO in the domain of game-playing AI, particularly in automating the training process and discovering novel strategies. The study underscores the feasibility of PSO for such applications while also pointing to the challenges that remain in achieving human-level performance in Tetris through automated training methods.
 	
-	\chapter{Technical Plan}
+	\chapter{Methodology}
 	
 		% Graphical and textual description is provided for flow of information between components in the system/stages in the research study.
 		% Graphical overview of system/research study corresponds to the textual description provided with no errors.	
@@ -332,6 +606,275 @@
 		% All documents provided are well-drawn/well-written, complete and correct. The purpose and role of each document in the project is stated clearly.
 		
 		% Defining rules
+		\section{Defining the Rules}
+		% 
+			Tetris is a game that has many different variations, each with varying rules. In this section, we will formally define the game's rules that will be enforced throughout our implementation.
+			
+			\subsection{Tetrimino Sequence Generation}
+			
+				Regardless of the variant, there are seven distinct Tetriminos present in every game of Tetris, each with their own names (refer to Figure \ref{fig:tetris-pieces}). However, the way the sequences of Tetriminos are generated differ depending on the variant defined. In our variant of the game, the rules of piece generation will be similar to that defined by \citeauthor{tetris-drl-2} \cite{tetris-drl-2}.
+				
+				\begin{figure}
+					\begin{center}
+							%		
+						\begin{subfigure}[t]{.1\linewidth}
+							\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.5},scale=.5]
+								\node at (0,0) {\opiece};
+							\end{tikzpicture}
+							\caption{O}
+						\end{subfigure}
+						%
+						\begin{subfigure}[t]{.1\linewidth}
+							\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.5},scale=.5]
+								\node at (0,0) {\tpiece};
+							\end{tikzpicture}
+							\caption{T}
+						\end{subfigure}
+						%					
+						\begin{subfigure}[t]{.1\linewidth}
+							\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.5},scale=.5]
+								\node at (0,0) {\zpiece};
+							\end{tikzpicture}
+							\caption{Z}
+						\end{subfigure}
+						%
+						\begin{subfigure}[t]{.1\linewidth}
+							\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.5},scale=.5]
+								\node at (0,0) {\spiece};
+							\end{tikzpicture}
+							\caption{S}
+						\end{subfigure}
+						%					
+						\begin{subfigure}[t]{.1\linewidth}
+							\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.5},scale=.5]
+								\node at (0,0) {\lpiece};
+							\end{tikzpicture}
+							\caption{L}
+						\end{subfigure}
+						%					
+						\begin{subfigure}[t]{.1\linewidth}
+							\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.5},scale=.5]
+								\node at (0,0) {\jpiece};
+							\end{tikzpicture}
+							\caption{J}
+						\end{subfigure}
+						%	
+						\begin{subfigure}[t]{.1\linewidth}
+							\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.5},scale=.5]
+								\node at (0,0) {\ipiece};
+							\end{tikzpicture}
+							\caption{I}
+						\end{subfigure}		
+					\end{center}
+					\caption{The Tetriminos and their names.}
+					\label{fig:tetris-pieces}
+				\end{figure}
+				
+				The system used to generate piece sequences is known as \textit{7-bag}. It works by generating a sequence of all seven Tetriminos permuted randomly, as if they were drawn from a bag \cite{harddrop}. The sequence is then given to the player before another bag is generated. This means that there are $7!$ or 5,040 different permutations of the seven pieces for any given bag. The system gives each one of these permutations an equal probability of occurring. This ensures that there will not be periods of piece drought -- where a player waits for an extended period of time for a preferred piece,\footnote{The maximum number of pieces between a piece $X$ and another piece $X$ is 12.} or piece rain -- where a player keeps receiving the same pieces consecutively.
+			
+			\subsection{Matrix Dimensions}
+			
+				Under official guideline Tetris rules, the matrix dimension is 10 columns wide and 22 rows tall, but the top two rows are hidden. These two rows will allow the player to survive even if the middle of the matrix is filled up by moving the piece to the side of the matrix (refer to Figure \ref{fig:22-row-ex}).
+				
+				\begin{figure}
+					\centering
+					\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+						\coordinate (sw) at (5,0);
+						\coordinate (nw) at (5,20);
+						\coordinate (se) at (15,0);
+						\coordinate (ne) at (15,20);
+						\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+						\node at (sw){\garbage{20}{8}};
+						\node at ($(nw) + (3,0)$) {\ipiece};
+						\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+					\end{tikzpicture}
+					\caption{\centering I piece is spawned at the 21st row of the matrix, but the player can survive by slotting the piece into the eighth column of the matrix.}
+					\label{fig:22-row-ex}
+				\end{figure}			
+			
+			\subsection{Spins}
+			
+				The rotation system used by guideline Tetris games is known as the \textit{Super Rotation System} (SRS), and it defines how Tetriminos spawn, rotate, and what kicks can be performed \cite{harddrop}. It is important for us to define the rotation rules here so that we can create a simulation of Tetris that is as accurate as possible.
+				
+				When unobstructed, the Tetriminos all rotate around a single point (refer to Figure \ref{fig:srs}). The O and I pieces rotate around an intersection of grid-lines whereas the other pieces rotate around the centre of a grid-box.
+				
+				\begin{figure}
+					\centering
+					\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.4},scale=.4]
+						% opiece
+						\node at (0,0) {\opiece};
+						\filldraw[black] (1,1) circle (4pt);
+						\node at (5,0) {\opiece};
+						\filldraw[black] (6,1) circle (4pt);
+						\node at (10,0) {\opiece};
+						\filldraw[black] (11,1) circle (4pt);
+						\node at (15,0) {\opiece};
+						\filldraw[black] (16,1) circle (4pt);
+						% tpiece
+						\node at (0,-3) {\tpiece};
+						\filldraw[black] (1.5,-2.5) circle (4pt);
+						\node at (5,-4) {\rotatebox{-90}{\tpiece}};
+						\filldraw[black] (5.5,-2.5) circle (4pt);
+						\node at (9,-4) {\rotatebox{180}{\tpiece}};
+						\filldraw[black] (10.5,-2.5) circle (4pt);
+						\node at (14,-4) {\rotatebox{90}{\tpiece}};
+						\filldraw[black] (15.5,-2.5) circle (4pt);
+						% zpiece
+						\node at (0, -7) {\zpiece};
+						\filldraw[black] (1.5,-6.5) circle (4pt);
+						\node at (5, -8) {\rotatebox{90}{\zpiece}};
+						\filldraw[black] (5.5,-6.5) circle (4pt);
+						\node at (9, -8) {\zpiece};
+						\filldraw[black] (10.5,-6.5) circle (4pt);
+						\node at (14, -8) {\rotatebox{90}{\zpiece}};
+						\filldraw[black] (15.5,-6.5) circle (4pt);
+						% spiece
+						\node at (0,-11){\spiece};
+						\filldraw[black] (1.5,-10.5) circle (4pt);
+						\node at (5,-12){\rotatebox{90}{\spiece}};
+						\filldraw[black] (5.5,-10.5) circle (4pt);
+						\node at (9,-12){\spiece};
+						\filldraw[black] (10.5,-10.5) circle (4pt);
+						\node at (14,-12){\rotatebox{90}{\spiece}};
+						\filldraw[black] (15.5,-10.5) circle (4pt);
+						% lpiece
+						\node at (0,-15){\lpiece};
+						\filldraw[black] (1.5,-14.5) circle (4pt);
+						\node at (5,-16){\rotatebox{-90}{\lpiece}};
+						\filldraw[black] (5.5,-14.5) circle (4pt);
+						\node at (9,-16){\rotatebox{180}{\lpiece}};
+						\filldraw[black] (10.5,-14.5) circle (4pt);
+						\node at (14,-16){\rotatebox{90}{\lpiece}};
+						\filldraw[black] (15.5,-14.5) circle (4pt);
+						% jpiece
+						\node at (0,-19){\jpiece};
+						\filldraw[black] (1.5,-18.5) circle (4pt);
+						\node at (5,-20){\rotatebox{-90}{\jpiece}};
+						\filldraw[black] (5.5,-18.5) circle (4pt);
+						\node at (9,-20){\rotatebox{180}{\jpiece}};
+						\filldraw[black] (10.5,-18.5) circle (4pt);
+						\node at (14,-20){\rotatebox{90}{\jpiece}};
+						\filldraw[black] (15.5,-18.5) circle (4pt);
+						% ipiece
+						\node at (0,-23) {\ipiece};
+						\filldraw[black] (2,-23) circle (4pt);
+						\node at (6,-25) {\rotatebox{90}{\ipiece}};
+						\filldraw[black] (6,-23) circle (4pt);
+						\node at (9,-24) {\rotatebox{180}{\ipiece}};
+						\filldraw[black] (11,-23) circle (4pt);
+						\node at (15,-25) {\rotatebox{-90}{\ipiece}};
+						\filldraw[black] (16,-23) circle (4pt);
+					\end{tikzpicture}
+					\caption{\centering The four rotation states of all seven Tetriminos. The black dots represent centres of rotation.}
+					\label{fig:srs}
+				\end{figure}
+								
+				However, if the piece is obstructed by the wall, the floor, or another fixed piece, the game attempts to ``kick'' the Tetrimino into an alternative position nearby \cite{harddrop}. When this occurs, the game tests 5 potential positions to kick the piece towards; if the position of all the tests are unavailable, the rotation itself fails, resulting in the piece not rotating at all. Other than the O piece, all the other pieces are able to kick into different positions. The I piece has its own set of kick values, but the remaining pieces all share identical ones.
+				
+				Tables \ref{tab:i-kick} and \ref{tab:non-i-kick} show the kick values for these pieces \cite{harddrop}. The kick values represent translations relative to rotations. The following conventions will be used for naming rotation states for the tables:
+				
+				\begin{itemize}
+					\item 0 = spawn state
+					\item L = state resulting from a counter-clockwise rotation from the spawn state
+					\item R = state resulting from a clockwise rotation from the spawn state.
+					\item 2 = state resulting from 2 successive rotations in either direction from spawn.
+				\end{itemize}
+				
+				\begin{table}
+					\caption{I Tetrimino Wall Kick Data.}
+					\label{tab:i-kick}
+					\centering
+					\begin{tblr}{colspec={| c | c | c | c | c | c |},cell{2-Z}{2-Z}={font=\ttfamily},row{1}={gray!35}}
+						\hline
+						& Test 1 & Test 2 & Test 3 & Test 4 & Test 5 \\
+						\hline
+						0 $\rightarrow$ R & (0, 0) & (-2, 0) & \texttt{(+1, 0)} & (-2, -1) & (+1, +2) \\
+						\hline
+						R $\rightarrow$ 0 & (0, 0) & (+2, 0) & (-1, 0) & (+2, +1) & (-1, -2) \\
+						\hline
+						R $\rightarrow$ 2 & (0, 0) & (-1, 0) & (+2, 0) & (-1, +2) & (+2, -1) \\
+						\hline
+						2 $\rightarrow$ R & (0, 0) & (+1, 0) & (-2, 0) & (+1, -2) & (-2, +1) \\
+						\hline
+						2 $\rightarrow$ L & (0, 0) & (+2, 0) & (-1, 0) & (+2, +1) & (-1, -2) \\
+						\hline
+						L $\rightarrow$ 2 & (0, 0) & (-2, 0) & (+1, 0) & (-2, -1) & (+1, +2) \\
+						\hline
+						L $\rightarrow$ 0 & (0, 0) & (+1, 0) & (-2, 0) & (+1, -2) & (-2, +1) \\
+						\hline
+						0 $\rightarrow$ L & (0, 0) & (-1, 0) & (+2, 0) & (-1, +2) & (+2, -1) \\
+						\hline
+					\end{tblr}
+				\end{table}
+				
+				\begin{table}
+					\caption{T, Z, S, L and J Tetrimino Wall Kick Data.}
+					\label{tab:non-i-kick}
+					\centering
+					\begin{tblr}{colspec={| c | c | c | c | c | c |},cell{2-Z}{2-Z}={font=\ttfamily},row{1}={gray!35}}
+						\hline
+						& Test 1 & Test 2 & Test 3 & Test 4 & Test 5 \\
+						\hline
+						0 $\rightarrow$ R & (0, 0) & (-1, 0) & (-1, +1) & (0, -2) & (-1, -2) \\
+						\hline
+						R $\rightarrow$ 0 & (0, 0) & (+1, 0) & (+1, -1) & (0, +2) & (+1, +2) \\
+						\hline
+						R $\rightarrow$ 2 & (0, 0) & (+1, 0) & (+1, -1) & (0, +2) & (+1, +2) \\
+						\hline
+						2 $\rightarrow$ R & (0, 0) & (-1, 0) & (-1, +1) & (0, -2) & (-1, -2) \\
+						\hline
+						2 $\rightarrow$ L & (0, 0) & (+1, 0) & (+1, +1) & (0, -2) & (+1, -2) \\
+						\hline
+						L $\rightarrow$ 2 & (0, 0) & (-1, 0) & (-1, -1) & (0, +2) & (-1, +2) \\
+						\hline
+						L $\rightarrow$ 0 & (0, 0) & (-1, 0) & (-1, -1) & (0, +2) & (-1, +2) \\
+						\hline
+						0 $\rightarrow$ L & (0, 0) & (+1, 0) & (+1, +1)	& (0, -2) & (+1, -2) \\
+						\hline
+					\end{tblr}
+				\end{table}
+			
+			\subsection{Attacks}
+			
+				In \citeauthor{tetris-learning-by-imitation}'s papers \cite{tetris-learning-by-imitation} \cite{tetris-bb-mc-planning}, they defined attack rules for their variant of multiplayer Tetris. Here, we will define the attack rules of guideline Tetris, which will be used for our implementation.
+				
+				\subsubsection{Garbage Lines}
+					
+					
+			
+				\subsubsection{Line Clears}
+				
+				\subsubsection{T-spins}
+				
+				\subsubsection{Back-to-back (B2B)}
+				
+				\subsubsection{Combos}
+			
+			\subsection{Gravity}
+			
+			\subsection{Other Features}
+%				hold
+%				5-piece lookahead
+		
+		\section{Algorithm Selection}
+		% how algorithms work, why we choose them
+		
+		\section{Problem Formulation}
+		% problem formulation for each algorithm
+		
+			\subsection{Features}
+		
+		\section{Evaluation Framework}
+		% ui and evaluation framework
+		% attack per piece
+		% in order to obtain data, suggest encoding scheme
+			\subsection{Evaluating Attack Efficiency}
+			
+			\subsection{Evaluating Survivability}
+			
+			\subsection{Playing Against Other Players}
+
+			\subsection{Comparing Algorithms}
 	
 	\chapter{Work Plan}
 		

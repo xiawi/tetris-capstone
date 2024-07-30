@@ -31,8 +31,8 @@
       \strng{authorbibnamehash}{62c6ec64255fa6912c7988d73cfb96bc}
       \strng{authornamehash}{62c6ec64255fa6912c7988d73cfb96bc}
       \strng{authorfullhash}{62c6ec64255fa6912c7988d73cfb96bc}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{In this webpage, the game of Tetris is described as an addictive puzzle game, there are references to some rules of the game, which includes the clearing of lines and the losing condition. There is also a section on the creator of Tetris. As this is the 'About Us' page of the official Tetris website, this is treated as a credible source. This source will be used to introduce the Tetris game. It gives readers a good amount of information without being too overwhelming.}
@@ -85,8 +85,8 @@
       \strng{editorbibnamehash}{7b906aa6c4ae3cf3d56a88b8db8b0484}
       \strng{editornamehash}{7b906aa6c4ae3cf3d56a88b8db8b0484}
       \strng{editorfullhash}{7b906aa6c4ae3cf3d56a88b8db8b0484}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In the popular computer game of Tetris, the player is given a sequence of tetromino pieces and must pack them into a rectangular gameboard initially occupied by a given configuration of filled squares; any completely filled row of the gameboard is cleared and all pieces above it drop by one row. We prove that in the offline version of Tetris, it is NP-complete to maximize the number of cleared rows, maximize the number of tetrises (quadruples of rows simultaneously filled and cleared), minimize the maximum height of an occupied square, or maximize the number of pieces placed before the game ends. We furthermore show the extreme inapproximability of the first and last of these objectives to within a factor of p1−ɛ, when given a sequence of p pieces, and the inapproximability of the third objective to within a factor of 2−$\epsilon$, for any $\epsilon$ > 0. Our results hold under several variations on the rules of Tetris, including different models of rotation, limitations on player agility, and restricted piecesets.}
@@ -118,8 +118,8 @@
       \strng{authorbibnamehash}{bc0594e03b378190296ddb3795a8e375}
       \strng{authornamehash}{bc0594e03b378190296ddb3795a8e375}
       \strng{authorfullhash}{bc0594e03b378190296ddb3795a8e375}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{In this thesis, Brzustowski proves that the classic game of Tetris is unwinnable if the computer is aware of and reacting to the player's moves. This is because certain pieces will lead to a loss given to the player in a sequence. This thesis is referenced in several different research papers relating to the game. This source will be used as an example for the research that is being done on Tetris.}
@@ -141,8 +141,8 @@
       \strng{authorbibnamehash}{71bf737350bf70e772cabcf129eca809}
       \strng{authornamehash}{71bf737350bf70e772cabcf129eca809}
       \strng{authorfullhash}{71bf737350bf70e772cabcf129eca809}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{In this article, Burgiel proved that any game of Tetris is unbeatable, regardless of whether the machine is aware of the player's move. Rigorous mathematical proof is provided to show that this is true. This article will be used as an example for the research that is being done on Tetris.}
@@ -174,8 +174,8 @@
       \strng{authorbibnamehash}{13b9c16a9de2bb891eb8aa2a768eb2a8}
       \strng{authornamehash}{13b9c16a9de2bb891eb8aa2a768eb2a8}
       \strng{authorfullhash}{13b9c16a9de2bb891eb8aa2a768eb2a8}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{annotation}{In a of theis textbook, Sipser describes NP-completeness and shares some characteristics of NP-complete problems. Sipser is an American theoretical computer scientist who made many contributions in the field of computational complexity. This source will be used to describe the properties of NP-complete problems.}
       \field{booktitle}{Introduction to the Theory of Computation}
@@ -215,8 +215,8 @@
       \strng{authorbibnamehash}{8051c7ddecff3544ef2881175b9d6fb4}
       \strng{authornamehash}{0b9d9d0cfcaa05065c6311f99f6996a5}
       \strng{authorfullhash}{8051c7ddecff3544ef2881175b9d6fb4}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{In their paper, Lesch et al. introduces vehicle route optimisation as an NP-complete problem. They then utilise nature-inspired algorithms including ant colony optimisation and genetic algorithms to tackle route optimisation. This source will be used to introduce route optimisation as a proven NP-complete problem.}
@@ -461,8 +461,8 @@
       \strng{authorbibnamehash}{ca711c277fef4261f5d82957753fe10f}
       \strng{authornamehash}{ca711c277fef4261f5d82957753fe10f}
       \strng{authorfullhash}{e99b645f1d33d9fdc8e5590ce45f72bf}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Information Processing}
@@ -525,7 +525,7 @@
         {{hash=bf548d53325530139be1bf265f542f48}{%
            family={Bovet},
            familyi={B\bibinitperiod},
-           given={Daniel\bibnamedelima P.},
+           given={Daniel\bibnamedelima P},
            giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
         {{hash=24b611db6ccecd8c9f138bfb5dd34488}{%
            family={Crescenzi},
@@ -538,6 +538,9 @@
            given={Riccardo},
            giveni={R\bibinitperiod}}}%
       }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
       \strng{namehash}{322e57aa97e1a2f13d269d09b82c9fe8}
       \strng{fullhash}{322e57aa97e1a2f13d269d09b82c9fe8}
       \strng{bibnamehash}{322e57aa97e1a2f13d269d09b82c9fe8}
@@ -548,8 +551,6 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Complexity classes are usually defined by referring to computation models and by putting suitable restrictions on them. Following this approach, many proofs of results are tightly bound to the characteristics of the computation model and of its restrictions and, therefore, they sometimes hide the essential properties which insure the obtained results. In order to obtain more general results, a uniform family of computation models which encompasses most of the complexity classes of interest is introduced. As a first initial set of results derivable from the proposed approach, we will give a sufficient and necessary condition for proving separations of relativized complexity classes, a characterization of complexity classes with complete languages and a sufficient condition for proving strong separations of relativized complexity classes. Examples of applications of these results to some specific complexity classes are then given. Additional results related to separations by sparse oracles can be found in Bovet (1991).}
-      \field{issn}{0304-3975}
       \field{journaltitle}{Theoretical Computer Science}
       \field{number}{2}
       \field{title}{A uniform approach to define complexity classes}
@@ -557,15 +558,6 @@
       \field{year}{1992}
       \field{pages}{263\bibrangedash 283}
       \range{pages}{21}
-      \verb{doi}
-      \verb https://doi.org/10.1016/0304-3975(92)90125-Y
-      \endverb
-      \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/030439759290125Y
-      \endverb
-      \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/030439759290125Y
-      \endverb
     \endentry
     \entry{cc:modern}{book}{}
       \name{author}{2}{}{%
@@ -619,8 +611,8 @@
       \strng{authorbibnamehash}{77ecb2e0f6439810a8a7f12f0b76f9ac}
       \strng{authornamehash}{77ecb2e0f6439810a8a7f12f0b76f9ac}
       \strng{authorfullhash}{77ecb2e0f6439810a8a7f12f0b76f9ac}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{First Edition}
@@ -640,8 +632,8 @@
       \strng{authorbibnamehash}{c8f17b9639fd4046dd85c2daf62d2605}
       \strng{authornamehash}{c8f17b9639fd4046dd85c2daf62d2605}
       \strng{authorfullhash}{c8f17b9639fd4046dd85c2daf62d2605}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{6.046J: Design and Analysis on Algorithms, Massachusetts Institute of Technology}
@@ -661,6 +653,730 @@
       \field{howpublished}{\url{https://www.claymath.org/millennium-problems/}}
       \field{note}{[Accessed 15-05-2024]}
       \field{title}{{T}he {M}illennium {P}rize {P}roblems - {C}lay {M}athematics {I}nstitute --- claymath.org}
+    \endentry
+    \entry{tetris-learning-by-imitation}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=23fb077af0dc1ee0a605944188c1191c}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Dapeng},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ff9a161a4242ac863aa56ad95da97e84}{%
+           family={Cai},
+           familyi={C\bibinitperiod},
+           given={Zhongjie},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=ea3c99f847e19974acae14650e2c41f0}{%
+           family={Nebel},
+           familyi={N\bibinitperiod},
+           given={Bernhard},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{023ab39e9bd6b5a0fa66b0a3212a2e15}
+      \strng{fullhash}{023ab39e9bd6b5a0fa66b0a3212a2e15}
+      \strng{bibnamehash}{023ab39e9bd6b5a0fa66b0a3212a2e15}
+      \strng{authorbibnamehash}{023ab39e9bd6b5a0fa66b0a3212a2e15}
+      \strng{authornamehash}{023ab39e9bd6b5a0fa66b0a3212a2e15}
+      \strng{authorfullhash}{023ab39e9bd6b5a0fa66b0a3212a2e15}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{PLAYING TETRIS USING LEARNING BY IMITATION}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:10668262
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:10668262
+      \endverb
+    \endentry
+    \entry{imitation-learning}{article}{}
+      \name{author}{4}{}{%
+        {{hash=eaf6c67e979a8ffb4cf1a087a4b76e56}{%
+           family={Hussein},
+           familyi={H\bibinitperiod},
+           given={Ahmed},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4ae93acfe7753c434ba98d1cca2121a9}{%
+           family={Gaber},
+           familyi={G\bibinitperiod},
+           given={{Mohamed Medhat}},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8ee870839373bdec087796433d91b98e}{%
+           family={Elyan},
+           familyi={E\bibinitperiod},
+           given={Eyad},
+           giveni={E\bibinitperiod}}}%
+        {{hash=5be1d96df47e9680d491d156aaeaa1c5}{%
+           family={Jayne},
+           familyi={J\bibinitperiod},
+           given={Chrisina},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery (ACM)}%
+      }
+      \strng{namehash}{509cb3544df15b81f5316861f64c3280}
+      \strng{fullhash}{3e394505e66fbe500b9b1dbff63f64b0}
+      \strng{bibnamehash}{3e394505e66fbe500b9b1dbff63f64b0}
+      \strng{authorbibnamehash}{3e394505e66fbe500b9b1dbff63f64b0}
+      \strng{authornamehash}{509cb3544df15b81f5316861f64c3280}
+      \strng{authorfullhash}{3e394505e66fbe500b9b1dbff63f64b0}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Imitation learning techniques aim to mimic human behavior in a given task. An agent (a learning machine) is trained to perform a task from demonstrations by learning a mapping between observations and actions. The idea of teaching by imitation has been around for many years; however, the field is gaining attention recently due to advances in computing and sensing as well as rising demand for intelligent applications. The paradigm of learning by imitation is gaining popularity because it facilitates teaching complex tasks with minimal expert knowledge of the tasks. Generic imitation learning methods could potentially reduce the problem of teaching a task to that of providing demonstrations, without the need for explicit programming or designing reward functions specific to the task. Modern sensors are able to collect and transmit high volumes of data rapidly, and processors with high computational power allow fast processing that maps the sensory data to actions in a timely manner. This opens the door for many potential AI applications that require real-time perception and reaction such as humanoid robots, self-driving vehicles, human computer interaction, and computer games, to name a few. However, specialized algorithms are needed to effectively and robustly learn models as learning by imitation poses its own set of challenges. In this article, we survey imitation learning methods and present design options in different steps of the learning process. We introduce a background and motivation for the field as well as highlight challenges specific to the imitation problem. Methods for designing and evaluating imitation learning tasks are categorized and reviewed. Special attention is given to learning methods in robotics and games as these domains are the most popular in the literature and provide a wide array of problems and methodologies. We extensively discuss combining imitation learning approaches using different sources and methods, as well as incorporating other motion learning methods to enhance imitation. We also discuss the potential impact on industry, present major applications, and highlight current and future research directions.}
+      \field{issn}{0360-0300}
+      \field{journaltitle}{ACM Computing Surveys}
+      \field{month}{4}
+      \field{number}{2}
+      \field{title}{Imitation Learning: A Survey of Learning Methods}
+      \field{volume}{50}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1145/3071073
+      \endverb
+    \endentry
+    \entry{fahey-ai}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=522d8a23ec1aee3a7c1ea5b91a2fbed0}{%
+           family={Fahey},
+           familyi={F\bibinitperiod},
+           given={Colin},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{522d8a23ec1aee3a7c1ea5b91a2fbed0}
+      \strng{fullhash}{522d8a23ec1aee3a7c1ea5b91a2fbed0}
+      \strng{bibnamehash}{522d8a23ec1aee3a7c1ea5b91a2fbed0}
+      \strng{authorbibnamehash}{522d8a23ec1aee3a7c1ea5b91a2fbed0}
+      \strng{authornamehash}{522d8a23ec1aee3a7c1ea5b91a2fbed0}
+      \strng{authorfullhash}{522d8a23ec1aee3a7c1ea5b91a2fbed0}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[accessed Jun. 23, 2024]}
+      \field{title}{{Tetris AI}}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb http://www.colinfahey.com/tetris/
+      \endverb
+      \verb{url}
+      \verb http://www.colinfahey.com/tetris/
+      \endverb
+    \endentry
+    \entry{mcts}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=9ab03b6560824b5e37050acfc18272e9}{%
+           family={Chaslot},
+           familyi={C\bibinitperiod},
+           given={{Guillaume Maurice Jean-Bernard Chaslot}},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Maastricht University}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Maastricht University}%
+      }
+      \strng{namehash}{9ab03b6560824b5e37050acfc18272e9}
+      \strng{fullhash}{9ab03b6560824b5e37050acfc18272e9}
+      \strng{bibnamehash}{9ab03b6560824b5e37050acfc18272e9}
+      \strng{authorbibnamehash}{9ab03b6560824b5e37050acfc18272e9}
+      \strng{authornamehash}{9ab03b6560824b5e37050acfc18272e9}
+      \strng{authorfullhash}{9ab03b6560824b5e37050acfc18272e9}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9789085590996}
+      \field{series}{Siks Dissertation Series}
+      \field{title}{Monte-Carlo Tree Search}
+      \field{type}{phdthesis}
+      \field{year}{2010}
+      \verb{doi}
+      \verb 10.26481/dis.20100930gc
+      \endverb
+    \endentry
+    \entry{tetris-bb-mc-planning}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=ff9a161a4242ac863aa56ad95da97e84}{%
+           family={Cai},
+           familyi={C\bibinitperiod},
+           given={Zhongjie},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=23fb077af0dc1ee0a605944188c1191c}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Dapeng},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ea3c99f847e19974acae14650e2c41f0}{%
+           family={Nebel},
+           familyi={N\bibinitperiod},
+           given={Bernhard},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{ed33bd45e4e39a57c0ace10f6610657c}
+      \strng{fullhash}{ed33bd45e4e39a57c0ace10f6610657c}
+      \strng{bibnamehash}{ed33bd45e4e39a57c0ace10f6610657c}
+      \strng{authorbibnamehash}{ed33bd45e4e39a57c0ace10f6610657c}
+      \strng{authornamehash}{ed33bd45e4e39a57c0ace10f6610657c}
+      \strng{authorfullhash}{ed33bd45e4e39a57c0ace10f6610657c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{AISB 2011: AI and Games}
+      \field{month}{01}
+      \field{title}{Playing Tetris Using Bandit-Based Monte-Carlo Planning}
+      \field{year}{2011}
+    \endentry
+    \entry{bandit-based-mcts}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=38e4d8f3816645f33342266d60a42d10}{%
+           family={Kocsis},
+           familyi={K\bibinitperiod},
+           given={Levente},
+           giveni={L\bibinitperiod}}}%
+        {{hash=98b0d29966f947460b3eb25590bfa7b5}{%
+           family={Szepesvári},
+           familyi={S\bibinitperiod},
+           given={Csaba},
+           giveni={C\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=e6019b2c2378860e64064fa7db22d500}{%
+           family={Fürnkranz},
+           familyi={F\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3a954fc182e5a18b0900ce293c0401ea}{%
+           family={Scheffer},
+           familyi={S\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6a34223729914e9e416bbcfb542d18af}{%
+           family={Spiliopoulou},
+           familyi={S\bibinitperiod},
+           given={Myra},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{d2a501acf3375269bdf09c94a3f59cae}
+      \strng{fullhash}{d2a501acf3375269bdf09c94a3f59cae}
+      \strng{bibnamehash}{d2a501acf3375269bdf09c94a3f59cae}
+      \strng{authorbibnamehash}{d2a501acf3375269bdf09c94a3f59cae}
+      \strng{authornamehash}{d2a501acf3375269bdf09c94a3f59cae}
+      \strng{authorfullhash}{d2a501acf3375269bdf09c94a3f59cae}
+      \strng{editorbibnamehash}{93f2322aa4992a73dacbfa4489aa7cbf}
+      \strng{editornamehash}{93f2322aa4992a73dacbfa4489aa7cbf}
+      \strng{editorfullhash}{93f2322aa4992a73dacbfa4489aa7cbf}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{For large state-space Markovian Decision Problems Monte-Carlo planning is one of the few viable approaches to find near-optimal solutions. In this paper we introduce a new algorithm, UCT, that applies bandit ideas to guide Monte-Carlo planning. In finite-horizon or discounted MDPs the algorithm is shown to be consistent and finite sample bounds are derived on the estimation error due to sampling. Experimental results show that in several domains, UCT is significantly more efficient than its alternatives.}
+      \field{booktitle}{Machine Learning: ECML 2006}
+      \field{isbn}{978-3-540-46056-5}
+      \field{title}{Bandit Based Monte-Carlo Planning}
+      \field{year}{2006}
+      \field{pages}{282\bibrangedash 293}
+      \range{pages}{12}
+    \endentry
+    \entry{tetris-drl}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5f5b4dfb51038346b92dbf27fe057b59}{%
+           family={Stevens},
+           familyi={S\bibinitperiod},
+           given={Matt},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5f8c37a5615b1369ce1b454378512381}{%
+           family={Pradhan},
+           familyi={P\bibinitperiod},
+           given={Sabeek},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{16fd088fc05fcf7b4766278e95bd3077}
+      \strng{fullhash}{16fd088fc05fcf7b4766278e95bd3077}
+      \strng{bibnamehash}{16fd088fc05fcf7b4766278e95bd3077}
+      \strng{authorbibnamehash}{16fd088fc05fcf7b4766278e95bd3077}
+      \strng{authornamehash}{16fd088fc05fcf7b4766278e95bd3077}
+      \strng{authorfullhash}{16fd088fc05fcf7b4766278e95bd3077}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Convolutional Neural Networks for Visual Recognition CS23, Stanford Univ., Stanford, CA, USA, Tech. Rep}
+      \field{title}{Playing tetris with deep reinforcement learning}
+      \field{year}{2016}
+    \endentry
+    \entry{lee-ai}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=cf76c6c5a3f14ac3b795d0713c8444b8}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Yiyuan},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{cf76c6c5a3f14ac3b795d0713c8444b8}
+      \strng{fullhash}{cf76c6c5a3f14ac3b795d0713c8444b8}
+      \strng{bibnamehash}{cf76c6c5a3f14ac3b795d0713c8444b8}
+      \strng{authorbibnamehash}{cf76c6c5a3f14ac3b795d0713c8444b8}
+      \strng{authornamehash}{cf76c6c5a3f14ac3b795d0713c8444b8}
+      \strng{authorfullhash}{cf76c6c5a3f14ac3b795d0713c8444b8}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://codemyroad.wordpress.com/2013/04/14/tetris-ai-the-near-perfect-player/}}
+      \field{note}{[accessed Jul. 17, 2024]}
+      \field{title}{{T}etris {AI} - {T}he ({N}ear) {P}erfect {B}ot}
+    \endentry
+    \entry{tetris-drl-2}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=af35e81346215015f7763bd069439eda}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Ziao},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Illinois at Urbana-Champaign}%
+      }
+      \strng{namehash}{af35e81346215015f7763bd069439eda}
+      \strng{fullhash}{af35e81346215015f7763bd069439eda}
+      \strng{bibnamehash}{af35e81346215015f7763bd069439eda}
+      \strng{authorbibnamehash}{af35e81346215015f7763bd069439eda}
+      \strng{authornamehash}{af35e81346215015f7763bd069439eda}
+      \strng{authorfullhash}{af35e81346215015f7763bd069439eda}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Playing Tetris with deep reinforcement learning}
+      \field{type}{Master's Thesis}
+      \field{year}{2021}
+    \endentry
+    \entry{yang2020nature}{book}{}
+      \name{author}{1}{}{%
+        {{hash=8b9a8afb4153d569a17f211b83af9fac}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Xin-She},
+           giveni={X\bibinithyphendelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press}%
+      }
+      \strng{namehash}{8b9a8afb4153d569a17f211b83af9fac}
+      \strng{fullhash}{8b9a8afb4153d569a17f211b83af9fac}
+      \strng{bibnamehash}{8b9a8afb4153d569a17f211b83af9fac}
+      \strng{authorbibnamehash}{8b9a8afb4153d569a17f211b83af9fac}
+      \strng{authornamehash}{8b9a8afb4153d569a17f211b83af9fac}
+      \strng{authorfullhash}{8b9a8afb4153d569a17f211b83af9fac}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Nature-inspired optimization algorithms}
+      \field{year}{2020}
+    \endentry
+    \entry{metaheuristic}{article}{}
+      \name{author}{4}{}{%
+        {{hash=48f0bf6508463e8f37c54481b00c94e5}{%
+           family={Almufti},
+           familyi={A\bibinitperiod},
+           given={Saman},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5016c878ee89d6abeabba9769f65187a}{%
+           family={Shaban},
+           familyi={S\bibinitperiod},
+           given={Awaz},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0839a20482386e91b0e0468e4c7d9344}{%
+           family={Ali},
+           familyi={A\bibinitperiod},
+           given={Rasan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c9f51ef6ea5e718229f694bccaafe234}{%
+           family={Fuente},
+           familyi={F\bibinitperiod},
+           given={Jayson},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2425d84953af4a1652bc6c27f70f0927}
+      \strng{fullhash}{d791117db8489c9ccb3de47adad2e28a}
+      \strng{bibnamehash}{d791117db8489c9ccb3de47adad2e28a}
+      \strng{authorbibnamehash}{d791117db8489c9ccb3de47adad2e28a}
+      \strng{authornamehash}{2425d84953af4a1652bc6c27f70f0927}
+      \strng{authorfullhash}{d791117db8489c9ccb3de47adad2e28a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Polaris Global Journal of Scholarly Research and Trends}
+      \field{month}{04}
+      \field{title}{Overview of Metaheuristic Algorithms}
+      \field{volume}{2}
+      \field{year}{2023}
+      \field{pages}{10\bibrangedash 32}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.58429/pgjsrt.v2n2a144
+      \endverb
+    \endentry
+    \entry{tetris-harmony-search}{article}{}
+      \name{author}{3}{}{%
+        {{hash=455c6062d0dc78ea5e00c92d5cabe007}{%
+           family={Romero},
+           familyi={R\bibinitperiod},
+           given={Victor\bibnamedelimb II\bibnamedelima M},
+           giveni={V\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=420a28fdaebf2a8f5dd2606430975de5}{%
+           family={Tomes},
+           familyi={T\bibinitperiod},
+           given={Leonel\bibnamedelima L},
+           giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=5fc10d8104bfe5105ad6a0fb1c6f5d92}{%
+           family={Yusiong},
+           familyi={Y\bibinitperiod},
+           given={John\bibnamedelimb Paul\bibnamedelima T},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {International Journal of Computer Science Issues (IJCSI)}%
+      }
+      \strng{namehash}{90c6cf4ce1058c7d1fd6e0017caa7ac2}
+      \strng{fullhash}{90c6cf4ce1058c7d1fd6e0017caa7ac2}
+      \strng{bibnamehash}{90c6cf4ce1058c7d1fd6e0017caa7ac2}
+      \strng{authorbibnamehash}{90c6cf4ce1058c7d1fd6e0017caa7ac2}
+      \strng{authornamehash}{90c6cf4ce1058c7d1fd6e0017caa7ac2}
+      \strng{authorfullhash}{90c6cf4ce1058c7d1fd6e0017caa7ac2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Computer Science Issues (IJCSI)}
+      \field{number}{1}
+      \field{title}{Tetris agent optimization using harmony search algorithm}
+      \field{volume}{8}
+      \field{year}{2011}
+      \field{pages}{22}
+      \range{pages}{1}
+    \endentry
+    \entry{harmony-search}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d7487355768ee9fdbf8324ad1c1d661c}{%
+           family={Geem},
+           familyi={G\bibinitperiod},
+           given={Zong\bibnamedelima Woo},
+           giveni={Z\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=217de8f7fbadad8de1a854e5ab0ea7cc}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Joong\bibnamedelima Hoon},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=d30379f49fb281633b11d7e1e7677207}{%
+           family={Loganathan},
+           familyi={L\bibinitperiod},
+           given={Gobichettipalayam\bibnamedelima Vasudevan},
+           giveni={G\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Sage Publications Sage CA: Thousand Oaks, CA}%
+      }
+      \strng{namehash}{cf0d5c9c40a4bff1d8992f43dbf98bdc}
+      \strng{fullhash}{cf0d5c9c40a4bff1d8992f43dbf98bdc}
+      \strng{bibnamehash}{cf0d5c9c40a4bff1d8992f43dbf98bdc}
+      \strng{authorbibnamehash}{cf0d5c9c40a4bff1d8992f43dbf98bdc}
+      \strng{authornamehash}{cf0d5c9c40a4bff1d8992f43dbf98bdc}
+      \strng{authorfullhash}{cf0d5c9c40a4bff1d8992f43dbf98bdc}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{simulation}
+      \field{number}{2}
+      \field{title}{A new heuristic optimization algorithm: harmony search}
+      \field{volume}{76}
+      \field{year}{2001}
+      \field{pages}{60\bibrangedash 68}
+      \range{pages}{9}
+    \endentry
+    \entry{mvpa}{article}{}
+      \name{author}{1}{}{%
+        {{hash=979643e279451809eb102371e57fde26}{%
+           family={Bouchekara},
+           familyi={B\bibinitperiod},
+           given={Houssem},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{979643e279451809eb102371e57fde26}
+      \strng{fullhash}{979643e279451809eb102371e57fde26}
+      \strng{bibnamehash}{979643e279451809eb102371e57fde26}
+      \strng{authorbibnamehash}{979643e279451809eb102371e57fde26}
+      \strng{authornamehash}{979643e279451809eb102371e57fde26}
+      \strng{authorfullhash}{979643e279451809eb102371e57fde26}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Operational Research}
+      \field{month}{03}
+      \field{title}{Most Valuable Player Algorithm: a novel optimization algorithm inspired from sport}
+      \field{volume}{20}
+      \field{year}{2020}
+      \field{pages}{1\bibrangedash 57}
+      \range{pages}{57}
+      \verb{doi}
+      \verb 10.1007/s12351-017-0320-y
+      \endverb
+    \endentry
+    \entry{tetris-mvpa-ga}{article}{}
+      \name{author}{3}{}{%
+        {{hash=3e6058416679e9239a80333515a561ea}{%
+           family={Armanto},
+           familyi={A\bibinitperiod},
+           given={Hendrawan},
+           giveni={H\bibinitperiod}}}%
+        {{hash=77da82557baaf78e9250b11ef4cb89d0}{%
+           family={Putra},
+           familyi={P\bibinitperiod},
+           given={Ronal\bibnamedelima Dwi},
+           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=338eac44c0e538a3bf39492c64d07f69}{%
+           family={Pickerling},
+           familyi={P\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{261a46ce2deb021935a250c5a1402887}
+      \strng{fullhash}{261a46ce2deb021935a250c5a1402887}
+      \strng{bibnamehash}{261a46ce2deb021935a250c5a1402887}
+      \strng{authorbibnamehash}{261a46ce2deb021935a250c5a1402887}
+      \strng{authornamehash}{261a46ce2deb021935a250c5a1402887}
+      \strng{authorfullhash}{261a46ce2deb021935a250c5a1402887}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Inform: Jurnal Ilmiah Bidang Teknologi Informasi dan Komunikasi}
+      \field{number}{1}
+      \field{title}{MVPA and GA Comparison for State Space Optimization at Classic Tetris Game Agent Problem}
+      \field{volume}{7}
+      \field{year}{2022}
+      \field{pages}{73\bibrangedash 80}
+      \range{pages}{8}
+    \endentry
+    \entry{nia-soft-computing}{book}{}
+      \name{author}{5}{}{%
+        {{hash=b269aa41fb6f54a29b5cbb2e3c7f9759}{%
+           family={Arya},
+           familyi={A\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=527e6a66913975262c0b61a2572b6de5}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=bb259202aa766176d5c1054969aaf516}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={M.P.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ac4275f878fce16c92f41cead8848e63}{%
+           family={Iyer},
+           familyi={I\bibinitperiod},
+           given={B.R.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=1845ce10a932a138a0efa46b303d65b3}{%
+           family={Gudivada},
+           familyi={G\bibinitperiod},
+           given={V.N.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Institution of Engineering}%
+        {Technology}%
+      }
+      \strng{namehash}{1c06260eaab64449be08b3ddcce34b86}
+      \strng{fullhash}{0951ebe4b38a1c30bba6bf3e2d758ffa}
+      \strng{bibnamehash}{0951ebe4b38a1c30bba6bf3e2d758ffa}
+      \strng{authorbibnamehash}{0951ebe4b38a1c30bba6bf3e2d758ffa}
+      \strng{authornamehash}{1c06260eaab64449be08b3ddcce34b86}
+      \strng{authorfullhash}{0951ebe4b38a1c30bba6bf3e2d758ffa}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781839535161}
+      \field{series}{Computing and Networks}
+      \field{title}{Nature-inspired Optimization Algorithms and Soft Computing: Methods, Technology and Applications for IoTs, Smart Cities, Healthcare and Industrial Automation}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://books.google.com.my/books?id=lTjhEAAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.com.my/books?id=lTjhEAAAQBAJ
+      \endverb
+    \endentry
+    \entry{tetris-ga-flom-robinson}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=19d44c856e5a5cc0fc40fc759dbbc569}{%
+           family={Flom},
+           familyi={F\bibinitperiod},
+           given={Landon},
+           giveni={L\bibinitperiod}}}%
+        {{hash=639bee4c09114fc2abbd67a395498c65}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Cliff},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{8928a8a23be1d0be7d04e8fa6767c066}
+      \strng{fullhash}{8928a8a23be1d0be7d04e8fa6767c066}
+      \strng{bibnamehash}{8928a8a23be1d0be7d04e8fa6767c066}
+      \strng{authorbibnamehash}{8928a8a23be1d0be7d04e8fa6767c066}
+      \strng{authornamehash}{8928a8a23be1d0be7d04e8fa6767c066}
+      \strng{authorfullhash}{8928a8a23be1d0be7d04e8fa6767c066}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Using a Genetic Algorithm to Weight an Evaluation Function for Tetris}
+      \field{year}{2005}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:18453509
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:18453509
+      \endverb
+    \endentry
+    \entry{genitor}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b64bc2becad49e7b8be65b1b7ca374f1}{%
+           family={Whitley},
+           familyi={W\bibinitperiod},
+           given={Darrell},
+           giveni={D\bibinitperiod}}}%
+        {{hash=12818fda69390e8ed3ca48709b098d6f}{%
+           family={Starkweather},
+           familyi={S\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{8ed1c51ffda4399cd87d85ff344ed969}
+      \strng{fullhash}{8ed1c51ffda4399cd87d85ff344ed969}
+      \strng{bibnamehash}{8ed1c51ffda4399cd87d85ff344ed969}
+      \strng{authorbibnamehash}{8ed1c51ffda4399cd87d85ff344ed969}
+      \strng{authornamehash}{8ed1c51ffda4399cd87d85ff344ed969}
+      \strng{authorfullhash}{8ed1c51ffda4399cd87d85ff344ed969}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Experimental \& Theoretical Artificial Intelligence}
+      \field{number}{3}
+      \field{title}{Genitor II: A distributed genetic algorithm}
+      \field{volume}{2}
+      \field{year}{1990}
+      \field{pages}{189\bibrangedash 214}
+      \range{pages}{26}
+    \endentry
+    \entry{uniform-crossover}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=87f721deeb9ff199a35612e60e882ceb}{%
+           family={Syswerda},
+           familyi={S\bibinitperiod},
+           given={Gilbert},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{87f721deeb9ff199a35612e60e882ceb}
+      \strng{fullhash}{87f721deeb9ff199a35612e60e882ceb}
+      \strng{bibnamehash}{87f721deeb9ff199a35612e60e882ceb}
+      \strng{authorbibnamehash}{87f721deeb9ff199a35612e60e882ceb}
+      \strng{authornamehash}{87f721deeb9ff199a35612e60e882ceb}
+      \strng{authorfullhash}{87f721deeb9ff199a35612e60e882ceb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proc. 3rd Intl Conference on Genetic Algorithms 1989}
+      \field{month}{01}
+      \field{title}{Uniform Crossover in Genetic Algorithms}
+      \field{year}{1989}
+    \endentry
+    \entry{tetris-aco}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=5e774dffbb92621364ac8d541864cf6c}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Xingguo},
+           giveni={X\bibinitperiod}}}%
+        {{hash=c8cf19241225247d6d07dbf8a516b8ed}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=8299411e801162727f349d4f6e600064}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Weiwei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=fa3131088153ba010f679c3c06dab319}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Yinghuan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=9c1ecb1f7c47cf02e9e994296746328c}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{487595a95b4d4541ec902dfde0e5cdc5}
+      \strng{fullhash}{4e2863249d2d77ba62029e01eee3af79}
+      \strng{bibnamehash}{4e2863249d2d77ba62029e01eee3af79}
+      \strng{authorbibnamehash}{4e2863249d2d77ba62029e01eee3af79}
+      \strng{authornamehash}{487595a95b4d4541ec902dfde0e5cdc5}
+      \strng{authorfullhash}{4e2863249d2d77ba62029e01eee3af79}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{07}
+      \field{title}{Apply Ant Colony Optimization to Tetris}
+      \field{year}{2009}
+      \field{pages}{1741\bibrangedash 1742}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1145/1569901.1570136
+      \endverb
+    \endentry
+    \entry{harddrop}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://harddrop.com/}}
+      \field{note}{[accessed Jul. 27, 2024]}
+      \field{title}{{Hard Drop - Tetris Community}}
     \endentry
   \enddatalist
 \endrefsection

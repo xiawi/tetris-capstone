@@ -1,18 +1,18 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'planning-document.blg'
-[307] biber-MSWIN64:340> INFO - === 
-[353] Biber.pm:419> INFO - Reading 'planning-document.bcf'
-[474] Biber.pm:979> INFO - Found 19 citekeys in bib section 0
-[488] Biber.pm:4419> INFO - Processing section 0
-[503] Biber.pm:4610> INFO - Looking for bibtex file '../../resources/citation.bib' for section 0
-[571] bibtex.pm:1713> INFO - LaTeX decoding ...
-[601] bibtex.pm:1519> INFO - Found BibTeX data source '../../resources/citation.bib'
-[729] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[730] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[730] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[730] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[746] bbl.pm:660> INFO - Writing 'planning-document.bbl' with encoding 'UTF-8'
-[757] bbl.pm:763> INFO - Output to planning-document.bbl
-[757] Biber.pm:131> WARN - legacy month field 'sep' in entry 'cc:conceptual-perspective' is not an integer - this will probably not sort properly.
-[757] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\Admin\AppData\Local\Temp\biber_tmp_8ho6\79acecc52ff72f017f31533f617ffb0e_4396.utf8, line 135, warning: 1 characters of junk seen at toplevel
-[757] Biber.pm:133> INFO - WARNINGS: 2
+[101] biber-MSWIN64:340> INFO - === 
+[150] Biber.pm:419> INFO - Reading 'planning-document.bcf'
+[271] Biber.pm:979> INFO - Found 40 citekeys in bib section 0
+[284] Biber.pm:4419> INFO - Processing section 0
+[295] Biber.pm:4610> INFO - Looking for bibtex file '../../resources/citation.bib' for section 0
+[362] bibtex.pm:1713> INFO - LaTeX decoding ...
+[406] bibtex.pm:1519> INFO - Found BibTeX data source '../../resources/citation.bib'
+[580] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[580] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[580] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[580] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[606] bbl.pm:660> INFO - Writing 'planning-document.bbl' with encoding 'UTF-8'
+[623] bbl.pm:763> INFO - Output to planning-document.bbl
+[623] Biber.pm:131> WARN - legacy month field 'sep' in entry 'cc:conceptual-perspective' is not an integer - this will probably not sort properly.
+[623] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\Admin\AppData\Local\Temp\biber_tmp_2wWX\79acecc52ff72f017f31533f617ffb0e_24916.utf8, line 135, warning: 1 characters of junk seen at toplevel
+[623] Biber.pm:133> INFO - WARNINGS: 2
