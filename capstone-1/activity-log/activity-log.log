@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  15 JUL 2024 12:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  30 JUL 2024 20:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1055,7 +1055,7 @@ Package biblatex Info: ... file 'activity-log.bbl' found.
 (./activity-log.bbl)
 Package biblatex Info: Reference section=0 on input line 25.
 Package biblatex Info: Reference segment=0 on input line 25.
-<../../resources/images/logos/sunway-set.png, id=107, 397.485pt x 104.7915pt>
+<../../resources/images/logos/sunway-set.png, id=95, 397.485pt x 104.7915pt>
 File: ../../resources/images/logos/sunway-set.png Graphic file (type png)
 <use ../../resources/images/logos/sunway-set.png>
 Package pdftex.def Info: ../../resources/images/logos/sunway-set.png  used on i
@@ -1089,211 +1089,40 @@ l.119
 Chapter 2.
 [6
 
-] [7] [8]
-Overfull \hbox (18.12064pt too wide) in paragraph at lines 191--191
-[]\OT1/cmr/m/it/12 Tetris AI\OT1/cmr/m/n/12 , [ac-cessed Jun. 23, 2024], 2003. 
-[On-line]. Avail-able: []$\OT1/cmtt/m/n/12 http : / / www . colinfahey .
- []
-
-[9]
+] [7] [8] [9] [10]
 Chapter 3.
+[11
 
-
-pdfTeX warning: pdflatex.exe (file ./meeting-records/signed/meeting-1.pdf): PDF
- inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<./meeting-records/signed/meeting-1.pdf, id=240, 597.50829pt x 845.0471pt>
-File: ./meeting-records/signed/meeting-1.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-1.pdf>
-Package pdftex.def Info: ./meeting-records/signed/meeting-1.pdf  used on input 
-line 200.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-
-pdfTeX warning: pdflatex.exe (file ./meeting-records/signed/meeting-1.pdf): PDF
- inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-File: ./meeting-records/signed/meeting-1.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-1.pdf>
-Package pdftex.def Info: ./meeting-records/signed/meeting-1.pdf  used on input 
-line 200.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-
-pdfTeX warning: pdflatex.exe (file ./meeting-records/signed/meeting-1.pdf): PDF
- inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-
-
-pdfTeX warning: pdflatex.exe (file ./meeting-records/signed/meeting-1.pdf): PDF
- inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<./meeting-records/signed/meeting-1.pdf, id=243, page=1, 597.50829pt x 845.0471
-pt>
-File: ./meeting-records/signed/meeting-1.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-1.pdf, page 1>
-Package pdftex.def Info: ./meeting-records/signed/meeting-1.pdf , page1 used on
- input line 200.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: ./meeting-records/signed/meeting-1.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-1.pdf, page 1>
-Package pdftex.def Info: ./meeting-records/signed/meeting-1.pdf , page1 used on
- input line 200.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-[10
-
-]
-File: ./meeting-records/signed/meeting-1.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-1.pdf, page 1>
-Package pdftex.def Info: ./meeting-records/signed/meeting-1.pdf , page1 used on
- input line 200.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: ./meeting-records/signed/meeting-1.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-1.pdf, page 1>
-Package pdftex.def Info: ./meeting-records/signed/meeting-1.pdf , page1 used on
- input line 200.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: ./meeting-records/signed/meeting-1.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-1.pdf, page 1>
-Package pdftex.def Info: ./meeting-records/signed/meeting-1.pdf , page1 used on
- input line 200.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [11 <./meeting-records/signed/meeting-1.pdf>]
-
-pdfTeX warning: pdflatex.exe (file ./meeting-records/signed/meeting-2.pdf): PDF
- inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<./meeting-records/signed/meeting-2.pdf, id=295, 597.50829pt x 845.0471pt>
-File: ./meeting-records/signed/meeting-2.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-2.pdf>
-Package pdftex.def Info: ./meeting-records/signed/meeting-2.pdf  used on input 
-line 202.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-
-pdfTeX warning: pdflatex.exe (file ./meeting-records/signed/meeting-2.pdf): PDF
- inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-File: ./meeting-records/signed/meeting-2.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-2.pdf>
-Package pdftex.def Info: ./meeting-records/signed/meeting-2.pdf  used on input 
-line 202.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-
-pdfTeX warning: pdflatex.exe (file ./meeting-records/signed/meeting-2.pdf): PDF
- inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-
-
-pdfTeX warning: pdflatex.exe (file ./meeting-records/signed/meeting-2.pdf): PDF
- inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<./meeting-records/signed/meeting-2.pdf, id=298, page=1, 597.50829pt x 845.0471
-pt>
-File: ./meeting-records/signed/meeting-2.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-2.pdf, page 1>
-Package pdftex.def Info: ./meeting-records/signed/meeting-2.pdf , page1 used on
- input line 202.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: ./meeting-records/signed/meeting-2.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-2.pdf, page 1>
-Package pdftex.def Info: ./meeting-records/signed/meeting-2.pdf , page1 used on
- input line 202.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: ./meeting-records/signed/meeting-2.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-2.pdf, page 1>
-Package pdftex.def Info: ./meeting-records/signed/meeting-2.pdf , page1 used on
- input line 202.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: ./meeting-records/signed/meeting-2.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-2.pdf, page 1>
-Package pdftex.def Info: ./meeting-records/signed/meeting-2.pdf , page1 used on
- input line 202.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: ./meeting-records/signed/meeting-2.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-2.pdf, page 1>
-Package pdftex.def Info: ./meeting-records/signed/meeting-2.pdf , page1 used on
- input line 202.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-[12 <./meeting-records/signed/meeting-2.pdf>]
-
-pdfTeX warning: pdflatex.exe (file ./meeting-records/signed/meeting-3.pdf): PDF
- inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<./meeting-records/signed/meeting-3.pdf, id=334, 597.50829pt x 845.0471pt>
-File: ./meeting-records/signed/meeting-3.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-3.pdf>
-Package pdftex.def Info: ./meeting-records/signed/meeting-3.pdf  used on input 
-line 204.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-
-pdfTeX warning: pdflatex.exe (file ./meeting-records/signed/meeting-3.pdf): PDF
- inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-File: ./meeting-records/signed/meeting-3.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-3.pdf>
-Package pdftex.def Info: ./meeting-records/signed/meeting-3.pdf  used on input 
-line 204.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-
-pdfTeX warning: pdflatex.exe (file ./meeting-records/signed/meeting-3.pdf): PDF
- inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-
-
-pdfTeX warning: pdflatex.exe (file ./meeting-records/signed/meeting-3.pdf): PDF
- inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<./meeting-records/signed/meeting-3.pdf, id=337, page=1, 597.50829pt x 845.0471
-pt>
-File: ./meeting-records/signed/meeting-3.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-3.pdf, page 1>
-Package pdftex.def Info: ./meeting-records/signed/meeting-3.pdf , page1 used on
- input line 204.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: ./meeting-records/signed/meeting-3.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-3.pdf, page 1>
-Package pdftex.def Info: ./meeting-records/signed/meeting-3.pdf , page1 used on
- input line 204.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: ./meeting-records/signed/meeting-3.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-3.pdf, page 1>
-Package pdftex.def Info: ./meeting-records/signed/meeting-3.pdf , page1 used on
- input line 204.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: ./meeting-records/signed/meeting-3.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-3.pdf, page 1>
-Package pdftex.def Info: ./meeting-records/signed/meeting-3.pdf , page1 used on
- input line 204.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: ./meeting-records/signed/meeting-3.pdf Graphic file (type pdf)
-<use ./meeting-records/signed/meeting-3.pdf, page 1>
-Package pdftex.def Info: ./meeting-records/signed/meeting-3.pdf , page1 used on
- input line 204.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-[13 <./meeting-records/signed/meeting-3.pdf>] (./activity-log.aux)
+] (./activity-log.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
  ***********
 Package rerunfilecheck Info: File `activity-log.out' has not changed.
-(rerunfilecheck)             Checksum: 913D301C3A5DE849D3DC0B37747D9574;4509.
+(rerunfilecheck)             Checksum: 5E3590588230F7E435A950F786A1B7A6;4200.
 Package logreq Info: Writing requests to 'activity-log.run.xml'.
 \openout1 = `activity-log.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30810 strings out of 474504
- 606700 string characters out of 5756725
+ 30829 strings out of 474504
+ 607411 string characters out of 5756725
  1939043 words of memory out of 5000000
- 52271 multiletter control sequences out of 15000+600000
+ 52280 multiletter control sequences out of 15000+600000
  564720 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,17n,107p,2296b,1475s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
-live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2023/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt1
-2.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/
-texlive/2023/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on activity-log.pdf (15 pages, 531849 bytes).
+ 102i,9n,107p,2296b,1484s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
+live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/202
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmtt12.pfb>
+Output written on activity-log.pdf (13 pages, 257970 bytes).
 PDF statistics:
- 422 PDF objects out of 1000 (max. 8388607)
- 337 compressed objects within 4 object streams
- 66 named destinations out of 1000 (max. 500000)
- 278 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 309 PDF objects out of 1000 (max. 8388607)
+ 275 compressed objects within 3 object streams
+ 76 named destinations out of 1000 (max. 500000)
+ 194 words of extra memory for PDF output out of 10000 (max. 10000000)
 
