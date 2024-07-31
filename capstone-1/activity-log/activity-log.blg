@@ -1,18 +1,18 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'activity-log.blg'
-[100] biber-MSWIN64:340> INFO - === 
-[149] Biber.pm:419> INFO - Reading 'activity-log.bcf'
-[245] Biber.pm:976> INFO - Using all citekeys in bib section 0
-[256] Biber.pm:4419> INFO - Processing section 0
-[267] Biber.pm:4610> INFO - Looking for bibtex file '../../resources/citation.bib' for section 0
-[334] bibtex.pm:1713> INFO - LaTeX decoding ...
-[371] bibtex.pm:1519> INFO - Found BibTeX data source '../../resources/citation.bib'
-[528] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[528] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[528] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[528] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[550] bbl.pm:660> INFO - Writing 'activity-log.bbl' with encoding 'UTF-8'
-[566] bbl.pm:763> INFO - Output to activity-log.bbl
-[567] Biber.pm:131> WARN - legacy month field 'sep' in entry 'cc:conceptual-perspective' is not an integer - this will probably not sort properly.
-[567] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\Admin\AppData\Local\Temp\biber_tmp_xjVW\79acecc52ff72f017f31533f617ffb0e_5180.utf8, line 135, warning: 1 characters of junk seen at toplevel
-[567] Biber.pm:133> INFO - WARNINGS: 2
+[145] biber-MSWIN64:340> INFO - === 
+[208] Biber.pm:419> INFO - Reading 'activity-log.bcf'
+[318] Biber.pm:976> INFO - Using all citekeys in bib section 0
+[337] Biber.pm:4419> INFO - Processing section 0
+[351] Biber.pm:4610> INFO - Looking for bibtex file '../../resources/citation.bib' for section 0
+[443] bibtex.pm:1713> INFO - LaTeX decoding ...
+[488] bibtex.pm:1519> INFO - Found BibTeX data source '../../resources/citation.bib'
+[688] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[688] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[688] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[688] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[725] bbl.pm:660> INFO - Writing 'activity-log.bbl' with encoding 'UTF-8'
+[745] bbl.pm:763> INFO - Output to activity-log.bbl
+[745] Biber.pm:131> WARN - legacy month field 'sep' in entry 'cc:conceptual-perspective' is not an integer - this will probably not sort properly.
+[745] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\Admin\AppData\Local\Temp\biber_tmp_dzDI\79acecc52ff72f017f31533f617ffb0e_24184.utf8, line 135, warning: 1 characters of junk seen at toplevel
+[745] Biber.pm:133> INFO - WARNINGS: 2
