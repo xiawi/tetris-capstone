@@ -25,6 +25,8 @@
 \usepackage[final]{microtype}
 \usepackage{subcaption}
 \usepackage[bottom]{footmisc}
+\usepackage{pgfgantt}
+\usepackage{pdflscape}
 
 
 \begin{document}
@@ -77,7 +79,7 @@
 			\vspace{1cm}
 			
 			\normalsize Semester: April 2024 \\
-			Date: % TODO: DATE OF SUBMISSION
+			Date: 1 August 2024
 			
 			\vfill
 			
@@ -229,12 +231,8 @@
 			
 			\begin{enumerate}
 				\item Formulate the problem of Versus Tetris for game AI.
-				\item Research and implement a variety of nature-inspired optimisation algorithms to determine their suitability for optimising gameplay strategies in Versus Tetris.
-				\item Design a comprehensive framework for objectively evaluating and comparing the performance of the algorithms.
-				\item Develop a playable game of Tetris that simulates gameplay and training.
-				\item Using the game, do comparative analyses with the designed framework to assess the effectiveness and efficiency of each algorithm.
-				\item Summarize findings from the comparative analyses.
-				\item Share the software with Tetris players of varying aptitudes to find the level of play for each algorithm.
+				\item Develop a playable game of Tetris that simulates gameplay for training and emulation.
+				\item Evaluate suitability of different nature-inspired optimisation algorithms to optimise gameplay strategies in Versus Tetris.
 			\end{enumerate}
 		
 		\section{Project Scope}
@@ -403,7 +401,7 @@
 					\label{fig:bbmcts-single-node}
 				\end{figure}
 				
-				Experimental results show that the artificial player shows promise, beating Fahey's AI \cite{fahey-ai} 91 times out of 100 games using the multiplayer Tetris rules mentioned in subsection \ref{subsec:imit-learning} \cite{tetris-bb-mc-planning}. The results also show that the artificial player outperformed the SVM based pattern player from \citeauthor{tetris-bb-mc-planning}'s previous work, where they approached the game with imitation learning \cite{tetris-learning-by-imitation}.
+				Experimental results show that the artificial player shows promise, beating Fahey's AI \cite{fahey-ai} 91 times out of 100 games using the multiplayer Tetris rules mentioned in Section \ref{subsec:imit-learning} \cite{tetris-bb-mc-planning}. The results also show that the artificial player outperformed the SVM based pattern player from \citeauthor{tetris-bb-mc-planning}'s previous work, where they approached the game with imitation learning \cite{tetris-learning-by-imitation}.
 				
 				% TODO may need better visualisation
 			
@@ -480,7 +478,7 @@
 					\item Meta-heuristic algorithms are not designed to solve a specific problem.
 				\end{enumerate}
 				
-				In this subsection, we will look into two works of literature that cover the use of two distinct meta-heuristic algorithms, namely, the harmony search algorithm, and the most valuable player algorithm, in optimising Tetris agents.
+				Here, we will look into two works of literature that cover the use of two distinct meta-heuristic algorithms, namely, the harmony search algorithm, and the most valuable player algorithm, in optimising Tetris agents.
 				
 				\subsubsection{Harmony Search Algorithm}
 					
@@ -531,7 +529,7 @@
 		
 			Nature-inspired optimisation algorithms are a class of meta-heuristic algorithms. These algorithms are based on natural phenomena and biological systems, borrowing ideas like natural selection and evolution to converge on acceptable solutions \cite{nia-soft-computing}. In this section, we will highlight three such algorithms that have been adopted to attempt to tackle the game of Tetris, specifically, the aforementioned genetic algorithm (GA), ant colony optimisation (ACO), particle swarm optimisation (PSO).
 			
-			All these works are similar to the ones mentioned in Subsection \ref{subsec:metaheuristic}, in the sense that they all utilise a list of features from the board state and that they all utilise these algorithms to optimise the weights for said features to be used in a state evaluation function.
+			All these works are similar to the ones mentioned in Section \ref{subsec:metaheuristic}, in the sense that they all utilise a list of features from the board state and that they all utilise these algorithms to optimise the weights for said features to be used in a state evaluation function.
 		
 			% Show examples of other work that has attempted to play Tetris with NIA
 			\subsection{Genetic Algorithm}
@@ -605,8 +603,10 @@
 		%Excellent description is provided for all methodologies, tools and techniques used to specify, design, build, test, integrate, document and deliver work products throughout the project along with the relevant supporting documents.
 		% All documents provided are well-drawn/well-written, complete and correct. The purpose and role of each document in the project is stated clearly.
 		
+		This chapter outlines the systematic approach employed to investigate the application of nature-inspired optimization algorithms to Versus Tetris. We define the rules of the game in Section \ref{sec:rules}, show our thought process in selecting algorithms in Section \ref{sec:algo-select}, formulate the problem of Versus Tetris in Section \ref{sec:problem-formulation}, and propose methods of evaluation in Section \ref{sec:evaluation}.
+		
 		% Defining rules
-		\section{Defining the Rules}
+		\section{Defining the Rules}\label{sec:rules}
 		% 
 			Tetris is a game that has many different variations, each with varying rules. In this section, we will formally define the game's rules that will be enforced throughout our implementation.
 			
@@ -697,6 +697,71 @@
 				The rotation system used by guideline Tetris games is known as the \textit{Super Rotation System} (SRS), and it defines how Tetriminos spawn, rotate, and what kicks can be performed \cite{harddrop}. It is important for us to define the rotation rules here so that we can create a simulation of Tetris that is as accurate as possible.
 				
 				When unobstructed, the Tetriminos all rotate around a single point (refer to Figure \ref{fig:srs}). The O and I pieces rotate around an intersection of grid-lines whereas the other pieces rotate around the centre of a grid-box.
+								
+				However, if the piece is obstructed by the wall, the floor, or another fixed piece, the game attempts to ``kick'' the Tetrimino into an alternative position nearby \cite{harddrop}. When this occurs, the game tests 5 potential positions to kick the piece towards; if the position of all the tests are unavailable, the rotation itself fails, resulting in the piece not rotating at all. Other than the O piece, all the other pieces are able to kick into different positions. The I piece has its own set of kick values, but the remaining pieces all share identical ones.
+				
+				Tables \ref{tab:i-kick} and \ref{tab:non-i-kick} show the kick values for these pieces \cite{harddrop}. The kick values represent translations relative to rotations. The following conventions will be used for naming rotation states for the tables:
+				
+				\begin{itemize}
+					\item 0 = spawn state
+					\item L = state resulting from a counter-clockwise rotation from the spawn state
+					\item R = state resulting from a clockwise rotation from the spawn state.
+					\item 2 = state resulting from 2 successive rotations in either direction from spawn.
+				\end{itemize}
+				
+				\begin{table}
+					\caption{I Tetrimino Wall Kick Data.}
+					\label{tab:i-kick}
+					\centering
+					\begin{tblr}{colspec={| c | c | c | c | c | c |},cell{2-Z}{2-Z}={font=\ttfamily},row{1}={gray!35}}
+						\hline
+						& Test 1 & Test 2 & Test 3 & Test 4 & Test 5 \\
+						\hline
+						0 $\rightarrow$ R & (0, 0) & (-2, 0) & \texttt{(+1, 0)} & (-2, -1) & (+1, +2) \\
+						\hline
+						R $\rightarrow$ 0 & (0, 0) & (+2, 0) & (-1, 0) & (+2, +1) & (-1, -2) \\
+						\hline
+						R $\rightarrow$ 2 & (0, 0) & (-1, 0) & (+2, 0) & (-1, +2) & (+2, -1) \\
+						\hline
+						2 $\rightarrow$ R & (0, 0) & (+1, 0) & (-2, 0) & (+1, -2) & (-2, +1) \\
+						\hline
+						2 $\rightarrow$ L & (0, 0) & (+2, 0) & (-1, 0) & (+2, +1) & (-1, -2) \\
+						\hline
+						L $\rightarrow$ 2 & (0, 0) & (-2, 0) & (+1, 0) & (-2, -1) & (+1, +2) \\
+						\hline
+						L $\rightarrow$ 0 & (0, 0) & (+1, 0) & (-2, 0) & (+1, -2) & (-2, +1) \\
+						\hline
+						0 $\rightarrow$ L & (0, 0) & (-1, 0) & (+2, 0) & (-1, +2) & (+2, -1) \\
+						\hline
+					\end{tblr}
+				\end{table}
+				
+				\begin{table}
+					\caption{T, Z, S, L and J Tetrimino Wall Kick Data.}
+					\label{tab:non-i-kick}
+					\centering
+					\begin{tblr}{colspec={| c | c | c | c | c | c |},cell{2-Z}{2-Z}={font=\ttfamily},row{1}={gray!35}}
+						\hline
+						& Test 1 & Test 2 & Test 3 & Test 4 & Test 5 \\
+						\hline
+						0 $\rightarrow$ R & (0, 0) & (-1, 0) & (-1, +1) & (0, -2) & (-1, -2) \\
+						\hline
+						R $\rightarrow$ 0 & (0, 0) & (+1, 0) & (+1, -1) & (0, +2) & (+1, +2) \\
+						\hline
+						R $\rightarrow$ 2 & (0, 0) & (+1, 0) & (+1, -1) & (0, +2) & (+1, +2) \\
+						\hline
+						2 $\rightarrow$ R & (0, 0) & (-1, 0) & (-1, +1) & (0, -2) & (-1, -2) \\
+						\hline
+						2 $\rightarrow$ L & (0, 0) & (+1, 0) & (+1, +1) & (0, -2) & (+1, -2) \\
+						\hline
+						L $\rightarrow$ 2 & (0, 0) & (-1, 0) & (-1, -1) & (0, +2) & (-1, +2) \\
+						\hline
+						L $\rightarrow$ 0 & (0, 0) & (-1, 0) & (-1, -1) & (0, +2) & (-1, +2) \\
+						\hline
+						0 $\rightarrow$ L & (0, 0) & (+1, 0) & (+1, +1)	& (0, -2) & (+1, -2) \\
+						\hline
+					\end{tblr}
+				\end{table}
 				
 				\begin{figure}
 					\centering
@@ -768,119 +833,509 @@
 					\caption{\centering The four rotation states of all seven Tetriminos. The black dots represent centres of rotation.}
 					\label{fig:srs}
 				\end{figure}
-								
-				However, if the piece is obstructed by the wall, the floor, or another fixed piece, the game attempts to ``kick'' the Tetrimino into an alternative position nearby \cite{harddrop}. When this occurs, the game tests 5 potential positions to kick the piece towards; if the position of all the tests are unavailable, the rotation itself fails, resulting in the piece not rotating at all. Other than the O piece, all the other pieces are able to kick into different positions. The I piece has its own set of kick values, but the remaining pieces all share identical ones.
-				
-				Tables \ref{tab:i-kick} and \ref{tab:non-i-kick} show the kick values for these pieces \cite{harddrop}. The kick values represent translations relative to rotations. The following conventions will be used for naming rotation states for the tables:
-				
-				\begin{itemize}
-					\item 0 = spawn state
-					\item L = state resulting from a counter-clockwise rotation from the spawn state
-					\item R = state resulting from a clockwise rotation from the spawn state.
-					\item 2 = state resulting from 2 successive rotations in either direction from spawn.
-				\end{itemize}
-				
-				\begin{table}
-					\caption{I Tetrimino Wall Kick Data.}
-					\label{tab:i-kick}
-					\centering
-					\begin{tblr}{colspec={| c | c | c | c | c | c |},cell{2-Z}{2-Z}={font=\ttfamily},row{1}={gray!35}}
-						\hline
-						& Test 1 & Test 2 & Test 3 & Test 4 & Test 5 \\
-						\hline
-						0 $\rightarrow$ R & (0, 0) & (-2, 0) & \texttt{(+1, 0)} & (-2, -1) & (+1, +2) \\
-						\hline
-						R $\rightarrow$ 0 & (0, 0) & (+2, 0) & (-1, 0) & (+2, +1) & (-1, -2) \\
-						\hline
-						R $\rightarrow$ 2 & (0, 0) & (-1, 0) & (+2, 0) & (-1, +2) & (+2, -1) \\
-						\hline
-						2 $\rightarrow$ R & (0, 0) & (+1, 0) & (-2, 0) & (+1, -2) & (-2, +1) \\
-						\hline
-						2 $\rightarrow$ L & (0, 0) & (+2, 0) & (-1, 0) & (+2, +1) & (-1, -2) \\
-						\hline
-						L $\rightarrow$ 2 & (0, 0) & (-2, 0) & (+1, 0) & (-2, -1) & (+1, +2) \\
-						\hline
-						L $\rightarrow$ 0 & (0, 0) & (+1, 0) & (-2, 0) & (+1, -2) & (-2, +1) \\
-						\hline
-						0 $\rightarrow$ L & (0, 0) & (-1, 0) & (+2, 0) & (-1, +2) & (+2, -1) \\
-						\hline
-					\end{tblr}
-				\end{table}
-				
-				\begin{table}
-					\caption{T, Z, S, L and J Tetrimino Wall Kick Data.}
-					\label{tab:non-i-kick}
-					\centering
-					\begin{tblr}{colspec={| c | c | c | c | c | c |},cell{2-Z}{2-Z}={font=\ttfamily},row{1}={gray!35}}
-						\hline
-						& Test 1 & Test 2 & Test 3 & Test 4 & Test 5 \\
-						\hline
-						0 $\rightarrow$ R & (0, 0) & (-1, 0) & (-1, +1) & (0, -2) & (-1, -2) \\
-						\hline
-						R $\rightarrow$ 0 & (0, 0) & (+1, 0) & (+1, -1) & (0, +2) & (+1, +2) \\
-						\hline
-						R $\rightarrow$ 2 & (0, 0) & (+1, 0) & (+1, -1) & (0, +2) & (+1, +2) \\
-						\hline
-						2 $\rightarrow$ R & (0, 0) & (-1, 0) & (-1, +1) & (0, -2) & (-1, -2) \\
-						\hline
-						2 $\rightarrow$ L & (0, 0) & (+1, 0) & (+1, +1) & (0, -2) & (+1, -2) \\
-						\hline
-						L $\rightarrow$ 2 & (0, 0) & (-1, 0) & (-1, -1) & (0, +2) & (-1, +2) \\
-						\hline
-						L $\rightarrow$ 0 & (0, 0) & (-1, 0) & (-1, -1) & (0, +2) & (-1, +2) \\
-						\hline
-						0 $\rightarrow$ L & (0, 0) & (+1, 0) & (+1, +1)	& (0, -2) & (+1, -2) \\
-						\hline
-					\end{tblr}
-				\end{table}
 			
 			\subsection{Attacks}
 			
 				In \citeauthor{tetris-learning-by-imitation}'s papers \cite{tetris-learning-by-imitation} \cite{tetris-bb-mc-planning}, they defined attack rules for their variant of multiplayer Tetris. Here, we will define the attack rules of guideline Tetris, which will be used for our implementation.
 				
-				\subsubsection{Garbage Lines}
+				\subsubsection{Garbage}
 					
+					Garbage lines (or attack lines) are lines sent from one opponent to another. They all have a one column well that would allow a player to clear them (refer to Figure \ref{fig:gar}). Garbage is sent in batches, when a player performs an action that is able to send garbage lines, those garbage lines are grouped together, and the wells of grouped garbage lines are always on the same column. However, if the same player performs more attack actions, there may be multiple different wells present in garbage lines. Garbage lines are a key part of the game as players can also use these lines to send attacks back to the opponent.
 					
+					\begin{figure}
+						\centering
+						\begin{minipage}{.2\textwidth}
+							\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+								\coordinate (sw) at (5,0);
+								\coordinate (nw) at (5,20);
+								\coordinate (se) at (15,0);
+								\coordinate (ne) at (15,20);
+								\coordinate (gar) at (5,5);
+								\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\node at (sw){\garbage{3}{5}};
+								\node at ($(sw) + (0,3)$){\garbage{2}{6}};
+								\node at ($(gar) + (4,-2)$){\rotatebox{90}{\lpiece}};
+								\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+							\end{tikzpicture}
+						\end{minipage}\hspace{20pt}$\rightarrow$\hspace{20pt}
+						\begin{minipage}{.2\textwidth}
+							\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+								\coordinate (sw) at (5,0);
+								\coordinate (nw) at (5,20);
+								\coordinate (se) at (15,0);
+								\coordinate (ne) at (15,20);
+								\coordinate (gar) at (5,3);;
+								\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\node at (sw){\garbage{3}{5}};
+								\draw[fill = orange] (9,3) rectangle (11,4);
+								\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+							\end{tikzpicture}
+						\end{minipage}
+						\caption{Example of garbage lines (gray) being cleared by an L piece.}
+						\label{fig:gar}
+					\end{figure}
 			
 				\subsubsection{Line Clears}
 				
+					Any action that clears two or more lines simultaneously will send garbage lines to the opponent (refer to Table \ref{tab:line-clear}). It may seem obvious that it is always better for the player to go for Tetrises (4-line clears), but we will shed light on another mechanic that will impact strategy largely in Section \ref{subsubsec:combos}. 
+					
+					\begin{table}
+						\centering
+						\caption{Attack Table for Line Clears}
+						\label{tab:line-clear}
+						\begin{tblr}{c c}
+							\hline
+							Lines Cleared & Garbage Sent\\
+							\hline
+							1 & 0\\
+							2 & 1\\
+							3 & 2\\
+							4 & 4
+						\end{tblr}
+					\end{table}
+				
 				\subsubsection{T-spins}
 				
+					T-spins are a feature implemented in modern Tetris games that allow players to increase their scoring without simply performing Tetrises. To define a T-spin, we can first imagine the T piece in a 3 $\times$ 3 box (refer to Figure \ref{fig:t}).
+					
+					\begin{figure}[h]
+						\centering
+						\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.5},scale=.5]
+							\draw (0,0) rectangle (1,1);
+							\draw (1,0) rectangle (2,1);
+							\draw (2,0) rectangle (3,1);
+							\draw[fill = violet] (0,1) rectangle (1,2);
+							\draw[fill = violet] (1,1) rectangle (2,2);
+							\draw[fill = violet] (2,1) rectangle (3,2);
+							\draw (0,2) rectangle (1,3);
+							\draw[fill = violet] (1,2) rectangle (2,3);
+							\draw (2,2) rectangle (3,3);						
+						\end{tikzpicture}
+						\caption{T-piece in a 3 $\times$ 3 box.}
+						\label{fig:t}
+					\end{figure}
+					
+					For a T-spin to occur, the last movement of a T piece must have been a rotation, and at least three of the four corners in the 3 $\times$ 3 box needs to be filled (refer to Figure \ref{fig:t-spin}).
+					
+					\begin{figure}[h]
+						\centering
+						\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.5},scale=.5]
+							\draw[fill = black!40!white] (0,0) rectangle (1,1);
+							\draw (1,0) rectangle (2,1);
+							\draw[fill = black!40!white] (2,0) rectangle (3,1);
+							\draw[fill = violet] (0,1) rectangle (1,2);
+							\draw[fill = violet] (1,1) rectangle (2,2);
+							\draw[fill = violet] (2,1) rectangle (3,2);
+							\draw[fill = black!40!white] (0,2) rectangle (1,3);
+							\draw[fill = violet] (1,2) rectangle (2,3);
+							\draw[fill = black!40!white] (2,2) rectangle (3,3);						
+						\end{tikzpicture}
+						\caption{\centering Visualisation of the T-spin condition. At least three of the four grey squares need to be filled.}
+						\label{fig:t-spin}
+					\end{figure}
+				
+					Regular T-spins send double the lines that they clear (refer to Table \ref{tab:t-spin}). Figure \ref{fig:t-spin} shows a few examples of T-spins.
+					
+					\begin{figure}
+						\centering
+						\begin{subfigure}{\textwidth}
+							\centering
+							\begin{minipage}{.2\textwidth}
+								\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+									\coordinate (sw) at (5,0);
+									\coordinate (nw) at (5,20);
+									\coordinate (se) at (15,0);
+									\coordinate (ne) at (15,20);
+									\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+									\draw[fill=black!40!white] (sw) -- (5,3) -- (6,3) -- (7,3) -- (7,2) -- (6,2) -- (6,1) -- (7,1) -- (7,0) -- cycle;
+									\draw[fill=black!40!white] (se) rectangle (8,1);
+									\node at (7,0){\rotatebox{-90}{\tpiece}};
+									\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\end{tikzpicture}
+							\end{minipage}\hspace{20pt} \texttt{right rotate} $\rightarrow$ \hspace{20pt}
+							\begin{minipage}{.2\textwidth}
+								\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+									\coordinate (sw) at (5,0);
+									\coordinate (nw) at (5,20);
+									\coordinate (se) at (15,0);
+									\coordinate (ne) at (15,20);
+									\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+									\draw[fill=black!40!white] (sw) -- (5,3) -- (6,3) -- (7,3) -- (7,2) -- (6,2) -- (6,1) -- (7,1) -- (7,0) -- cycle;
+									\draw[fill=black!40!white] (se) rectangle (8,1);
+									\node at (6,0){\rotatebox{180}{\tpiece}};
+									\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\end{tikzpicture}
+							\end{minipage}
+							\caption{Example of a T-spin Single.}
+						\end{subfigure}
+						\begin{subfigure}{\textwidth}
+							\centering
+							\begin{minipage}{.2\textwidth}
+								\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+									\coordinate (sw) at (5,0);
+									\coordinate (nw) at (5,20);
+									\coordinate (se) at (15,0);
+									\coordinate (ne) at (15,20);
+									\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+									\draw[fill=black!40!white] (sw) -- (5,3) -- (6,3) -- (7,3) -- (7,2) -- (6,2) -- (6,1) -- (7,1) -- (7,0) -- cycle;
+									\draw[fill=black!40!white] (se) -- (15,2) -- (9,2) -- (9,1) -- (8,1) -- (8,0) -- cycle;
+									\node at (7,0){\rotatebox{-90}{\tpiece}};
+									\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\end{tikzpicture}
+							\end{minipage}\hspace{20pt} \texttt{right rotate} $\rightarrow$ \hspace{20pt}
+							\begin{minipage}{.2\textwidth}
+								\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+									\coordinate (sw) at (5,0);
+									\coordinate (nw) at (5,20);
+									\coordinate (se) at (15,0);
+									\coordinate (ne) at (15,20);
+									\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+									\draw[fill=black!40!white] (sw) -- (5,3) -- (6,3) -- (7,3) -- (7,2) -- (6,2) -- (6,1) -- (7,1) -- (7,0) -- cycle;
+									\draw[fill=black!40!white] (se) -- (15,2) -- (9,2) -- (9,1) -- (8,1) -- (8,0) -- cycle;
+									\node at (6,0){\rotatebox{180}{\tpiece}};
+									\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\end{tikzpicture}
+							\end{minipage}
+							\caption{Example of a T-spin Double.}
+						\end{subfigure}
+						\begin{subfigure}{\textwidth}
+							\centering
+							\begin{minipage}{.2\textwidth}
+								\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+									\coordinate (sw) at (5,0);
+									\coordinate (nw) at (5,20);
+									\coordinate (se) at (15,0);
+									\coordinate (ne) at (15,20);
+									\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+									\draw[fill=black!40!white] (sw) -- (7,0) -- (7,1) -- (6,1) -- (6,2) -- (7,2) -- (7,3) -- (5,3) -- cycle;
+									\draw[fill=black!40!white] (se) -- (15,5) -- (7,5) -- (7,4) -- (8,4) -- (8,3) -- (8,0) -- cycle;
+									\node at ($(sw) + (0,3)$){\tpiece};
+									\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\end{tikzpicture}
+							\end{minipage}\hspace{20pt} \texttt{left rotate} $\rightarrow$ \hspace{20pt}
+							\begin{minipage}{.2\textwidth}
+								\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+									\coordinate (sw) at (5,0);
+									\coordinate (nw) at (5,20);
+									\coordinate (se) at (15,0);
+									\coordinate (ne) at (15,20);
+									\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+									\draw[fill=black!40!white] (sw) -- (7,0) -- (7,1) -- (6,1) -- (6,2) -- (7,2) -- (7,3) -- (5,3) -- cycle;
+									\draw[fill=black!40!white] (se) -- (15,5) -- (7,5) -- (7,4) -- (8,4) -- (8,3) -- (8,0) -- cycle;
+									\node at (6,0){\rotatebox{90}{\tpiece}};
+									\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\end{tikzpicture}
+							\end{minipage}
+							\caption{Example of a T-spin Triple.}
+							\label{fig:t-spin-triple}
+						\end{subfigure}
+						\caption{Examples of T-spins.}
+					\end{figure}
+					
+					\begin{table}
+						\centering
+						\caption{Attack Table for T-spins}
+						\label{tab:t-spin}
+						\begin{tblr}{c c}
+							\hline
+							T-Spin & Garbage Sent\\
+							\hline
+							Single & 2\\
+							Double & 4\\
+							Triple & 6\\
+						\end{tblr}
+					\end{table}
+					
 				\subsubsection{Back-to-back (B2B)}
 				
-				\subsubsection{Combos}
+					Back-to-back is a feature that encourages players to continuously play for Tetrises and T-spins. When these attacks are done back-to-back, it increases the garbage lines being sent to the opponent by one. For example, if a player performs a Tetris, and their following attack is also a Tetris, they would send a total of 9 lines; 4 from the initial attack, and 4 + 1 back-to-back from the latter.
+				
+				\subsubsection{Combos}\label{subsubsec:combos}
+				
+					When a player clears multiple lines in quick succession, with every subsequent piece being used to clear at least one line, they initiate a combo. At certain points in a combo, additional lines are added to the garbage group sent to the opponent (refer to Table \ref{tab:combo}). 
+					
+					\begin{table}[h]
+						\centering
+						\begin{tblr}{| c | c |}
+							\hline
+							Combo & Additional Garbage\\
+							\hline
+							0 & 0\\
+							1 & 0\\
+							2 & 1\\
+							3 & 1\\
+							4 & 2\\
+							5 & 2\\
+							6 & 3\\
+							7 & 3\\
+							8 & 4\\
+							9 & 4\\
+							10 & 4\\
+							11+ & 5\\
+							\hline
+						\end{tblr}
+						\caption{Combo Table}
+						\label{tab:combo}
+					\end{table}
+				
+				\subsubsection{Perfect Clears}
+				
+					A perfect clear occurs when a player clears the matrix completely, leaving no remnants of existing Tetrominos behind. It can be difficult to perform perfect clears in Versus Tetris, because if there is an odd number of garbage sent from the opponent, a perfect clear becomes completely impossible. Because of this, a perfect clear has the highest attack in a single move, sending 10 lines of garbage to the opponent.
+				
+				\subsubsection{Stored attack}
+				
+					When garbage is being sent to an opponent, the garbage lines do not suddenly appear in the opponent's matrix. It is stored in an attack potential, usually represented as a vertical meter on the side of the matrix (refer to Figure \ref{fig:attack-potential}). This is to let the opponent see the potential attacks that might be coming, and allows them to clear lines in order to perform cancelling.
+					
+					Cancelling is done when the garbage sent in a move is equivalent or higher to the number of garbage lines stored in the attack potential. This allows players to defend their matrix from unfavourable garbage. Figure \ref{fig:attack-potential} shows an example of cancelling a 6-line attack potential with a T-spin Triple (refer to Figure \ref{fig:t-spin-triple}).
+					
+					\begin{figure}
+						\centering
+						\begin{minipage}{.2\textwidth}
+							\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+								\coordinate (sw) at (5,0);
+								\coordinate (nw) at (5,20);
+								\coordinate (se) at (15,0);
+								\coordinate (ne) at (15,20);
+								\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\draw[fill=black!40!white] (sw) -- (7,0) -- (7,1) -- (6,1) -- (6,2) -- (7,2) -- (7,3) -- (5,3) -- cycle;
+								\draw[fill=black!40!white] (se) -- (15,5) -- (7,5) -- (7,4) -- (8,4) -- (8,3) -- (8,0) -- cycle;
+								\node at (6,0){\rotatebox{90}{\tpiece}};
+								\draw[fill=gray] (sw) rectangle (4,20);
+								\draw[fill=red] (sw) rectangle (4,6);
+								\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+							\end{tikzpicture}
+						\end{minipage}
+						\hspace{20pt} $\rightarrow$ \hspace{20pt}
+						\begin{minipage}{.2\textwidth}
+							\begin{minipage}{.2\textwidth}
+								\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+									\coordinate (sw) at (5,0);
+									\coordinate (nw) at (5,20);
+									\coordinate (se) at (15,0);
+									\coordinate (ne) at (15,20);
+									\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+									\draw[fill=black!40!white] (se) -- (15,2) -- (7,2) -- (7,1) -- (8,1) -- (8,0) -- cycle;
+									\draw[fill=gray] (sw) rectangle (4,20);
+									\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\end{tikzpicture}
+							\end{minipage}
+						\end{minipage}
+						\caption{\centering Example of Stored Attack and Cancelling.}
+						\label{fig:attack-potential}
+					\end{figure}
 			
 			\subsection{Gravity}
 			
+				In modern Versus Tetris games, gravity starts slow but slowly increases in order to force the players to make decisions quicker. However, in our implementation, we are more interested in the quality of the decisions being made, not the speed at which it is being made. Therefore, in this implementation, gravity will not be a factor. There are two ways that this might be implemented:
+				
+				\begin{enumerate}
+					\item \textbf{Zero Gravity}: The player has to manually move pieces down with a key, and manually place a piece with another key.
+					\item \textbf{Legal Placement Selection}: Instead of requiring the players to manually move pieces, we give the player several options for a piece to be placed, and check for legality before giving the options to the player.
+				\end{enumerate}
+				
+				When the game is outputted, the speed of the algorithms will follow the pace of the opposing player, similar to a turn-based game like chess. The player will play a move, and the algorithm will play a move. With no gravity, the player will be able to take as long as they want to plan ahead.
+			
 			\subsection{Other Features}
+			
+				Here two additional features that may help a player improve decision making will be listed.
+				
+				\begin{itemize}
+					\item \textbf{Hold}: Much like in \citeauthor{tetris-drl-2}'s \cite{tetris-drl-2} work, the hold function is used to hold on to a piece for future use and may be swapped any time with a piece in play.
+					\item \textbf{Five-piece Lookahead}:In our implementation of the game, five pieces of lookahead will be given to the player at all times, i.e. the player will be able to see five-pieces in their queue. This does two things:
+					\begin{enumerate}
+						\item It allows our player to plan for future pieces.
+						\item It allows our player to calculate the probability of upcoming pieces.
+					\end{enumerate}
+				\end{itemize}
 %				hold
 %				5-piece lookahead
 		
-		\section{Algorithm Selection}
+		\section{Algorithm Selection}\label{sec:algo-select}
 		% how algorithms work, why we choose them
+			Choosing the right algorithms is crucial for tackling the challenges of Versus Tetris. In this study, the three aforementioned nature-inspired optimization algorithms have been selected -- Genetic Algorithms (GA), Particle Swarm Optimization (PSO), and Ant Colony Optimization (ACO). These algorithms were chosen because previous research has shown they hold promise in playing Tetris.
+			
+			These algorithms have been well-studied and validated in other domains, giving us confidence in their potential for this study. Their selection also reflects our goal of exploring a diverse set of optimization approaches, which can yield deeper insights into their performance and suitability for real-time gaming environments. The algorithms will all have the same information as one another, and will all be evaluated with the same piece sequences.
 		
-		\section{Problem Formulation}
-		% problem formulation for each algorithm
+		\section{Problem Formulation}\label{sec:problem-formulation}
 		
+			In this section, we will formulate the problem of Versus Tetris. Even though multiple different algorithms will be used in order to optimise the decision making process of the game, the parameter tuning for each algorithm addressed in the results section.
+		
+			\subsection{Problem Definition}
+			
+				The problem is to develop a Tetris agent capable of playing Tetris well by effectively evaluating state-action pairs using a weighted feature function and optimising the agent's strategy based on win/loss outcomes.
+				
+			\subsection{States and Actions}
+			
+				In our problem, a state is a comprehensive representation of the Tetris matrix, including:
+				
+				\begin{enumerate}
+					\item \textbf{Matrix configurations}: Information on both matrices, including occupied and unoccupied ci neells.
+					\item \textbf{Current Tetrominos}: The current Tetrominos each agent is using
+					\item \textbf{Lookahead}: The current five lookahead pieces in the queue of each player.
+					\item \textbf{Hold}: The current piece being held by each player.
+				\end{enumerate}
+				
+				To an agent, an action is simply seen as a legal piece placement. An agent does not need to know how to move a piece from one place to another, they just need to know whether it is possible to get there. Of course, holding the current piece is also a legal action.
+				
+				In order to decide on an action, the agent will be utilising a heuristic which is a weighted sum of numerical features, much like in previous studies (refer to Equation \ref{eq:heuristic}).
+				
+				\begin{equation} 
+					\sum_{i=1}^{k} w_i f(S)_i
+				\end{equation}\label{eq:heuristic}
+				
+				\noindent where $S$ is a state, $f_i$ is the feature function of said state, and $w_i$ is the corresponding weight of feature $f_i$. The weights for each feature will be optimised using nature-inspired algorithms.
+				
+				When an action is decided on and taken, the state transitions from one state to the next. The transitional model would place the piece, check for line clears, and update attack potentials as needed.
+				
+				\begin{equation}
+					S_{t+1} = T(S_t, A)
+				\end{equation}
+				
+				When either the agent or an opponent has lost, a termination condition is met.
+				
 			\subsection{Features}
+				
+				Plenty of the literature that utilise any form of meta-heuristics have identified a number of features that describe informative aspects of a Tetris grid that can all be numerically defined. We believe that Versus Tetris is different enough that it will need a different set of features that should be taken into consideration, although there will be some overlapping features. These features include:
+				
+				\begin{enumerate}
+					\item \textbf{Pile height}: The row number of the highest occupied cell in the grid.
+					\item \textbf{Hole count}: A hole is an unoccupied cell with an occupied cell on top of it.
+					\item \textbf{Column transitions}: The sum of all vertical transitions between occupied and unoccupied cells. The bottom of the matrix is considered a row of occupied cells.
+					\item \textbf{Row transitions}: The sum of all horizontal transitions between occupied and unoccupied cells. Matrix borders count as occupied cells.
+					\item \textbf{Landing height}: The height at which the current piece is placed.
+					\item \textbf{Eroded piece count}: The number of cells from the current shape that will be removed by the placement, multiplied by the total number of rows that will be cleared as a result of performing the placement.
+					\item \textbf{Cumulative wells}: The sum of accumulated depths of the wells.
+					\item \textbf{Hole depth}: The number of filled cells above holes summed over all columns.
+					\item \textbf{Row hole}: The number of rows that contain at least one hole.
+					\item \textbf{Potential attack}: The total potential garbage that could be sent to an opponent. This can be calculated using the information provided in Section \ref{sec:rules} and the 5 lookahead pieces.
+					\item \textbf{Stored attack}: The stored attack after making a placement.
+					\item \textbf{Attack/Cancellation}: The number of garbage lines sent or cancelled from playing a move.
+				\end{enumerate}
+				
+			\subsection{Training}
+			
+				In order to simulate Versus gameplay, we will have different individuals from the same algorithm play each other with their corresponding weight vectors. If an individual has a high win-rate it is likely that their weight vectors help them play advantageously.
+				
+				When an algorithm converges past a certain degree, we terminate it and obtain the weight vectors of the final iteration of the algorithm. From here, we can see what the agents were prioritising.
 		
-		\section{Evaluation Framework}
+		\section{Evaluating Gameplay}\label{sec:evaluation}
 		% ui and evaluation framework
 		% attack per piece
 		% in order to obtain data, suggest encoding scheme
+			
+			In this section, we will highlight three methods we will be evaluating the best-performing agents created from our algorithms. The three methods will be used to evaluate attack efficiency, survivability, as well as the agent's ability to win against a diverse set of play-styles.
+		
 			\subsection{Evaluating Attack Efficiency}
+			
+				In modern Versus Tetris games, attack efficiency is calculated with the metric Attack per Minute (\textit{APM}), which is calculated by dividing the lines sent from a player with the number of minutes they have played. In our implementation, since the algorithms and players will have seemingly unlimited time to decide on a move, this metric would be a problem. Therefore, the metric that we will be using is Attack per Piece (\textit{APP}). This metric will be calculated by dividing the lines sent from a player with the number of pieces placed.
+				
+				\begin{equation}
+					\text{Attack per Piece (\textit{APP})} = \dfrac{\text{Total Attack}}{\text{Total Pieces Placed}}
+				\end{equation}
+				
+				In order to test this, we would let each algorithm play normal single-player games of Tetris in isolation, and calculating the potential attacks that would be sent. The higher an algorithm's \textit{APP} is, the more efficient it is at attacking.
 			
 			\subsection{Evaluating Survivability}
 			
-			\subsection{Playing Against Other Players}
-
-			\subsection{Comparing Algorithms}
+				To evaluate the survivability of each algorithm, we let them play a mini-game known as ``Cheese Race''. The goal of the algorithm in this mini-game is to clear 100 groups of garbage, each with randomised wells (refer to Figure \ref{fig:cheese-race}). The garbage refreshes every time a line is cleared, and the goal of the algorithm should be to clear 100 lines as quickly as possible, with as little pieces as possible.
+				
+				\begin{figure}
+					\centering
+					\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.4},scale=.4]
+						\coordinate (sw) at (5,0);
+						\coordinate (nw) at (5,20);
+						\coordinate (se) at (15,0);
+						\coordinate (ne) at (15,20);
+						\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+						\node at ($(nw) - (4,5)$){\spiece};	
+						\node at (sw){\garbage{1}{5}};
+						\node at ($(sw) + (0,1)$){\garbage{1}{2}};
+						\node at ($(sw) + (0,2)$){\garbage{1}{9}};
+						\node at ($(sw) + (0,3)$){\garbage{1}{8}};
+						\node at ($(sw) + (0,4)$){\garbage{1}{4}};
+						\node at ($(sw) + (0,5)$){\garbage{1}{5}}; 
+						\node at ($(nw) + (3,-3)$){\zpiece};
+						\node at ($(ne) + (1,-2)$){\lpiece};
+						\node at ($(ne) + (1,-5)$){\jpiece};
+						\node at ($(ne) + (1,-8)$){\opiece};
+						\node at ($(ne) + (1,-11)$){\ipiece};
+						\node at ($(ne) + (1,-14)$){\tpiece};
+						\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+					\end{tikzpicture}
+					\caption{A game of cheese race.}
+					\label{fig:cheese-race}
+				\end{figure}
+				
+				The metric that would be used for evaluating an algorithm would be the number of pieces placed. In this test, the lower the metric, the higher the survivability of the algorithm.
+			
+			\subsection{Playing Versus}
+			
+				Finally, the algorithms will be pitted against one another in a two-player Versus Tetris game with the rules defined in Section \ref{sec:rules}. The outcomes of these games will be recorded to find the best performing algorithm within the three selected.
+				
+				Furthermore, the best players of each algorithm will also be selected to play against real human opponents, and feedback will be obtained from players. Ideally, there would be a record of these games, and we could look through the games ourselves to find where our algorithms are struggling.
 	
 	\chapter{Work Plan}
 		
 		% Excellent description of all work activities to be performed during the project, relationship among the activities and the resultant work products for each activity.
 		% Scheduled duration for each work activity is justified and supported by the identified project risk factors and work decomposition that each activity requires.
 		% The whole project schedule, milestones and activitiy lists are depicted professionally on the Gantt chart with all dependencies, predecessor and successor work activities denoted clearly.
+		
+		This work plan outlines the comprehensive strategy for this project, providing a detailed breakdown of project activities, their interdependencies, and the estimated timeline for completion. A Gantt chart is also provided as a visual representation of the project's temporal progression.
+		
+
+		\begin{longtblr}[
+			caption = {Work Activities, Risk Factors and Duration},
+			label = {tab:work},
+			]{| c | X | X | X | c |}
+			\hline
+			Phases & Work Activities & Work Product & Risk Factors & Duration \\
+			\hline
+			{Create \\ Functional \\ Tetris \\ Simulation} & Create a functional Versus Tetris simulator. It should follow the rules outlined in Section \ref{sec:rules}. & A functional Tetris game & Difficulty of task & 3 Weeks\\
+			\hline
+			{Algorithm \\ Development} & Implement GA, PSO, and ACO for optimising Tetris gameplay, define parameters and initialise the algorithms. & Algorithms that are able to play Tetris decently. & Difficulty of task, unexpected bugs & 4 Weeks\\
+			\hline
+			{Create \\playable\\ game} & Create a playable game of Tetris for other players to play on it and provide feedback. It will allow players to play against the agents tuned by the algorithms. & Playable Tetris Game & Unexpected bugs, deciding on implementation details (what to develop on, how to collect data, etc.) & 3 Week \\
+			\hline
+			{Collect \\ Data} & Have people with varying skill levels attempt to play the game against the different algorithms. Summarise the data with tables and graphs and find out if any agent is doing significantly better. & Data, tables, and graphs & Lack of responses & 1 Week \\
+			\hline
+			{Write \\Results} & Write all obtained results & Completed results section & Too little data, previous tasks unfinished & 2 Weeks \\
+			\hline
+			{Revisions \\ and\\ Submission} & Make final revisions before submission & Final report & Incomplete work, time constraints due to assignments & 1 Week \\
+			\hline
+			{Prepare \\ for \\ Viva} & Create slides to summarise all work done, practice presentation, prepare for potential questions & Viva Slides and Script & Inadequate preparation & 1 Week\\
+			\hline
+		\end{longtblr}
+		
+		\begin{landscape}
+			\begin{figure}
+				\centering
+				\begin{ganttchart}[x unit=1cm, vgrid=dotted, hgrid = true]{1}{13}
+					\gantttitle{W1}{1}
+					\gantttitle{W2}{1}
+					\gantttitle{W3}{1}
+					\gantttitle{W4}{1}
+					\gantttitle{W5}{1}
+					\gantttitle{W6}{1}
+					\gantttitle{W7}{1} 
+					\gantttitle{W8}{1}
+					\gantttitle{W9}{1}
+					\gantttitle{W10}{1}
+					\gantttitle{W11}{1}
+					\gantttitle{W12}{1}
+					\gantttitle{W13}{1}\\
+					\ganttbar{Create Functional Tetris Simulation}{1}{3}\\
+					\ganttlinkedbar{Algorithm Development}{4}{7}\\
+					\ganttmilestone{Tuned Agents}{7}\\
+					\ganttbar{Create Playable Game}{6}{9}\\
+					\ganttlinkedbar{Collect Data}{10}{10}\\
+					\ganttbar{Write Results}{10}{11}\\
+					\ganttbar{Revisions and Submission}{12}{12}\\
+					\ganttmilestone{Submission}{12}\\
+					\ganttbar{Prepare for Viva}{13}{13}
+				\end{ganttchart}
+				\caption{Gantt Chart of Timeline}
+			\end{figure}
+		\end{landscape}
 	
 	\printbibliography[heading={bibnumbered}, title={References}]
 		

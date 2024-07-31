@@ -1361,6 +1361,54 @@
       \field{year}{1989}
       \true{nocite}
     \endentry
+    \entry{tetris-aco}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=5e774dffbb92621364ac8d541864cf6c}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Xingguo},
+           giveni={X\bibinitperiod}}}%
+        {{hash=c8cf19241225247d6d07dbf8a516b8ed}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=8299411e801162727f349d4f6e600064}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Weiwei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=fa3131088153ba010f679c3c06dab319}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Yinghuan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=9c1ecb1f7c47cf02e9e994296746328c}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{487595a95b4d4541ec902dfde0e5cdc5}
+      \strng{fullhash}{4e2863249d2d77ba62029e01eee3af79}
+      \strng{bibnamehash}{4e2863249d2d77ba62029e01eee3af79}
+      \strng{authorbibnamehash}{4e2863249d2d77ba62029e01eee3af79}
+      \strng{authornamehash}{487595a95b4d4541ec902dfde0e5cdc5}
+      \strng{authorfullhash}{4e2863249d2d77ba62029e01eee3af79}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{07}
+      \field{title}{Apply Ant Colony Optimization to Tetris}
+      \field{year}{2009}
+      \true{nocite}
+      \field{pages}{1741\bibrangedash 1742}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1145/1569901.1570136
+      \endverb
+    \endentry
     \entry{harddrop}{misc}{}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}

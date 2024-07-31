@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  31 JUL 2024 06:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  1 AUG 2024 04:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1187,30 +1187,98 @@ Package footmisc Info: Declaring symbol style lamport* on input line 744.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 765
 .
 )
-\@quotelevel=\count480
-\@quotereset=\count481
+(c:/texlive/2023/texmf-dist/tex/latex/pgfgantt/pgfgantt.sty
+Package: pgfgantt 2018/01/10 v5.0 Draw Gantt diagrams with TikZ
+
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen355
+))
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@layerbox@background=\box95
+\pgf@layerboxsaved@background=\box96
+)
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.t
+ex
+File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfcalendar.sty
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfcalendar.code.tex
+File: pgfcalendar.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfcalendarcurrentjulian=\count480
+\pgf@cal@easter@Y=\count481
+\pgf@cal@easter@G=\count482
+\pgf@cal@easter@C=\count483
+\pgf@cal@easter@X=\count484
+\pgf@cal@easter@Z=\count485
+\pgf@cal@easter@D=\count486
+\pgf@cal@easter@E=\count487
+\pgf@cal@easter@N=\count488
+\pgf@cal@easter@M=\count489
+\pgf@cal@easter@julianday=\count490
+))
+\gtt@currentline=\count491
+\gtt@lasttitleline=\count492
+\gtt@currgrid=\count493
+\gtt@chartwidth=\count494
+\gtt@lasttitleslot=\count495
+\gtt@elementid=\count496
+\gtt@today@slot=\count497
+\gtt@startjulian=\count498
+\gtt@endjulian=\count499
+\gtt@chartid=\count500
+\gtt@vrule@slot=\count501
+\gtt@calendar@slots=\count502
+\gtt@calendar@weeknumber=\count503
+\gtt@calendar@startofweek=\count504
+\gtt@left@slot=\count505
+\gtt@right@slot=\count506
+)
+(c:/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+
+(c:/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+
+(c:/texlive/2023/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
+\@quotelevel=\count507
+\@quotereset=\count508
 
 (./planning-document.aux)
 \openout1 = `planning-document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1248,53 +1316,32 @@ LaTeX Font Info:    ... okay on input line 30.
 
 (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count482
-\scratchdimen=\dimen355
-\scratchbox=\box95
-\nofMPsegments=\count483
-\nofMParguments=\count484
+\scratchcounter=\count509
+\scratchdimen=\dimen356
+\scratchbox=\box97
+\nofMPsegments=\count510
+\nofMParguments=\count511
 \everyMPshowfont=\toks45
-\MPscratchCnt=\count485
-\MPscratchDim=\dimen356
-\MPnumerator=\count486
-\makeMPintoPDFobject=\count487
+\MPscratchCnt=\count512
+\MPscratchDim=\dimen357
+\MPnumerator=\count513
+\makeMPintoPDFobject=\count514
 \everyMPtoPDFconversion=\toks46
 ) (c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-
-(c:/texlive/2023/texmf-dist/tex/latex/grfext/grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (c:/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 30.
+Package hyperref Info: Link coloring OFF on input line 32.
 
 (./planning-document.out) (./planning-document.out)
 \@outlinefile=\write5
 \openout5 = `planning-document.out'.
 
-
-(c:/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape.sty
-Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
-
-(c:/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
-Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
-F (HO)
-
-(c:/texlive/2023/texmf-dist/tex/latex/graphics/lscape.sty
-Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
-)
-Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-))
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -1310,25 +1357,25 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'planning-document.bbl' found.
 
 (./planning-document.bbl)
-Package biblatex Info: Reference section=0 on input line 30.
-Package biblatex Info: Reference segment=0 on input line 30.
+Package biblatex Info: Reference section=0 on input line 32.
+Package biblatex Info: Reference segment=0 on input line 32.
 
 (c:/texlive/2023/texmf-dist/tex/latex/ninecolors/ninecolors.sty
 Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
 )
-LaTeX Info: Redefining \microtypecontext on input line 30.
-Package microtype Info: Applying patch `item' on input line 30.
-Package microtype Info: Applying patch `toc' on input line 30.
-Package microtype Info: Applying patch `eqnum' on input line 30.
-Package microtype Info: Applying patch `footnote' on input line 30.
-Package microtype Info: Applying patch `verbatim' on input line 30.
+LaTeX Info: Redefining \microtypecontext on input line 32.
+Package microtype Info: Applying patch `item' on input line 32.
+Package microtype Info: Applying patch `toc' on input line 32.
+Package microtype Info: Applying patch `eqnum' on input line 32.
+Package microtype Info: Applying patch `footnote' on input line 32.
+Package microtype Info: Applying patch `verbatim' on input line 32.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 30.
+LaTeX Info: Redefining \showhyphens on input line 32.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1339,11 +1386,11 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<../../resources/images/logos/sunway-set.png, id=167, 397.485pt x 104.7915pt>
+<../../resources/images/logos/sunway-set.png, id=175, 397.485pt x 104.7915pt>
 File: ../../resources/images/logos/sunway-set.png Graphic file (type png)
 <use ../../resources/images/logos/sunway-set.png>
 Package pdftex.def Info: ../../resources/images/logos/sunway-set.png  used on i
-nput line 49.
+nput line 51.
 (pdftex.def)             Requested size: 377.74203pt x 99.58464pt.
  [1
 
@@ -1393,7 +1440,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.151 	 		
+l.153 	 		
            [1
 
 ] [2] [3]
@@ -1415,7 +1462,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 > Step: build the whole table.
  [11] [12] [13] [14]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
-46.
+44.
 
 (c:/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
@@ -1441,7 +1488,7 @@ Overfull \hbox (11.40594pt too wide) in paragraph at lines 665--666
 
 [18
 
-]
+] [19]
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -1458,34 +1505,371 @@ Overfull \hbox (11.40594pt too wide) in paragraph at lines 665--666
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
- [19{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [20
-] [21] [22]
+ [20{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+Missing character: There is no ; in font nullfont!
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+> Step: build the whole table.
+[21]
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+> Step: build the whole table.
+ [22] [23]
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+> Step: build the whole table.
+ [24]
+Overfull \hbox (4.30566pt too wide) in paragraph at lines 1106--1107
+[][] 
+ []
+
+
+Overfull \hbox (76.77971pt too wide) in paragraph at lines 1120--1121
+[][] 
+ []
+
+[25] [26] [27] [28] [29] [30]
 Chapter 4.
-[23
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+[]\T1/cmr/m/n/12 (+20) Create a func-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) tional Ver-sus
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) Tetris sim-u-la-tor.
+ []
+
+
+Underfull \hbox (badness 2538) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) It should fol-low
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+[]\T1/cmr/m/n/12 (+20) A func-tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+[]\T1/cmr/m/n/12 (+20) Implement GA,
+ []
+
+
+Underfull \hbox (badness 2418) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) PSO, and ACO
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) for op-ti-mis-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) Tetris game-play,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+[]\T1/cmr/m/n/12 (+20) Algorithms that
+ []
+
+
+Underfull \hbox (badness 1881) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) other play-ers to
+ []
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) agents tuned by
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+[]\T1/cmr/m/n/12 (+20) Playable Tetris
+ []
+
+
+Underfull \hbox (badness 4048) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) the dif-fer-ent al-
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) go-rithms. Sum-
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) marise the data
+ []
+
+
+Underfull \hbox (badness 2772) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) with ta-bles and
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) graphs and find
+ []
+
+
+Underfull \hbox (badness 6236) in paragraph at lines 1307--1307
+[]\T1/cmr/m/n/12 (+20) Too lit-tle data,
+ []
+
+
+Underfull \hbox (badness 2961) in paragraph at lines 1307--1307
+[]\T1/cmr/m/n/12 (+20) Make fi-nal re-vi-
+ []
+
+
+Underfull \hbox (badness 7576) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) time con-straints
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) due to as-sign-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+[]\T1/cmr/m/n/12 (+20) Create slides
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) to sum-marise
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) all work done,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) prac-tice pre-sen-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) ta-tion, pre-pare
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) for po-ten-tial
+ []
+
+
+Underfull \hbox (badness 2772) in paragraph at lines 1307--1307
+[]\T1/cmr/m/n/12 (+20) Viva Slides and
+ []
+
+> Step: build the whole table.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+[]\T1/cmr/m/n/12 (+20) Create a func-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) tional Ver-sus
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) Tetris sim-u-la-tor.
+ []
+
+
+Underfull \hbox (badness 2538) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) It should fol-low
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+[]\T1/cmr/m/n/12 (+20) A func-tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+[]\T1/cmr/m/n/12 (+20) Implement GA,
+ []
+
+
+Underfull \hbox (badness 2418) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) PSO, and ACO
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) for op-ti-mis-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) Tetris game-play,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+[]\T1/cmr/m/n/12 (+20) Algorithms that
+ []
+
+
+Underfull \hbox (badness 1881) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) other play-ers to
+ []
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) agents tuned by
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+[]\T1/cmr/m/n/12 (+20) Playable Tetris
+ []
+
+[31
 
 ]
-Chapter 5.
-[24
+Underfull \hbox (badness 4048) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) the dif-fer-ent al-
+ []
 
-] [25] [26] (./planning-document.aux)
+
+Underfull \hbox (badness 1005) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) go-rithms. Sum-
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) marise the data
+ []
+
+
+Underfull \hbox (badness 2772) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) with ta-bles and
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) graphs and find
+ []
+
+
+Underfull \hbox (badness 6236) in paragraph at lines 1307--1307
+[]\T1/cmr/m/n/12 (+20) Too lit-tle data,
+ []
+
+
+Underfull \hbox (badness 2961) in paragraph at lines 1307--1307
+[]\T1/cmr/m/n/12 (+20) Make fi-nal re-vi-
+ []
+
+
+Underfull \hbox (badness 7576) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) time con-straints
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) due to as-sign-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+[]\T1/cmr/m/n/12 (+20) Create slides
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) to sum-marise
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) all work done,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) prac-tice pre-sen-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) ta-tion, pre-pare
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+\T1/cmr/m/n/12 (+20) for po-ten-tial
+ []
+
+
+Underfull \hbox (badness 2772) in paragraph at lines 1307--1307
+[]\T1/cmr/m/n/12 (+20) Viva Slides and
+ []
+
+[32] [33]
+Chapter 5.
+[34
+
+
+
+] [35] [36] (./planning-document.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
  ***********
 Package rerunfilecheck Info: File `planning-document.out' has not changed.
-(rerunfilecheck)             Checksum: 27A179CAC83AFE1C2FB9E7E88372BF02;6114.
+(rerunfilecheck)             Checksum: E9A50242C0EBC6727268ABDCC1A7E905;6278.
 Package logreq Info: Writing requests to 'planning-document.run.xml'.
 \openout1 = `planning-document.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38559 strings out of 474504
- 745763 string characters out of 5756725
- 2008043 words of memory out of 5000000
- 59587 multiletter control sequences out of 15000+600000
- 588649 words of font info for 195 fonts, out of 8000000 for 9000
+ 40325 strings out of 474504
+ 792358 string characters out of 5756725
+ 2020043 words of memory out of 5000000
+ 61267 multiletter control sequences out of 15000+600000
+ 596606 words of font info for 219 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,10n,131p,2301b,1515s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,12n,131p,2301b,1515s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-di
@@ -1507,10 +1891,10 @@ f-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fon
 ts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/p
 ublic/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-s
 uper/sftt1200.pfb>
-Output written on planning-document.pdf (32 pages, 576975 bytes).
+Output written on planning-document.pdf (42 pages, 613324 bytes).
 PDF statistics:
- 770 PDF objects out of 1000 (max. 8388607)
- 679 compressed objects within 7 object streams
- 170 named destinations out of 1000 (max. 500000)
- 43858 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 900 PDF objects out of 1000 (max. 8388607)
+ 795 compressed objects within 8 object streams
+ 214 named destinations out of 1000 (max. 500000)
+ 50018 words of extra memory for PDF output out of 51595 (max. 10000000)
 
