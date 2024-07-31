@@ -2511,6 +2511,8 @@
     <bcf:citekey order="148" intorder="1">tetris-learning-by-imitation</bcf:citekey>
     <bcf:citekey order="149" intorder="1">tetris-learning-by-imitation</bcf:citekey>
     <bcf:citekey order="150" intorder="1">tetris-bb-mc-planning</bcf:citekey>
+    <bcf:citekey order="151" intorder="1">tetris-drl-2</bcf:citekey>
+    <bcf:citekey order="152" intorder="1">tetris-drl-2</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

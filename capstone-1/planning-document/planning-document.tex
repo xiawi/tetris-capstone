@@ -77,7 +77,7 @@
 			\vspace{1cm}
 			
 			\normalsize Semester: April 2024 \\
-			Date: % TODO: DATE OF SUBMISSION
+			Date: 1 August 2024
 			
 			\vfill
 			
@@ -403,7 +403,7 @@
 					\label{fig:bbmcts-single-node}
 				\end{figure}
 				
-				Experimental results show that the artificial player shows promise, beating Fahey's AI \cite{fahey-ai} 91 times out of 100 games using the multiplayer Tetris rules mentioned in subsection \ref{subsec:imit-learning} \cite{tetris-bb-mc-planning}. The results also show that the artificial player outperformed the SVM based pattern player from \citeauthor{tetris-bb-mc-planning}'s previous work, where they approached the game with imitation learning \cite{tetris-learning-by-imitation}.
+				Experimental results show that the artificial player shows promise, beating Fahey's AI \cite{fahey-ai} 91 times out of 100 games using the multiplayer Tetris rules mentioned in Section \ref{subsec:imit-learning} \cite{tetris-bb-mc-planning}. The results also show that the artificial player outperformed the SVM based pattern player from \citeauthor{tetris-bb-mc-planning}'s previous work, where they approached the game with imitation learning \cite{tetris-learning-by-imitation}.
 				
 				% TODO may need better visualisation
 			
@@ -480,7 +480,7 @@
 					\item Meta-heuristic algorithms are not designed to solve a specific problem.
 				\end{enumerate}
 				
-				In this subsection, we will look into two works of literature that cover the use of two distinct meta-heuristic algorithms, namely, the harmony search algorithm, and the most valuable player algorithm, in optimising Tetris agents.
+				Here, we will look into two works of literature that cover the use of two distinct meta-heuristic algorithms, namely, the harmony search algorithm, and the most valuable player algorithm, in optimising Tetris agents.
 				
 				\subsubsection{Harmony Search Algorithm}
 					
@@ -531,7 +531,7 @@
 		
 			Nature-inspired optimisation algorithms are a class of meta-heuristic algorithms. These algorithms are based on natural phenomena and biological systems, borrowing ideas like natural selection and evolution to converge on acceptable solutions \cite{nia-soft-computing}. In this section, we will highlight three such algorithms that have been adopted to attempt to tackle the game of Tetris, specifically, the aforementioned genetic algorithm (GA), ant colony optimisation (ACO), particle swarm optimisation (PSO).
 			
-			All these works are similar to the ones mentioned in Subsection \ref{subsec:metaheuristic}, in the sense that they all utilise a list of features from the board state and that they all utilise these algorithms to optimise the weights for said features to be used in a state evaluation function.
+			All these works are similar to the ones mentioned in Section \ref{subsec:metaheuristic}, in the sense that they all utilise a list of features from the board state and that they all utilise these algorithms to optimise the weights for said features to be used in a state evaluation function.
 		
 			% Show examples of other work that has attempted to play Tetris with NIA
 			\subsection{Genetic Algorithm}
@@ -838,33 +838,328 @@
 			
 				In \citeauthor{tetris-learning-by-imitation}'s papers \cite{tetris-learning-by-imitation} \cite{tetris-bb-mc-planning}, they defined attack rules for their variant of multiplayer Tetris. Here, we will define the attack rules of guideline Tetris, which will be used for our implementation.
 				
-				\subsubsection{Garbage Lines}
+				\subsubsection{Garbage}
 					
+					Garbage lines (or attack lines) are lines sent from one opponent to another. They all have a one column well that would allow a player to clear them (refer to Figure \ref{fig:gar}). Garbage is sent in batches, when a player performs an action that is able to send garbage lines, those garbage lines are grouped together, and the wells of grouped garbage lines are always on the same column. However, if the same player performs more attack actions, there may be multiple different wells present in garbage lines. Garbage lines are a key part of the game as players can also use these lines to send attacks back to the opponent.
 					
+					\begin{figure}[b]
+						\centering
+						\begin{minipage}{.2\textwidth}
+							\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+								\coordinate (sw) at (5,0);
+								\coordinate (nw) at (5,20);
+								\coordinate (se) at (15,0);
+								\coordinate (ne) at (15,20);
+								\coordinate (gar) at (5,5);
+								\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\node at (sw){\garbage{3}{5}};
+								\node at ($(sw) + (0,3)$){\garbage{2}{6}};
+								\node at ($(gar) + (4,-2)$){\rotatebox{90}{\lpiece}};
+								\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+							\end{tikzpicture}
+						\end{minipage}\hspace{20pt}$\rightarrow$\hspace{20pt}
+						\begin{minipage}{.2\textwidth}
+							\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+								\coordinate (sw) at (5,0);
+								\coordinate (nw) at (5,20);
+								\coordinate (se) at (15,0);
+								\coordinate (ne) at (15,20);
+								\coordinate (gar) at (5,3);;
+								\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\node at (sw){\garbage{3}{5}};
+								\draw[fill = orange] (9,3) rectangle (11,4);
+								\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+							\end{tikzpicture}
+						\end{minipage}
+						\caption{Example of garbage lines (gray) being cleared by an L piece.}
+						\label{fig:gar}
+					\end{figure}
 			
 				\subsubsection{Line Clears}
 				
+					Any action that clears two or more lines simultaneously will send garbage lines to the opponent (refer to Table \ref{tab:line-clear}). It may seem obvious that it is always better for the player to go for Tetrises (4-line clears), but we will shed light on another mechanic that will impact strategy largely in Section \ref{subsubsec:combos}. 
+					
+					\begin{table}
+						\centering
+						\caption{Attack Table for Line Clears}
+						\label{tab:line-clear}
+						\begin{tblr}{c c}
+							\hline
+							Lines Cleared & Garbage Sent\\
+							\hline
+							1 & 0\\
+							2 & 1\\
+							3 & 2\\
+							4 & 4
+						\end{tblr}
+					\end{table}
+				
 				\subsubsection{T-spins}
 				
+					T-spins are a feature implemented in modern Tetris games that allow players to increase their scoring without simply performing Tetrises. To define a T-spin, we can first imagine the T piece in a 3 $\times$ 3 box (refer to Figure \ref{fig:t}).
+					
+					\begin{figure}[h]
+						\centering
+						\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.5},scale=.5]
+							\draw (0,0) rectangle (1,1);
+							\draw (1,0) rectangle (2,1);
+							\draw (2,0) rectangle (3,1);
+							\draw[fill = violet] (0,1) rectangle (1,2);
+							\draw[fill = violet] (1,1) rectangle (2,2);
+							\draw[fill = violet] (2,1) rectangle (3,2);
+							\draw (0,2) rectangle (1,3);
+							\draw[fill = violet] (1,2) rectangle (2,3);
+							\draw (2,2) rectangle (3,3);						
+						\end{tikzpicture}
+						\caption{T-piece in a 3 $\times$ 3 box.}
+						\label{fig:t}
+					\end{figure}
+					
+					For a T-spin to occur, the last movement of a T piece must have been a rotation, and at least three of the four corners in the 3 $\times$ 3 box needs to be filled (refer to Figure \ref{fig:t-spin}).
+					
+					\begin{figure}[h]
+						\centering
+						\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.5},scale=.5]
+							\draw[fill = black!40!white] (0,0) rectangle (1,1);
+							\draw (1,0) rectangle (2,1);
+							\draw[fill = black!40!white] (2,0) rectangle (3,1);
+							\draw[fill = violet] (0,1) rectangle (1,2);
+							\draw[fill = violet] (1,1) rectangle (2,2);
+							\draw[fill = violet] (2,1) rectangle (3,2);
+							\draw[fill = black!40!white] (0,2) rectangle (1,3);
+							\draw[fill = violet] (1,2) rectangle (2,3);
+							\draw[fill = black!40!white] (2,2) rectangle (3,3);						
+						\end{tikzpicture}
+						\caption{\centering Visualisation of the T-spin condition. At least three of the four grey squares need to be filled.}
+						\label{fig:t-spin}
+					\end{figure}
+				
+					Regular T-spins send double the lines that they clear (refer to Table \ref{tab:t-spin}). Figure \ref{fig:t-spin} shows a few examples of T-spins.
+					
+					\begin{figure}
+						\centering
+						\begin{subfigure}{\textwidth}
+							\centering
+							\begin{minipage}{.2\textwidth}
+								\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+									\coordinate (sw) at (5,0);
+									\coordinate (nw) at (5,20);
+									\coordinate (se) at (15,0);
+									\coordinate (ne) at (15,20);
+									\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+									\draw[fill=black!40!white] (sw) -- (5,3) -- (6,3) -- (7,3) -- (7,2) -- (6,2) -- (6,1) -- (7,1) -- (7,0) -- cycle;
+									\draw[fill=black!40!white] (se) rectangle (8,1);
+									\node at (7,0){\rotatebox{-90}{\tpiece}};
+									\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\end{tikzpicture}
+							\end{minipage}\hspace{20pt} \texttt{right rotate} $\rightarrow$ \hspace{20pt}
+							\begin{minipage}{.2\textwidth}
+								\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+									\coordinate (sw) at (5,0);
+									\coordinate (nw) at (5,20);
+									\coordinate (se) at (15,0);
+									\coordinate (ne) at (15,20);
+									\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+									\draw[fill=black!40!white] (sw) -- (5,3) -- (6,3) -- (7,3) -- (7,2) -- (6,2) -- (6,1) -- (7,1) -- (7,0) -- cycle;
+									\draw[fill=black!40!white] (se) rectangle (8,1);
+									\node at (6,0){\rotatebox{180}{\tpiece}};
+									\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\end{tikzpicture}
+							\end{minipage}
+							\caption{Example of a T-spin Single.}
+						\end{subfigure}
+						\begin{subfigure}{\textwidth}
+							\centering
+							\begin{minipage}{.2\textwidth}
+								\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+									\coordinate (sw) at (5,0);
+									\coordinate (nw) at (5,20);
+									\coordinate (se) at (15,0);
+									\coordinate (ne) at (15,20);
+									\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+									\draw[fill=black!40!white] (sw) -- (5,3) -- (6,3) -- (7,3) -- (7,2) -- (6,2) -- (6,1) -- (7,1) -- (7,0) -- cycle;
+									\draw[fill=black!40!white] (se) -- (15,2) -- (9,2) -- (9,1) -- (8,1) -- (8,0) -- cycle;
+									\node at (7,0){\rotatebox{-90}{\tpiece}};
+									\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\end{tikzpicture}
+							\end{minipage}\hspace{20pt} \texttt{right rotate} $\rightarrow$ \hspace{20pt}
+							\begin{minipage}{.2\textwidth}
+								\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+									\coordinate (sw) at (5,0);
+									\coordinate (nw) at (5,20);
+									\coordinate (se) at (15,0);
+									\coordinate (ne) at (15,20);
+									\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+									\draw[fill=black!40!white] (sw) -- (5,3) -- (6,3) -- (7,3) -- (7,2) -- (6,2) -- (6,1) -- (7,1) -- (7,0) -- cycle;
+									\draw[fill=black!40!white] (se) -- (15,2) -- (9,2) -- (9,1) -- (8,1) -- (8,0) -- cycle;
+									\node at (6,0){\rotatebox{180}{\tpiece}};
+									\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\end{tikzpicture}
+							\end{minipage}
+							\caption{Example of a T-spin Double.}
+						\end{subfigure}
+						\begin{subfigure}{\textwidth}
+							\centering
+							\begin{minipage}{.2\textwidth}
+								\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+									\coordinate (sw) at (5,0);
+									\coordinate (nw) at (5,20);
+									\coordinate (se) at (15,0);
+									\coordinate (ne) at (15,20);
+									\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+									\draw[fill=black!40!white] (sw) -- (7,0) -- (7,1) -- (6,1) -- (6,2) -- (7,2) -- (7,3) -- (5,3) -- cycle;
+									\draw[fill=black!40!white] (se) -- (15,5) -- (7,5) -- (7,4) -- (8,4) -- (8,3) -- (8,0) -- cycle;
+									\node at ($(sw) + (0,3)$){\tpiece};
+									\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\end{tikzpicture}
+							\end{minipage}\hspace{20pt} \texttt{left rotate} $\rightarrow$ \hspace{20pt}
+							\begin{minipage}{.2\textwidth}
+								\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+									\coordinate (sw) at (5,0);
+									\coordinate (nw) at (5,20);
+									\coordinate (se) at (15,0);
+									\coordinate (ne) at (15,20);
+									\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+									\draw[fill=black!40!white] (sw) -- (7,0) -- (7,1) -- (6,1) -- (6,2) -- (7,2) -- (7,3) -- (5,3) -- cycle;
+									\draw[fill=black!40!white] (se) -- (15,5) -- (7,5) -- (7,4) -- (8,4) -- (8,3) -- (8,0) -- cycle;
+									\node at (6,0){\rotatebox{90}{\tpiece}};
+									\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\end{tikzpicture}
+							\end{minipage}
+							\caption{Example of a T-spin Triple.}
+							\label{fig:t-spin-triple}
+						\end{subfigure}
+						\caption{Examples of T-spins.}
+					\end{figure}
+					
+					\begin{table}
+						\centering
+						\caption{Attack Table for T-spins}
+						\label{tab:t-spin}
+						\begin{tblr}{c c}
+							\hline
+							T-Spin & Garbage Sent\\
+							\hline
+							Single & 2\\
+							Double & 4\\
+							Triple & 6\\
+						\end{tblr}
+					\end{table}
+					
 				\subsubsection{Back-to-back (B2B)}
 				
-				\subsubsection{Combos}
+					Back-to-back is a feature that encourages players to continuously play for Tetrises and T-spins. When these attacks are done back-to-back, it increases the garbage lines being sent to the opponent by one. For example, if a player performs a Tetris, and their following attack is also a Tetris, they would send a total of 9 lines; 4 from the initial attack, and 4 + 1 back-to-back from the latter.
+				
+				\subsubsection{Combos}\label{subsubsec:combos}
+				
+					When a player clears multiple lines in quick succession, with every subsequent piece being used to clear at least one line, they initiate a combo. At certain points in a combo, additional lines are added to the garbage group sent to the opponent (refer to Table \ref{tab:combo}). 
+					
+					\begin{table}[h]
+						\centering
+						\begin{tblr}{| c | c |}
+							\hline
+							Combo & Additional Garbage\\
+							\hline
+							0 & 0\\
+							1 & 0\\
+							2 & 1\\
+							3 & 1\\
+							4 & 2\\
+							5 & 2\\
+							6 & 3\\
+							7 & 3\\
+							8 & 4\\
+							9 & 4\\
+							10 & 4\\
+							11+ & 5\\
+							\hline
+						\end{tblr}
+						\caption{Combo Table}
+						\label{tab:combo}
+					\end{table}
+				
+				\subsubsection{Perfect Clears}
+				
+					A perfect clear occurs when a player clears the matrix completely, leaving no remnants of existing Tetrominos behind. It can be difficult to perform perfect clears in Versus Tetris, because if there is an odd number of garbage sent from the opponent, a perfect clear becomes completely impossible. Because of this, a perfect clear has the highest attack in a single move, sending 10 lines of garbage to the opponent.
+				
+				\subsubsection{Attack Potential}
+				
+					When garbage is being sent to an opponent, the garbage lines do not suddenly appear in the opponent's matrix. It is stored in an attack potential, usually represented as a vertical meter on the side of the matrix (refer to Figure \ref{fig:attack-potential}). This is to let the opponent see the potential attacks that might be coming, and allows them to clear lines in order to perform cancelling.
+					
+					Cancelling is done when the garbage sent in a move is equivalent or higher to the number of garbage lines stored in the attack potential. This allows players to defend their matrix from unfavourable garbage. Figure \ref{fig:attack-potential} shows an example of cancelling a 6-line attack potential with a T-spin Triple (refer to Figure \ref{fig:t-spin-triple}).
+					
+					\begin{figure}
+						\centering
+						\begin{minipage}{.2\textwidth}
+							\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+								\coordinate (sw) at (5,0);
+								\coordinate (nw) at (5,20);
+								\coordinate (se) at (15,0);
+								\coordinate (ne) at (15,20);
+								\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\draw[fill=black!40!white] (sw) -- (7,0) -- (7,1) -- (6,1) -- (6,2) -- (7,2) -- (7,3) -- (5,3) -- cycle;
+								\draw[fill=black!40!white] (se) -- (15,5) -- (7,5) -- (7,4) -- (8,4) -- (8,3) -- (8,0) -- cycle;
+								\node at (6,0){\rotatebox{90}{\tpiece}};
+								\draw[fill=gray] (sw) rectangle (4,20);
+								\draw[fill=red] (sw) rectangle (4,6);
+								\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+							\end{tikzpicture}
+						\end{minipage}
+						\hspace{20pt} $\rightarrow$ \hspace{20pt}
+						\begin{minipage}{.2\textwidth}
+							\begin{minipage}{.2\textwidth}
+								\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+									\coordinate (sw) at (5,0);
+									\coordinate (nw) at (5,20);
+									\coordinate (se) at (15,0);
+									\coordinate (ne) at (15,20);
+									\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+									\draw[fill=black!40!white] (se) -- (15,2) -- (7,2) -- (7,1) -- (8,1) -- (8,0) -- cycle;
+									\draw[fill=gray] (sw) rectangle (4,20);
+									\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+								\end{tikzpicture}
+							\end{minipage}
+						\end{minipage}
+						\caption{\centering Example of Attack Potential and Cancelling.}
+						\label{fig:attack-potential}
+					\end{figure}
 			
 			\subsection{Gravity}
 			
+				In modern Versus Tetris games, gravity starts slow but slowly increases in order to force the players to make decisions quicker. However, in our implementation, we are more interested in the quality of the decisions being made, not the speed at which it is being made. Therefore, in this implementation, gravity will not be a factor. There are two ways that this might be implemented:
+				
+				\begin{enumerate}
+					\item \textbf{Zero Gravity}: The player has to manually move pieces down with a key, and manually place a piece with another key.
+					\item \textbf{Legal Placement Selection}: Instead of requiring the players to manually move pieces, we give the player several options for a piece to be placed, and check for legality before giving the options to the player.
+				\end{enumerate}
+			
 			\subsection{Other Features}
+			
+				Here two additional features that may help a player improve decision making will be listed.
+				
+				\begin{itemize}
+					\item \textbf{Hold}: Much like in \citeauthor{tetris-drl-2}'s \cite{tetris-drl-2} work, the hold function is used to hold on to a piece for future use and may be swapped any time with a piece in play.
+					\item \textbf{Five-piece Lookahead}:In our implementation of the game, five pieces of lookahead will be given to the player at all times, i.e. the player will be able to see five-pieces in their queue. This does two things:
+					\begin{enumerate}
+						\item It allows our player to plan for future pieces.
+						\item It allows our player to calculate the probability of upcoming pieces (due to 7-bag).
+					\end{enumerate}
+				\end{itemize}
 %				hold
 %				5-piece lookahead
 		
 		\section{Algorithm Selection}
 		% how algorithms work, why we choose them
+			
 		
 		\section{Problem Formulation}
 		% problem formulation for each algorithm
 		
 			\subsection{Features}
+			
+		\section{Evaluating the Algorithms}
 		
-		\section{Evaluation Framework}
+		\section{Evaluating Gameplay}
 		% ui and evaluation framework
 		% attack per piece
 		% in order to obtain data, suggest encoding scheme
@@ -873,8 +1168,6 @@
 			\subsection{Evaluating Survivability}
 			
 			\subsection{Playing Against Other Players}
-
-			\subsection{Comparing Algorithms}
 	
 	\chapter{Work Plan}
 		
