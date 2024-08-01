@@ -42,10 +42,10 @@
 \contentsline {subsection}{\numberline {3.3.1}Problem Definition}{27}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}States and Actions}{27}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Features}{28}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Training}{28}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.4}Implementation of Nature-inspired Algorithms}{28}{subsection.3.3.4}%
 \contentsline {section}{\numberline {3.4}Evaluating Gameplay}{29}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Evaluating Attack Efficiency}{29}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Evaluating Survivability}{29}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Playing Versus}{30}{subsection.3.4.3}%
 \contentsline {chapter}{\numberline {4}Work Plan}{31}{chapter.4}%
-\contentsline {chapter}{\numberline {5}References}{34}{chapter.5}%
+\contentsline {chapter}{\numberline {5}References}{37}{chapter.5}%

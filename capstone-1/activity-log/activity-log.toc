@@ -1,29 +1,15 @@
 \contentsline {chapter}{\numberline {1}Timeline}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Writing an Introduction}{1}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Week 1 (21 April - 27 April)}{2}{subsection.1.1.1}%
-\contentsline {section}{\numberline {1.2}Conducting the Literature Review}{2}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Week 1 (21 April - 27 April)}{2}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Week 2 (28 April - 4 May)}{2}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Week 3 (5 May - 11 May)}{3}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}Week 4 (12 May - 18 May)}{3}{subsection.1.2.4}%
-\contentsline {subsection}{\numberline {1.2.5}Week 5 (19 May - 25 May)}{3}{subsection.1.2.5}%
-\contentsline {subsection}{\numberline {1.2.6}Week 6 (26 May - 1 June)}{3}{subsection.1.2.6}%
-\contentsline {subsection}{\numberline {1.2.7}Week 7 (2 June - 8 June)}{4}{subsection.1.2.7}%
-\contentsline {subsection}{\numberline {1.2.8}Week 8 (9 June - 15 June)}{4}{subsection.1.2.8}%
-\contentsline {subsection}{\numberline {1.2.9}Week 9 (16 June - 22 June)}{4}{subsection.1.2.9}%
-\contentsline {subsection}{\numberline {1.2.10}Week 10 (23 June - 29 June)}{4}{subsection.1.2.10}%
-\contentsline {subsection}{\numberline {1.2.11}Week 11 (30 June - 6 July)}{4}{subsection.1.2.11}%
-\contentsline {subsection}{\numberline {1.2.12}Week 12 (7 July - 13 July)}{4}{subsection.1.2.12}%
-\contentsline {section}{\numberline {1.3}Coming Up With a Technical Plan}{4}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Creating a Work Plan}{4}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Making Revisions}{4}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Week 3 (5 May - 11 May)}{4}{subsection.1.5.1}%
-\contentsline {chapter}{\numberline {2}Bibliography}{6}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Meeting Records}{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}\ignorespaces Meeting 1}{12}{section.3.1}%
-\contentsline {section}{\numberline {3.2}\ignorespaces Meeting 2}{13}{section.3.2}%
-\contentsline {section}{\numberline {3.3}\ignorespaces Meeting 3}{14}{section.3.3}%
-\contentsline {section}{\numberline {3.4}\ignorespaces Meeting 4}{15}{section.3.4}%
-\contentsline {section}{\numberline {3.5}\ignorespaces Meeting 5}{16}{section.3.5}%
-\contentsline {section}{\numberline {3.6}\ignorespaces Meeting 6}{17}{section.3.6}%
-\contentsline {section}{\numberline {3.7}\ignorespaces Meeting 7}{18}{section.3.7}%
+\contentsline {section}{\numberline {1.1}Weekly Breakdown}{4}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Introduction}{4}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Literature Review}{4}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Methodology}{6}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Work Plan}{6}{subsection.1.1.4}%
+\contentsline {chapter}{\numberline {2}Bibliography}{8}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Meeting Records}{16}{chapter.3}%
+\contentsline {section}{\numberline {3.1}\ignorespaces Meeting 1}{17}{section.3.1}%
+\contentsline {section}{\numberline {3.2}\ignorespaces Meeting 2}{18}{section.3.2}%
+\contentsline {section}{\numberline {3.3}\ignorespaces Meeting 3}{19}{section.3.3}%
+\contentsline {section}{\numberline {3.4}\ignorespaces Meeting 4}{20}{section.3.4}%
+\contentsline {section}{\numberline {3.5}\ignorespaces Meeting 5}{21}{section.3.5}%
+\contentsline {section}{\numberline {3.6}\ignorespaces Meeting 6}{22}{section.3.6}%
+\contentsline {section}{\numberline {3.7}\ignorespaces Meeting 7}{23}{section.3.7}%

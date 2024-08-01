@@ -15,6 +15,8 @@
 \usepackage[backend=biber, style=ieee]{biblatex}
 \usepackage[nottoc,numbib]{tocbibind}
 \usepackage{pgfgantt}
+\usepackage{pdflscape}
+\usepackage{tabularray,varwidth,enumitem}
 \renewbibmacro{finentry}{\finentry%
 	\iffieldundef{annotation}
 	{}
@@ -83,108 +85,217 @@
 		% Project is split into critical stages. Brief description is provided for each stage of the project on the processes to be executed.
 		% Time allocated for each stage is justified by student assessment of own workload, ability and work to be done to deliver.
 		
-		In this chapter, the project's progression is meticulously documented. In these pages, the critical stages of the project are depicted, each accompanied by a concise description illuminating the strategies and rationales behind the allocated times.
+		In this chapter, the project's progression is meticulously documented. In these pages, the critical stages of the project are depicted in the form of tables. A Gantt chart of the timeline is also provided to give an overview of the project's temporal progression.
 		
-		Furthermore, the week-by-week tasks undertaken are outlined within these sections. Thus, offering a granular insight into the day-to-day endeavours taken to propel the project towards its culmination.
+		\begin{longtblr}[
+			caption = {Overall Work Activities},
+			label = {tab:work},
+			]{| c | X | X | X | c |}
+			\hline
+			Phases & Work Activities & Work Product & Risk Factors & {Time \\ Allocated} \\
+			\hline
+			Introduction & Write a comprehensive introduction, including the motivation, problem statement, aim, objectives and scope of the project. & A comprehensive introduction & Misunderstanding of concepts & 1 Week \\
+			\hline
+			{Literature \\ Review} & Find and read a wide variety of literature to write a comprehensive review that (1) justifies the use of non-traditional algorithms and (2) showcase past approaches to the game. & A comprehensive literature review that has a diverse set of sources & Lack of understanding of concepts, misunderstanding concepts & 12 Weeks \\
+			\hline
+			{Methodology} & Come up with a methodology that covers all bases, it should include rule definition, algorithm selection, problem formulation and evaluation metrics & A well-defined methodology & Inadequate explanation of rules, trouble formulating problem formally & 4 Weeks \\
+			\hline
+			{Work Plan} & Create a work plan that includes this table, a Gantt chart summarising what has been done in the planning phase of the project, as well as a similar table and Gantt chart for the implementation phase. & A well-defined work plan with goals to be met & Time constraints, formatting issues & 1 Week \\
+			\hline
+		\end{longtblr}
 		
-		\begin{figure}[h]
-			\centering
-			\begin{ganttchart}[
-				expand chart = \textwidth, 
-				time slot format = isodate,
-				vgrid = {*6{draw=none}, dotted}
-				]{2024-04-21}{2024-07-31}
-				\gantttitlecalendar{year, month=shortname}\\
-				\ganttgroup{\hyperref[sec:intro]{Introduction}}{2024-04-21}{2024-04-27}\\
-				\ganttbar{Research}{2024-04-21}{2024-04-25}\\
-				\ganttbar{Writing}{2024-04-22}{2024-04-27}\\
-				\ganttgroup{\hyperref[sec:litrev]{Lit Review}}{2024-04-24}{2024-06-01}\\
-				\ganttbar{Research}{2024-04-24}{2024-05-04}\\
-				\ganttbar{Writing}{2024-05-05}{2024-05-12}\\
-				\ganttmilestone{\hyperref[subsec:litrevw3]{Structuring Lit Review}}{2024-05-11}\\
-				\ganttgroup{Revision}{2024-05-10}{2024-05-12}\\
-				\ganttbar{\hyperref[subsec:revw3]{Figures}}{2024-05-10}{2024-05-11}\\
-			\end{ganttchart}
-			\caption{Gantt Chart of Timeline}
-		\end{figure}
+		\begin{landscape}
+			\begin{figure}
+				\centering
+				\begin{ganttchart}[x unit=1cm, vgrid=dotted, hgrid = true]{1}{15}
+					\gantttitle{W1}{1}
+					\gantttitle{W2}{1}
+					\gantttitle{W3}{1}
+					\gantttitle{W4}{1}
+					\gantttitle{W5}{1}
+					\gantttitle{W6}{1}
+					\gantttitle{W7}{1} 
+					\gantttitle{W8}{1}
+					\gantttitle{W9}{1}
+					\gantttitle{W10}{1}
+					\gantttitle{W11}{1}
+					\gantttitle{W12}{1}
+					\gantttitle{W13}{1}
+					\gantttitle{W14}{1}
+					\gantttitle{W15}{1}\\
+					\ganttgroup{Introduction}{1}{1}\\
+					\ganttgroup{Literature Review}{1}{12}\\
+					\ganttbar{Research}{1}{10}\\
+					\ganttlinkedbar{Writing}{3}{12}\\
+					\ganttmilestone{Completed Review}{12}\\
+					\ganttgroup{Methodology}{12}{15}\\
+					\ganttbar{Defining Rules}{12}{14}\\
+					\ganttbar{On Implementation}{14}{15}\\
+					\ganttgroup{Work Plan}{15}{15}\\
+				\end{ganttchart}
+				\caption{CP1 Timeline}
+			\end{figure}
+		\end{landscape}
 		
-		\section{Writing an Introduction}
+		\section{Weekly Breakdown}
+		
+			In this section, a week-to-week overview that summarises work done that particular week will be shown in table form. Each subsection will contain a table that showcases work done for a particular chapter of the planning document. 
+		
+		\subsection{Introduction}
 		\label{sec:intro}
 		
 			The introduction serves as the project's foundation, providing essential background information, introducing the topic, and articulating the project's objectives. Recognising its pivotal role, \textbf{one week} of time was allocated for its composition. This deliberate time-frame aimed to allow ample time for thoroughness, ensuring no essential elements were overlooked in writing a comprehensive and compelling introduction.
 			
-			\subsection{Week 1 (21 April - 27 April)}
-				
-				This week, a significant portion of my time was dedicated to researching resources for the introduction section of the project. I looked into various academic papers and online resources to gather insights and background information relevant to the topic. Utilising Google Scholar, I tried to familiarise myself with existing research on Tetris, nature-inspired algorithms and NP-completeness to write a compelling introduction.
-				
-				The latter part of the week was primarily focused on drafting and refining the introduction section. After seeking feedback from Dr Richard, he provided me constructive critiques on my initial motivation and challenged me to think deeper about the broader significance of the project. His feedback encouraged me to explore avenues beyond the mere identification of a research gap.
-				
-				After several iterations, I believe the introduction is now in a more robust and coherent state, with a clearer articulation of the project's motivation and objectives. Dr Richard's guidance helped me realise the importance of grounding the project in broader contexts and considering its potential implications beyond academic research.				
-				
-		\section{Conducting the Literature Review}
+			\begin{longtblr}[
+				caption = Weekly breakdown of work done for Introduction Chapter.
+				]{colspec={c|X}, hlines, vlines}
+				Week & Work Done \\
+				1 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Researched existing literature on Tetris, NP-completeness and Nature-inspired algorithms.
+						\item Wrote the introduction chapter.
+						\item Learnt the tikz \LaTeX package to draw better figures.
+					\end{itemize}
+				\end{varwidth}\\
+			\end{longtblr}
+
+		\subsection{Literature Review}
 		\label{sec:litrev}
 		
-			The literature review is one of the chapters that will take up a lot of space in the planning document. It is important to be thorough and correct about the information written on these pages. As such, a generous time of \textbf{seven weeks} were allocated to research and write this section.
+			The literature review is one of the chapters that will take up a lot of space in the planning document. It is important to be thorough and correct about the information written on these pages. As such, a generous time of \textbf{twelve weeks} were allocated to research and write this section.
+			
+			\begin{longtblr}[
+				caption = Weekly breakdown of work done for Literature Review Chapter.
+				]{colspec={c|X}, hlines, vlines}
+				Week & Work Done \\
+				1 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Found and read literature on NP-completeness.
+						\item Tried to understand computational complexity as a whole.
+					\end{itemize}
+				\end{varwidth}\\
+				2 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Continued researching NP-completeness.
+						\item Understood enough computational complexity for the project: complexity classes, reductions, P and NP, etc.
+					\end{itemize}
+				\end{varwidth}\\
+				3 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Found and read literature on the difficulty of Tetris.
+						\item Began writing the first section of the literature review, dedicated to showing the intrinsic difficulty of the game of Tetris. 
+					\end{itemize}
+				\end{varwidth}\\
+				4 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Finished writing first section of literature review.
+						\item Created images for clarity.
+					\end{itemize}
+				\end{varwidth}\\
+				5 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Found literature that utilise different approaches to playing Tetris with AI.
+					\end{itemize}
+				\end{varwidth}\\
+				6 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Continued finding different approaches taken to play Tetris.
+						\item Specifically read and digested paper on imitation learning.
+						\item Began structuring second section of the literature review, dedicated to showcasing some of the approaches taken to play Tetris that aren't nature-inspired.
+					\end{itemize}
+				\end{varwidth}\\
+				7 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Completed a subsection on the use of imitation learning for playing Tetris
+						\item Read up on Monte-Carlo Tree Search, UCB1, and how it is used as an approach to Tetris.
+					\end{itemize}
+				\end{varwidth}\\
+				8 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Completed a subsection on the use of UCB1 for playing Tetris.
+						\item Read up on some deep reinforcement learning concepts because some papers were found that used Q-learning to play Tetris.
+					\end{itemize}
+				\end{varwidth}\\
+				9 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Read literature that described the use of deep reinforcement learning for Tetris.
+						\item Completed a subsection on the use of deep reinforcement learning for playing Tetris.
+						\item Found and read papers that utilise non nature-inspired meta-heuristics like Harmony Search Algorithm and MVP Algorithm to play Tetris.
+						\item Found literature on using Genetic Algorithms and Particle Swarm Optimisation to play Tetris.
+					\end{itemize}
+				\end{varwidth}\\
+				10 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Found and read literature on the use of Ant Colony Optimisation to play Tetris.
+						\item Completed a subsection on the use of different meta-heuristic algorithms for playing Tetris.
+						\item Started writing section dedicated to demonstrating the use of nature-inspired algorithms in playing Tetris.
+					\end{itemize}
+				\end{varwidth}\\
+				11 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Completed a subsection on the use of genetic algorithms in playing Tetris.
+					\end{itemize}
+				\end{varwidth}\\
+				12 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Completed a subsection on the use of Particle Swarm Optimisation in playing Tetris.
+						\item Completed a subsection on the use of Ant Colony Optimisation in playing Tetris.
+					\end{itemize}
+				\end{varwidth}\\
+			\end{longtblr}
 		
-			\subsection{Week 1 (21 April - 27 April)}
-				
-				While writing the introduction, I found numerous papers that could be used for the literature review section of the project. I tried to read up on and digest information on NP-completeness, proving a problem is NP-complete, multi-objective functions and nature-inspired algorithms.
-				
-			\subsection{Week 2 (28 April - 4 May)}\label{subsec:litrevw2}
-				
-				As more time goes by, the semester naturally gets heavier. All practical classes started this week. Subsequently, more time was allocated to my other subjects. I took this week to get accustomed to managing my time, balancing my lectures, practicals as well as research.
-				
-				When I did have time this week, I read up on the articles and papers that I have found in Week 1 (refer to Subsection \ref{subsec:litrevw2}) and began writing annotations for the bibliography. I tried to digest what I read and create atomic notes on ideas that could help when writing the literature review.
-				
-			\subsection{Week 3 (5 May - 11 May)}\label{subsec:litrevw3}
-			
-				Most of this week was dedicated to structuring the literature review. I tried to think of a flow that would help the reader understand as much as possible. I knew that I wanted to delve into the mathematics of NP-completeness, argue why I chose to use nature-inspired algorithms, and eventually divert attention back to optimising Tetris.
-				
-			\subsection{Week 4 (12 May - 18 May)}
-				
-				I spent the first half of the week looking at textbooks and online lectures to gain a deeper understanding of computational complexity. As Tetris being NP-complete is one of the central motivations of the project, understanding complexity and the proof was extremely important.
-				
-				After doing some research, I started on the literature review. I split the first section into two parts. The first part is dedicated to explaining certain key concepts of complexity, including complexity classes, the P vs NP problem, etc. The second part is planned to delve into reductions, explain the 3-partition problem briefly, and take a closer look at the Tetris proof.
-				
-				I also had my second meeting with Dr Richard this week, where he gave me some recommendations on what to include in each section of the review.
-				
-			\subsection{Week 5 (19 May - 25 May)}
-			
-				As the assignments started pouring in this week, I spent less time working on the project. I did eventually complete the first section of the literature review, but a quick chat with Dr Richard revealed that the section was a little directionless. This meant that I needed to completely restructure the section.
-			
-			\subsection{Week 6 (26 May - 1 June)}
-			
-				This week was dedicated to rewriting most of the first section of the literature review, on the topic of complexity and justifying the use of non-traditional algorithmic approaches. I spent most of the week finding where certain pieces of content can be placed more appropriately in the new structure.
-				
-				I also had a meeting with Dr Richard, where he approved of the new direction I was taking with the literature review. He also recommended that I start thinking about the methodology of the project.
-			
-			\subsection{Week 7 (2 June - 8 June)}
-			
-				This week, I hit a bit of a slump. With the many assignments that I was taking on and other deadlines to meet, I ended up neglecting the project a little too much. In the end, I only finished the first section of the literature review hastily. It will probably need some refinement before submission.
-				
-			\subsection{Week 8 (9 June - 15 June)}
-				
-				This week, I had a meeting with Dr Richard to discuss the trajectory of the literature review. He gave me some insights into what I should be doing for the sections that I have written, and some future chapters. In the coming week, I aim to finish at least another section of the literature review, and completely finish it by our next meeting.
-				
-			\subsection{Week 9 (16 June - 22 June)}
-				
-				Most of the week was spent on finding resources for the rest of the literature review. Some time was spent on deciding on the structure of the remaining sections. Additionally, I finally started on the second section of the literature review.
-				
-			\subsection{Week 10 (23 June - 29 June)}
-			
-			\subsection{Week 11 (30 June - 6 July)}
-			
-			\subsection{Week 12 (7 July - 13 July)}
+		\subsection{Methodology}
 		
-		\section{Coming Up With a Technical Plan}
+			The methodology is arguably the most important chapter of the review as it sets up the entire project in the implementation phase (CP2). \textbf{Four weeks} were allocated to write up the methodology, which should define everything that will be done in a structured manner.
+			
+			\begin{longtblr}[
+				caption = Weekly breakdown of work done for Methodology Chapter.
+				]{colspec={c|X}, hlines, vlines}
+				Week & Work Done \\
+				12 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Structured the Methodology chapter
+						\item Began writing section on rules, defining the piece randomiser and matrix dimensions.
+					\end{itemize}
+				\end{varwidth}\\
+				13 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Researched Tetris spin rules.
+						\item Continued writing rules section, defining spins, gravity and other features.
+					\end{itemize}
+				\end{varwidth}\\
+				14 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Researched Tetris attack rules.
+						\item Completed writing rules section, adding attack rules to the rules.
+						\item Completed section on algorithm selection.
+						\item Began problem formulation section.
+					\end{itemize}
+				\end{varwidth}\\
+				15 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Completed problem formulation section.
+						\item Completed section on evaluation metrics.
+					\end{itemize}
+				\end{varwidth}\\
+			\end{longtblr}
 		
-		\section{Creating a Work Plan}
-		
-		\section{Making Revisions}
-		
-			\subsection{Week 3 (5 May - 11 May)}\label{subsec:revw3}
-				
-				Besides working on the literature review this week (refer to Subsection \ref{subsec:litrevw3}), I also spent some time refining the figures used in the introduction. With the help of Dr Richard, I learnt to use the tikz \LaTeX package in order to draw better figures. This was also done to achieve more consistent figures, as I found having screenshots and images from different sources led to a messier paper.
+		\subsection{Work Plan}
+			
+			Careful consideration needs to be taken when coming up with a work plan. Risk factors need to be thought of and time needs to be allocated to each task. However, since the work plan takes up the least space in the document, only \textbf{one week} of time was allocated to it.
+			
+			\begin{longtblr}[
+				caption = Weekly breakdown of work done for Work Plan  Chapter.
+				]{colspec={c|X}, hlines, vlines}
+				Week & Work Done \\
+				15 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Came up with tasks that need to be done.
+						\item Created table to showcase work activities, risk factors, and time allocated for all tasks.
+						\item Created Gantt chart to visualise the timeline.
+					\end{itemize}
+				\end{varwidth}\\
+			\end{longtblr}
 		
 	% Bibliography
 	\nocite{*}
@@ -195,7 +306,9 @@
 		% Attended all scheduled meetings with well-prepared presentations or documents to aid discussion of the project.
 		% Sets own goals and able to negotiate deliverables for upcoming meeting based on own workload and ability.
 		% Delivers all work as promised along with detailed analysis on the cause/effect of own actions to the project outcome. (Able to do and analyse results of own actions)
+		Throughout the semester, I had seven meetings with Dr Richard. Each time we discussed the work that had been done between the current and previous meeting. Dr Richard gave me plenty of pointers, as well as personal advice to produce a better planning document.
 		
+		The following pages contain all meeting records, including the date and time of the meeting, the items discussed, and the expected work outcomes before the next meeting. 
 		
 		\includepdf[addtotoc={1, section, 1, Meeting 1, meeting1}, pagecommand={\thispagestyle{plain}}]{./meeting-records/signed/meeting-1}
 		

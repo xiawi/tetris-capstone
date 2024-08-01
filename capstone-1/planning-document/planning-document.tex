@@ -94,6 +94,8 @@
 	
 	\chapter*{Abstract}
 	
+		This capstone project explores the effectiveness of nature-inspired optimization algorithms in the context of Versus Tetris, a competitive multiplayer variant of the classic Tetris game. Given the NP-completeness of optimizing natural objectives in Tetris, traditional algorithms struggle to find efficient solutions. Nature-inspired algorithms, which draw from biological processes, offer promising alternatives by providing acceptable solutions within feasible time frames. This research aims to develop a robust Tetris-playing software capable of competing in Versus mode using algorithms such as Genetic Algorithms, Ant Colony Optimization, and Particle Swarm Optimization. The project includes formulating the problem for game AI, developing a simulation environment, and evaluating the performance of different algorithms. The findings are expected to contribute to the understanding of how nature-inspired approaches can address complex, real-time computational problems and enhance gameplay strategies in competitive gaming scenarios.
+	
 	\addcontentsline{toc}{chapter}{Abstract}
 	
 	\tableofcontents
@@ -1163,7 +1165,7 @@
 			\subsection{Problem Definition}
 			
 				The problem is to develop a Tetris agent capable of playing Tetris well by effectively evaluating state-action pairs using a weighted feature function and optimising the agent's strategy based on win/loss outcomes.
-				
+
 			\subsection{States and Actions}
 			
 				In our problem, a state is a comprehensive representation of the Tetris matrix, including:
@@ -1193,7 +1195,7 @@
 				
 				When either the agent or an opponent has lost, a termination condition is met.
 				
-			\subsection{Features}
+			\subsection{Features}\label{subsec:features}
 				
 				Plenty of the literature that utilise any form of meta-heuristics have identified a number of features that describe informative aspects of a Tetris grid that can all be numerically defined. We believe that Versus Tetris is different enough that it will need a different set of features that should be taken into consideration, although there will be some overlapping features. These features include:
 				
@@ -1212,11 +1214,17 @@
 					\item \textbf{Attack/Cancellation}: The number of garbage lines sent or cancelled from playing a move.
 				\end{enumerate}
 				
-			\subsection{Training}
-			
-				In order to simulate Versus gameplay, we will have different individuals from the same algorithm play each other with their corresponding weight vectors. If an individual has a high win-rate it is likely that their weight vectors help them play advantageously.
+%			\subsection{Training}
+%			
+%				In order to simulate Versus gameplay, we will have different individuals from the same algorithm play each other with their corresponding weight vectors. If an individual has a high win-rate it is likely that their weight vectors help them play advantageously.
+%				
+%				When an algorithm converges past a certain degree, we terminate it and obtain the weight vectors of the final iteration of the algorithm. From here, we can see what the agents were prioritising.
 				
-				When an algorithm converges past a certain degree, we terminate it and obtain the weight vectors of the final iteration of the algorithm. From here, we can see what the agents were prioritising.
+			\subsection{Implementation of Nature-inspired Algorithms}
+			
+				The implementation of nature-inspired optimization algorithms for playing Versus Tetris will follow a structured approach, ensuring a fair and comprehensive evaluation of each algorithm's performance. Each Tetris-playing agent will be represented as a weight vector, and each individual in each algorithm will represent a single Tetris-playing strategy. 
+				
+				The fitness of each agent will be determined by its win-rate when playing against other agents that have been trained using the same algorithm. This approach ensures a competitive and dynamic environment, where agents are constantly adapting to outperform their peers. Each algorithm will be implemented and iterated over several generations or cycles, allowing for the emergence of robust and effective Tetris-playing strategies. The comparative analysis of the win-rates will provide insights into the relative effectiveness of each nature-inspired algorithm in optimizing gameplay for Versus Tetris.
 		
 		\section{Evaluating Gameplay}\label{sec:evaluation}
 		% ui and evaluation framework
@@ -1280,15 +1288,65 @@
 		% Scheduled duration for each work activity is justified and supported by the identified project risk factors and work decomposition that each activity requires.
 		% The whole project schedule, milestones and activitiy lists are depicted professionally on the Gantt chart with all dependencies, predecessor and successor work activities denoted clearly.
 		
-		This work plan outlines the comprehensive strategy for this project, providing a detailed breakdown of project activities, their interdependencies, and the estimated timeline for completion. A Gantt chart is also provided as a visual representation of the project's temporal progression.
+		This work plan outlines the comprehensive strategy for this project, providing a detailed breakdown of project activities, their interdependencies, and the estimated timeline for completion. The work plans and Gantt charts of both the planning phase of the project (CP1) and the implementation phase of the project (CP2) is included in this chapter.
 		
-
 		\begin{longtblr}[
-			caption = {Work Activities, Risk Factors and Duration},
+			caption = {Work Activities, Risk Factors and Time Allocated for CP1},
 			label = {tab:work},
 			]{| c | X | X | X | c |}
 			\hline
-			Phases & Work Activities & Work Product & Risk Factors & Duration \\
+			Phases & Work Activities & Work Product & Risk Factors & {Time \\ Allocated} \\
+			\hline
+			Introduction & Write a comprehensive introduction, including the motivation, problem statement, aim, objectives and scope of the project. & A comprehensive introduction & Misunderstanding of concepts & 1 Week \\
+			\hline
+			{Literature \\ Review} & Find and read a wide variety of literature to write a comprehensive review that (1) justifies the use of non-traditional algorithms and (2) showcase past approaches to the game. & A comprehensive literature review that has a diverse set of sources & Lack of understanding of concepts, misunderstanding concepts & 12 Weeks \\
+			\hline
+			{Methodology} & Come up with a methodology that covers all bases, it should include rule definition, algorithm selection, problem formulation and evaluation metrics & A well-defined methodology & Inadequate explanation of rules, trouble formulating problem formally & 4 Weeks \\
+			\hline
+			{Work Plan} & Create a work plan that includes this table, a Gantt chart summarising what has been done in the planning phase of the project, as well as a similar table and Gantt chart for the implementation phase. & A well-defined work plan with goals to be met & Time constraints, formatting issues & 1 Week \\
+			\hline
+		\end{longtblr}
+		
+		\begin{landscape}
+			\begin{figure}
+				\centering
+				\begin{ganttchart}[x unit=1cm, vgrid=dotted, hgrid = true]{1}{15}
+					\gantttitle{W1}{1}
+					\gantttitle{W2}{1}
+					\gantttitle{W3}{1}
+					\gantttitle{W4}{1}
+					\gantttitle{W5}{1}
+					\gantttitle{W6}{1}
+					\gantttitle{W7}{1} 
+					\gantttitle{W8}{1}
+					\gantttitle{W9}{1}
+					\gantttitle{W10}{1}
+					\gantttitle{W11}{1}
+					\gantttitle{W12}{1}
+					\gantttitle{W13}{1}
+					\gantttitle{W14}{1}
+					\gantttitle{W15}{1}\\
+					\ganttgroup{Introduction}{1}{1}\\
+					\ganttgroup{Literature Review}{1}{12}\\
+					\ganttbar{Research}{1}{10}\\
+					\ganttlinkedbar{Writing}{3}{12}\\
+					\ganttmilestone{Completed Review}{12}\\
+					\ganttgroup{Methodology}{12}{15}\\
+					\ganttbar{Defining Rules}{12}{14}\\
+					\ganttbar{On Implementation}{14}{15}\\
+					\ganttgroup{Work Plan}{15}{15}\\
+				\end{ganttchart}
+				\caption{CP1 Timeline}
+			\end{figure}
+		\end{landscape}
+		
+
+		\begin{longtblr}[
+			caption = {Work Activities, Risk Factors and Time Allocated for CP2},
+			label = {tab:work},
+			]{| c | X | X | X | c |}
+			\hline
+			Phases & Work Activities & Work Product & Risk Factors & {Time \\ Allocated} \\
 			\hline
 			{Create \\ Functional \\ Tetris \\ Simulation} & Create a functional Versus Tetris simulator. It should follow the rules outlined in Section \ref{sec:rules}. & A functional Tetris game & Difficulty of task & 3 Weeks\\
 			\hline
@@ -1333,7 +1391,7 @@
 					\ganttmilestone{Submission}{12}\\
 					\ganttbar{Prepare for Viva}{13}{13}
 				\end{ganttchart}
-				\caption{Gantt Chart of Timeline}
+				\caption{CP2 Timeline}
 			\end{figure}
 		\end{landscape}
 	

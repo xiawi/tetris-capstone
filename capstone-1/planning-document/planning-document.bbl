@@ -406,7 +406,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{annotation}{This paper investigates the use of particle swarm optimization (PSO) to train neural network agents for playing the game of Tetris. The experimental results show the learning progress of the algorithm and compare it to a hand-optimized Tetris playing algorithm. The study concludes that a swarm-based approach is feasible for Tetris and suggests avenues for future work to further optimize the training algorithm parameters and improve the performance of the neural agents. The paper provides valuable insights into the application of computational intelligence techniques to game-playing agents.}
+      \field{annotation}{This paper investigates the use of particle swarm optimization (PSO) to train neural network agents for playing the game of Tetris. The experimental results show the learning progress of the algorithm and compare it to a hand-optimized Tetris playing algorithm. The study concludes that a swarm-based approach is feasible for Tetris and suggests avenues for future work to further optimize the training algorithm parameters and improve the performance of the neural agents. The paper provides valuable insights into the application of computational intelligence techniques to game-playing agents. It will be cited as a nature-inspired approach to play Tetris.}
       \field{booktitle}{IEEE Congress on Evolutionary Computation}
       \field{title}{Swarm Tetris: Applying particle swarm optimization to tetris}
       \field{year}{2010}
@@ -465,6 +465,7 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In their paper, Asif et al. used Demaine et al.'s proof as a starting point to prove that Tetris is NP-hard in a general case. They proved that the game remains NP-complete even when restricted to 8 columns, or to 4 rows, showcasing the inherent difficulty of the problem. The paper utilise rigorous mathematical proofs to showcase their findings. This source will be used in addition to Demaine et al.'s paper to show the intrinsic difficulty of Tetris.}
       \field{journaltitle}{Journal of Information Processing}
       \field{month}{01}
       \field{title}{Tetris is NP-hard even with O(1) Rows or Columns}
@@ -501,6 +502,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This book is rooted in the thesis that complexity theory is extremely rich in conceptual content, and that this contents should be explicitly communicated in expositions and courses on the subject. The desire to provide a corresponding textbook is indeed the motivation for writing the current book and its main governing principle.The book offers a conceptual perspective on complexity theory, and the presentation is designed to highlight this perspective. It is intended mainly for students that wish to learn complexity theory and for educators that intend to teach a course on complexity theory. The book is also intended to promote interest in complexity theory and make it acccessible to general readers with adequate background (which is mainly being comfortable with abstract discussions, definitions and proofs). We expect most readers to have a basic knowledge of algorithms, or at least be fairly comfortable with the notion of an algorithm.The book focuses on several sub-areas of complexity theory (including, e.g., pseudorandomness and probabilistic proof systems). In each case, the exposition starts from the intuitive questions addresses by the sub-area, as embodied in the concepts that it studies. The exposition discusses the fundamental importance of these questions, the choices made in the actual formulation of these questions and notions, the approaches that underly the answers, and the ideas that are embedded in these answers. Our view is that these (non-technical") aspects are the core of the field, and the presentation attempts to re ect this view.}
+      \field{annotation}{This book conceptually describes complexity theory as a whole, and give conceptually rich explanations to complexity in general. It will be cited in explaining NP-completeness.}
       \field{issn}{0163-5700}
       \field{journaltitle}{SIGACT News}
       \field{month}{9}
@@ -508,8 +510,6 @@
       \field{title}{Computational complexity: a conceptual perspective}
       \field{volume}{39}
       \field{year}{2008}
-      \field{pages}{35\bibrangedash 39}
-      \range{pages}{5}
       \verb{doi}
       \verb 10.1145/1412700.1412710
       \endverb
@@ -551,6 +551,7 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{This textbook talks about computational complexity as a whole. The authors give a more uniform explanation of complexities, including concepts like NP and NP-hard. It will be cited to explain NP-completeness.}
       \field{journaltitle}{Theoretical Computer Science}
       \field{number}{2}
       \field{title}{A uniform approach to define complexity classes}
@@ -585,6 +586,7 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{This textbook attempts to explain complexity theory with a more modern approach. One of the key things mentioned in this book was that most researchers believe that P and NP are not equal sets. This will be used to justify why we need to use alternative approaches to approach NP-complete problems.}
       \field{isbn}{9780521424264}
       \field{title}{Computational Complexity: A Modern Approach}
       \field{year}{2009}
@@ -615,6 +617,7 @@
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{This textbook is one of the most popular textbooks talking about NP things and intractability. The authors talk about numerous concepts in an intuitive way for readers of any level. It will be used when talking about the difficulty of the game and defining NP and NP-completeness.}
       \field{edition}{First Edition}
       \field{isbn}{0716710455}
       \field{title}{Computers and Intractability: A Guide to the Theory of NP-Completeness}
@@ -636,6 +639,7 @@
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{These lecture notes explain the theories of complexity in an intuitive way that would allow many different readers to understand these concepts. It gives intuitive explanations to nondeterminism, reductions, and the NP-completeness criteria. It is credible as these are the lecture notes given by professors at MIT. It will be used when explaining certain NP related concepts.}
       \field{note}{6.046J: Design and Analysis on Algorithms, Massachusetts Institute of Technology}
       \field{title}{NP-Completeness}
       \field{year}{2015}
@@ -650,6 +654,7 @@
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
+      \field{annotation}{This website contains a list of the Millennium Prize Problems, which are the 7 most difficult problems in mathematics. Anyone who is capable of solving any of these problems are entitled to a million dollars. One of these problems is the problem of wheter P=NP. This will serve as general information of P, NP, and complexity classes.}
       \field{howpublished}{\url{https://www.claymath.org/millennium-problems/}}
       \field{note}{[Accessed 15-05-2024]}
       \field{title}{{T}he {M}illennium {P}rize {P}roblems - {C}lay {M}athematics {I}nstitute --- claymath.org}
@@ -682,6 +687,7 @@
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In their paper, Zhang et al. utilise an imitation learning approach to play Tetris. The machine learns patterns and features from a player or existing algorithm and tries to play like them. Experimental results show that a system imitating a human player will outperform one imitating an AI in a two-player game, but the opposite is true for a single-player game. This will be cited to demonstrate using imitation learning to tackle Tetris.}
       \field{title}{PLAYING TETRIS USING LEARNING BY IMITATION}
       \field{year}{2010}
       \verb{urlraw}
@@ -731,6 +737,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Imitation learning techniques aim to mimic human behavior in a given task. An agent (a learning machine) is trained to perform a task from demonstrations by learning a mapping between observations and actions. The idea of teaching by imitation has been around for many years; however, the field is gaining attention recently due to advances in computing and sensing as well as rising demand for intelligent applications. The paradigm of learning by imitation is gaining popularity because it facilitates teaching complex tasks with minimal expert knowledge of the tasks. Generic imitation learning methods could potentially reduce the problem of teaching a task to that of providing demonstrations, without the need for explicit programming or designing reward functions specific to the task. Modern sensors are able to collect and transmit high volumes of data rapidly, and processors with high computational power allow fast processing that maps the sensory data to actions in a timely manner. This opens the door for many potential AI applications that require real-time perception and reaction such as humanoid robots, self-driving vehicles, human computer interaction, and computer games, to name a few. However, specialized algorithms are needed to effectively and robustly learn models as learning by imitation poses its own set of challenges. In this article, we survey imitation learning methods and present design options in different steps of the learning process. We introduce a background and motivation for the field as well as highlight challenges specific to the imitation problem. Methods for designing and evaluating imitation learning tasks are categorized and reviewed. Special attention is given to learning methods in robotics and games as these domains are the most popular in the literature and provide a wide array of problems and methodologies. We extensively discuss combining imitation learning approaches using different sources and methods, as well as incorporating other motion learning methods to enhance imitation. We also discuss the potential impact on industry, present major applications, and highlight current and future research directions.}
+      \field{annotation}{This article gives a brief overview of imitation learning, explaining the objectives of using the method, which is to mimic human behaviour by learning a mapping between observation and demonstrations. This article will be cited when defining imitation learning.}
       \field{issn}{0360-0300}
       \field{journaltitle}{ACM Computing Surveys}
       \field{month}{4}
@@ -760,6 +767,7 @@
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Fahey's AI is largely cited in a handful of the existing literature. In this webpage, Fahey explains his approach to developing a Tetris AI. It will be cited when a direct comparison is done between Fahey's AI and other works.}
       \field{note}{[accessed Jun. 23, 2024]}
       \field{title}{{Tetris AI}}
       \field{year}{2003}
@@ -797,6 +805,7 @@
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In this thesis, Chaslot defines Monte-Carlo Tree Search as a best-first search method that is based on a randomised exploration of the search space. It will be used to further explain one of the approaches taken to play Tetris.}
       \field{isbn}{9789085590996}
       \field{series}{Siks Dissertation Series}
       \field{title}{Monte-Carlo Tree Search}
@@ -834,6 +843,7 @@
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In their article, Cai et al. attempt to use a variation of Monte-Carlo Tree Search known as UCB1 to approach the game of Tetris. Under their implementation, they found that it was able to defeat Fahey's AI as well as their previous imitation learning algorithms. This will be used to demonstrate using a bandit-based Monte-Carlo approach to play Tetris with algorithms.}
       \field{journaltitle}{AISB 2011: AI and Games}
       \field{month}{01}
       \field{title}{Playing Tetris Using Bandit-Based Monte-Carlo Planning}
@@ -889,6 +899,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{For large state-space Markovian Decision Problems Monte-Carlo planning is one of the few viable approaches to find near-optimal solutions. In this paper we introduce a new algorithm, UCT, that applies bandit ideas to guide Monte-Carlo planning. In finite-horizon or discounted MDPs the algorithm is shown to be consistent and finite sample bounds are derived on the estimation error due to sampling. Experimental results show that in several domains, UCT is significantly more efficient than its alternatives.}
+      \field{annotation}{This paper formally defines the algorithm used by Cai et al. in their work on using UCB1 to approach Tetris. It will be cited to explain what UCB1 actually is.}
       \field{booktitle}{Machine Learning: ECML 2006}
       \field{isbn}{978-3-540-46056-5}
       \field{title}{Bandit Based Monte-Carlo Planning}
@@ -919,6 +930,7 @@
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In their paper, Stevens and Pradhan take a deep reinforcement learning approach to learn the game of Tetris. They use Q-learning to train a convolutional neural network to make better piece placement decisions. This paper will be used to demonstrate using deep reinforcement learning to play Tetris.}
       \field{journaltitle}{Convolutional Neural Networks for Visual Recognition CS23, Stanford Univ., Stanford, CA, USA, Tech. Rep}
       \field{title}{Playing tetris with deep reinforcement learning}
       \field{year}{2016}
@@ -941,6 +953,7 @@
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In this webpage, Lee showcases their near perfect Tetris bot, and the methods they used to achieve the bot. The fitness function defined by Lee is used in Stevens and Pradhan's paper. This webpage will be cited when it is mentioned directly by other papers, and when comparing performance.}
       \field{howpublished}{\url{https://codemyroad.wordpress.com/2013/04/14/tetris-ai-the-near-perfect-player/}}
       \field{note}{[accessed Jul. 17, 2024]}
       \field{title}{{T}etris {AI} - {T}he ({N}ear) {P}erfect {B}ot}
@@ -966,6 +979,7 @@
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In this thesis, Chen uses Stevens and Pradhan's work as a starting point and approaches Tetris in a similar way. They also attempted different ways to train the agent, such as making them play a harder variant, allowing them to use the ``hold'' feature, and giving them a more predictible random piece generator. Experimental results showed that it significantly outperformed Stevens and Pradhan's agent. This paper will be used to demonstrate using deep reinforcement learning to play Tetris.}
       \field{title}{Playing Tetris with deep reinforcement learning}
       \field{type}{Master's Thesis}
       \field{year}{2021}
@@ -991,6 +1005,7 @@
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{This book is a collection of information on nature-inspired optimisation algorithms. It also mentions that there are no widely accepted definitions of the term meta-heuristic. This book will be cited to show that meta-heuristic is a relatively loose term.}
       \field{title}{Nature-inspired optimization algorithms}
       \field{year}{2020}
     \endentry
@@ -1027,6 +1042,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In this article, Almufti et al. explain meta-heuristic and give a list of characteristics present in many meta-heuristics. It will be used to introduce meta-heuristics in the literature review.}
       \field{journaltitle}{Polaris Global Journal of Scholarly Research and Trends}
       \field{month}{04}
       \field{title}{Overview of Metaheuristic Algorithms}
@@ -1069,6 +1085,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In this article, Romero et al. describes the use of Harmony Search Algorithm in optimising a Tetris agent. By using the weighted sum of features as an evaluation function, an agent can decide on which move to take. The weights for each feature are optimised using the harmony search algorithm. This article will be used to demonstrate how harmony search has been used to play Tetris.}
       \field{journaltitle}{International Journal of Computer Science Issues (IJCSI)}
       \field{number}{1}
       \field{title}{Tetris agent optimization using harmony search algorithm}
@@ -1108,6 +1125,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In this article, Geem et al. propose a new algorithm inspired from the improvisation processes of musicians. The article will be used to introduce the Harmony Search algorithm before delving into how it has been used to approach Tetris.}
       \field{journaltitle}{simulation}
       \field{number}{2}
       \field{title}{A new heuristic optimization algorithm: harmony search}
@@ -1134,6 +1152,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In this article, Bouchekara proposes a meta-heuristic algorithm that is inspired from sports, where teams compete against one another to win a championship and individuals compete against one another to win an MVP trophy. This article will be used to introduce the ideas of the MVP Algorithm before delving into how it is used to play Tetris.}
       \field{journaltitle}{Operational Research}
       \field{month}{03}
       \field{title}{Most Valuable Player Algorithm: a novel optimization algorithm inspired from sport}
@@ -1173,6 +1192,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In this article, Armanto et al. compare the use of an MVP algorithm and a Genetic Algorithm (GA) in optimising the state space of a classic Tetris agent. Results show that the MVP algorithm outperforms the GA, converging quicker and outscoring the GA. This article will be used to demonstrate how MVPA has been used to play Tetris. The results showing how MVPA outperforms GA will also be mentioned.}
       \field{journaltitle}{Inform: Jurnal Ilmiah Bidang Teknologi Informasi dan Komunikasi}
       \field{number}{1}
       \field{title}{MVPA and GA Comparison for State Space Optimization at Classic Tetris Game Agent Problem}
@@ -1223,6 +1243,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In this book, certain concepts relating to nature-inspired algorithms are defined. Specifically, nature-inspired algorithms are themselves defined. The book will be cited when giving a short introduction to nature-inspired algorithms.}
       \field{isbn}{9781839535161}
       \field{series}{Computing and Networks}
       \field{title}{Nature-inspired Optimization Algorithms and Soft Computing: Methods, Technology and Applications for IoTs, Smart Cities, Healthcare and Industrial Automation}
@@ -1257,6 +1278,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In this article, Flom and Robinson utilise a variation of Genetic Algorithms to weight an evaluation function for a classic Tetris agent. It will be cited to demonstrate the use of genetic algorithms in playing Tetris.}
       \field{title}{Using a Genetic Algorithm to Weight an Evaluation Function for Tetris}
       \field{year}{2005}
       \verb{urlraw}
@@ -1292,6 +1314,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In this article, Whitley and Starkweather propose a variation of Genetic Algorithms known as GENITOR. The algorithm is similar to that of vanilla GA, but instead of completely replacing a previous generation with a new one, GENITOR replaces poor performing individuals with children of high-performing individuals. This paper will be cited to define GENITOR, as this is the variation used by Flom and Robinson in their work.}
       \field{journaltitle}{Journal of Experimental \& Theoretical Artificial Intelligence}
       \field{number}{3}
       \field{title}{Genitor II: A distributed genetic algorithm}
@@ -1318,6 +1341,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In this article, Syswerda formally defines what uniform crossover is and its differences between other types of crossover in a genetic algorithm. It is cited to better define uniform crossover, as this is the crossover function used by Flom and Robinson in their work.}
       \field{journaltitle}{Proc. 3rd Intl Conference on Genetic Algorithms 1989}
       \field{month}{01}
       \field{title}{Uniform Crossover in Genetic Algorithms}
@@ -1361,6 +1385,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{In this article, Chen et al. outlines their use of Ant Colony Optimisation (ACO) in playing Tetris. Similar to the other meta-heuristics mentioned, a list of features were used, and the algorithm was used to optimise the weights of each feature. This article will be cited to demonstrate the use of ACO in optimising an agent's Tetris gameplay.}
       \field{month}{07}
       \field{title}{Apply Ant Colony Optimization to Tetris}
       \field{year}{2009}
@@ -1374,6 +1399,7 @@
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
+      \field{annotation}{This website is home to the Tetris community. There are several wiki pages that explain the rules of Tetris in detail. The website will be used to help define the rules of Tetris more accurately.}
       \field{howpublished}{\url{https://harddrop.com/}}
       \field{note}{[accessed Jul. 27, 2024]}
       \field{title}{{Hard Drop - Tetris Community}}
