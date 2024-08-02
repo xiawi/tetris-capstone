@@ -1171,7 +1171,7 @@
 				In our problem, a state is a comprehensive representation of the Tetris matrix, including:
 				
 				\begin{enumerate}
-					\item \textbf{Matrix configurations}: Information on both matrices, including occupied and unoccupied ci neells.
+					\item \textbf{Matrix configurations}: Information on both matrices, including occupied and unoccupied cells.
 					\item \textbf{Current Tetrominos}: The current Tetrominos each agent is using
 					\item \textbf{Lookahead}: The current five lookahead pieces in the queue of each player.
 					\item \textbf{Hold}: The current piece being held by each player.
@@ -1181,9 +1181,9 @@
 				
 				In order to decide on an action, the agent will be utilising a heuristic which is a weighted sum of numerical features, much like in previous studies (refer to Equation \ref{eq:heuristic}).
 				
-				\begin{equation} 
+				\begin{equation}\label{eq:heuristic}
 					\sum_{i=1}^{k} w_i f(S)_i
-				\end{equation}\label{eq:heuristic}
+				\end{equation}
 				
 				\noindent where $S$ is a state, $f_i$ is the feature function of said state, and $w_i$ is the corresponding weight of feature $f_i$. The weights for each feature will be optimised using nature-inspired algorithms.
 				
