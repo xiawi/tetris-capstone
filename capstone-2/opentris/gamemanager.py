@@ -1,4 +1,5 @@
 import pygame
+import random
 
 from settings import QUEUE_SEED, PLAYER
 from gamecontroller import GameController
@@ -8,6 +9,10 @@ from renderer import Renderer
 
 class GameManager():
   def __init__(self):
+    if QUEUE_SEED:
+      seed = QUEUE_SEED
+    else:
+      seed = random.random()
     self.left_board = GameController(SevenBag(QUEUE_SEED))
     if PLAYER:
       self.input_handler = InputHandler(self.left_board)

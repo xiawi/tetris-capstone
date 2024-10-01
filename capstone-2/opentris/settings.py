@@ -1,2 +1,2 @@
-QUEUE_SEED = 69
+QUEUE_SEED = None
 PLAYER = True
