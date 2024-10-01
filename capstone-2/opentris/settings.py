@@ -1,0 +1,2 @@
+QUEUE_SEED = 69
+PLAYER = True
