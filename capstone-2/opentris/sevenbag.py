@@ -10,16 +10,17 @@ class SevenBag:
     else:
       self.seed = random.random()
     random.seed(self.seed)
-    self.bag = []
+    self.sequence = []
 
-  def generateBag(self) -> list:
-    self.bag = [*TETROMINOS]
-    random.shuffle(self.bag)
+  def generateNewBag(self) -> None:
+    new_bag = [*TETROMINOS]
+    random.shuffle(new_bag)
+    self.sequence.extend(new_bag)
   
-  def getNextTetromino(self) -> Tetromino:
-    if not self.bag:
-      self.generateBag()
-    tetromino = self.bag.pop(0)
+  def getTetrominoAt(self, index) -> Tetromino:
+    if index >= len(self.sequence):
+      self.generateNewBag()
+    tetromino = self.sequence[index]
     return Tetromino(tetromino)
 
 
@@ -27,7 +28,4 @@ class SevenBag:
 
 if __name__ == "__main__":
   test = SevenBag(44)
-  for i in range(10):
-    for j in range(7):
-      print(test.getNextTetromino().name, end=" ")
-    print()
+    

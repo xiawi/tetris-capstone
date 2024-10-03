@@ -1,2 +1,2 @@
 QUEUE_SEED = None
-PLAYER = False
+PLAYER = True

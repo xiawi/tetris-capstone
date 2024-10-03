@@ -14,13 +14,14 @@ class GameManager():
       seed = QUEUE_SEED
     else:
       seed = random.random()
-    self.left_board = GameController(SevenBag(seed))
-    self.right_board = GameController(SevenBag(seed))
+    self.bag = SevenBag(seed)
+    self.left_board = GameController(self.bag)
+    self.right_board = GameController(self.bag)
     if PLAYER:
       self.input_handler = InputHandler(self.left_board)
     else:
-      self.left_bot = Bot(self.left_board)
-    self.right_bot = Bot(self.right_board)
+      self.left_bot = Bot(self.left_board, self.right_board)
+    self.right_bot = Bot(self.right_board, self.left_board)
     self.renderer = Renderer(self.left_board, self.right_board)
     self.clock = pygame.time.Clock()
     self.current_player = "left"
@@ -30,22 +31,6 @@ class GameManager():
       self.current_player = 'right'
     else:
       self.current_player = 'left'
-
-  # def run(self):
-  #   running = True
-  #   while running:
-  #     if PLAYER:
-  #       self.input_handler.handleInput()  # Handle user input
-  #       self.renderer.render()  # Render game state
-  #       while self.left_board.matrix.tetrominos_placed > self.right_board.matrix.tetrominos_placed:
-  #         self.right_bot.takeAction()
-  #       self.clock.tick(60)  # Control frame rate
-  #     else:
-  #       self.renderer.render()
-  #       self.left_bot.takeAction()
-  #       while self.left_board.matrix.tetrominos_placed > self.right_board.matrix.tetrominos_placed:
-  #         self.right_bot.takeAction()
-  #       self.clock.tick(1)
 
   def run(self):
     running = True
