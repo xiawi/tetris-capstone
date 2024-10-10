@@ -66,7 +66,7 @@ class GameController:
     self.active_piece.y = y  # Set final y position
 
     self.matrix.lockTetromino(self.active_piece)  # Lock the piece in the matrix
-    garbage = self.calculateGarbage()
+    garbage = self.calculateAttack()
     if garbage > 0:
       print(garbage)
     self.matrix.clearLines()
@@ -74,10 +74,10 @@ class GameController:
     self.hold.resetStatus()
     self.spawnTetromino()
 
-  def calculateGarbage(self): # All Garbage Logic + Line Clearing for PC check
+  def calculateAttack(self): # All Garbage Logic + Line Clearing for PC check
+    # TODO REFINE LOGIC
     garbage = 0
     lines_cleared = self.matrix.calculateLineClears()
-    print(lines_cleared)
 
     if lines_cleared > 0:
       self.combo += 1

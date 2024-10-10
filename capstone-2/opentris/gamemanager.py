@@ -7,7 +7,7 @@ from sevenbag import SevenBag
 from inputhandler import InputHandler
 from renderer import Renderer
 from bot import Bot
-from storedgarbage import StoredGarbage
+from storedattack import StoredAttack
 
 class GameManager():
   def __init__(self, left_name: str = "L", right_name: str = "R"):
@@ -46,7 +46,8 @@ class GameManager():
           if PLAYER:
             if self.current_player == 'left':
               self.input_handler.handleInput()  # Handle user input for left board
-              # if self.left_d
+              if self.left_board.matrix.tetrominos_placed > self.right_board.matrix.tetrominos_placed:
+                self.switch_turns()
             else:
               self.right_bot.takeAction()  # Right bot takes its turn
               self.switch_turns()

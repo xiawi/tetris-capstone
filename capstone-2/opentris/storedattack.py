@@ -1,11 +1,11 @@
 import random
 
-class StoredGarbage:
+class StoredAttack:
   def __init__(self, seed) -> None:
     self.garbage_queue = []
     random.seed(seed)
   
-  def addGarbageToQueue(self):
+  def addGarbageToQueue(self, lines):
     
     pass
 
