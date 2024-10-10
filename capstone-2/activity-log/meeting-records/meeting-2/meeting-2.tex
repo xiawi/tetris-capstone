@@ -1,0 +1,92 @@
+\documentclass[a4paper, 12pt]{report}
+\usepackage[margin=1in,includefoot]{geometry}
+\usepackage{parskip}
+\usepackage{tikz}
+\usepackage{setspace}
+\graphicspath{ {../../../../resources/images/} }
+\pagestyle{empty}
+\usepackage{pifont}
+\renewcommand{\labelitemii}{\ding{118}}
+
+\begin{document}
+	
+	\onehalfspacing
+	
+	\begin{center}
+		
+		\textbf{\large SCHOOL OF ENGINEERING AND TECHNOLOGY}	\\
+		\textbf{\small DEPARTMENT OF COMPUTING AND INFORMATION SYSTEMS} \\
+		\vspace{1cm}
+		\textbf{\LARGE SUPERVISION MEETING RECORD}\\
+		\textbf{\normalsize Meeting 2}	% MEETING #
+		
+	\end{center}
+	
+	\noindent			% no indents
+	\textbf{Date: } 04 October 2024 \\	% DATE HERE
+	\textbf{Time: } 02:00 PM - 02:30 PM \\	% TIME HERE
+	\textbf{Student: } Yap Wei Xiang \\
+	\textbf{Supervisor: } Dr Richard Wong Teck Ken \\
+	
+	\noindent			% no indents
+	\textbf{\underline{Updates From the Previous Meeting: }}
+	\begin{itemize}	% list updates
+		\item Made progress on simulation
+		\begin{itemize}
+			\item Including visual rendering of the game state, correct wall kicks, rotation logic, movement logic, a seeded randomizer, and some preliminary controls.
+		\end{itemize}
+	\end{itemize}
+	
+	\noindent			% no indents
+	\textbf{\underline{Items Discussed this Meeting: }}
+	\begin{itemize}	% list items dicussed
+		\item Some concerns of the potential outputs.
+		\begin{itemize}
+			\item Speed of convergence depends heavily on the starting points given to each algorithm, which is random.
+		\end{itemize}
+		\item Update in methodology
+		\begin{itemize}
+			\item Methodology needs to be updated from CP1, some decisions were made during the development of the simulation.
+		\end{itemize}
+		\item The evaluation function might need to be dynamic, but Dr Richard advised me to stick to using static weights for now.
+	\end{itemize}
+	
+	\noindent			% no indents
+	\textbf{\underline{Work for the Coming Meeting: }}
+	\begin{itemize}	% list expected work
+		\item Complete simulation (stored attack, garbage lines, etc.)
+		\item Begin work on an evaluation function which would be a weighted sum of numerical features.
+	\end{itemize}
+	
+	\vfill
+	
+	% signatures
+	
+	\noindent
+	\begin{minipage}[t]{6cm}	% UPDATE THIS WITH DR RICHARD'S SIGNATURE
+		\raggedright
+		\textbf{Supervisor Signature:} \\
+		\vspace{1cm}
+		\rule{5cm}{.5pt}
+		\vfill
+	\end{minipage}
+	\hfill \noindent
+	\begin{minipage}[t]{6cm}
+		\raggedright
+		\textbf{Student's Signature:} \\
+		\vspace{1cm}
+		\rule{5cm}{.5pt}
+		\vfill
+		\begin{tikzpicture}[remember picture,overlay]
+			\node[xshift=13.5cm,yshift=-23.4cm,anchor=north west] at (current page.north west){%
+				\includegraphics[height=3cm]{signatures/weixiang}};
+		\end{tikzpicture}
+	\end{minipage}
+	
+\end{document}
+
+
+% Ask about changing methodology (specific or keep it general)
+% Focus on static weights before assuming the problem requires a dynamic eval function
+% Update in methodology
+% Concerns about the way algorithms will converge

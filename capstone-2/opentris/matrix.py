@@ -13,14 +13,21 @@ class Matrix:
         if int(cell):  # Check if the cell is part of the Tetromino
           if tetromino.y + row_idx >= 0:  # Only lock if it's in the visible area
             self.grid[tetromino.y + row_idx][tetromino.x + col_idx] = tetromino.color
-    self.clearLines()
+    
     self.tetrominos_placed += 1
-
+    
   def clearLines(self) -> None:
     for y in range(MATRIX_HEIGHT):
       if all(self.grid[y]):
         del self.grid[y]
         self.grid.insert(0, [0 for _ in range(MATRIX_WIDTH)])
+  
+  def calculateLineClears(self) -> int:
+    lines_cleared = 0
+    for y in range(MATRIX_HEIGHT):
+      if all(self.grid[y]):
+        lines_cleared += 1
+    return lines_cleared
 
   def checkCollision(self, piece_x: int, piece_y: int, shape: list) -> bool:
     # Check if the Tetromino collides with the walls, bottom, or other pieces

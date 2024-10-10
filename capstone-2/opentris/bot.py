@@ -14,6 +14,5 @@ class Bot:
         exit()  # Exit the game
     self.me.hardDrop()
   
-  def eval(self):
-
+  def evaluate(self):
     pass

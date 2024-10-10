@@ -1,0 +1,69 @@
+\documentclass[a4paper, 12pt]{report}
+\usepackage[margin=1in,includefoot]{geometry}
+\usepackage{parskip}
+\usepackage{tikz}
+\usepackage{setspace}
+\graphicspath{ {../../../../resources/images/} }
+\pagestyle{empty}
+\usepackage{pifont}
+\renewcommand{\labelitemii}{\ding{118}}
+
+\begin{document}
+	
+	\onehalfspacing
+	
+	\begin{center}
+		
+		\textbf{\large SCHOOL OF ENGINEERING AND TECHNOLOGY}	\\
+		\textbf{\small DEPARTMENT OF COMPUTING AND INFORMATION SYSTEMS} \\
+		\vspace{1cm}
+		\textbf{\LARGE SUPERVISION MEETING RECORD}\\
+		\textbf{\normalsize Meeting 1}	% MEETING #
+		
+	\end{center}
+	
+	\noindent			% no indents
+	\textbf{Date: } 19 September 2024 \\	% DATE HERE
+	\textbf{Time: } 10:30 AM - 11:00 AM \\	% TIME HERE
+	\textbf{Student: } Yap Wei Xiang \\
+	\textbf{Supervisor: } Dr Richard Wong Teck Ken \\
+	
+	\noindent			% no indents
+	\textbf{\underline{Items Discussed this Meeting: }}
+	\begin{itemize}	% list items dicussed
+		\item Set up meeting times for Capstone 2.
+		\item Outlined structure of the final report.
+	\end{itemize}
+	
+	\noindent			% no indents
+	\textbf{\underline{Work for the Coming Meeting: }}
+	\begin{itemize}	% list expected work
+		\item Start work on the Tetris simulation.
+	\end{itemize}
+	
+	\vfill
+	
+	% signatures
+	
+	\noindent
+	\begin{minipage}[t]{6cm}	% UPDATE THIS WITH DR RICHARD'S SIGNATURE
+		\raggedright
+		\textbf{Supervisor Signature:} \\
+		\vspace{2cm}
+		\rule{5cm}{.5pt}
+		\vfill
+	\end{minipage}
+	\hfill \noindent
+	\begin{minipage}[t]{6cm}
+		\raggedright
+		\textbf{Student's Signature:} \\
+		\vspace{2cm}
+		\rule{5cm}{.5pt}
+		\vfill
+		\begin{tikzpicture}[remember picture,overlay]
+			\node[xshift=13.5cm,yshift=-23.4cm,anchor=north west] at (current page.north west){%
+				\includegraphics[height=3cm]{signatures/weixiang}};
+		\end{tikzpicture}
+	\end{minipage}
+	
+\end{document}

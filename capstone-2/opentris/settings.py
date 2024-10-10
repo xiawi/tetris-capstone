@@ -1,2 +1,2 @@
-QUEUE_SEED = None
+SEED = None # Seven bag and garbage seed
 PLAYER = True
