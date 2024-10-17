@@ -7,6 +7,7 @@
 - [X] turn-based logic
 - [X] win/loss condition
 - [X] garbage mechanics
+  - [X] refine garbage mechanics
 - [ ] stored attack
 
 # Bot behavior

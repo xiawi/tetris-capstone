@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  11 OCT 2024 20:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  11 OCT 2024 23:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**planning-document.tex
-(./planning-document.tex
+**final-report.tex
+(./final-report.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
 (c:/texlive/2023/texmf-dist/tex/latex/extsizes/extreport.cls
@@ -1258,12 +1258,12 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 \@quotelevel=\count507
 \@quotereset=\count508
 
-(./planning-document.aux
+(./final-report.aux
 
 LaTeX Warning: Label `tab:work' multiply defined.
 
 )
-\openout1 = `planning-document.aux'.
+\openout1 = `final-report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
@@ -1342,9 +1342,9 @@ e
 ))
 Package hyperref Info: Link coloring OFF on input line 32.
 
-(./planning-document.out) (./planning-document.out)
+(./final-report.out) (./final-report.out)
 \@outlinefile=\write5
-\openout5 = `planning-document.out'.
+\openout5 = `final-report.out'.
 
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -1355,12 +1355,12 @@ File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `planning-document.bcf'.
+\openout4 = `final-report.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'planning-document.bbl' found.
+Package biblatex Info: ... file 'final-report.bbl' found.
 
-(./planning-document.bbl)
+(./final-report.bbl)
 Package biblatex Info: Reference section=0 on input line 32.
 Package biblatex Info: Reference segment=0 on input line 32.
 
@@ -1402,7 +1402,7 @@ nput line 51.
 texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <../../resources/images/lo
 gos/sunway-set.png>] [1
 
-] (./planning-document.toc
+] (./final-report.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1422,18 +1422,18 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 ])
 \tf@toc=\write6
-\openout6 = `planning-document.toc'.
+\openout6 = `final-report.toc'.
 
  [3]
-(./planning-document.lot)
+(./final-report.lot)
 \tf@lot=\write7
-\openout7 = `planning-document.lot'.
+\openout7 = `final-report.lot'.
 
  [4
 
-] (./planning-document.lof)
+] (./final-report.lof)
 \tf@lof=\write8
-\openout8 = `planning-document.lof'.
+\openout8 = `final-report.lof'.
 
  [5
 
@@ -1444,8 +1444,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.155 	 		
-           [1
+l.155 	
+        [1
 
 ] [2] [3]
 Chapter 2.
@@ -2097,7 +2097,7 @@ Chapter 5.
 
 
 
-] [38] [39] (./planning-document.aux)
+] [38] [39] (./final-report.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
@@ -2106,20 +2106,20 @@ L3 programming layer <2023-10-10>
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `planning-document.out' has not changed.
+Package rerunfilecheck Info: File `final-report.out' has not changed.
 (rerunfilecheck)             Checksum: 4997BF9FD745D5C1A479BD17CF21B186;6467.
-Package logreq Info: Writing requests to 'planning-document.run.xml'.
-\openout1 = `planning-document.run.xml'.
+Package logreq Info: Writing requests to 'final-report.run.xml'.
+\openout1 = `final-report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
  40412 strings out of 474504
- 794418 string characters out of 5756725
+ 794213 string characters out of 5756725
  2020043 words of memory out of 5000000
  61351 multiletter control sequences out of 15000+600000
  597788 words of font info for 221 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,12n,131p,2301b,1517s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,12n,131p,2296b,1517s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-di
@@ -2141,7 +2141,7 @@ f-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fon
 ts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/p
 ublic/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-s
 uper/sftt1200.pfb>
-Output written on planning-document.pdf (45 pages, 620963 bytes).
+Output written on final-report.pdf (45 pages, 620963 bytes).
 PDF statistics:
  921 PDF objects out of 1000 (max. 8388607)
  812 compressed objects within 9 object streams

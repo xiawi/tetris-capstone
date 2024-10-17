@@ -75,48 +75,48 @@ class GameController:
     self.spawnTetromino()
 
   def calculateAttack(self): # All Garbage Logic + Line Clearing for PC check
-    # TODO REFINE LOGIC
     garbage = 0
     lines_cleared = self.matrix.calculateLineClears()
 
     if lines_cleared > 0:
       self.combo += 1
-    else:
-      self.combo = -1
 
-    if self.combo >= 11:
-      garbage += 5
-    elif self.combo >= 8:
-      garbage += 4
-    elif self.combo >= 6:
-      garbage += 3
-    elif self.combo >= 4:
-      garbage += 2
-    elif self.combo >= 2:
-      garbage += 1
+      # PC check
+      if self.isPerfectClear(lines_cleared):
+        garbage += 6
 
-    if self.isTspin() and not self.isMini():
-      garbage += 2 * lines_cleared
-    else:
-      if lines_cleared == 2:
-        garbage += 1
-      elif lines_cleared == 3:
-        garbage += 2
-      elif lines_cleared == 4:
+      # Adding lines based on combo
+      if self.combo >= 11:
+        garbage += 5
+      elif self.combo >= 8:
         garbage += 4
+      elif self.combo >= 6:
+        garbage += 3
+      elif self.combo >= 4:
+        garbage += 2
+      elif self.combo >= 2:
+        garbage += 1
 
-    # b2b check
-    if lines_cleared > 0:
+      # B2B
       if self.isTspin() or lines_cleared == 4:
         self.b2b += 1
+      else: 
+        self.b2b = -1 # if line clear is not a tetris or a type of tspin, reset b2b counter 
+
+      # general line clear logic
+      if self.isTspin() and not self.isMini():
+        garbage += 2 * lines_cleared
       else:
-        self.b2b = -1
-      if self.b2b > 0:
-        garbage += self.b2b
-
-    if self.isPerfectClear():
-      garbage += 6
-
+        if lines_cleared == 2:
+          garbage += 1
+        if lines_cleared == 3:
+          garbage += 2
+        if lines_cleared == 4:
+          garbage += 4
+    
+    else:
+      self.combo = -1 # if there are no line clears, reset combo counter
+    
     return garbage
 
   def isTspin(self):
@@ -134,6 +134,8 @@ class GameController:
         return True
       else:
         return False
+    else:
+      return False
       
   def isMini(self):
     current_rotation = self.active_piece.current_rotation
@@ -152,8 +154,7 @@ class GameController:
           return True
     return False
   
-  def isPerfectClear(self):
-    line_clears = self.matrix.calculateLineClears()
+  def isPerfectClear(self, line_clears):
     occupied_rows = 0
     for idx, row in enumerate(self.matrix.grid):
       if not all(cell == 0 for cell in row):

@@ -1,0 +1,18 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'final-report.blg'
+[99] biber-MSWIN64:340> INFO - === 
+[142] Biber.pm:419> INFO - Reading 'final-report.bcf'
+[259] Biber.pm:979> INFO - Found 40 citekeys in bib section 0
+[271] Biber.pm:4419> INFO - Processing section 0
+[281] Biber.pm:4610> INFO - Looking for bibtex file '../../resources/citation.bib' for section 0
+[344] bibtex.pm:1713> INFO - LaTeX decoding ...
+[394] bibtex.pm:1519> INFO - Found BibTeX data source '../../resources/citation.bib'
+[566] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[566] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[566] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[566] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[591] bbl.pm:660> INFO - Writing 'final-report.bbl' with encoding 'UTF-8'
+[610] bbl.pm:763> INFO - Output to final-report.bbl
+[610] Biber.pm:131> WARN - legacy month field 'sep' in entry 'cc:conceptual-perspective' is not an integer - this will probably not sort properly.
+[610] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\Admin\AppData\Local\Temp\biber_tmp_Sk0a\79acecc52ff72f017f31533f617ffb0e_22940.utf8, line 135, warning: 1 characters of junk seen at toplevel
+[611] Biber.pm:133> INFO - WARNINGS: 2
