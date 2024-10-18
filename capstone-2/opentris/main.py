@@ -7,7 +7,9 @@ def main():
   game = GameManager("Bob", "Bot")
   winner = game.run()
   print(winner.name)
-  print(winner.matrix.tetrominos_placed)
+  print(winner.total_attack)
+  print(winner.tetrominos_placed)
+  print(winner.total_attack/winner.tetrominos_placed)
 
 if __name__ == "__main__":
   main()

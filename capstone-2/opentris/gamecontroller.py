@@ -20,6 +20,8 @@ class GameController:
     self.stored_attack = StoredAttack(garbage_system)
     self.combo = -1
     self.b2b = -1
+    self.tetrominos_placed = 0
+    self.total_attack = 0
     self.spawnTetromino()
 
   def spawnTetromino(self, tetromino: Tetromino = None) -> None:
@@ -74,10 +76,12 @@ class GameController:
     if lines_cleared:
       attack = self.calculateAttack(lines_cleared) # if lines_cleared > 0: make sure receiveAttack does not happen
       self.most_recent_attack = self.stored_attack.performAttack(attack)
+      self.total_attack += self.most_recent_attack
     elif self.stored_attack.hasStoredAttack():
       garbage, hole = self.stored_attack.receiveAttack()
       self.matrix.receiveAttack(garbage, hole)
     self.matrix.clearLines()
+    self.tetrominos_placed += 1
     self.most_recent_move = None
     self.hold.resetStatus()
     self.spawnTetromino()

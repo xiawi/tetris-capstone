@@ -4,7 +4,6 @@ from tetromino import Tetromino
 class Matrix:
   def __init__(self) -> None:
     self.grid = [[0 for _ in range(MATRIX_WIDTH)] for _ in range(MATRIX_HEIGHT)]
-    self.tetrominos_placed = 0
 
   def lockTetromino(self, tetromino: Tetromino) -> None:
     shape = tetromino.getShape()
@@ -13,8 +12,6 @@ class Matrix:
         if int(cell):  # Check if the cell is part of the Tetromino
           if tetromino.y + row_idx >= 0:  # Only lock if it's in the visible area
             self.grid[tetromino.y + row_idx][tetromino.x + col_idx] = tetromino.color
-    
-    self.tetrominos_placed += 1
     
   def clearLines(self) -> None:
     for y in range(MATRIX_HEIGHT):

@@ -3,7 +3,8 @@
 - [X] write GameManager class
 - [X] render both boards
 - [X] implement ghost piece
-- [ ] better controls (ARR, DAS, etc)
+- [X] better controls (ARR, DAS, etc)
+  - [ ] improve if there's time
 - [X] turn-based logic
 - [X] win/loss condition
 - [X] garbage mechanics

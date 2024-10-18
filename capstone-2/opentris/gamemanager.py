@@ -52,7 +52,7 @@ class GameManager():
           if PLAYER:
             if self.current_player == 'left':
               self.input_handler.handleInput()  # Handle user input for left board
-              if self.left_board.matrix.tetrominos_placed > self.right_board.matrix.tetrominos_placed:
+              if self.left_board.tetrominos_placed > self.right_board.tetrominos_placed:
                 self.sendAttack(self.left_board, self.right_board)
                 self.switchTurns()
             else:
