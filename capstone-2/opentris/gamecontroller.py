@@ -4,9 +4,11 @@ from matrix import Matrix
 from lookahead import Lookahead
 from hold import Hold
 from sevenbag import SevenBag
+from storedattack import StoredAttack
+from garbagesystem import GarbageSystem
 
 class GameController:
-  def __init__(self, name, bag: SevenBag) -> None:
+  def __init__(self, name, bag: SevenBag, garbage_system: GarbageSystem) -> None:
     self.name = name
     self.matrix = Matrix()
     self.lookahead = Lookahead(bag)
@@ -14,6 +16,8 @@ class GameController:
     self.active_piece = None
     self.has_lost = False
     self.most_recent_move = None
+    self.most_recent_attack = 0
+    self.stored_attack = StoredAttack(garbage_system)
     self.combo = -1
     self.b2b = -1
     self.spawnTetromino()
@@ -66,17 +70,23 @@ class GameController:
     self.active_piece.y = y  # Set final y position
 
     self.matrix.lockTetromino(self.active_piece)  # Lock the piece in the matrix
-    garbage = self.calculateAttack()
-    if garbage > 0:
-      print(garbage)
+    lines_cleared = self.matrix.calculateLineClears()
+    if lines_cleared:
+      attack = self.calculateAttack(lines_cleared) # if lines_cleared > 0: make sure receiveAttack does not happen
+      self.most_recent_attack = self.stored_attack.performAttack(attack)
+    elif self.stored_attack.hasStoredAttack():
+      garbage, hole = self.stored_attack.receiveAttack()
+      self.matrix.receiveAttack(garbage, hole)
     self.matrix.clearLines()
     self.most_recent_move = None
     self.hold.resetStatus()
     self.spawnTetromino()
 
-  def calculateAttack(self): # All Garbage Logic + Line Clearing for PC check
+  def storeAttack(self, lines):
+    self.stored_attack.storeAttack(lines)
+
+  def calculateAttack(self, lines_cleared): # All Garbage Logic + Line Clearing for PC check
     garbage = 0
-    lines_cleared = self.matrix.calculateLineClears()
 
     if lines_cleared > 0:
       self.combo += 1

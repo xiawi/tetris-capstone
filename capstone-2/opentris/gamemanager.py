@@ -7,7 +7,7 @@ from sevenbag import SevenBag
 from inputhandler import InputHandler
 from renderer import Renderer
 from bot import Bot
-from storedattack import StoredAttack
+from garbagesystem import GarbageSystem
 
 class GameManager():
   def __init__(self, left_name: str = "L", right_name: str = "R"):
@@ -17,9 +17,10 @@ class GameManager():
       seed = random.random()
 
     self.bag = SevenBag(seed)
+    self.garbage_system = GarbageSystem(seed)
 
-    self.left_board = GameController(left_name, self.bag)
-    self.right_board = GameController(right_name, self.bag)
+    self.left_board = GameController(left_name, self.bag, self.garbage_system)
+    self.right_board = GameController(right_name, self.bag, self.garbage_system)
     if PLAYER:
       self.input_handler = InputHandler(self.left_board)
     else:
@@ -29,11 +30,16 @@ class GameManager():
     self.clock = pygame.time.Clock()
     self.current_player = "left"
 
-  def switch_turns(self):
+  def switchTurns(self):
     if self.current_player == 'left':
       self.current_player = 'right'
     else:
       self.current_player = 'left'
+
+  def sendAttack(self, sender: GameController, receiver: GameController): # TODO
+    if sender.most_recent_attack:
+      receiver.storeAttack(sender.most_recent_attack)
+      sender.most_recent_attack = 0
 
   def run(self) -> GameController:
     running = True
@@ -47,17 +53,21 @@ class GameManager():
             if self.current_player == 'left':
               self.input_handler.handleInput()  # Handle user input for left board
               if self.left_board.matrix.tetrominos_placed > self.right_board.matrix.tetrominos_placed:
-                self.switch_turns()
+                self.sendAttack(self.left_board, self.right_board)
+                self.switchTurns()
             else:
               self.right_bot.takeAction()  # Right bot takes its turn
-              self.switch_turns()
+              self.sendAttack(self.right_board, self.left_board)
+              self.switchTurns()
           else:
             if self.current_player == 'left':
               self.left_bot.takeAction()
-              self.switch_turns()
+              self.sendAttack(self.left_board, self.right_board)
+              self.switchTurns()
             else:
               self.right_bot.takeAction()
-              self.switch_turns()
+              self.sendAttack(self.right_board, self.left_board)
+              self.switchTurns()
         else:
           pygame.time.wait(1000)
           break

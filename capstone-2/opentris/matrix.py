@@ -1,4 +1,4 @@
-from constants import MATRIX_HEIGHT, MATRIX_WIDTH
+from constants import MATRIX_HEIGHT, MATRIX_WIDTH, GRAY
 from tetromino import Tetromino
 
 class Matrix:
@@ -43,6 +43,15 @@ class Matrix:
           if new_y >= 0 and self.grid[new_y][new_x]:  # Collision with locked piece
               return True
     return False
+  
+  def receiveAttack(self, lines, hole):
+    for _ in range(lines):
+      self.grid.pop(0)  # Remove the top row
+      # Add a new garbage row at the bottom with a hole
+      garbage_row = [GRAY if x != hole else 0 for x in range(MATRIX_WIDTH)]
+      self.grid.append(garbage_row)
+    pass
+
 
 if __name__ == "__main__":
   m = Matrix()

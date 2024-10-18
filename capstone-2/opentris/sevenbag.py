@@ -5,10 +5,7 @@ from tetromino import Tetromino
 
 class SevenBag:
   def __init__(self, seed: int = None) -> None:
-    if seed:
-      self.seed = seed
-    else:
-      self.seed = random.random()
+    self.seed = seed
     random.seed(self.seed)
     self.sequence = []
 

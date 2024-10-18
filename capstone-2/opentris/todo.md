@@ -8,7 +8,8 @@
 - [X] win/loss condition
 - [X] garbage mechanics
   - [X] refine garbage mechanics
-- [ ] stored attack
+- [X] implement garbage lines
+- [X] stored attack
 
 # Bot behavior
 - [ ] come up with eval function, use weighted sum for now
