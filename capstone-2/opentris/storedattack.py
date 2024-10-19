@@ -16,9 +16,9 @@ class StoredAttack:
     if self.hasStoredAttack():
       attack = self.attack.pop(0)
       hole = self.hole.pop(0)
-      return attack, hole
+      return (attack, hole)
     else:
-      return 0, 0
+      return (0, 0)
   
   def performAttack(self, lines):
     while self.hasStoredAttack():

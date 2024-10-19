@@ -1,4 +1,4 @@
-from constants import WALL_KICK_DATA, MATRIX_WIDTH, TETROMINOS
+from constants import WALL_KICK_DATA, MATRIX_WIDTH, MATRIX_HEIGHT
 from tetromino import Tetromino
 from matrix import Matrix
 from lookahead import Lookahead
@@ -110,7 +110,7 @@ class GameController:
         garbage += 2
       elif self.combo >= 2:
         garbage += 1
-
+      
       # B2B
       if self.isTspin() or lines_cleared == 4:
         self.b2b += 1
@@ -140,7 +140,7 @@ class GameController:
       for corner in corners_to_check:
         specific_corner_x = self.active_piece.x + corner[0]
         specific_corner_y = self.active_piece.y + corner[1]
-        if specific_corner_x < 0 or specific_corner_x >= MATRIX_WIDTH:
+        if specific_corner_x < 0 or specific_corner_x >= MATRIX_WIDTH or specific_corner_y >= MATRIX_HEIGHT:
           corners_filled += 1
         elif self.matrix.grid[specific_corner_y][specific_corner_x]:
           corners_filled += 1
