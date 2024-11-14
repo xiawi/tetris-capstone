@@ -3,9 +3,8 @@ from constants import MINO_SIZE, BACKGROUND_COLOR, SCREEN_WIDTH, SCREEN_HEIGHT, 
 from gamecontroller import GameController
 
 class Renderer:
-  def __init__(self, left_board: GameController, right_board: GameController):
-    self.left_board = left_board
-    self.right_board = right_board
+  def __init__(self, board: GameController):
+    self.board = board
     self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
   def drawHold(self, game_controller: GameController, x: int):
@@ -108,7 +107,6 @@ class Renderer:
 
   def render(self):
     self.screen.fill(BACKGROUND_COLOR)
-    self.drawBoard(self.left_board, 0)
-    self.drawBoard(self.right_board, 27)
+    self.drawBoard(self.board, 0)
     pygame.display.set_caption("OpenTris")
     pygame.display.flip()

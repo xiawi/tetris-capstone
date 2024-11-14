@@ -5,6 +5,11 @@ class Matrix:
   def __init__(self) -> None:
     self.grid = [[0 for _ in range(MATRIX_WIDTH)] for _ in range(MATRIX_HEIGHT)]
 
+  def __eq__(self, value: object) -> bool:
+    if isinstance(value, Matrix):
+      return self.grid == value.grid
+    return False
+
   def lockTetromino(self, tetromino: Tetromino) -> None:
     shape = tetromino.getShape()
     for row_idx, row in enumerate(shape):
