@@ -22,6 +22,6 @@ class Tetromino:
     return shape
   
 if __name__ == "__main__":
-  shape = Tetromino("T").getShape()
+  shape = Tetromino("T").getRotatedShape(1)
   for row in shape:
     print(row)

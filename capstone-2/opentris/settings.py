@@ -1,6 +1,6 @@
 # General settings
-SEED = None # Seven bag and garbage seed
-PLAYER = True
+SEED = 3 # Seven bag and garbage seed
+PLAYER = False
 
 # Controls (if PLAYER)
 DAS = 80

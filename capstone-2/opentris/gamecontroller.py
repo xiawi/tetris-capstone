@@ -53,13 +53,11 @@ class GameController:
   def moveLeft(self):
     if not self.matrix.checkCollision(self.active_piece.x - 1, self.active_piece.y, self.active_piece.getShape()):
       self.active_piece.x -= 1
-      print(self.active_piece.x)
       self.most_recent_move = "move"
 
   def moveRight(self):
     if not self.matrix.checkCollision(self.active_piece.x + 1, self.active_piece.y, self.active_piece.getShape()):
       self.active_piece.x += 1
-      print(self.active_piece.x)
       self.most_recent_move = "move"
   
   def softDrop(self):
@@ -68,7 +66,6 @@ class GameController:
       self.most_recent_move = "move"
 
   def hardDrop(self):
-    print(self.active_piece.x)
     y = self.active_piece.y  # Start from current y position
     while not self.matrix.checkCollision(self.active_piece.x, y + 1, self.active_piece.getShape()):
         y += 1  # Move down until collision occurs

@@ -4,7 +4,7 @@ from gamemanager import GameManager
 
 def main():
   pygame.init()
-  game = GameManager("Player", "Bot")
+  game = GameManager("Left", "Right")
   winner = game.run()
   print(winner.name)
   print(winner.total_attack)

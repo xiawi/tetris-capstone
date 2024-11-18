@@ -24,8 +24,8 @@ class GameManager():
     if PLAYER:
       self.input_handler = InputHandler(self.left_board)
     else:
-      self.left_bot = Bot(self.left_board, self.right_board)
-    self.right_bot = Bot(self.right_board, self.left_board)
+      self.left_bot = Bot(self.left_board)
+    self.right_bot = Bot(self.right_board)
     self.renderer = Renderer(self.left_board, self.right_board)
     self.clock = pygame.time.Clock()
     self.current_player = "left"
@@ -45,7 +45,7 @@ class GameManager():
     running = True
     while running:
       try:
-        self.clock.tick(120)  # Keep smooth rendering, but handle turns separately
+        self.clock.tick(10)  # Keep smooth rendering, but handle turns separately
         self.renderer.render()  # Render the boards
 
         if not self.left_board.has_lost and not self.right_board.has_lost:

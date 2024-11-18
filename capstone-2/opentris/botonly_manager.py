@@ -39,6 +39,8 @@ class GameManager():
           if event.type == pygame.QUIT:
             pygame.quit()
             exit()  # Exit the game
+          # if event.type == pygame.KEYDOWN:
+          #   self.bot.takeAction()
       except:
         running = False
 

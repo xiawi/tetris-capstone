@@ -14,3 +14,4 @@
 
 # Bot behavior
 - [ ] come up with eval function, use weighted sum for now
+- [ ] decide on a better copy mechanism than deepcopy
