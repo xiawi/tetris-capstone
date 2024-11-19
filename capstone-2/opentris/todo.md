@@ -15,3 +15,7 @@
 # Bot behavior
 - [ ] come up with eval function, use weighted sum for now
 - [ ] decide on a better copy mechanism than deepcopy
+- [ ] add tucks into legal placements
+- [ ] add spins into legal placements
+- [ ] redo hole calculation
+- [ ] add attack feature into eval consideration

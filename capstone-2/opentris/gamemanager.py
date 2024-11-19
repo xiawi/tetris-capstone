@@ -45,7 +45,10 @@ class GameManager():
     running = True
     while running:
       try:
-        self.clock.tick(10)  # Keep smooth rendering, but handle turns separately
+        if PLAYER:
+          self.clock.tick(120)  # Keep smooth rendering, but handle turns separately
+        else:
+          self.clock.tick(10)  # Keep smooth rendering, but handle turns separately
         self.renderer.render()  # Render the boards
 
         if not self.left_board.has_lost and not self.right_board.has_lost:
