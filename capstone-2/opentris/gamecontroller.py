@@ -74,7 +74,7 @@ class GameController:
     self.matrix.lockTetromino(self.active_piece)  # Lock the piece in the matrix
     lines_cleared = self.matrix.calculateLineClears()
     if lines_cleared:
-      attack = self.calculateAttack(lines_cleared) # if lines_cleared > 0: make sure receiveAttack does not happen
+      attack = self.calculateAttack(lines_cleared, self.most_recent_move) # if lines_cleared > 0: make sure receiveAttack does not happen
       self.most_recent_attack = self.stored_attack.performAttack(attack)
       self.total_attack += self.most_recent_attack
     elif self.stored_attack.hasStoredAttack():
@@ -89,7 +89,7 @@ class GameController:
   def storeAttack(self, lines):
     self.stored_attack.storeAttack(lines)
 
-  def calculateAttack(self, lines_cleared): # All Garbage Logic + Line Clearing for PC check
+  def calculateAttack(self, lines_cleared, most_recent_move): # All Garbage Logic + Line Clearing for PC check
     garbage = 0
 
     if lines_cleared > 0:
@@ -112,13 +112,13 @@ class GameController:
         garbage += 1
       
       # B2B
-      if self.isTspin() or lines_cleared == 4:
+      if self.isTspin(most_recent_move) or lines_cleared == 4:
         self.b2b += 1
       else: 
         self.b2b = -1 # if line clear is not a tetris or a type of tspin, reset b2b counter 
 
       # general line clear logic
-      if self.isTspin() and not self.isMini():
+      if self.isTspin(most_recent_move) and not self.isMini():
         garbage += 2 * lines_cleared
       else:
         if lines_cleared == 2:
@@ -133,8 +133,8 @@ class GameController:
     
     return garbage
 
-  def isTspin(self):
-    if self.most_recent_move == "rotate" and self.active_piece.name == "T":
+  def isTspin(self, most_recent_move):
+    if most_recent_move == "rotate" and self.active_piece.name == "T":
       corners_filled = 0
       corners_to_check = [[1,0], [3,0], [1,2], [3,2]]
       for corner in corners_to_check:

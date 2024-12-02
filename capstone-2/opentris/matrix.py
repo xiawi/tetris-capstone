@@ -16,6 +16,7 @@ class Matrix:
       for col_idx, cell in enumerate(row):
         if int(cell):  # Check if the cell is part of the Tetromino
           if tetromino.y + row_idx >= 0:  # Only lock if it's in the visible area
+            # print(tetromino.x, tetromino.y)
             self.grid[tetromino.y + row_idx][tetromino.x + col_idx] = tetromino.color
     
   def clearLines(self) -> None:

@@ -20,10 +20,9 @@ class GameManager():
 
     self.board = GameController("Bot", self.bag, self.garbage_system)
     for x in range(10):
-      self.board.matrix.grid[21][x] = 1 if x < 5 else 0
-      self.board.matrix.grid[20][x] = 1 if x < 7 else 0
-      self.board.matrix.grid[19][x] = 1 if x < 7 else 0
-      self.board.matrix.grid[18][x] = 1 if x < 7 else 0
+      self.board.matrix.grid[21][x] = 1 if x < 7 else 0
+      self.board.matrix.grid[20][x] = 1 if x < 9 else 0
+      self.board.matrix.grid[19][x] = 1 if x < 9 else 0
     self.bot = Bot(self.board)
     self.renderer = Renderer(self.board)
     self.clock = pygame.time.Clock()
