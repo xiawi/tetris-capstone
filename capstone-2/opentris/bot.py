@@ -10,7 +10,7 @@ from garbagesystem import GarbageSystem
 from constants import MATRIX_HEIGHT, MATRIX_WIDTH, WALL_KICK_DATA
 
 class Bot:
-  def __init__(self, me: GameController):
+  def __init__(self, me: GameController, weight_vector: list = None):
     random.seed()
     self.me = me
       
@@ -66,6 +66,7 @@ class Bot:
     matrices = []
     action_sequence = []
     line_clears = []
+    held_piece = []
     tuck_spin_considerations = []
     
     # consider holding if possible
@@ -73,6 +74,7 @@ class Bot:
       matrices.append(matrix)
       action_sequence.append(["H"])
       line_clears.append(0)
+      held_piece.append(tetromino)
       
     # find simple placements for each rotation, ie hard drop in each column with each rotation
     for rotation in range(4):
@@ -82,7 +84,6 @@ class Bot:
       matrix_copy = copy.deepcopy(matrix)
       ori_x = tetromino_copy.x
       landing_states = []
-      
       for x in self.getXRange(tetromino_copy, matrix_copy):
         actions = []
         new_tetromino = copy.deepcopy(tetromino_copy)
@@ -117,6 +118,7 @@ class Bot:
           matrices.append(new_matrix)
           action_sequence.append(actions)
           line_clears.append(lines)
+          held_piece.append(None)
       
       for i in range(1, len(landing_states)):
         if landing_states[i][1] - landing_states[i - 1][1] >= 1:
@@ -166,7 +168,6 @@ class Bot:
         actions.append("SD")
         
         # get full range of movement
-        
         for x in self.getXRange(tetromino_copy, matrix_copy):
           if x == tetromino_copy.x:
             pass
@@ -243,6 +244,7 @@ class Bot:
           post_spin_matrices.append(spun_matrix)
           post_spin_action_sequence.append(spun_actions)
           post_spin_line_clears.append(lines_cleared)
+          held_piece.append(None)
           # print(1)
         else:
           # print(spun_actions, 0)
@@ -269,6 +271,7 @@ class Bot:
           post_spin_matrices.append(spun_matrix)
           post_spin_action_sequence.append(spun_actions)
           post_spin_line_clears.append(lines_cleared)
+          held_piece.append(None)
         else:
           break
     
@@ -276,7 +279,7 @@ class Bot:
     action_sequence.extend(post_spin_action_sequence)
     line_clears.extend(post_spin_line_clears)
         
-    return list(zip(matrices, action_sequence, line_clears))
+    return list(zip(matrices, action_sequence, line_clears, held_piece))
   
   def getXRange(self, tetromino: Tetromino, matrix: Matrix):
     ghost_tetromino = copy.deepcopy(tetromino)
@@ -340,7 +343,7 @@ class Bot:
     height = self.getHeight(matrix)
     attack = self.getAttack(action_sequence, cleared_lines)
     # evaluation = self.hole_weight * holes + self.height_weight * height + self.line_clear_weight * cleared_lines + self.column_transition_weight * self.getColumnTransition(matrix)
-    evaluation = self.hole_weight * holes + self.height_weight * height + self.attack_weight * attack
+    evaluation = self.hole_weight * holes + self.height_weight * height + self.line_clear_weight * cleared_lines + self.attack_weight * attack + self.column_transition_weight * self.getColumnTransition(matrix)
     # evaluation = - 20 * holes - height
     return evaluation
 
@@ -401,7 +404,7 @@ if __name__ == "__main__":
     gc.matrix.grid[20][x] = 1 if x < 1 or x > 3 else 0
     gc.matrix.grid[19][x] = 1 if x < 2 else 0
   # bot.takeAction()
-  placements = bot.generateLegalPlacements(Tetromino("T", 4, 0), gc.matrix, True)
+  placements = bot.generateLegalPlacements(gc.active_piece, gc.matrix, True)
   # print(bot.evaluatePlacement(placements[9][0], placements[9][2]))
   # print(bot.getHoles(placements[9][0]))
   # for placement in placements:
