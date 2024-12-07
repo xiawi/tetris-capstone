@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  11 OCT 2024 23:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  6 DEC 2024 14:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -684,7 +684,7 @@ Package biblatex Info: ... file 'blx-dm.def' found.
 File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'ieee.dbx' not found.
+Package biblatex Info: ... file 'numeric-comp.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@afterword=\count351
@@ -794,11 +794,6 @@ File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 \biburllcskip=\muskip20
 \c@smartand=\count427
 )
-Package biblatex Info: Trying to load bibliography style 'ieee'...
-Package biblatex Info: ... file 'ieee.bbx' found.
-
-(c:/texlive/2023/texmf-dist/tex/latex/biblatex-ieee/ieee.bbx
-File: ieee.bbx 2021/12/06 v1.3f biblatex bibliography style
 Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.bbx' found.
 
@@ -816,12 +811,7 @@ Package biblatex Info: ... file 'standard.bbx' found.
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count428
 \c@bbx:relatedtotal=\count429
-))))
-Package biblatex Info: Trying to load citation style 'ieee'...
-Package biblatex Info: ... file 'ieee.cbx' found.
-
-(c:/texlive/2023/texmf-dist/tex/latex/biblatex-ieee/ieee.cbx
-File: ieee.cbx 2021/12/06 v1.3f biblatex citation style
+)))
 Package biblatex Info: Trying to load citation style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.cbx' found.
 
@@ -842,10 +832,6 @@ Package biblatex Info: Redefining '\textcites'.
 Package biblatex Info: Redefining '\cites'.
 Package biblatex Info: Redefining '\parencites'.
 Package biblatex Info: Redefining '\smartcites'.
-)
-Package biblatex Info: Redefining '\cite'.
-Package biblatex Info: Redefining '\supercite'.
-Package biblatex Info: Redefining '\cites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
@@ -1265,24 +1251,24 @@ LaTeX Warning: Label `tab:work' multiply defined.
 )
 \openout1 = `final-report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1340,7 +1326,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 32.
+Package hyperref Info: Link coloring OFF on input line 37.
 
 (./final-report.out) (./final-report.out)
 \@outlinefile=\write5
@@ -1361,25 +1347,25 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'final-report.bbl' found.
 
 (./final-report.bbl)
-Package biblatex Info: Reference section=0 on input line 32.
-Package biblatex Info: Reference segment=0 on input line 32.
+Package biblatex Info: Reference section=0 on input line 37.
+Package biblatex Info: Reference segment=0 on input line 37.
 
 (c:/texlive/2023/texmf-dist/tex/latex/ninecolors/ninecolors.sty
 Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
 )
-LaTeX Info: Redefining \microtypecontext on input line 32.
-Package microtype Info: Applying patch `item' on input line 32.
-Package microtype Info: Applying patch `toc' on input line 32.
-Package microtype Info: Applying patch `eqnum' on input line 32.
-Package microtype Info: Applying patch `footnote' on input line 32.
-Package microtype Info: Applying patch `verbatim' on input line 32.
+LaTeX Info: Redefining \microtypecontext on input line 37.
+Package microtype Info: Applying patch `item' on input line 37.
+Package microtype Info: Applying patch `toc' on input line 37.
+Package microtype Info: Applying patch `eqnum' on input line 37.
+Package microtype Info: Applying patch `footnote' on input line 37.
+Package microtype Info: Applying patch `verbatim' on input line 37.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 32.
+LaTeX Info: Redefining \showhyphens on input line 37.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1394,7 +1380,7 @@ Package caption Info: End \AtBeginDocument code.
 File: ../../resources/images/logos/sunway-set.png Graphic file (type png)
 <use ../../resources/images/logos/sunway-set.png>
 Package pdftex.def Info: ../../resources/images/logos/sunway-set.png  used on i
-nput line 51.
+nput line 56.
 (pdftex.def)             Requested size: 377.74203pt x 99.58464pt.
  [1
 
@@ -1444,7 +1430,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.155 	
+l.160 	
         [1
 
 ] [2] [3]
@@ -1466,7 +1452,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 > Step: build the whole table.
  [11] [12] [13] [14]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
-46.
+51.
 
 (c:/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
@@ -1486,7 +1472,7 @@ Package microtype Info: Loading generic protrusion settings for font family
  [15] [16] [17]
 Chapter 3.
 
-Overfull \hbox (11.40594pt too wide) in paragraph at lines 667--668
+Overfull \hbox (11.40594pt too wide) in paragraph at lines 672--673
 [][] 
  []
 
@@ -1538,12 +1524,12 @@ Missing character: There is no ; in font nullfont!
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
  [24]
-Overfull \hbox (4.30566pt too wide) in paragraph at lines 1108--1109
+Overfull \hbox (4.30566pt too wide) in paragraph at lines 1113--1114
 [][] 
  []
 
 
-Overfull \hbox (76.77971pt too wide) in paragraph at lines 1122--1123
+Overfull \hbox (76.77971pt too wide) in paragraph at lines 1127--1128
 [][] 
  []
 
@@ -2097,7 +2083,14 @@ Chapter 5.
 
 
 
-] [38] [39] (./final-report.aux)
+]
+Overfull \hbox (0.64941pt too wide) in paragraph at lines 1398--1398
+[]\T1/cmr/m/n/12 (-20) Colin Fa-hey. \T1/cmr/m/it/12 (-20) Tetris AI\T1/cmr/m/n
+/12 (-20) . [ac-cessed Jun. 23, 2024]. 2003. \T1/cmr/m/sc/12 (-20) url\T1/cmr/m
+/n/12 (-20) : []$\T1/cmtt/m/n/12 http : / / www . colinfahey .
+ []
+
+[38] [39] (./final-report.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
@@ -2113,13 +2106,13 @@ Package logreq Info: Writing requests to 'final-report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40412 strings out of 474504
- 794213 string characters out of 5756725
+ 40346 strings out of 474504
+ 792818 string characters out of 5756725
  2020043 words of memory out of 5000000
- 61351 multiletter control sequences out of 15000+600000
- 597788 words of font info for 221 fonts, out of 8000000 for 9000
+ 61303 multiletter control sequences out of 15000+600000
+ 597363 words of font info for 216 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,12n,131p,2296b,1517s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,12n,131p,2296b,1526s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-di
@@ -2141,10 +2134,10 @@ f-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fon
 ts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/p
 ublic/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-s
 uper/sftt1200.pfb>
-Output written on final-report.pdf (45 pages, 620963 bytes).
+Output written on final-report.pdf (45 pages, 621991 bytes).
 PDF statistics:
- 921 PDF objects out of 1000 (max. 8388607)
- 812 compressed objects within 9 object streams
- 219 named destinations out of 1000 (max. 500000)
+ 924 PDF objects out of 1000 (max. 8388607)
+ 815 compressed objects within 9 object streams
+ 217 named destinations out of 1000 (max. 500000)
  50018 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -10,7 +10,7 @@ from bot import Bot
 from garbagesystem import GarbageSystem
 
 class GameManager():
-  def __init__(self, left_name: str = "L", right_name: str = "R"):
+  def __init__(self, renderer:bool = True, left_weights: list = None, right_weights:list = None):
     if SEED:
       seed = SEED
     else:
@@ -19,14 +19,16 @@ class GameManager():
     self.bag = SevenBag(seed)
     self.garbage_system = GarbageSystem(seed)
 
-    self.left_board = GameController(left_name, self.bag, self.garbage_system)
-    self.right_board = GameController(right_name, self.bag, self.garbage_system)
+    self.left_board = GameController(self.bag, self.garbage_system)
+    self.right_board = GameController(self.bag, self.garbage_system)
     if PLAYER:
       self.input_handler = InputHandler(self.left_board)
     else:
-      self.left_bot = Bot(self.left_board)
-    self.right_bot = Bot(self.right_board)
-    self.renderer = Renderer(self.left_board, self.right_board)
+      self.left_bot = Bot(self.left_board, left_weights)
+    self.right_bot = Bot(self.right_board, right_weights)
+    self.use_renderer = renderer
+    if renderer:
+      self.renderer = Renderer(self.left_board, self.right_board)
     self.clock = pygame.time.Clock()
     self.current_player = "left"
 
@@ -43,13 +45,16 @@ class GameManager():
 
   def run(self) -> GameController:
     running = True
+    
     while running:
       try:
         if PLAYER:
           self.clock.tick(120)  # Keep smooth rendering, but handle turns separately
         else:
-          self.clock.tick(10)  # Keep smooth rendering, but handle turns separately
-        self.renderer.render()  # Render the boards
+          self.clock.tick(120)  # Keep smooth rendering, but handle turns separately
+        
+        if self.use_renderer:
+          self.renderer.render()  # Render the boards
 
         if not self.left_board.has_lost and not self.right_board.has_lost:
           if PLAYER:
@@ -75,18 +80,23 @@ class GameManager():
           pygame.time.wait(1000)
           break
 
-        for event in pygame.event.get():
-          if event.type == pygame.QUIT:
-            pygame.quit()
-            exit()  # Exit the game
-      except:
+        if self.use_renderer:
+          for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+              pygame.quit()
+              exit()  # Exit the game
+      except Exception as e:
+        print(e)
         running = False
+
+    winner = 0 if self.right_board.has_lost else 1
     
-    return self.left_board if self.right_board.has_lost else self.right_board
+    return [winner, self.left_board.total_attack/self.left_board.tetrominos_placed, self.right_board.total_attack/self.right_board.tetrominos_placed]
       
       
 
 if __name__ == "__main__":
   pygame.init()
-  gm = GameManager()
-  gm.run()
+  for i in range(45):
+    gm = GameManager(False)
+    print(gm.run())

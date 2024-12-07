@@ -10,7 +10,12 @@
 \usepackage{pdfpages}
 \titleformat{\chapter}[hang]{\huge\bfseries}{\thechapter}{20pt}{\vspace{0.5em}}
 \titlespacing*{\chapter}{0pt}{-3em}{1.1\parskip}
-\usepackage[backend=biber, style=ieee]{biblatex}
+\usepackage[
+style=numeric-comp, 
+backend=biber,
+sorting=none,
+hyperref=true
+]{biblatex}
 \usepackage{parskip}
 \setlength{\parindent}{1cm}
 \setlength{\parskip}{.5\baselineskip}
@@ -54,10 +59,10 @@
 		\vspace{.5cm}
 		
 		\begin{center}
-			\textbf{\large CAPSTONE PROJECT 1} \\
-			\textbf{\large Planning Document} \\
+			\textbf{\large CAPSTONE PROJECT 2} \\
+			\textbf{\large Final Report} \\
 			\vspace{1cm}
-			\textbf{\large Playing Versus Tetris with Nature-inspired Optimisation Algorithms}
+			\textbf{\large Playing Versus Tetris with a Genetic Algorithm}
 			
 			\vspace{1cm}
 			
@@ -78,12 +83,12 @@
 			
 			\vspace{1cm}
 			
-			\normalsize Semester: April 2024 \\
-			Date: 1 August 2024
+			\normalsize Semester: September 2024 \\
+			Date: 13 December 2024
 			
 			\vfill
 			
-			Department of Computing and Information Systems\\
+			Department of Smart Computing and Cyber Resilience (DSCCR)\\
 			School of Engineering and Technology\\
 			Sunway University
 		\end{center}
@@ -143,7 +148,7 @@
 	\end{figure}
 	
 	% Tetris and computer science
-	Since its release, mathematicians and computer scientists have been intrigued by the game of Tetris, leading to a diverse array of research endeavours exploring the various facets of the game, including its computational complexity \cite{tetris-is-hard-even-to-approx}, and its possibility of being won \cite{can-you-win-at-tetris} \cite{how-to-lose-at-tetris}.
+	Since its release, mathematicians and computer scientists have been intrigued by the game of Tetris, leading to a diverse array of research endeavours exploring the various facets of the game, including its computational complexity \cite{tetris-is-hard-even-to-approx}, and its possibility of being won \cite{can-you-win-at-tetris,how-to-lose-at-tetris}.
 	
 	\section{Motivation}
 	
@@ -234,7 +239,7 @@
 	\begin{enumerate}
 		\item Formulate the problem of Versus Tetris for game AI.
 		\item Develop a playable game of Tetris that simulates gameplay for training and emulation.
-		\item Evaluate suitability of different nature-inspired optimisation algorithms to optimise gameplay strategies in Versus Tetris.
+		\item Utilise a genetic algorithm to optimise gameplay strategies in Versus Tetris.
 	\end{enumerate}
 	
 	\section{Project Scope}
@@ -317,7 +322,7 @@
 	
 	It is important to note that even though \citeauthor{tetris-is-hard-even-to-approx}'s \cite{tetris-is-hard-even-to-approx} proof is based on a variant of Tetris that is quite different from Versus Tetris, the difficulty of Versus Tetris can be implied from the proof. Versus Tetris introduces additional gameplay factors, such as the competitive aspect where players can send ``garbage'' lines to their opponents, adding layers of complexity. As such, Versus Tetris is arguably more difficult than its classic variant, or  \citeauthor{tetris-is-hard-even-to-approx}'s variant \cite{tetris-is-hard-even-to-approx}.
 	
-	Given the NP-completeness of Tetris \cite{tetris-is-hard-even-to-approx} \cite{tetris-o1-np-hard}, it is evident that traditional deterministic algorithmic approaches would face significant challenges in efficiently playing the game \cite{cc:conceptual-perspective}. The NP-completeness of the game implies that obtaining exact solutions are computationally intractable within a reasonable time frame.
+	Given the NP-completeness of Tetris \cite{tetris-is-hard-even-to-approx, tetris-o1-np-hard}, it is evident that traditional deterministic algorithmic approaches would face significant challenges in efficiently playing the game \cite{cc:conceptual-perspective}. The NP-completeness of the game implies that obtaining exact solutions are computationally intractable within a reasonable time frame.
 	
 	To address this, we may relax the requirements for a solution. This can be done by either broadening the set of acceptable solutions or focusing on average-case scenarios instead of worst-case scenarios \cite{cc:conceptual-perspective}. This shift in focus allows the use of more practical, non-traditional algorithms that provide acceptable solutions within a reasonable time, even if they are not optimal. 
 	
@@ -1082,7 +1087,7 @@
 	
 	\subsubsection{Perfect Clears}
 	
-	A perfect clear occurs when a player clears the matrix completely, leaving no remnants of existing Tetrominos behind. It can be difficult to perform perfect clears in Versus Tetris, because if there is an odd number of garbage sent from the opponent, a perfect clear becomes completely impossible. Because of this, a perfect clear has the highest attack in a single move, sending 10 lines of garbage to the opponent.
+	A perfect clear occurs when a player clears the matrix completely, leaving no remnants of existing Tetrominos behind. It can be difficult to perform perfect clears in Versus Tetris, because if there is an odd number of garbage sent from the opponent, a perfect clear becomes completely impossible. Because of this, a perfect clear has the highest attack in a single move, sending 6 lines of garbage to the opponent.
 	
 	\subsubsection{Stored attack}
 	
@@ -1128,14 +1133,9 @@
 	
 	\subsection{Gravity}
 	
-	In modern Versus Tetris games, gravity starts slow but slowly increases in order to force the players to make decisions quicker. However, in our implementation, we are more interested in the quality of the decisions being made, not the speed at which it is being made. Therefore, in this implementation, gravity will not be a factor. There are two ways that this might be implemented:
+	In modern Versus Tetris games, gravity starts slow but slowly increases in order to force the players to make decisions quicker. However, in our implementation, we are more interested in the quality of the decisions being made, not the speed at which it is being made. Therefore, in this implementation, gravity will not be a factor. 
 	
-	\begin{enumerate}
-		\item \textbf{Zero Gravity}: The player has to manually move pieces down with a key, and manually place a piece with another key.
-		\item \textbf{Legal Placement Selection}: Instead of requiring the players to manually move pieces, we give the player several options for a piece to be placed, and check for legality before giving the options to the player.
-	\end{enumerate}
-	
-	When the game is outputted, the speed of the algorithms will follow the pace of the opposing player, similar to a turn-based game like chess. The player will play a move, and the algorithm will play a move. With no gravity, the player will be able to take as long as they want to plan ahead.
+	This was implemented by disabling gravity entirely, forcing players and the bot to have to manually input ``soft drop'' until they reach their desired height. When the game is played, the speed of the algorithms will follow the pace of the opposing player, similar to a turn-based game like chess. The player will play a move, and the algorithm will play a move. With no gravity, the player will be able to take as long as they want to plan ahead.
 	
 	\subsection{Other Features}
 	

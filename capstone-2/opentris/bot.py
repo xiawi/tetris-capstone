@@ -17,15 +17,29 @@ class Bot:
     # self.hole_weight = -0.6483074206751366
     # self.height_weight = -0.9550269397680944
     # self.line_clear_weight = 0.7139929472467322
-    self.hole_weight = random.uniform(-1,0)
-    self.height_weight = random.uniform(-1,0)
-    self.line_clear_weight = random.uniform(0,1)
-    self.column_transition_weight = random.uniform(-1,0)
-    self.attack_weight = random.uniform(0,1)
-    print(self.hole_weight, self.height_weight, self.line_clear_weight, self.attack_weight)
+    if not weight_vector:
+      self.height_weight = random.uniform(-1,1)
+      self.hole_weight = random.uniform(-1,1)
+      self.column_transition_weight = random.uniform(-1,1)
+      self.row_transition_weight = random.uniform(-1,1)
+      self.hole_depth_weight = random.uniform(-1,1)
+      self.cumulative_well_depth_weight = random.uniform(-1,1)
+      self.row_hole_weight = random.uniform(-1,1)
+      self.line_clear_weight = random.uniform(-1,1)
+      self.attack_weight = random.uniform(-1,1)
+    else:
+      self.height_weight = weight_vector[0]
+      self.hole_weight = weight_vector[1]
+      self.column_transition_weight = weight_vector[2]
+      self.row_transition_weight = weight_vector[3]
+      self.hole_depth_weight = weight_vector[4]
+      self.cumulative_well_depth_weight = weight_vector[5]
+      self.row_hole_weight = weight_vector[6]
+      self.line_clear_weight = weight_vector[7]
+      self.attack_weight = weight_vector[8]
+    # print(self.height_weight, self.hole_weight, self.column_transition_weight, self.row_transition_weight, self.hole_depth_weight, self.cumulative_well_depth_weight, self.row_hole_weight, self.line_clear_weight, self.attack_weight)
   
   def takeAction(self): # this needs to end in a piece placement
-
     # for event in pygame.event.get():
     #   if event.type == pygame.QUIT:
     #     pygame.quit()
@@ -339,52 +353,122 @@ class Bot:
   
   def evaluatePlacement(self, matrix: Matrix, action_sequence, cleared_lines):
     # evaluation function
-    holes = self.getHoles(matrix)
     height = self.getHeight(matrix)
+    holes = self.getHoles(matrix)
+    column_transition = self.getColumnTransition(matrix)
+    row_transition = self.getRowTransition(matrix)
+    hole_depth = self.getHoleDepth(matrix)
+    cumulative_well_depth = self.getCumulativeWellDepth(matrix)
+    row_hole = self.getRowHoles(matrix)
     attack = self.getAttack(action_sequence, cleared_lines)
+    
+    
     # evaluation = self.hole_weight * holes + self.height_weight * height + self.line_clear_weight * cleared_lines + self.column_transition_weight * self.getColumnTransition(matrix)
-    evaluation = self.hole_weight * holes + self.height_weight * height + self.line_clear_weight * cleared_lines + self.attack_weight * attack + self.column_transition_weight * self.getColumnTransition(matrix)
+    evaluation = float(self.height_weight * height + 
+                  self.hole_weight * holes +
+                  self.column_transition_weight * column_transition +
+                  self.row_transition_weight * row_transition +
+                  self.hole_depth_weight * hole_depth +
+                  self.cumulative_well_depth_weight * cumulative_well_depth +
+                  self.row_hole_weight * row_hole +
+                  self.line_clear_weight * cleared_lines +
+                  self.attack_weight * attack
+      )
     # evaluation = - 20 * holes - height
     return evaluation
-
-  def getHoles(self, matrix: Matrix):
-    # TODO redo this part man please don't forget man
-    holes = 0
-    for x in range(MATRIX_WIDTH):
-      for y in range(1, MATRIX_HEIGHT):
-        if matrix.grid[y - 1][x]:
-          if matrix.grid[y][x] == 0:
-            holes += 1
-    return holes
             
   def getHeight(self, matrix):
     for i in range(MATRIX_HEIGHT):
       if any(matrix.grid[i]):
         return 22 - i
     return 0
+  
+  def getHoles(self, matrix: Matrix):
+    holes = 0
+    for x in range(MATRIX_WIDTH):
+      filled_encountered = False
+      for y in range(MATRIX_HEIGHT):
+        if matrix.grid[y][x]:
+          filled_encountered = True
+        elif filled_encountered and matrix.grid[y][x] == 0:
+          holes += 1
+          
+    return holes
 
   def getColumnTransition(self, matrix):
     column_transition = 0
-    prev_height = 0
+    matrix_copy = copy.deepcopy(matrix)
 
-    for i in range(MATRIX_HEIGHT):
-      if matrix.grid[i][0] != 0:
-        prev_height = 22 - i
-        break
-
-    for x in range(1, MATRIX_WIDTH):
+    for x in range(MATRIX_WIDTH):
       for y in range(MATRIX_HEIGHT):
-        if y == 21 and not matrix.grid[y][x]:
-          column_transition += prev_height
-          prev_height = 0
-
-        if matrix.grid[y][x]:
-          column_transition += abs(prev_height - (22 - y))
-          prev_height = 22 - y
-          break
-        
+        if matrix_copy.grid[y][x]:
+          matrix_copy.grid[y][x] = 1
     
+    for column in range(MATRIX_WIDTH):
+      for row in range(MATRIX_HEIGHT - 1):
+        if matrix_copy.grid[row][column] != matrix_copy.grid[row + 1][column]:
+          column_transition += 1
+          
     return column_transition
+  
+  def getRowTransition(self, matrix):
+    row_transition = 0
+    matrix_copy = copy.deepcopy(matrix)
+    
+    for x in range(MATRIX_WIDTH):
+      for y in range(MATRIX_HEIGHT):
+        if matrix_copy.grid[y][x]:
+          matrix_copy.grid[y][x] = 1
+    
+    for column in range(MATRIX_WIDTH - 1):
+      for row in range(MATRIX_HEIGHT):
+        if matrix_copy.grid[row][column] != matrix_copy.grid[row][column + 1]:
+          row_transition += 1
+          
+    return row_transition
+  
+  def getHoleDepth(self, matrix):
+    hole_depth = 0
+    
+    for x in range(MATRIX_WIDTH):
+      depth = 0
+      for y in range(MATRIX_HEIGHT):
+        if matrix.grid[y][x]:
+          depth += 1
+        elif matrix.grid[y][x] == 0 and depth > 0:
+          hole_depth += depth
+      
+    return hole_depth
+  
+  def getRowHoles(self, matrix):
+    row_holes = 0
+    
+    for y in range(MATRIX_HEIGHT):
+      has_filled_cell = any(matrix.grid[y][x] for x in range(MATRIX_WIDTH))
+      if has_filled_cell:
+        row_holes += sum(1 for x in range(MATRIX_WIDTH) if matrix.grid[y][x] == 0)
+    
+    return row_holes
+  
+  def getCumulativeWellDepth(self, matrix):
+    well_depth = 0
+    
+    for x in range(MATRIX_WIDTH):
+      for y in range(MATRIX_HEIGHT):
+        if matrix.grid[y][x] == 0:
+          # check if is well - if left and right sides are both filled, it is considered a well.
+          left_filled = (x == 0 or matrix.grid[y][x - 1])
+          right_filled = (x == MATRIX_WIDTH - 1 or matrix.grid[y][x + 1])
+          if left_filled and right_filled:
+            depth = 1
+            for k in range(y + 1, MATRIX_HEIGHT):
+              if matrix.grid[k][x]== 0:
+                depth += 1
+              else:
+                break
+            well_depth += 1
+    
+    return well_depth
   
   def getAttack(self, action_sequence, cleared_lines):
     action_copy = copy.deepcopy(action_sequence)
@@ -409,5 +493,6 @@ if __name__ == "__main__":
   # print(bot.getHoles(placements[9][0]))
   # for placement in placements:
     # print(bot.evaluatePlacement(placement[0], placement[2]))
-  for i in range(100):
+  for i in range(10):
     bot.takeAction()
+  col_trans_matrix = bot.getColumnTransition(gc.matrix)

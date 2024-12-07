@@ -8,8 +8,7 @@ from storedattack import StoredAttack
 from garbagesystem import GarbageSystem
 
 class GameController:
-  def __init__(self, name, bag: SevenBag, garbage_system: GarbageSystem) -> None:
-    self.name = name
+  def __init__(self, bag: SevenBag, garbage_system: GarbageSystem) -> None:
     self.matrix = Matrix()
     self.lookahead = Lookahead(bag)
     self.hold = Hold()

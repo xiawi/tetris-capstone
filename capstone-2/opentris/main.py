@@ -4,14 +4,14 @@ from gamemanager import GameManager
 
 def main():
   pygame.init()
-  game = GameManager("Left", "Right")
-  winner = game.run()
-  attack_efficiency = winner.total_attack/winner.tetrominos_placed
-  print(winner.name)
-  print(winner.total_attack)
-  print(winner.tetrominos_placed)
-  print(attack_efficiency)
-  return attack_efficiency
+  game = GameManager(True, 
+                     [-0.033834568682264365, -0.6996927987541205, 0.03844319078030968, -0.5395512344019757, -0.35100360599261304, 0.16963463426129363, 0.037983126530018334, -0.2135303901764551, 0.4914735089376845], 
+                     [-0.033834568682264365, -0.6996927987541205, 0.03844319078030968, -0.5395512344019757, -0.35100360599261304, 0.2326351448343416, 0.012208799120306695, -0.2135303901764551, 0.4914735089376845])
+  results = game.run()
+  print(results)
+
+def simulateGame():
+  pass
 
 if __name__ == "__main__":
   main()
