@@ -13,17 +13,16 @@ class GameManager():
     if SEED:
       seed = SEED
     else:
-      seed = random.random()
+      seed = 2
 
     self.bag = SevenBag(seed)
     self.garbage_system = GarbageSystem(seed)
 
-    self.board = GameController("Bot", self.bag, self.garbage_system)
+    self.board = GameController(self.bag, self.garbage_system)
     for x in range(10):
-      self.board.matrix.grid[21][x] = 1 if x < 7 else 0
-      self.board.matrix.grid[20][x] = 1 if x < 9 else 0
-      self.board.matrix.grid[19][x] = 1 if x < 9 else 0
-    self.bot = Bot(self.board)
+      self.board.matrix.grid[21][x] = 1 if x < 4 else 0
+      self.board.matrix.grid[20][x] = 1 if x < 5 else 0
+    self.bot = Bot(self.board, [0, -1, 0, 0, 0, 0, 0, 0, 0, 0])
     self.renderer = Renderer(self.board)
     self.clock = pygame.time.Clock()
 
@@ -31,7 +30,7 @@ class GameManager():
     running = True
     while running:
       try:
-        self.clock.tick(1)  # Keep smooth renderingy
+        self.clock.tick(1)  # Keep smooth rendering
         self.renderer.render()  # Render the board
         self.bot.takeAction()
 

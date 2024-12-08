@@ -75,7 +75,7 @@ class GameController:
     if lines_cleared:
       attack = self.calculateAttack(lines_cleared, self.most_recent_move) # if lines_cleared > 0: make sure receiveAttack does not happen
       self.most_recent_attack = self.stored_attack.performAttack(attack)
-      self.total_attack += self.most_recent_attack
+      self.total_attack += attack
     elif self.stored_attack.hasStoredAttack():
       garbage, hole = self.stored_attack.receiveAttack()
       self.matrix.receiveAttack(garbage, hole)
@@ -88,11 +88,11 @@ class GameController:
   def storeAttack(self, lines):
     self.stored_attack.storeAttack(lines)
 
-  def calculateAttack(self, lines_cleared, most_recent_move): # All Garbage Logic + Line Clearing for PC check
+  def calculateAttack(self, lines_cleared, most_recent_move, just_calculating: bool = False): # All Garbage Logic + Line Clearing for PC check
     garbage = 0
 
     if lines_cleared > 0:
-      self.combo += 1
+      self.combo += 1 if not just_calculating else 0
 
       # PC check
       if self.isPerfectClear(lines_cleared):
@@ -112,9 +112,9 @@ class GameController:
       
       # B2B
       if self.isTspin(most_recent_move) or lines_cleared == 4:
-        self.b2b += 1
+        self.b2b += 1 if not just_calculating else 0
       else: 
-        self.b2b = -1 # if line clear is not a tetris or a type of tspin, reset b2b counter 
+        self.b2b = -1 if not just_calculating else 0# if line clear is not a tetris or a type of tspin, reset b2b counter 
 
       # general line clear logic
       if self.isTspin(most_recent_move) and not self.isMini():

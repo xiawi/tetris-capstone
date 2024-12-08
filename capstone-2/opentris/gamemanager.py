@@ -29,7 +29,7 @@ class GameManager():
     self.use_renderer = renderer
     if renderer:
       self.renderer = Renderer(self.left_board, self.right_board)
-    self.clock = pygame.time.Clock()
+      self.clock = pygame.time.Clock()
     self.current_player = "left"
 
   def switchTurns(self):
@@ -48,15 +48,15 @@ class GameManager():
     
     while running:
       try:
-        if PLAYER:
-          self.clock.tick(120)  # Keep smooth rendering, but handle turns separately
-        else:
-          self.clock.tick(120)  # Keep smooth rendering, but handle turns separately
         
         if self.use_renderer:
+          if PLAYER:
+            self.clock.tick(120)  # Keep smooth rendering, but handle turns separately
+          else:
+            self.clock.tick(10)  # Keep smooth rendering, but handle turns separately
           self.renderer.render()  # Render the boards
 
-        if not self.left_board.has_lost and not self.right_board.has_lost:
+        if not self.left_board.has_lost and not self.right_board.has_lost and self.right_board.tetrominos_placed < 1000000000000:
           if PLAYER:
             if self.current_player == 'left':
               self.input_handler.handleInput()  # Handle user input for left board

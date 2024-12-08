@@ -27,6 +27,7 @@ class Bot:
       self.row_hole_weight = random.uniform(-1,1)
       self.line_clear_weight = random.uniform(-1,1)
       self.attack_weight = random.uniform(-1,1)
+      self.b2b_weight = random.uniform(-1,1)
     else:
       self.height_weight = weight_vector[0]
       self.hole_weight = weight_vector[1]
@@ -37,6 +38,7 @@ class Bot:
       self.row_hole_weight = weight_vector[6]
       self.line_clear_weight = weight_vector[7]
       self.attack_weight = weight_vector[8]
+      self.b2b_weight = weight_vector[9]
     # print(self.height_weight, self.hole_weight, self.column_transition_weight, self.row_transition_weight, self.hole_depth_weight, self.cumulative_well_depth_weight, self.row_hole_weight, self.line_clear_weight, self.attack_weight)
   
   def takeAction(self): # this needs to end in a piece placement
@@ -132,7 +134,7 @@ class Bot:
           matrices.append(new_matrix)
           action_sequence.append(actions)
           line_clears.append(lines)
-          held_piece.append(None)
+          held_piece.append(self.me.hold.held_piece)
       
       for i in range(1, len(landing_states)):
         if landing_states[i][1] - landing_states[i - 1][1] >= 1:
@@ -175,9 +177,8 @@ class Bot:
             tetromino_copy.current_rotation = (tetromino_copy.current_rotation - 1) % 4
           case "RR":
             tetromino_copy.current_rotation = (tetromino_copy.current_rotation + 1) % 4   
-            
       
-      while not matrix_copy.checkCollision(tetromino_copy.x, tetromino_copy.y + 1, tetromino_copy.getShape()):
+      while not matrix_copy.checkCollision(tetromino_copy.x, tetromino_copy.y - 1, tetromino_copy.getShape()):
         tetromino_copy.y += 1
         actions.append("SD")
         
@@ -205,6 +206,7 @@ class Bot:
               matrices.append(tucked_matrix)
               action_sequence.append(tucked_actions)
               line_clears.append(lines)
+              held_piece.append(self.me.hold.held_piece)
     
     post_spin_matrices = []
     post_spin_action_sequence = []
@@ -258,7 +260,7 @@ class Bot:
           post_spin_matrices.append(spun_matrix)
           post_spin_action_sequence.append(spun_actions)
           post_spin_line_clears.append(lines_cleared)
-          held_piece.append(None)
+          held_piece.append(self.me.hold.held_piece)
           # print(1)
         else:
           # print(spun_actions, 0)
@@ -285,7 +287,7 @@ class Bot:
           post_spin_matrices.append(spun_matrix)
           post_spin_action_sequence.append(spun_actions)
           post_spin_line_clears.append(lines_cleared)
-          held_piece.append(None)
+          held_piece.append(self.me.hold.held_piece)
         else:
           break
     
@@ -361,7 +363,7 @@ class Bot:
     cumulative_well_depth = self.getCumulativeWellDepth(matrix)
     row_hole = self.getRowHoles(matrix)
     attack = self.getAttack(action_sequence, cleared_lines)
-    
+    b2b = self.getB2b(action_sequence, cleared_lines)
     
     # evaluation = self.hole_weight * holes + self.height_weight * height + self.line_clear_weight * cleared_lines + self.column_transition_weight * self.getColumnTransition(matrix)
     evaluation = float(self.height_weight * height + 
@@ -372,7 +374,8 @@ class Bot:
                   self.cumulative_well_depth_weight * cumulative_well_depth +
                   self.row_hole_weight * row_hole +
                   self.line_clear_weight * cleared_lines +
-                  self.attack_weight * attack
+                  self.attack_weight * attack +
+                  self.b2b_weight * b2b
       )
     # evaluation = - 20 * holes - height
     return evaluation
@@ -477,22 +480,37 @@ class Bot:
       most_recent_move = "rotate"
     else:
       most_recent_move = "move"
-    attack = self.me.calculateAttack(cleared_lines, most_recent_move)
+    attack = self.me.calculateAttack(cleared_lines, most_recent_move, True)
     return attack
   
+  def getB2b(self, action_sequence, cleared_lines):
+    b2b = self.me.b2b
+    action_copy = copy.deepcopy(action_sequence)
+    action_copy.pop()
+    if len(action_copy) != 0 and (action_copy[-1] == "LR" or action_copy[-1] == "RR"):
+      most_recent_move = "rotate"
+    else:
+      most_recent_move = "move"
+    if self.me.isTspin(most_recent_move) or cleared_lines == 4:
+      b2b += 1
+    else:
+      b2b = 0
+    
+    return b2b
+  
 if __name__ == "__main__":
-  gc = GameController("bot", SevenBag(1), GarbageSystem(1))
+  gc = GameController(SevenBag(1), GarbageSystem(1))
   bot = Bot(gc)
   for x in range(10):
-    gc.matrix.grid[21][x] = 1 if x != 2 else 0
-    gc.matrix.grid[20][x] = 1 if x < 1 or x > 3 else 0
-    gc.matrix.grid[19][x] = 1 if x < 2 else 0
+    gc.matrix.grid[21][x] = 1 if x < 4 else 0
+    gc.matrix.grid[20][x] = 1 if x < 5 else 0
+
   # bot.takeAction()
-  placements = bot.generateLegalPlacements(gc.active_piece, gc.matrix, True)
+  placements = bot.generateLegalPlacements(Tetromino("T", 5, 0), gc.matrix, True)
   # print(bot.evaluatePlacement(placements[9][0], placements[9][2]))
   # print(bot.getHoles(placements[9][0]))
   # for placement in placements:
     # print(bot.evaluatePlacement(placement[0], placement[2]))
-  for i in range(10):
-    bot.takeAction()
-  col_trans_matrix = bot.getColumnTransition(gc.matrix)
+  # for i in range(10):
+  #   bot.takeAction()
+  # col_trans_matrix = bot.getColumnTransition(gc.matrix)

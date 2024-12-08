@@ -99,10 +99,10 @@ class Renderer:
     pass
 
   def drawBoard(self, game_controller: GameController, x: int):
-    self.drawHold(game_controller, x)
+    # self.drawHold(game_controller, x)
     self.drawGrid(game_controller, x)
     self.drawActivePiece(game_controller, x)
-    self.drawLookahead(game_controller, x)
+    # self.drawLookahead(game_controller, x)
     self.drawGhost(game_controller, x)
     pass
 
