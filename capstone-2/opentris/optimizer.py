@@ -70,21 +70,6 @@ class GAOptimizer:
     print("\nfitness calculated") 
     return fitness
 
-  # def selectParents(self, population, fitnesses):
-  #   parent_pair = []
-  #   cumulative_fitness = [0] * POPULATION_SIZE
-  #   cumulative_fitness[0] = fitnesses[0]
-  #   for i in range(1, POPULATION_SIZE):
-  #     cumulative_fitness[i] = cumulative_fitness[i - 1] + fitnesses[i]
-  
-  #   for i in range(2):
-  #     rand = random.uniform(0, cumulative_fitness[-1])
-  #     for j in range(len(cumulative_fitness)):
-  #         if rand <= cumulative_fitness[j]:
-  #           parent_pair.append(population[j])
-  #           break
-  #   return parent_pair
-  
   def selectParents(self, population, fitnesses, iteration):
     # Pair fitnesses with their indices and sort by fitness
     fitness_with_indices = sorted((f, i) for i, f in enumerate(fitnesses))
