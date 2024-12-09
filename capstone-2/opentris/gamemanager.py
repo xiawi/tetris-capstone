@@ -91,7 +91,7 @@ class GameManager():
 
     winner = 0 if self.right_board.has_lost else 1
     
-    return [winner, self.left_board.total_attack/self.left_board.tetrominos_placed, self.right_board.total_attack/self.right_board.tetrominos_placed]
+    return [winner, self.left_board.total_attack/self.left_board.tetrominos_placed, self.right_board.total_attack/self.right_board.tetrominos_placed, self.left_board.tetrominos_placed, self.right_board.tetrominos_placed]
       
       
 

@@ -502,11 +502,11 @@ if __name__ == "__main__":
   gc = GameController(SevenBag(1), GarbageSystem(1))
   bot = Bot(gc)
   for x in range(10):
-    gc.matrix.grid[21][x] = 1 if x < 4 else 0
-    gc.matrix.grid[20][x] = 1 if x < 5 else 0
+    gc.matrix.grid[21][x] = 1 if x < 4 or x >= 6 else 0
+    gc.matrix.grid[20][x] = 1 if x < 5 or x >= 7 else 0
 
   # bot.takeAction()
-  placements = bot.generateLegalPlacements(Tetromino("T", 5, 0), gc.matrix, True)
+  placements = bot.generateLegalPlacements(Tetromino("S", 5, 0), gc.matrix, True)
   # print(bot.evaluatePlacement(placements[9][0], placements[9][2]))
   # print(bot.getHoles(placements[9][0]))
   # for placement in placements:

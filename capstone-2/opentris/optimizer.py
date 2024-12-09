@@ -7,14 +7,14 @@ from concurrent.futures import ThreadPoolExecutor
 
 WEIGHT_VECTOR_SIZE = 10 # focusing on 10 numerical features, therefore 10 weights in the vector
 POPULATION_SIZE = 6
-MUTATION_RATE = 0.1
-MAX_ITER = 10000
+MUTATION_RATE = 0.3
+MAX_ITER = 100
 MIN_AVERAGE_DIFFERENCE = 0.01
 
 class GAOptimizer:
   def __init__(self) -> None:
-    self.population_log_file = open("./logs/08_12_06_2_indivs_population_log.txt", "w", buffering=1)
-    self.best_individual_log_file = open("./logs/08_12_06_2_indivs_best_individual_log.txt", "w", buffering=1)
+    self.population_log_file = open("./logs/09_12_06_attack_survival_wr_high_mutation_100_iter_fitness_indivs_population_log.txt", "w", buffering=1)
+    self.best_individual_log_file = open("./logs/09_12_06_attack_survival_wr_high_mutation_100_iter_fitness_indivs_best_individual_log.txt", "w", buffering=1)
   
   def initializePopulation(self):
     population = []
@@ -27,16 +27,17 @@ class GAOptimizer:
 
   def calculateFitnesses(self, population):
     fitness = [0] * POPULATION_SIZE
-    # individual_wins = [[0 for _ in range(POPULATION_SIZE)] for _ in range(POPULATION_SIZE)]
+    individual_wins = [[0 for _ in range(POPULATION_SIZE)] for _ in range(POPULATION_SIZE)]
     individual_attacks = [[0 for _ in range(POPULATION_SIZE)] for _ in range(POPULATION_SIZE)]
+    pieces_placed = [[0 for _ in range(POPULATION_SIZE)] for _ in range(POPULATION_SIZE)]
 
     # Function to simulate a single match
     def simulate_match(i, j):
       print(".", end="", flush=True)  # Print a dot for each game
       game_manager = GameManager(False, population[i], population[j])
-      results = game_manager.run()  # results = (winner, attack1, attack2)
+      results = game_manager.run()  # results = (winner, attack1, attack2, placed1, placed2)
       print("!", end="", flush=True)
-      return i, j, results[0], results[1], results[2]
+      return i, j, results[0], results[1], results[2], results[3], results[4]
 
     # Create tasks for matches
     matches = [(i, j) for i in range(POPULATION_SIZE - 1) for j in range(i + 1, POPULATION_SIZE)]
@@ -46,21 +47,25 @@ class GAOptimizer:
       results = list(executor.map(lambda match: simulate_match(*match), matches))
 
     # Process match results
-    for i, j, winner, attack_by_i, attack_by_j in results:
-      # if winner == 0:
-      #   individual_wins[i][j] = 1
-      # else:
-      #   individual_wins[j][i] = 1
+    for i, j, winner, attack_by_i, attack_by_j, placed_by_i, placed_by_j in results:
+      if winner == 0:
+        individual_wins[i][j] = 1
+      else:
+        individual_wins[j][i] = 1
       individual_attacks[i][j] = attack_by_i
       individual_attacks[j][i] = attack_by_j
+      pieces_placed[i][j] = placed_by_i
+      pieces_placed[j][i] = placed_by_j
 
     # Calculate fitness
     for i in range(POPULATION_SIZE):
-      # total_wins = sum(individual_wins[i])
+      total_wins = sum(individual_wins[i])
       total_attack_efficiency = sum(individual_attacks[i])
-      # winrate = total_wins / (POPULATION_SIZE - 1)  # Matches played
+      total_pieces_placed = sum(pieces_placed[i])
+      winrate = total_wins / (POPULATION_SIZE - 1)  # Matches played
       average_efficiency = total_attack_efficiency / (POPULATION_SIZE - 1)
-      fitness[i] = average_efficiency
+      average_pieces_placed = total_pieces_placed / (POPULATION_SIZE - 1)
+      fitness[i] = average_efficiency + 0.01 * average_pieces_placed + winrate
 
     print("\nfitness calculated") 
     return fitness
@@ -80,7 +85,7 @@ class GAOptimizer:
   #           break
   #   return parent_pair
   
-  def selectParents(self, population, fitnesses):
+  def selectParents(self, population, fitnesses, iteration):
     # Pair fitnesses with their indices and sort by fitness
     fitness_with_indices = sorted((f, i) for i, f in enumerate(fitnesses))
     
@@ -92,11 +97,17 @@ class GAOptimizer:
         current_rank = i + 1  # Increment rank only if fitness differs
       ranks[fitness_with_indices[i][1]] = current_rank
 
-    # Calculate selection probabilities using ranks
+    # Adjust selection probabilities dynamically based on iteration
     total_rank_sum = sum(ranks)
-    selection_probs = [rank / total_rank_sum for rank in ranks]
+    selection_probs = [
+      (rank / total_rank_sum) ** (1 + iteration / MAX_ITER) for rank in ranks
+    ]
 
-    # Use roulette-wheel selection based on ranks
+    # Normalize probabilities
+    total_prob_sum = sum(selection_probs)
+    selection_probs = [prob / total_prob_sum for prob in selection_probs]
+
+    # Use roulette-wheel selection based on adjusted probabilities
     parent_pair = []
     for _ in range(2):  # Select two parents
       rand = random.uniform(0, 1)
@@ -108,6 +119,7 @@ class GAOptimizer:
           break
 
     return parent_pair
+
 
 
   
@@ -124,16 +136,18 @@ class GAOptimizer:
 
     return [child1, child2]
   
-  def mutate(self, individual):
+  def mutate(self, individual, iteration):
+    # Linearly decrease mutation rate based on iteration
+    dynamic_mutation_rate = MUTATION_RATE * (1 - iteration / MAX_ITER)
+    
     for i in range(len(individual)):
       rand = random.random()
-      if rand < MUTATION_RATE:
-        individual[i] += random.uniform(-0.1, 0.1)
-        if individual[i] > 1:
-          individual[i] = 1
-        elif individual[i] < -1:
-          individual[i] = -1
+      if rand < dynamic_mutation_rate:
+        individual[i] += random.uniform(-.5, .5)
+        # Clamp values to [-1, 1]
+        individual[i] = max(-1, min(1, individual[i]))
     return individual
+
   
   def findAverageDifferences(self, population):
     average_differences = []
@@ -173,10 +187,10 @@ class GAOptimizer:
 
       new_generation = []
       for i in range(int(POPULATION_SIZE/2)):
-        parents = self.selectParents(self.population, self.fitnesses)
+        parents = self.selectParents(self.population, self.fitnesses, curr_iter)
         offspring = self.crossover(parents)
         new_generation.extend(offspring)
-      mutated = [self.mutate(offspring) for offspring in new_generation]
+      mutated = [self.mutate(offspring, curr_iter) for offspring in new_generation]
       self.population = mutated
       self.fitnesses = self.calculateFitnesses(self.population)
    
@@ -187,7 +201,7 @@ class GAOptimizer:
 
     max_fitness = max(self.fitnesses)
     best_individual = self.population[self.fitnesses.index(max_fitness)]
-
+    curr_iter += 1
     self.logPopulation(self.population, self.fitnesses, curr_iter)
     self.logBestIndividual(best_individual, max_fitness, curr_iter)
   

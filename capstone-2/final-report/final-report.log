@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  6 DEC 2024 14:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  9 DEC 2024 12:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1472,6 +1472,10 @@ Package microtype Info: Loading generic protrusion settings for font family
  [15] [16] [17]
 Chapter 3.
 
+LaTeX Warning: Reference `sec:sim-building' on page 18 undefined on input line 
+613.
+
+
 Overfull \hbox (11.40594pt too wide) in paragraph at lines 672--673
 [][] 
  []
@@ -1543,235 +1547,235 @@ Chapter 4.
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Underfull \hbox (badness 1242) in paragraph at lines 1308--1308
+Underfull \hbox (badness 1242) in paragraph at lines 1309--1309
 []\T1/cmr/m/n/12 (+20) Write a com-pre-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) lem state-ment,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) aim, ob-jec-tives
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 []\T1/cmr/m/n/12 (-3) Misunderstanding
  []
 
 
-Underfull \hbox (badness 2495) in paragraph at lines 1308--1308
+Underfull \hbox (badness 2495) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) proaches to the
  []
 
 
-Underfull \hbox (badness 2698) in paragraph at lines 1308--1308
+Underfull \hbox (badness 2698) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) lit-er-a-ture re-view
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 []\T1/cmr/m/n/12 (+20) Lack of un-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) der-stand-ing of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) con-cepts, mis-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) un-der-stand-ing
  []
 
 
-Underfull \hbox (badness 1803) in paragraph at lines 1308--1308
+Underfull \hbox (badness 1803) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) cov-ers all bases,
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 1308--1308
+Underfull \hbox (badness 1137) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) tion and eval-u-a-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 []\T1/cmr/m/n/12 (+20) A well-defined
  []
 
 
-Underfull \hbox (badness 4981) in paragraph at lines 1308--1308
+Underfull \hbox (badness 4981) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) na-tion of rules,
  []
 
 
-Underfull \hbox (badness 1142) in paragraph at lines 1308--1308
+Underfull \hbox (badness 1142) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) ing prob-lem for-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 []\T1/cmr/m/n/12 (+20) Create a work
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) chart sum-maris-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) ing what has
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) plan-ning phase
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) chart for the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) im-ple-men-ta-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 []\T1/cmr/m/n/12 (+20) A well-defined
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 1308--1308
+Underfull \hbox (badness 3601) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) work plan with
  []
 
 > Step: build the whole table.
 
-Underfull \hbox (badness 1242) in paragraph at lines 1308--1308
+Underfull \hbox (badness 1242) in paragraph at lines 1309--1309
 []\T1/cmr/m/n/12 (+20) Write a com-pre-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) lem state-ment,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) aim, ob-jec-tives
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 []\T1/cmr/m/n/12 (-3) Misunderstanding
  []
 
 
-Underfull \hbox (badness 2495) in paragraph at lines 1308--1308
+Underfull \hbox (badness 2495) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) proaches to the
  []
 
 
-Underfull \hbox (badness 2698) in paragraph at lines 1308--1308
+Underfull \hbox (badness 2698) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) lit-er-a-ture re-view
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 []\T1/cmr/m/n/12 (+20) Lack of un-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) der-stand-ing of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) con-cepts, mis-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) un-der-stand-ing
  []
 
 [31
 
 ]
-Underfull \hbox (badness 1803) in paragraph at lines 1308--1308
+Underfull \hbox (badness 1803) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) cov-ers all bases,
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 1308--1308
+Underfull \hbox (badness 1137) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) tion and eval-u-a-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 []\T1/cmr/m/n/12 (+20) A well-defined
  []
 
 
-Underfull \hbox (badness 4981) in paragraph at lines 1308--1308
+Underfull \hbox (badness 4981) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) na-tion of rules,
  []
 
 
-Underfull \hbox (badness 1142) in paragraph at lines 1308--1308
+Underfull \hbox (badness 1142) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) ing prob-lem for-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 []\T1/cmr/m/n/12 (+20) Create a work
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) chart sum-maris-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) ing what has
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) plan-ning phase
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) chart for the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) im-ple-men-ta-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1309
 []\T1/cmr/m/n/12 (+20) A well-defined
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 1308--1308
+Underfull \hbox (badness 3601) in paragraph at lines 1309--1309
 \T1/cmr/m/n/12 (+20) work plan with
  []
 
@@ -1784,213 +1788,213 @@ Underfull \hbox (badness 3601) in paragraph at lines 1308--1308
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 []\T1/cmr/m/n/12 (+20) Create a func-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) tional Ver-sus
  []
 
 
-Underfull \hbox (badness 6110) in paragraph at lines 1365--1365
+Underfull \hbox (badness 6110) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) Tetris sim-u-la-tor.
  []
 
 
-Underfull \hbox (badness 1975) in paragraph at lines 1365--1365
+Underfull \hbox (badness 1975) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) It should fol-low
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 []\T1/cmr/m/n/12 (+20) A func-tional
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 []\T1/cmr/m/n/12 (+20) Implement GA,
  []
 
 
-Underfull \hbox (badness 1874) in paragraph at lines 1365--1365
+Underfull \hbox (badness 1874) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) PSO, and ACO
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) for op-ti-mis-ing
  []
 
 
-Underfull \hbox (badness 6268) in paragraph at lines 1365--1365
+Underfull \hbox (badness 6268) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) Tetris game-play,
  []
 
 
-Underfull \hbox (badness 7308) in paragraph at lines 1365--1365
+Underfull \hbox (badness 7308) in paragraph at lines 1366--1366
 []\T1/cmr/m/n/12 (+20) Algorithms that
  []
 
 
-Underfull \hbox (badness 1424) in paragraph at lines 1365--1365
+Underfull \hbox (badness 1424) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) other play-ers to
  []
 
 
-Underfull \hbox (badness 1057) in paragraph at lines 1365--1365
+Underfull \hbox (badness 1057) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) agents tuned by
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 []\T1/cmr/m/n/12 (+20) Playable Tetris
  []
 
 
-Underfull \hbox (badness 1502) in paragraph at lines 1365--1365
+Underfull \hbox (badness 1502) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) at-tempt to play
  []
 
 
-Underfull \hbox (badness 3271) in paragraph at lines 1365--1365
+Underfull \hbox (badness 3271) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) the dif-fer-ent al-
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 1365--1365
+Underfull \hbox (badness 1584) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) marise the data
  []
 
 
-Underfull \hbox (badness 2173) in paragraph at lines 1365--1365
+Underfull \hbox (badness 2173) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) with ta-bles and
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 1365--1365
+Underfull \hbox (badness 1584) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) graphs and find
  []
 
 
-Underfull \hbox (badness 5189) in paragraph at lines 1365--1365
+Underfull \hbox (badness 5189) in paragraph at lines 1366--1366
 []\T1/cmr/m/n/12 (+20) Too lit-tle data,
  []
 
 
-Underfull \hbox (badness 2334) in paragraph at lines 1365--1365
+Underfull \hbox (badness 2334) in paragraph at lines 1366--1366
 []\T1/cmr/m/n/12 (+20) Make fi-nal re-vi-
  []
 
 
-Underfull \hbox (badness 5316) in paragraph at lines 1365--1365
+Underfull \hbox (badness 5316) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) time con-straints
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) due to as-sign-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 []\T1/cmr/m/n/12 (+20) Create slides
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) to sum-marise
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) all work done,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) prac-tice pre-sen-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) ta-tion, pre-pare
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) for po-ten-tial
  []
 
 
-Underfull \hbox (badness 2173) in paragraph at lines 1365--1365
+Underfull \hbox (badness 2173) in paragraph at lines 1366--1366
 []\T1/cmr/m/n/12 (+20) Viva Slides and
  []
 
 > Step: build the whole table.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 []\T1/cmr/m/n/12 (+20) Create a func-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) tional Ver-sus
  []
 
 
-Underfull \hbox (badness 6110) in paragraph at lines 1365--1365
+Underfull \hbox (badness 6110) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) Tetris sim-u-la-tor.
  []
 
 
-Underfull \hbox (badness 1975) in paragraph at lines 1365--1365
+Underfull \hbox (badness 1975) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) It should fol-low
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 []\T1/cmr/m/n/12 (+20) A func-tional
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 []\T1/cmr/m/n/12 (+20) Implement GA,
  []
 
 
-Underfull \hbox (badness 1874) in paragraph at lines 1365--1365
+Underfull \hbox (badness 1874) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) PSO, and ACO
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) for op-ti-mis-ing
  []
 
 
-Underfull \hbox (badness 6268) in paragraph at lines 1365--1365
+Underfull \hbox (badness 6268) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) Tetris game-play,
  []
 
 
-Underfull \hbox (badness 7308) in paragraph at lines 1365--1365
+Underfull \hbox (badness 7308) in paragraph at lines 1366--1366
 []\T1/cmr/m/n/12 (+20) Algorithms that
  []
 
 
-Underfull \hbox (badness 1424) in paragraph at lines 1365--1365
+Underfull \hbox (badness 1424) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) other play-ers to
  []
 
 
-Underfull \hbox (badness 1057) in paragraph at lines 1365--1365
+Underfull \hbox (badness 1057) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) agents tuned by
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 []\T1/cmr/m/n/12 (+20) Playable Tetris
  []
 
@@ -1998,82 +2002,82 @@ Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
 
 
 ]
-Underfull \hbox (badness 1502) in paragraph at lines 1365--1365
+Underfull \hbox (badness 1502) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) at-tempt to play
  []
 
 
-Underfull \hbox (badness 3271) in paragraph at lines 1365--1365
+Underfull \hbox (badness 3271) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) the dif-fer-ent al-
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 1365--1365
+Underfull \hbox (badness 1584) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) marise the data
  []
 
 
-Underfull \hbox (badness 2173) in paragraph at lines 1365--1365
+Underfull \hbox (badness 2173) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) with ta-bles and
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 1365--1365
+Underfull \hbox (badness 1584) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) graphs and find
  []
 
 
-Underfull \hbox (badness 5189) in paragraph at lines 1365--1365
+Underfull \hbox (badness 5189) in paragraph at lines 1366--1366
 []\T1/cmr/m/n/12 (+20) Too lit-tle data,
  []
 
 
-Underfull \hbox (badness 2334) in paragraph at lines 1365--1365
+Underfull \hbox (badness 2334) in paragraph at lines 1366--1366
 []\T1/cmr/m/n/12 (+20) Make fi-nal re-vi-
  []
 
 
-Underfull \hbox (badness 5316) in paragraph at lines 1365--1365
+Underfull \hbox (badness 5316) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) time con-straints
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) due to as-sign-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 []\T1/cmr/m/n/12 (+20) Create slides
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) to sum-marise
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) all work done,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) prac-tice pre-sen-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) ta-tion, pre-pare
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
 \T1/cmr/m/n/12 (+20) for po-ten-tial
  []
 
 
-Underfull \hbox (badness 2173) in paragraph at lines 1365--1365
+Underfull \hbox (badness 2173) in paragraph at lines 1366--1366
 []\T1/cmr/m/n/12 (+20) Viva Slides and
  []
 
@@ -2084,7 +2088,7 @@ Chapter 5.
 
 
 ]
-Overfull \hbox (0.64941pt too wide) in paragraph at lines 1398--1398
+Overfull \hbox (0.64941pt too wide) in paragraph at lines 1399--1399
 []\T1/cmr/m/n/12 (-20) Colin Fa-hey. \T1/cmr/m/it/12 (-20) Tetris AI\T1/cmr/m/n
 /12 (-20) . [ac-cessed Jun. 23, 2024]. 2003. \T1/cmr/m/sc/12 (-20) url\T1/cmr/m
 /n/12 (-20) : []$\T1/cmtt/m/n/12 http : / / www . colinfahey .
@@ -2097,19 +2101,28 @@ L3 programming layer <2023-10-10>
  ***********
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `final-report.out' has not changed.
-(rerunfilecheck)             Checksum: 4997BF9FD745D5C1A479BD17CF21B186;6467.
+
+Package rerunfilecheck Warning: File `final-report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `final-report.out':
+(rerunfilecheck)             Before: 4997BF9FD745D5C1A479BD17CF21B186;6467
+(rerunfilecheck)             After:  8DE8BB0571C5EDC363814942F1D57E4B;6467.
 Package logreq Info: Writing requests to 'final-report.run.xml'.
 \openout1 = `final-report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40346 strings out of 474504
- 792818 string characters out of 5756725
+ 40347 strings out of 474504
+ 792836 string characters out of 5756725
  2020043 words of memory out of 5000000
- 61303 multiletter control sequences out of 15000+600000
+ 61304 multiletter control sequences out of 15000+600000
  597363 words of font info for 216 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,12n,131p,2296b,1526s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2134,10 +2147,10 @@ f-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fon
 ts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/p
 ublic/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-s
 uper/sftt1200.pfb>
-Output written on final-report.pdf (45 pages, 621991 bytes).
+Output written on final-report.pdf (45 pages, 622680 bytes).
 PDF statistics:
- 924 PDF objects out of 1000 (max. 8388607)
- 815 compressed objects within 9 object streams
+ 923 PDF objects out of 1000 (max. 8388607)
+ 814 compressed objects within 9 object streams
  217 named destinations out of 1000 (max. 500000)
  50018 words of extra memory for PDF output out of 51595 (max. 10000000)
 

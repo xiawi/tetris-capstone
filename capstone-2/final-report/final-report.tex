@@ -99,7 +99,7 @@ hyperref=true
 	
 	\chapter*{Abstract}
 	
-	This capstone project explores the effectiveness of nature-inspired optimization algorithms in the context of Versus Tetris, a competitive multiplayer variant of the classic Tetris game. Given the NP-completeness of optimizing natural objectives in Tetris, traditional algorithms struggle to find efficient solutions. Nature-inspired algorithms, which draw from biological processes, offer promising alternatives by providing acceptable solutions within feasible time frames. This research aims to develop a robust Tetris-playing software capable of competing in Versus mode using algorithms such as Genetic Algorithms, Ant Colony Optimization, and Particle Swarm Optimization. The project includes formulating the problem for game AI, developing a simulation environment, and evaluating the performance of different algorithms. The findings are expected to contribute to the understanding of how nature-inspired approaches can address complex, real-time computational problems and enhance gameplay strategies in competitive gaming scenarios.
+	This capstone project explores the effectiveness of genetic algorithms in the context of Versus Tetris, a competitive multiplayer variant of the classic Tetris game. Given the NP-completeness of optimizing natural objectives in Tetris, traditional algorithms struggle to find efficient solutions. Genetic algorithms, which draw from evolutionary processes, offer promising alternatives by providing acceptable solutions within feasible time frames. This research aims to develop a robust Tetris-playing software capable of competing in Versus mode using an evaluation function optimised by any optimisation algorithm, but in our case, the genetic algorithm. The project includes formulating the problem for game AI, developing a simulation environment, and optimising the gameplay using a genetic algorithm. The findings are expected to contribute to the understanding of how nature-inspired approaches can address complex, real-time computational problems and enhance gameplay strategies in competitive gaming scenarios.
 	
 	\addcontentsline{toc}{chapter}{Abstract}
 	
@@ -114,7 +114,7 @@ hyperref=true
 	\pagenumbering{arabic}
 	
 	% What is Tetris		
-	Tetris is a popular video game created in 1984 by computer programmer Alexey Pajitnov  \cite{about-tetris}. It is a puzzle game that requires players to strategically place sequences of pieces known as "Tetriminos" into a rectangular Matrix (refer to Figure \ref{fig:tetrisgame}). In the classic game, players attempt to clear as many lines as possible by completely filling horizontal rows of blocks, but if the Tetriminos surpass the top of the Matrix, the game ends.
+	Tetris is a popular video game created in 1984 by computer programmer Alexey Pajitnov  \cite{about-tetris}. It is a puzzle game that requires players to strategically place sequences of pieces known as ``Tetriminos'' or ``Tetrominos'', into a rectangular Matrix (refer to Figure \ref{fig:tetrisgame}). In the classic game, players attempt to clear as many lines as possible by completely filling horizontal rows of blocks, but if the Tetriminos surpass the top of the Matrix, the game ends.
 	
 	\begin{figure}[h]
 		\centering
@@ -226,7 +226,7 @@ hyperref=true
 	% Summarize the main purpose of your project in a single sentence or paragraph. This should provide a clear, concise statement of what you intend to accomplish.
 	% Your aim should align closely with the problem statement and reflect the broader motivation for your research.
 	
-	The aim of this capstone project is to assess the effectiveness of nature-inspired optimisation algorithms in playing the game of Versus Tetris. By integrating insights from nature-inspired algorithms, the project seeks to create a robust and adaptable Tetris-playing software capable of competing against human players or other Tetris-playing programs. Through this endeavour, the project aims to contribute valuable insights into the application of nature-inspired algorithms in addressing computationally complex problems.
+	The aim of this capstone project is to assess the effectiveness of genetic algorithms in playing the game of Versus Tetris. By integrating insights from genetic algorithms, the project seeks to create a robust and adaptable Tetris-playing software capable of competing against human players or other Tetris-playing programs. Through this endeavour, the project aims to contribute valuable insights into the application of nature-inspired algorithms in addressing computationally complex problems.
 	
 	\section{Objectives}
 	
@@ -248,7 +248,7 @@ hyperref=true
 	% Discuss any limitations or constraints that may impact the scope of your project, such as time, resources, or access to data.
 	% Clarify what readers can expect to find within the scope of your project and what may fall outside its boundaries.
 	
-	This project will focus specifically on the evaluation of nature-inspired optimisation algorithms in the context of multiplayer versus Tetris. It will entail the development of a playable Tetris game capable of simulating gameplay and the training of algorithms. This simulation environment will facilitate in the analysis and evaluation of these algorithms' performances. The scope includes the exploring of a range of nature-inspired algorithms to address the unique challenges inherent in Versus Tetris.
+	This project will focus specifically on the evaluation of genetic algorithms in the context of multiplayer versus Tetris. It will entail the development of a playable Tetris game capable of simulating gameplay and the training of algorithms. This simulation environment will facilitate in the analysis and evaluation of the algorithm's performance.	
 	
 	
 	% Exceptional overview of the proposed project.
@@ -610,7 +610,7 @@ hyperref=true
 	%Excellent description is provided for all methodologies, tools and techniques used to specify, design, build, test, integrate, document and deliver work products throughout the project along with the relevant supporting documents.
 	% All documents provided are well-drawn/well-written, complete and correct. The purpose and role of each document in the project is stated clearly.
 	
-	This chapter outlines the systematic approach employed to investigate the application of nature-inspired optimization algorithms to Versus Tetris. We define the rules of the game in Section \ref{sec:rules}, show our thought process in selecting algorithms in Section \ref{sec:algo-select}, formulate the problem of Versus Tetris in Section \ref{sec:problem-formulation}, and propose methods of evaluation in Section \ref{sec:evaluation}.
+	This chapter outlines the systematic approach employed to investigate the application of a genetic algorithm to Versus Tetris. We define the rules of the game in Section \ref{sec:rules}, show our thought process in building the simulation in Section \ref{sec:sim-building}, formulate the problem of Versus Tetris in Section \ref{sec:problem-formulation}, and propose methods of evaluation in Section \ref{sec:evaluation}.
 	
 	% Defining rules
 	\section{Defining the Rules}\label{sec:rules}
@@ -1133,9 +1133,9 @@ hyperref=true
 	
 	\subsection{Gravity}
 	
-	In modern Versus Tetris games, gravity starts slow but slowly increases in order to force the players to make decisions quicker. However, in our implementation, we are more interested in the quality of the decisions being made, not the speed at which it is being made. Therefore, in this implementation, gravity will not be a factor. 
+	In modern Versus Tetris games, gravity starts slow but slowly increases in order to force the players to make decisions quicker. However, in our implementation, we are more interested in the quality of the decisions being made, not the speed at which it is being made. Therefore, in this implementation, gravity is not a factor. 
 	
-	This was implemented by disabling gravity entirely, forcing players and the bot to have to manually input ``soft drop'' until they reach their desired height. When the game is played, the speed of the algorithms will follow the pace of the opposing player, similar to a turn-based game like chess. The player will play a move, and the algorithm will play a move. With no gravity, the player will be able to take as long as they want to plan ahead.
+	This was implemented by disabling gravity entirely, forcing players to have to manually input ``soft drop'' until they reach their desired height. When the game is played, the speed of the bots will follow the pace of the opposing player, similar to a turn-based game like chess. The player will play a move, and the bot will play a move. With no gravity, the player will be able to take as long as they want to plan ahead.
 	
 	\subsection{Other Features}
 	
@@ -1145,14 +1145,15 @@ hyperref=true
 		\item \textbf{Hold}: Much like in \citeauthor{tetris-drl-2}'s \cite{tetris-drl-2} work, the hold function is used to hold on to a piece for future use and may be swapped any time with a piece in play.
 		\item \textbf{Five-piece Lookahead}:In our implementation of the game, five pieces of lookahead will be given to the player at all times, i.e. the player will be able to see five-pieces in their queue. This does two things:
 		\begin{enumerate}
-			\item It allows our player to plan for future pieces.
-			\item It allows our player to calculate the probability of upcoming pieces.
+			\item It allows our player to potentially plan for future pieces.
+			\item It allows our player to potentially calculate the probability of upcoming pieces.
 		\end{enumerate}
 	\end{itemize}
 	%				hold
 	%				5-piece lookahead
+	In our implementation, although the five-piece lookahead and hold features are added, the bot is unaware of the current held piece or the five pieces ahead of it. The decision to do so was made because of the space and time complexity required to generate the legal placements for a single piece.
 	
-	\section{Algorithm Selection}\label{sec:algo-select}
+	\section{Simulation Building}\label{sec:sim-building}
 	% how algorithms work, why we choose them
 	Choosing the right algorithms is crucial for tackling the challenges of Versus Tetris. In this study, the three aforementioned nature-inspired optimization algorithms have been selected -- Genetic Algorithms (GA), Particle Swarm Optimization (PSO), and Ant Colony Optimization (ACO). These algorithms were chosen because previous research has shown they hold promise in playing Tetris.
 	
