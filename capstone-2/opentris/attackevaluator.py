@@ -1,8 +1,8 @@
 import pygame
-import random
 
 from settings import SEED
 from gamecontroller import GameController
+from tetromino import Tetromino
 from sevenbag import SevenBag
 from botonly_renderer import Renderer
 from bot import Bot
@@ -13,16 +13,13 @@ class GameManager():
     if SEED:
       seed = SEED
     else:
-      seed = 2
+      seed = 9
 
     self.bag = SevenBag(seed)
     self.garbage_system = GarbageSystem(seed)
 
     self.board = GameController(self.bag, self.garbage_system)
-    for x in range(10):
-      self.board.matrix.grid[21][x] = 1 if x < 4 else 0
-      self.board.matrix.grid[20][x] = 1 if x < 5 else 0
-    self.bot = Bot(self.board, [0, -1, 0, 0, 0, 0, 0, 0, 0, 0])
+    self.bot = Bot(self.board, [-0.9241634548042859, -0.6344800815480418, -1, -0.7518857423370778, 0.026389760264537543, -0.7016450659573539, 0.07718788025481071, 0.48772306100581286, -0.3671494868227996, 1])
     self.renderer = Renderer(self.board)
     self.clock = pygame.time.Clock()
 
@@ -30,11 +27,11 @@ class GameManager():
     running = True
     while running:
       try:
-        self.clock.tick(1)  # Keep smooth rendering
+        self.clock.tick(11111)  # Keep smooth rendering
         self.renderer.render()  # Render the board
         self.bot.takeAction()
 
-        if self.board.has_lost:
+        if self.board.has_lost or self.board.tetrominos_placed > 100:
           pygame.time.wait(1000)
           break
 
@@ -46,8 +43,10 @@ class GameManager():
           #   self.bot.takeAction()
       except:
         running = False
+    return self.board.total_attack / self.board.tetrominos_placed
+    
 
 if __name__ == "__main__":
   pygame.init()
   gm = GameManager()
-  gm.run()
+  print(gm.run())

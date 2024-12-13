@@ -1,0 +1,523 @@
+\documentclass[a4paper, 12pt]{extreport}
+\usepackage[margin=1in]{geometry}
+\usepackage{parskip}
+\setlength{\parindent}{1cm}
+\setlength{\parskip}{.5\baselineskip}
+\usepackage{tikz}
+\usepackage{setspace}
+\graphicspath{ {../../resources/images/} }
+\usepackage[titles]{tocloft}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{pdfpages}
+\titleformat{\chapter}[hang]{\huge\bfseries}{\thechapter}{20pt}{\vspace{0.5em}}
+\titlespacing*{\chapter}{0pt}{-3em}{1.1\parskip}
+\usepackage[backend=biber, style=ieee]{biblatex}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{pgfgantt}
+\usepackage{pdflscape}
+\usepackage{tabularray,varwidth,enumitem}
+\renewbibmacro{finentry}{\finentry%
+	\iffieldundef{annotation}
+	{}
+	{\par\medskip\printfield{annotation}\medskip\finentry}}
+
+\addbibresource{../../resources/citation.bib}
+
+\begin{document}
+	
+	\onehalfspacing
+	
+	\begin{titlepage}
+		
+		\centering
+		\begin{tikzpicture}
+			\node[] at (current page.north west){%
+				\includegraphics[height=3.5cm]{logos/sunway-set}};
+		\end{tikzpicture}
+		
+		\vspace{.5cm}
+		
+		\begin{center}
+			\textbf{\large CAPSTONE PROJECT 2} \\
+			\textbf{\large Activity Log} \\
+			\vspace{1cm}
+			\textbf{\large Playing Versus Tetris with a Genetic Algorithm}
+			
+			\vspace{1cm}
+			
+			by
+			
+			\vspace{1cm}
+			
+			\large Yap Wei Xiang \\
+			21067939
+			
+			\vspace{1cm}
+			
+			Bachelor of Science (Honours) in Computer Science
+			
+			\vspace{1cm}
+			
+			\large Supervisor: Dr Richard Wong Teck Ken
+			
+			\vspace{1cm}
+			
+			\normalsize Semester: September 2024 \\
+			Date: 13 December 2024
+			
+			\vfill
+			
+			Department of Smart Computing and Cyber Resilience (DSCCR)\\
+			School of Engineering and Technology\\
+			Sunway University
+		\end{center}
+		
+	\end{titlepage}
+	
+	\pagenumbering{roman}
+	\tableofcontents
+	
+	\chapter{Timeline and Activities}
+	
+	\pagenumbering{arabic}
+	
+	% Project is split into critical stages. Brief description is provided for each stage of the project on the processes to be executed.
+	% Time allocated for each stage is justified by student assessment of own workload, ability and work to be done to deliver.
+	
+	\section{CP1 Timeline}
+	
+	In this section, the CP1's progression is meticulously documented. In these pages, the critical stages of the project are depicted in the form of tables. A Gantt chart of the timeline is also provided to give an overview of the project's temporal progression.
+	
+	\begin{longtblr}[
+		caption = {CP1 Overall Work Activities},
+		label = {tab:work},
+		]{| c | X | X | X | c |}
+		\hline
+		Phases & Work Activities & Work Product & Risk Factors & {Time \\ Allocated} \\
+		\hline
+		Introduction & Write a comprehensive introduction, including the motivation, problem statement, aim, objectives and scope of the project. & A comprehensive introduction & Misunderstanding of concepts & 1 Week \\
+		\hline
+		{Literature \\ Review} & Find and read a wide variety of literature to write a comprehensive review that (1) justifies the use of non-traditional algorithms and (2) showcase past approaches to the game. & A comprehensive literature review that has a diverse set of sources & Lack of understanding of concepts, misunderstanding concepts & 12 Weeks \\
+		\hline
+		{Methodology} & Come up with a methodology that covers all bases, it should include rule definition, algorithm selection, problem formulation and evaluation metrics & A well-defined methodology & Inadequate explanation of rules, trouble formulating problem formally & 4 Weeks \\
+		\hline
+		{Work Plan} & Create a work plan that includes this table, a Gantt chart summarising what has been done in the planning phase of the project, as well as a similar table and Gantt chart for the implementation phase. & A well-defined work plan with goals to be met & Time constraints, formatting issues & 1 Week \\
+		\hline
+	\end{longtblr}
+	
+	\begin{landscape}
+		\begin{figure}
+			\centering
+			\begin{ganttchart}[x unit=1cm, vgrid=dotted, hgrid = true]{1}{15}
+				\gantttitle{W1}{1}
+				\gantttitle{W2}{1}
+				\gantttitle{W3}{1}
+				\gantttitle{W4}{1}
+				\gantttitle{W5}{1}
+				\gantttitle{W6}{1}
+				\gantttitle{W7}{1} 
+				\gantttitle{W8}{1}
+				\gantttitle{W9}{1}
+				\gantttitle{W10}{1}
+				\gantttitle{W11}{1}
+				\gantttitle{W12}{1}
+				\gantttitle{W13}{1}
+				\gantttitle{W14}{1}
+				\gantttitle{W15}{1}\\
+				\ganttgroup{Introduction}{1}{1}\\
+				\ganttgroup{Literature Review}{1}{12}\\
+				\ganttbar{Research}{1}{10}\\
+				\ganttlinkedbar{Writing}{3}{12}\\
+				\ganttmilestone{Completed Review}{12}\\
+				\ganttgroup{Methodology}{12}{15}\\
+				\ganttbar{Defining Rules}{12}{14}\\
+				\ganttbar{On Implementation}{14}{15}\\
+				\ganttgroup{Work Plan}{15}{15}\\
+			\end{ganttchart}
+			\caption{CP1 Timeline}
+		\end{figure}
+	\end{landscape}
+	
+	\subsection{CP1 Weekly Breakdown}
+	
+	In this section, a week-to-week overview that summarises work done that particular week will be shown in table form. Each subsection will contain a table that showcases work done for a particular chapter of the planning document. 
+	
+	\subsubsection{Introduction}
+	\label{sec:intro}
+	
+	The introduction serves as the project's foundation, providing essential background information, introducing the topic, and articulating the project's objectives. Recognising its pivotal role, \textbf{one week} of time was allocated for its composition. This deliberate time-frame aimed to allow ample time for thoroughness, ensuring no essential elements were overlooked in writing a comprehensive and compelling introduction.
+	
+	\begin{longtblr}[
+		caption = Weekly breakdown of work done for Introduction Chapter.
+		]{colspec={c|X}, hlines, vlines}
+		Week & Work Done \\
+		1 & \begin{varwidth}[t]{\linewidth}
+			\begin{itemize}[topsep=0pt,parsep=0pt]
+				\item Researched existing literature on Tetris, NP-completeness and Nature-inspired algorithms.
+				\item Wrote the introduction chapter.
+				\item Learnt the tikz \LaTeX package to draw better figures.
+			\end{itemize}
+		\end{varwidth}\\
+	\end{longtblr}
+	
+	\subsubsection{Literature Review}
+	\label{sec:litrev}
+	
+	The literature review is one of the chapters that will take up a lot of space in the planning document. It is important to be thorough and correct about the information written on these pages. As such, a generous time of \textbf{twelve weeks} were allocated to research and write this section.
+	
+	\begin{longtblr}[
+		caption = Weekly breakdown of work done for Literature Review Chapter.
+		]{colspec={c|X}, hlines, vlines}
+		Week & Work Done \\
+		1 & \begin{varwidth}[t]{\linewidth}
+			\begin{itemize}[topsep=0pt,parsep=0pt]
+				\item Found and read literature on NP-completeness.
+				\item Tried to understand computational complexity as a whole.
+			\end{itemize}
+		\end{varwidth}\\
+		2 & \begin{varwidth}[t]{\linewidth}
+			\begin{itemize}[topsep=0pt,parsep=0pt]
+				\item Continued researching NP-completeness.
+				\item Understood enough computational complexity for the project: complexity classes, reductions, P and NP, etc.
+			\end{itemize}
+		\end{varwidth}\\
+		3 & \begin{varwidth}[t]{\linewidth}
+			\begin{itemize}[topsep=0pt,parsep=0pt]
+				\item Found and read literature on the difficulty of Tetris.
+				\item Began writing the first section of the literature review, dedicated to showing the intrinsic difficulty of the game of Tetris. 
+			\end{itemize}
+		\end{varwidth}\\
+		4 & \begin{varwidth}[t]{\linewidth}
+			\begin{itemize}[topsep=0pt,parsep=0pt]
+				\item Finished writing first section of literature review.
+				\item Created images for clarity.
+			\end{itemize}
+		\end{varwidth}\\
+		5 & \begin{varwidth}[t]{\linewidth}
+			\begin{itemize}[topsep=0pt,parsep=0pt]
+				\item Found literature that utilise different approaches to playing Tetris with AI.
+			\end{itemize}
+		\end{varwidth}\\
+		6 & \begin{varwidth}[t]{\linewidth}
+			\begin{itemize}[topsep=0pt,parsep=0pt]
+				\item Continued finding different approaches taken to play Tetris.
+				\item Specifically read and digested paper on imitation learning.
+				\item Began structuring second section of the literature review, dedicated to showcasing some of the approaches taken to play Tetris that aren't nature-inspired.
+			\end{itemize}
+		\end{varwidth}\\
+		7 & \begin{varwidth}[t]{\linewidth}
+			\begin{itemize}[topsep=0pt,parsep=0pt]
+				\item Completed a subsection on the use of imitation learning for playing Tetris
+				\item Read up on Monte-Carlo Tree Search, UCB1, and how it is used as an approach to Tetris.
+			\end{itemize}
+		\end{varwidth}\\
+		8 & \begin{varwidth}[t]{\linewidth}
+			\begin{itemize}[topsep=0pt,parsep=0pt]
+				\item Completed a subsection on the use of UCB1 for playing Tetris.
+				\item Read up on some deep reinforcement learning concepts because some papers were found that used Q-learning to play Tetris.
+			\end{itemize}
+		\end{varwidth}\\
+		9 & \begin{varwidth}[t]{\linewidth}
+			\begin{itemize}[topsep=0pt,parsep=0pt]
+				\item Read literature that described the use of deep reinforcement learning for Tetris.
+				\item Completed a subsection on the use of deep reinforcement learning for playing Tetris.
+				\item Found and read papers that utilise non nature-inspired meta-heuristics like Harmony Search Algorithm and MVP Algorithm to play Tetris.
+				\item Found literature on using Genetic Algorithms and Particle Swarm Optimisation to play Tetris.
+			\end{itemize}
+		\end{varwidth}\\
+		10 & \begin{varwidth}[t]{\linewidth}
+			\begin{itemize}[topsep=0pt,parsep=0pt]
+				\item Found and read literature on the use of Ant Colony Optimisation to play Tetris.
+				\item Completed a subsection on the use of different meta-heuristic algorithms for playing Tetris.
+				\item Started writing section dedicated to demonstrating the use of nature-inspired algorithms in playing Tetris.
+			\end{itemize}
+		\end{varwidth}\\
+		11 & \begin{varwidth}[t]{\linewidth}
+			\begin{itemize}[topsep=0pt,parsep=0pt]
+				\item Completed a subsection on the use of genetic algorithms in playing Tetris.
+			\end{itemize}
+		\end{varwidth}\\
+		12 & \begin{varwidth}[t]{\linewidth}
+			\begin{itemize}[topsep=0pt,parsep=0pt]
+				\item Completed a subsection on the use of Particle Swarm Optimisation in playing Tetris.
+				\item Completed a subsection on the use of Ant Colony Optimisation in playing Tetris.
+			\end{itemize}
+		\end{varwidth}\\
+	\end{longtblr}
+	
+	\subsubsection{Methodology}
+	
+	The methodology is arguably the most important chapter of the review as it sets up the entire project in the implementation phase (CP2). \textbf{Four weeks} were allocated to write up the methodology, which should define everything that will be done in a structured manner.
+	
+	\begin{longtblr}[
+		caption = Weekly breakdown of work done for Methodology Chapter.
+		]{colspec={c|X}, hlines, vlines}
+		Week & Work Done \\
+		12 & \begin{varwidth}[t]{\linewidth}
+			\begin{itemize}[topsep=0pt,parsep=0pt]
+				\item Structured the Methodology chapter
+				\item Began writing section on rules, defining the piece randomiser and matrix dimensions.
+			\end{itemize}
+		\end{varwidth}\\
+		13 & \begin{varwidth}[t]{\linewidth}
+			\begin{itemize}[topsep=0pt,parsep=0pt]
+				\item Researched Tetris spin rules.
+				\item Continued writing rules section, defining spins, gravity and other features.
+			\end{itemize}
+		\end{varwidth}\\
+		14 & \begin{varwidth}[t]{\linewidth}
+			\begin{itemize}[topsep=0pt,parsep=0pt]
+				\item Researched Tetris attack rules.
+				\item Completed writing rules section, adding attack rules to the rules.
+				\item Completed section on algorithm selection.
+				\item Began problem formulation section.
+			\end{itemize}
+		\end{varwidth}\\
+		15 & \begin{varwidth}[t]{\linewidth}
+			\begin{itemize}[topsep=0pt,parsep=0pt]
+				\item Completed problem formulation section.
+				\item Completed section on evaluation metrics.
+			\end{itemize}
+		\end{varwidth}\\
+	\end{longtblr}
+	
+	\subsubsection{Work Plan}
+	
+	Careful consideration needs to be taken when coming up with a work plan. Risk factors need to be thought of and time needs to be allocated to each task. However, since the work plan takes up the least space in the document, only \textbf{one week} of time was allocated to it.
+	
+	\begin{longtblr}[
+		caption = Weekly breakdown of work done for Work Plan  Chapter.
+		]{colspec={c|X}, hlines, vlines}
+		Week & Work Done \\
+		15 & \begin{varwidth}[t]{\linewidth}
+			\begin{itemize}[topsep=0pt,parsep=0pt]
+				\item Came up with tasks that need to be done.
+				\item Created table to showcase work activities, risk factors, and time allocated for all tasks.
+				\item Created Gantt chart to visualise the timeline.
+			\end{itemize}
+		\end{varwidth}\\
+	\end{longtblr}
+	
+	\newpage
+	\section{CP2 Timeline}
+	
+		Much like for CP1, this section will be used to outline CP2's progression. Here, we will discuss the critical stages of the project are depicted them in the form of tables. A Gantt chart of the timeline is also provided to give an overview of the project's progression.
+		
+		\begin{longtblr}[
+			caption = {CP2 Overall Work Activities},
+			label = {tab:work2},
+			]{| c | X | X | X | c |}
+			\hline
+			Phases & Work Activities & Work Product & Risk Factors & {Time \\ Allocated} \\
+			\hline
+			{Building \\ Simulation} & Create a robust simulation with all rules included in CP1's planning document. & A complete simulation tool & Bugs, Issues with bot, development issues. & 4 Weeks \\
+			\hline
+			{Creating \\ Bot} & Build a bot that is able to find most if not all legal placements, using an evaluation function to decide on its moves. & A bot that can find most if not all legal placements, evaluation function of bot. & Difficulty finding legal placements, unexpected bot behaviour, bugs. & 8 Weeks \\
+			\hline
+			{GA \\ Implementation} & Implement Genetic Algorithm to optimise weight vectors. GA should have justifiable fitness functions, mutation rate and other metrics. GA should be able to generate data to be evaluated. & A complete genetic algorithm & Issues with implementation, GA definition, GA runtime too long. & 3 Weeks \\
+			\hline
+			{Report \\ Writing} & Make changes to methodology if any, gather data for results, write results and complete conclusion & A complete final report & Time constraints, formatting issues & 3 Weeks \\
+			\hline
+		\end{longtblr}
+	
+	\begin{landscape}
+		\begin{figure}
+			\centering
+			\begin{ganttchart}[x unit=1cm, vgrid=dotted, hgrid = true]{1}{13}
+				\gantttitle{W1}{1}
+				\gantttitle{W2}{1}
+				\gantttitle{W3}{1}
+				\gantttitle{W4}{1}
+				\gantttitle{W5}{1}
+				\gantttitle{W6}{1}
+				\gantttitle{W7}{1} 
+				\gantttitle{W8}{1}
+				\gantttitle{W9}{1}
+				\gantttitle{W10}{1}
+				\gantttitle{W11}{1}
+				\gantttitle{W12}{1}
+				\gantttitle{W13}{1}\\
+				\ganttgroup{OpenTris}{1}{4}\\
+				\ganttgroup{Creating Bot}{4}{11}\\
+				\ganttbar{Elementary Bot Behaviour}{4}{6}\\
+				\ganttlinkedbar{Evaluation Function}{7}{11}\\
+				\ganttbar{Advanced Behaviour}{8}{10}\\
+				\ganttgroup{GA Implementation}{11}{13}\\
+				\ganttbar{Build GA}{11}{12}\\
+				\ganttlinkedbar{Run GA for Data}{13}{13}\\
+				\ganttgroup{Report Writing}{11}{13}\\
+				\ganttbar{Revise Methodology}{11}{12}\\
+				\ganttlinkedbar{Results and Conclusion}{13}{13}
+			\end{ganttchart}
+			\caption{CP2 Timeline}
+		\end{figure}
+	\end{landscape}
+	
+	\subsection{CP2 Weekly Breakdown}
+	
+		Much like for CP1, this section will be dedicated to summarising the work done in a particular week in table form. Each subsection will contain a table that showcases work done implementing the project and completing the final report.
+		
+		\subsubsection{Building OpenTris}
+		
+			Since I could not find any simulations of Versus Tetris suited to my use case, I decided to build my own simulation. I built OpenTris for my exact use case, a simulation capable of pitting bots against each other, using an evaluation function to play. I spent \textbf{4 weeks} working on the simulation to ensure everything ran smoothly.
+			
+			\begin{longtblr}[
+				caption = Weekly breakdown of work done for OpenTris.
+				]{colspec={c|X}, hlines, vlines}
+				Week & Work Done \\
+				1 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Planning the simulation, coming up with necessary classes.
+						\item Started working on simple rendering engine and a bot that only hard drops.
+					\end{itemize}
+				\end{varwidth}\\
+				2 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Worked on game logic, including wall kicks, rotations, movements as well as a seeded randomiser for piece sequence generation.
+					\end{itemize}
+				\end{varwidth}\\
+				3 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Refined game logic, cleaned up code, made changes to ensure correct mechanics.
+					\end{itemize}
+				\end{varwidth}\\
+				4 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Worked on garbage mechanics, creating stored attacks.
+						\item Improved player movement controls.
+					\end{itemize}
+				\end{varwidth}\\
+			\end{longtblr}
+			
+		\subsubsection{Creating Bot}
+		
+			In order to test the weight vectors generated from the genetic algorithms, a bot had to be created that was able to take those weights and plug them into an eval function. I gave myself a generous 8 weeks to complete the development of the bot completely.
+		
+			\begin{longtblr}[
+				caption = Weekly breakdown of work done for the bot.
+				]{colspec={c|X}, hlines, vlines}
+				Week & Work Done \\
+				4 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Planning bot behaviour, including placements and actions to reach those placements.
+					\end{itemize}
+				\end{varwidth}\\
+				5 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Wrote an elementary bot capable of finding legal placements.
+						\item Found a way for bot to take sequences of actions to reach final placements.
+					\end{itemize}
+				\end{varwidth}\\
+				6 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Got stuck on implementing a way for the bot to do tucks and spins.
+						\item Tentatively stick with current bot behaviour.
+					\end{itemize}
+				\end{varwidth}\\
+				7 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Started working on a simple evaluation function that looked at pile height and hole count as features.
+					\end{itemize}
+				\end{varwidth}\\
+				8 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Started working on finding ways to include tucks and spins into considered placements.
+					\end{itemize}
+				\end{varwidth}\\
+				9 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Came up with a way for the bot to perform tucks.
+						\item Added hole depth to evaluation function.
+					\end{itemize}
+				\end{varwidth}\\
+				10 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Came up with a way for the bot to perform spins.
+					\end{itemize}
+				\end{varwidth}\\
+				11 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Finalised evaluation function by adding column transitions, row transitions, cumulative well depth, row holes, line clears, attacks and back-to-back as features.
+					\end{itemize}
+				\end{varwidth}\\
+			\end{longtblr}
+		
+		\subsubsection{GA Implementation}
+		
+			The genetic algorithm is the main purpose of this project. I had to ensure that it was able to produce results in the limited amount of time I had left. Thus, I decided to spend the rest of the \textbf{3 weeks} of CP2 working on the GA.
+			
+			\begin{longtblr}[
+				caption = Weekly breakdown of work done for the GA implementation.
+				]{colspec={c|X}, hlines, vlines}
+				Week & Work Done \\
+				11 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Began planning GA representation, crossover, selection, etc.
+						\item Began implementation and testing of GA.
+					\end{itemize}
+				\end{varwidth}\\
+				12 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Added logging functions to retrieve information on each population and their fitness, along with the best fit individual in each population.
+						\item Tweaked GA parameters, decreased population size due to time constraints.
+					\end{itemize}
+				\end{varwidth}\\
+				13 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Let the GA run.
+						\item Obtain data successfully.
+					\end{itemize}
+				\end{varwidth}\\
+			\end{longtblr}
+		
+		\subsubsection{Report Writing}
+		
+			After I was done with programming the bot, I started work on the final report. I had to revise the methodology to fit my current implementation, and also adjust the report as I decided to focus only on a single nature-inspired algorithm instead of several. I spent the final \textbf{3 weeks} of CP2 working on the final report.
+		
+			\begin{longtblr}[
+				caption = Weekly breakdown of work done for the final report.
+				]{colspec={c|X}, hlines, vlines}
+				Week & Work Done \\
+				11 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Found discrepancies between methodology and current implementation.
+						\item Began aligning methodology accordingly.
+					\end{itemize}
+				\end{varwidth}\\
+				12 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Completed methodology refinement.
+					\end{itemize}
+				\end{varwidth}\\
+				13 & \begin{varwidth}[t]{\linewidth}
+					\begin{itemize}[topsep=0pt,parsep=0pt]
+						\item Obtained results
+						\item Wrote results chapter
+						\item Wrote conclusion
+					\end{itemize}
+				\end{varwidth}\\
+			\end{longtblr}
+	
+	\chapter{Meeting Records}
+	
+	% Attended all scheduled meetings with well-prepared presentations or documents to aid discussion of the project.
+	% Sets own goals and able to negotiate deliverables for upcoming meeting based on own workload and ability.
+	% Delivers all work as promised along with detailed analysis on the cause/effect of own actions to the project outcome. (Able to do and analyse results of own actions)
+	Throughout the semester, I had six meetings with Dr Richard. Each time we discussed the work that had been done between the current and previous meeting. Dr Richard gave me plenty of pointers, as well as personal advice to produce a better project.
+	
+	The following pages contain all meeting records, including the date and time of the meeting, the items discussed, and the expected work outcomes before the next meeting. 
+	
+	\includepdf[addtotoc={1, section, 1, Meeting 1, meeting1}, pagecommand={\thispagestyle{plain}}]{./meeting-records/signed/meeting-1}
+	
+	\includepdf[addtotoc={1, section, 1, Meeting 2, meeting2}, pagecommand={\thispagestyle{plain}}]{./meeting-records/signed/meeting-2}
+	
+	\includepdf[addtotoc={1, section, 1, Meeting 3, meeting3}, pagecommand={\thispagestyle{plain}}]{./meeting-records/signed/meeting-3}
+	
+	\includepdf[addtotoc={1, section, 1, Meeting 4, meeting4}, pagecommand={\thispagestyle{plain}}]{./meeting-records/signed/meeting-4}
+	
+	\includepdf[addtotoc={1, section, 1, Meeting 5, meeting5}, pagecommand={\thispagestyle{plain}}]{./meeting-records/signed/meeting-5}
+	
+	\includepdf[addtotoc={1, section, 1, Meeting 6, meeting6}, pagecommand={\thispagestyle{plain}}]{./meeting-records/signed/meeting-6}
+	
+\end{document}

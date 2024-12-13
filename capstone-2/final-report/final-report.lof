@@ -1,5 +1,5 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces \centering A typical modern Tetris game where four lines are about to be cleared. The Tetrimino on the left of the matrix is the \textit {Hold} piece and the pieces to the right of the matrix are collectively known as the \textit {Queue}.}}{1}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces \centering A typical modern Tetris game where four lines are about to be cleared. The Tetromino on the left of the matrix is the \textit {Hold} piece and the pieces to the right of the matrix are collectively known as the \textit {Queue}.}}{1}{figure.caption.5}%
 \contentsline {figure}{\numberline {1.2}{\ignorespaces \centering A typical game of Versus Tetris. Both players are trying to send lines to each other. The grey blocks are \textit {Garbage Lines} sent from Player 2 (right) to Player 1 (left).}}{2}{figure.caption.6}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces \centering Visualisation of the sets P, NP, NP-hard and NP-complete.}}{6}{figure.caption.7}%
@@ -7,16 +7,19 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces \centering An example of a single node of the matrix state and piece in the planning tree.}}{9}{figure.caption.9}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Z and S pieces.}}{11}{figure.caption.10}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces The Tetriminos and their names.}}{18}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces The Tetrominos and their names.}}{18}{figure.caption.15}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces \centering I piece is spawned at the 21st row of the matrix, but the player can survive by slotting the piece into the eighth column of the matrix.}}{19}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces \centering The four rotation states of all seven Tetriminos. The black dots represent centres of rotation.}}{21}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \centering The four rotation states of all seven Tetrominos. The black dots represent centres of rotation.}}{21}{figure.caption.19}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Example of garbage lines (gray) being cleared by an L piece.}}{22}{figure.caption.21}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces T-piece in a 3 $\times $ 3 box.}}{22}{figure.caption.25}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces \centering Visualisation of the T-spin condition. At least three of the four grey squares need to be filled.}}{22}{figure.caption.26}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Examples of T-spins.}}{23}{figure.caption.27}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces \centering Example of Stored Attack and Cancelling.}}{25}{figure.caption.34}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces A game of cheese race.}}{30}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces OpenTris Class Diagram}}{27}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces \centering Example of a Tuck.}}{28}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Example of a Z-spin}}{29}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces A game of survival.}}{33}{figure.caption.45}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces CP1 Timeline}}{33}{figure.caption.36}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces CP2 Timeline}}{36}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Plot for fitness over iterations}}{35}{figure.caption.46}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }

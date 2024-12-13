@@ -4,17 +4,17 @@ import random
 import copy
 from gamemanager import GameManager
 from concurrent.futures import ThreadPoolExecutor
+from settings import MUTATION_RATE, MAX_PIECES
 
 WEIGHT_VECTOR_SIZE = 10 # focusing on 10 numerical features, therefore 10 weights in the vector
 POPULATION_SIZE = 6
-MUTATION_RATE = 0.3
-MAX_ITER = 100
+MAX_ITER = 200
 MIN_AVERAGE_DIFFERENCE = 0.01
 
 class GAOptimizer:
   def __init__(self) -> None:
-    self.population_log_file = open("./logs/09_12_06_attack_survival_wr_high_mutation_100_iter_fitness_indivs_population_log.txt", "w", buffering=1)
-    self.best_individual_log_file = open("./logs/09_12_06_attack_survival_wr_high_mutation_100_iter_fitness_indivs_best_individual_log.txt", "w", buffering=1)
+    self.population_log_file = open("./logs/2024_12_11_6_indivs_minimized_survival_corrected_b2b_population_log.txt", "w", buffering=1)
+    self.best_individual_log_file = open("./logs/2024_12_11_6_indivs_minimized_survival_corrected_b2b_best_individual_log.txt", "w", buffering=1)
   
   def initializePopulation(self):
     population = []
@@ -50,8 +50,11 @@ class GAOptimizer:
     for i, j, winner, attack_by_i, attack_by_j, placed_by_i, placed_by_j in results:
       if winner == 0:
         individual_wins[i][j] = 1
-      else:
+      elif winner == 1:
         individual_wins[j][i] = 1
+      else:
+        individual_wins[i][j] = .5
+        individual_wins[j][i] = .5
       individual_attacks[i][j] = attack_by_i
       individual_attacks[j][i] = attack_by_j
       pieces_placed[i][j] = placed_by_i
@@ -65,7 +68,7 @@ class GAOptimizer:
       winrate = total_wins / (POPULATION_SIZE - 1)  # Matches played
       average_efficiency = total_attack_efficiency / (POPULATION_SIZE - 1)
       average_pieces_placed = total_pieces_placed / (POPULATION_SIZE - 1)
-      fitness[i] = average_efficiency + 0.01 * average_pieces_placed + winrate
+      fitness[i] = average_efficiency + 1 / MAX_PIECES * average_pieces_placed + winrate
 
     print("\nfitness calculated") 
     return fitness

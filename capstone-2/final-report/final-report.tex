@@ -99,8 +99,12 @@ hyperref=true
 	
 	\chapter*{Abstract}
 	
-	This capstone project explores the effectiveness of genetic algorithms in the context of Versus Tetris, a competitive multiplayer variant of the classic Tetris game. Given the NP-completeness of optimizing natural objectives in Tetris, traditional algorithms struggle to find efficient solutions. Genetic algorithms, which draw from evolutionary processes, offer promising alternatives by providing acceptable solutions within feasible time frames. This research aims to develop a robust Tetris-playing software capable of competing in Versus mode using an evaluation function optimised by any optimisation algorithm, but in our case, the genetic algorithm. The project includes formulating the problem for game AI, developing a simulation environment, and optimising the gameplay using a genetic algorithm. The findings are expected to contribute to the understanding of how nature-inspired approaches can address complex, real-time computational problems and enhance gameplay strategies in competitive gaming scenarios.
-	
+		This capstone project explores the use of genetic algorithms (GAs) to optimize gameplay strategies in Versus Tetris, a competitive multiplayer variant of the classic Tetris game. Due to the NP-complexity of Tetris, traditional algorithms struggle to find efficient solutions, making nature-inspired approaches like GAs a promising alternative. The methodology involved developing a simulation environment where a GA was used to evolve a set of weights for an evaluation function that guided the bot’s decision-making process. The algorithm incorporated population initialization, fitness function calculation, and genetic operations (selection, crossover, mutation) to iteratively improve gameplay performance.
+		
+		While the GA did not result in significant improvements in attack efficiency, with performance declining in this area, it showed notable gains in survivability. The bot was able to place more pieces before the game ended, indicating that the GA successfully optimized strategies for longer gameplay under certain conditions. The evaluation metrics focused on attack efficiency and survivability, with the results reflecting a clear trade-off: while attack efficiency worsened, the bot's ability to survive longer in the game improved.
+		
+		These results suggest that the GA was able to enhance defensive strategies but struggled to optimize offensive tactics effectively. Future work could refine the fitness function to better balance attack and defense, incorporate additional gameplay features like the hold mechanic and lookahead, and explore hybrid models that combine genetic algorithms with reinforcement learning techniques. This research provides valuable insights into the challenges and potential of using nature-inspired algorithms to tackle complex, real-time decision-making in competitive gaming.
+		
 	\addcontentsline{toc}{chapter}{Abstract}
 	
 	\tableofcontents
@@ -114,7 +118,7 @@ hyperref=true
 	\pagenumbering{arabic}
 	
 	% What is Tetris		
-	Tetris is a popular video game created in 1984 by computer programmer Alexey Pajitnov  \cite{about-tetris}. It is a puzzle game that requires players to strategically place sequences of pieces known as ``Tetriminos'' or ``Tetrominos'', into a rectangular Matrix (refer to Figure \ref{fig:tetrisgame}). In the classic game, players attempt to clear as many lines as possible by completely filling horizontal rows of blocks, but if the Tetriminos surpass the top of the Matrix, the game ends.
+	Tetris is a popular video game created in 1984 by computer programmer Alexey Pajitnov  \cite{about-tetris}. It is a puzzle game that requires players to strategically place sequences of pieces known as ``Tetrominos'', into a rectangular Matrix (refer to Figure \ref{fig:tetrisgame}). In the classic game, players attempt to clear as many lines as possible by completely filling horizontal rows of blocks, but if the Tetrominos surpass the top of the Matrix, the game ends.
 	
 	\begin{figure}[h]
 		\centering
@@ -143,7 +147,7 @@ hyperref=true
 			\node at ($(ne) + (1,-14)$){\tpiece};
 			\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
 		\end{tikzpicture}
-		\caption{\centering A typical modern Tetris game where four lines are about to be cleared. The Tetrimino on the left of the matrix is the \textit{Hold} piece and the pieces to the right of the matrix are collectively known as the \textit{Queue}.}
+		\caption{\centering A typical modern Tetris game where four lines are about to be cleared. The Tetromino on the left of the matrix is the \textit{Hold} piece and the pieces to the right of the matrix are collectively known as the \textit{Queue}.}
 		\label{fig:tetrisgame}
 	\end{figure}
 	
@@ -265,7 +269,7 @@ hyperref=true
 	% Background information: versus and regular tetris, differences, similarities, randomness
 	% Justify why the literature review is about Tetris and not Versus Tetris
 	
-	Tetris, a timeless puzzle game created by Alexey Pajitnov in 1984, has captivated players and researchers alike with its engaging gameplay and complex strategic elements. The game challenges players to manipulate sequences of geometric shapes known as "Tetriminos" to clear horizontal lines within a confined space. Despite its simple premise, Tetris has inspired extensive research in computational complexity and artificial intelligence due to its inherent difficulty.
+	Tetris, a timeless puzzle game created by Alexey Pajitnov in 1984, has captivated players and researchers alike with its engaging gameplay and complex strategic elements. The game challenges players to manipulate sequences of geometric shapes known as "Tetrominos" to clear horizontal lines within a confined space. Despite its simple premise, Tetris has inspired extensive research in computational complexity and artificial intelligence due to its inherent difficulty.
 	
 	This review will cover the fundamental challenges of Tetris, explore existing approaches, and assess the potential of nature-inspired algorithms to enhance gameplay strategies.	
 	
@@ -339,7 +343,7 @@ hyperref=true
 	
 	In their approach, played Tetris games were fed into a machine learning model as inputs, where the model would receive positive feedback when a decision matched that of the imitated system, and negative feedback otherwise \cite{tetris-learning-by-imitation}. The learning is deemed successful if the trained model maintains similarity even when faced with data outside of the training set.
 	
-	The learning system consists of several components, including filters, pattern calculators, and support vector machines (SVMs) (refer to Figure \ref{fig:syscomponents-learning-by-imitation}) \cite{tetris-learning-by-imitation}. Because of the time consuming nature of training SVMs, each Tetrimino had its own dedicated filters, pattern calculators and SVMs, i.e. seven SVMs \footnote{Seven SVMs for the seven Tetriminos.} are working together in the artificial player. The output of any particular SVM describes how similar a candidate move is to the choice of the imitated player.
+	The learning system consists of several components, including filters, pattern calculators, and support vector machines (SVMs) (refer to Figure \ref{fig:syscomponents-learning-by-imitation}) \cite{tetris-learning-by-imitation}. Because of the time consuming nature of training SVMs, each Tetromino had its own dedicated filters, pattern calculators and SVMs, i.e. seven SVMs \footnote{Seven SVMs for the seven Tetrominos.} are working together in the artificial player. The output of any particular SVM describes how similar a candidate move is to the choice of the imitated player.
 	
 	\begin{figure}
 		\tikzstyle{block} = [rectangle, draw, 
@@ -532,7 +536,7 @@ hyperref=true
 	
 	Experimental results show that MVPA proved to optimise the game better than GA in terms of score and speed. In an endless game, MVPA managed to reach a score of 249 million while the GA only reached 68 million. The MVPA was also shown to find an acceptable solution faster than the GA in trials where the authors limited the spawn pieces. They observed that the MVPA converged much faster.
 	
-	\section{Playing Tetris with Nature-inspired Algorithms}
+	\section{Playing Tetris with Nature-inspired Algorithms} \label{sec:nia-tetris}
 	
 	Nature-inspired optimisation algorithms are a class of meta-heuristic algorithms. These algorithms are based on natural phenomena and biological systems, borrowing ideas like natural selection and evolution to converge on acceptable solutions \cite{nia-soft-computing}. In this section, we will highlight three such algorithms that have been adopted to attempt to tackle the game of Tetris, specifically, the aforementioned genetic algorithm (GA), ant colony optimisation (ACO), particle swarm optimisation (PSO).
 	
@@ -610,16 +614,16 @@ hyperref=true
 	%Excellent description is provided for all methodologies, tools and techniques used to specify, design, build, test, integrate, document and deliver work products throughout the project along with the relevant supporting documents.
 	% All documents provided are well-drawn/well-written, complete and correct. The purpose and role of each document in the project is stated clearly.
 	
-	This chapter outlines the systematic approach employed to investigate the application of a genetic algorithm to Versus Tetris. We define the rules of the game in Section \ref{sec:rules}, show our thought process in building the simulation in Section \ref{sec:sim-building}, formulate the problem of Versus Tetris in Section \ref{sec:problem-formulation}, and propose methods of evaluation in Section \ref{sec:evaluation}.
+	This chapter outlines the systematic approach employed to investigate the application of a genetic algorithm to Versus Tetris. We define the rules of the game in Section \ref{sec:rules}, show our thought process in building the simulation in Section \ref{sec:sim-building}, describe our implementation of the algorithm in Section \ref{sec:ga-implementation}, and propose methods of evaluation in Section \ref{sec:evaluation}.
 	
 	% Defining rules
 	\section{Defining the Rules}\label{sec:rules}
 	% 
 	Tetris is a game that has many different variations, each with varying rules. In this section, we will formally define the game's rules that will be enforced throughout our implementation.
 	
-	\subsection{Tetrimino Sequence Generation}
+	\subsection{Tetromino Sequence Generation}\label{subsec:tet-generation}
 	
-	Regardless of the variant, there are seven distinct Tetriminos present in every game of Tetris, each with their own names (refer to Figure \ref{fig:tetris-pieces}). However, the way the sequences of Tetriminos are generated differ depending on the variant defined. In our variant of the game, the rules of piece generation will be similar to that defined by \citeauthor{tetris-drl-2} \cite{tetris-drl-2}.
+	Regardless of the variant, there are seven distinct Tetrominos present in every game of Tetris, each with their own names (refer to Figure \ref{fig:tetris-pieces}). However, the way the sequences of Tetrominos are generated differ depending on the variant defined. In our variant of the game, the rules of piece generation will be similar to that defined by \citeauthor{tetris-drl-2} \cite{tetris-drl-2}.
 	
 	\begin{figure}
 		\begin{center}
@@ -673,11 +677,11 @@ hyperref=true
 				\caption{I}
 			\end{subfigure}		
 		\end{center}
-		\caption{The Tetriminos and their names.}
+		\caption{The Tetrominos and their names.}
 		\label{fig:tetris-pieces}
 	\end{figure}
 	
-	The system used to generate piece sequences is known as \textit{7-bag}. It works by generating a sequence of all seven Tetriminos permuted randomly, as if they were drawn from a bag \cite{harddrop}. The sequence is then given to the player before another bag is generated. This means that there are $7!$ or 5,040 different permutations of the seven pieces for any given bag. The system gives each one of these permutations an equal probability of occurring. This ensures that there will not be periods of piece drought -- where a player waits for an extended period of time for a preferred piece,\footnote{The maximum number of pieces between a piece $X$ and another piece $X$ is 12.} or piece rain -- where a player keeps receiving the same pieces consecutively.
+	The system used to generate piece sequences is known as \textit{7-bag}. It works by generating a sequence of all seven Tetrominos permuted randomly, as if they were drawn from a bag \cite{harddrop}. The sequence is then given to the player before another bag is generated. This means that there are $7!$ or 5,040 different permutations of the seven pieces for any given bag. The system gives each one of these permutations an equal probability of occurring. This ensures that there will not be periods of piece drought -- where a player waits for an extended period of time for a preferred piece,\footnote{The maximum number of pieces between a piece $X$ and another piece $X$ is 12.} or piece rain -- where a player keeps receiving the same pieces consecutively.
 	
 	\subsection{Matrix Dimensions}
 	
@@ -701,11 +705,11 @@ hyperref=true
 	
 	\subsection{Spins}
 	
-	The rotation system used by guideline Tetris games is known as the \textit{Super Rotation System} (SRS), and it defines how Tetriminos spawn, rotate, and what kicks can be performed \cite{harddrop}. It is important for us to define the rotation rules here so that we can create a simulation of Tetris that is as accurate as possible.
+	The rotation system used by guideline Tetris games is known as the \textit{Super Rotation System} (SRS), and it defines how Tetrominos spawn, rotate, and what kicks can be performed \cite{harddrop}. It is important for us to define the rotation rules here so that we can create a simulation of Tetris that is as accurate as possible.
 	
-	When unobstructed, the Tetriminos all rotate around a single point (refer to Figure \ref{fig:srs}). The O and I pieces rotate around an intersection of grid-lines whereas the other pieces rotate around the centre of a grid-box.
+	When unobstructed, the Tetrominos all rotate around a single point (refer to Figure \ref{fig:srs}). The O and I pieces rotate around an intersection of grid-lines whereas the other pieces rotate around the centre of a grid-box.
 	
-	However, if the piece is obstructed by the wall, the floor, or another fixed piece, the game attempts to ``kick'' the Tetrimino into an alternative position nearby \cite{harddrop}. When this occurs, the game tests 5 potential positions to kick the piece towards; if the position of all the tests are unavailable, the rotation itself fails, resulting in the piece not rotating at all. Other than the O piece, all the other pieces are able to kick into different positions. The I piece has its own set of kick values, but the remaining pieces all share identical ones.
+	However, if the piece is obstructed by the wall, the floor, or another fixed piece, the game attempts to ``kick'' the Tetromino into an alternative position nearby \cite{harddrop}. When this occurs, the game tests 5 potential positions to kick the piece towards; if the position of all the tests are unavailable, the rotation itself fails, resulting in the piece not rotating at all. Other than the O piece, all the other pieces are able to kick into different positions. The I piece has its own set of kick values, but the remaining pieces all share identical ones.
 	
 	Tables \ref{tab:i-kick} and \ref{tab:non-i-kick} show the kick values for these pieces \cite{harddrop}. The kick values represent translations relative to rotations. The following conventions will be used for naming rotation states for the tables:
 	
@@ -717,7 +721,7 @@ hyperref=true
 	\end{itemize}
 	
 	\begin{table}
-		\caption{I Tetrimino Wall Kick Data.}
+		\caption{I Tetromino Wall Kick Data.}
 		\label{tab:i-kick}
 		\centering
 		\begin{tblr}{colspec={| c | c | c | c | c | c |},cell{2-Z}{2-Z}={font=\ttfamily},row{1}={gray!35}}
@@ -744,7 +748,7 @@ hyperref=true
 	\end{table}
 	
 	\begin{table}
-		\caption{T, Z, S, L and J Tetrimino Wall Kick Data.}
+		\caption{T, Z, S, L and J Tetromino Wall Kick Data.}
 		\label{tab:non-i-kick}
 		\centering
 		\begin{tblr}{colspec={| c | c | c | c | c | c |},cell{2-Z}{2-Z}={font=\ttfamily},row{1}={gray!35}}
@@ -837,7 +841,7 @@ hyperref=true
 			\node at (15,-25) {\rotatebox{-90}{\ipiece}};
 			\filldraw[black] (16,-23) circle (4pt);
 		\end{tikzpicture}
-		\caption{\centering The four rotation states of all seven Tetriminos. The black dots represent centres of rotation.}
+		\caption{\centering The four rotation states of all seven Tetrominos. The black dots represent centres of rotation.}
 		\label{fig:srs}
 	\end{figure}
 	
@@ -1089,7 +1093,7 @@ hyperref=true
 	
 	A perfect clear occurs when a player clears the matrix completely, leaving no remnants of existing Tetrominos behind. It can be difficult to perform perfect clears in Versus Tetris, because if there is an odd number of garbage sent from the opponent, a perfect clear becomes completely impossible. Because of this, a perfect clear has the highest attack in a single move, sending 6 lines of garbage to the opponent.
 	
-	\subsubsection{Stored attack}
+	\subsubsection{Stored attack}\label{subsubsec:stored_attack}
 	
 	When garbage is being sent to an opponent, the garbage lines do not suddenly appear in the opponent's matrix. It is stored in an attack potential, usually represented as a vertical meter on the side of the matrix (refer to Figure \ref{fig:attack-potential}). This is to let the opponent see the potential attacks that might be coming, and allows them to clear lines in order to perform cancelling.
 	
@@ -1137,13 +1141,13 @@ hyperref=true
 	
 	This was implemented by disabling gravity entirely, forcing players to have to manually input ``soft drop'' until they reach their desired height. When the game is played, the speed of the bots will follow the pace of the opposing player, similar to a turn-based game like chess. The player will play a move, and the bot will play a move. With no gravity, the player will be able to take as long as they want to plan ahead.
 	
-	\subsection{Other Features}
+	\subsection{Other Features}\label{subsec:other-feats}
 	
 	Here two additional features that may help a player improve decision making will be listed.
 	
 	\begin{itemize}
 		\item \textbf{Hold}: Much like in \citeauthor{tetris-drl-2}'s \cite{tetris-drl-2} work, the hold function is used to hold on to a piece for future use and may be swapped any time with a piece in play.
-		\item \textbf{Five-piece Lookahead}:In our implementation of the game, five pieces of lookahead will be given to the player at all times, i.e. the player will be able to see five-pieces in their queue. This does two things:
+		\item \textbf{Five-piece Lookahead}: In our implementation of the game, five pieces of lookahead will be given to the player at all times, i.e. the player will be able to see five-pieces in their queue. This does two things:
 		\begin{enumerate}
 			\item It allows our player to potentially plan for future pieces.
 			\item It allows our player to potentially calculate the probability of upcoming pieces.
@@ -1151,102 +1155,236 @@ hyperref=true
 	\end{itemize}
 	%				hold
 	%				5-piece lookahead
-	In our implementation, although the five-piece lookahead and hold features are added, the bot is unaware of the current held piece or the five pieces ahead of it. The decision to do so was made because of the space and time complexity required to generate the legal placements for a single piece.
 	
-	\section{Simulation Building}\label{sec:sim-building}
-	% how algorithms work, why we choose them
-	Choosing the right algorithms is crucial for tackling the challenges of Versus Tetris. In this study, the three aforementioned nature-inspired optimization algorithms have been selected -- Genetic Algorithms (GA), Particle Swarm Optimization (PSO), and Ant Colony Optimization (ACO). These algorithms were chosen because previous research has shown they hold promise in playing Tetris.
+	In our implementation, although the five-piece lookahead and hold features are added, the bot is unaware of the current held piece or the five pieces ahead of it. The decision to do so was made because of the increasing space and time complexity required to generate the legal placements for these pieces.
 	
-	These algorithms have been well-studied and validated in other domains, giving us confidence in their potential for this study. Their selection also reflects our goal of exploring a diverse set of optimization approaches, which can yield deeper insights into their performance and suitability for real-time gaming environments. The algorithms will all have the same information as one another, and will all be evaluated with the same piece sequences.
+	\section{Building the Simulation}\label{sec:sim-building}
+	% how we built the simulation
+%	Choosing the right algorithms is crucial for tackling the challenges of Versus Tetris. In this study, the three aforementioned nature-inspired optimization algorithms have been selected -- Genetic Algorithms (GA), Particle Swarm Optimization (PSO), and Ant Colony Optimization (ACO). These algorithms were chosen because previous research has shown they hold promise in playing Tetris.
+%	
+%	These algorithms have been well-studied and validated in other domains, giving us confidence in their potential for this study. Their selection also reflects our goal of exploring a diverse set of optimization approaches, which can yield deeper insights into their performance and suitability for real-time gaming environments. The algorithms will all have the same information as one another, and will all be evaluated with the same piece sequences.
+
+		In this section, we discuss the development of OpenTris, an open source Versus Tetris simulation built to aid in research work. Additionally, we delve into the logic behind our bot behaviour.
+
+		\subsection{OpenTris}
+		
+			Since there were little to no tools found for Versus Tetris simulation, we built our own. OpenTris is an open source Versus Tetris simulation that is aimed to aid current and future research work. In this section, we outline the decisions made throughout the development process and explain each class involved in the simulation.
+			
+			\subsubsection{Development Decisions}
+			
+				To build the simulation, the programming language or framework used does not matter; we just needed to build a working simulation. We chose Python as our language, due to its ease of use, extensive community support, and the fact that it is one of the most commonly used programming languages in academic research. Python’s readability and flexibility made it ideal for rapid prototyping and the iterative development required in this project.
+				
+				For the game itself, we utilised Pygame, a framework designed specifically with game development in mind. Pygame allowed us to focus on gameplay logic rather than low-level implementation details, such as managing game loops, rendering graphics, and handling user inputs. By leveraging Pygame's built-in features, we streamlined the development process and ensured that our efforts were directed toward creating a robust simulation.
+			
+			\subsubsection{Classes}
+			
+				\begin{figure}
+					\centering
+					\includegraphics[width=\textwidth]{diagrams/class-diagrams.png}
+					\caption{OpenTris Class Diagram}
+					\label{fig:opentris}
+				\end{figure}
+			
+				Figure \ref{fig:opentris} shows a class diagram outlining the main classes in the program as well as the relationship between these classes. .
+				
+				\begin{enumerate}
+					\item \textbf{Tetromino:} used to describe a Tetromino, including its name, position, colour and rotation.
+					\item \textbf{SevenBag:} used to describe the Seven Bag system defined in section \ref{subsec:tet-generation}
+					\item \textbf{Lookahead:} contains information on the next five pieces.
+					\item \textbf{GarbageSystem:} generates the holes for garbage being sent.
+					\item \textbf{StoredAttack:} used to store information on current stored attack, as defined in section \ref{subsubsec:stored_attack}
+					\item \textbf{GameController:} handles logic for movement, holding, attack calculation, and piece spawning.
+					\item \textbf{Renderer:} renders everything that the user sees, including the lookahead, hold, matrices and pieces.
+					\item \textbf{Bot:} handles bot behaviour, further expanded upon in section \ref{subsec:bot}
+					\item \textbf{InputHandler:} allows human player to interact with the simulation.
+					\item \textbf{GameManager:} manages game state, ensures that game is turn based.
+					\item \textbf{Main:} houses the \verb|main| function, the main entry into our programme.
+				\end{enumerate}
+				
+			\subsubsection{Additional Details}
+			
+				We later added a piece limit to our simulation, due to the fact that when convergence occurs and the bots start agreeing more and more, they start playing too similarly for too long, resulting in a game that plays forever.
+		
+		\subsection{Bot Behaviour}\label{subsec:bot}
+		
+			In this section, we take a deeper look at how the Tetris AI actually works. We discuss how the bot finds legal placements, what the limitations are for our placement finding method, how our bot decides on a placement, as well as how the bot performs the actions required to achieve a chosen placement.  
+		
+			\subsubsection{Generating Legal Placements}
+			
+				To generate the legal placements for a piece, the bot rotates copies of the current Tetromino and attempts to place them in each accessible column, iterating through all possible rotations. To optimize memory usage, the bot checks whether a new matrix state resulting from an action sequence has already been considered. If so, the sequence is ignored. Doing this allowed us to cut down on memory use, specifically with pieces that had symmetry with their other rotations, such as the 'O', 'I', 'Z', and 'S' pieces.
+				
+				In order for the bot to consider a wider range of moves, it had to be able to perform two additional sequences:
+				
+				\begin{itemize}
+					\item \textbf{Tucks:} Soft-dropping a piece and tucking it under a filled cell (refer to Figure \ref{fig:tucks}).
+					\item \textbf{Spins:} Soft-dropping a piece into a location and performing rotations that lead to a new matrix state, e.g. T-spins.
+				\end{itemize}
+				
+				\begin{figure}
+					\centering
+					\begin{minipage}{.2\textwidth}
+						\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+							\coordinate (sw) at (5,0);
+							\coordinate (nw) at (5,5);
+							\coordinate (se) at (15,0);
+							\coordinate (ne) at (15,5);
+							\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+							\draw[fill=black!40!white] (se) -- (15,2) -- (7,2) -- (7,1) -- (8,1) -- (8,0) -- cycle;
+							\node at (5,0){\rotatebox{-90}{\lpiece}};
+							\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+						\end{tikzpicture}
+					\end{minipage}\hspace{20pt} $\rightarrow$ \hspace{20pt}
+					\begin{minipage}{.2\textwidth}
+						\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+							\coordinate (sw) at (5,0);
+							\coordinate (nw) at (5,5);
+							\coordinate (se) at (15,0);
+							\coordinate (ne) at (15,5);
+							\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+							\draw[fill=black!40!white] (se) -- (15,2) -- (7,2) -- (7,1) -- (8,1) -- (8,0) -- cycle;
+							\node at (6,0){\rotatebox{-90}{\lpiece}};
+							\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+						\end{tikzpicture}
+					\end{minipage}
+					\caption{\centering Example of a Tuck.}
+					\label{fig:tucks}
+				\end{figure}
+				
+				In order for the bot to find these placements, we look through the existing list of resulting landing states that have the same initial rotation and compare each state with its previous state. When a difference exists, we know that we should consider attempting tucks and spins in this position.
+				
+				To find tucks, we ask the bot to drop a piece where we predict a piece is ``tuckable'' and ask it to move the piece left and right until a new matrix state is found. If a new matrix state is unable to be found, we simply drop the piece one cell lower and attempt the same action. These tucked placements are also considered when finding spins.
+				
+				Finding spins was just about getting every considered landing state and trying to spin left and right at most four times to see if any new resulting matrix positions are reached. If a rotation fails to produce a new state, the bot abandons that direction.
+			
+			\subsubsection{Placement Limitations}
+				
+				The decision to ignore repeated states prevent certain spins such as Z-spins to occur (refer to Figure \ref{fig:zspin}). This is due to the fact that rotating a Z left and right produce an identical shape. Our bot starts by considering the right rotate, but because of the characteristics of the kick table (refer to Table \ref{tab:non-i-kick}), a Z-spin can only occur after the bot performs a left rotate.
+				
+				\begin{figure}
+					\centering
+					\begin{minipage}{.2\textwidth}
+						\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+							\coordinate (sw) at (5,0);
+							\coordinate (nw) at (5,5);
+							\coordinate (se) at (15,0);
+							\coordinate (ne) at (15,5);
+							\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+							\draw[fill=black!40!white] (se) -- (15,2) -- (7,2) -- (7,1) -- (8,1) -- (8,0) -- cycle;
+							\draw[fill=black!40!white] (sw) -- (6,0) -- (6,1) -- (5,1) -- cycle;
+							\node at (6,1){\rotatebox{-90}{\zpiece}};
+							\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+						\end{tikzpicture}
+					\end{minipage} \hspace{20pt} \texttt{left rotate} $\rightarrow$ \hspace{20pt}
+					\begin{minipage}{.2\textheight}
+						\begin{tikzpicture}[every node/.style={inner sep=-0.4pt,anchor=south west,scale=.3},scale=.3]
+							\coordinate (sw) at (5,0);
+							\coordinate (nw) at (5,5);
+							\coordinate (se) at (15,0);
+							\coordinate (ne) at (15,5);
+							\draw[fill=black!10!white] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+							\draw[fill=black!40!white] (se) -- (15,2) -- (7,2) -- (7,1) -- (8,1) -- (8,0) -- cycle;
+							\draw[fill=black!40!white] (sw) -- (6,0) -- (6,1) -- (5,1) -- cycle;
+							\node at (5,0){\rotatebox{180}{\zpiece}};
+							\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
+						\end{tikzpicture}
+					\end{minipage}
+					\caption{Example of a Z-spin}
+					\label{fig:zspin}
+				\end{figure}
+				
+				While this trade-off limits some moves, it significantly reduces memory consumption, ensuring efficient gameplay while preserving the majority of critical placements.
+				
+				Also, due to the exponential space complexity of considering all five-lookahead pieces, our bot ended up not considering any of them. It also does not consider the hold piece's potential states. The bot sees holding as a way to retain the current matrix state. Once hold is used, it cannot be used again, so there is a possibility that the bot performs a hold and ends up with a worse piece for the scenario it is facing.
+			
+			\subsubsection{Placement Decision}
+			
+				To decide on a placement, the bot uses a weighted feature evaluation function (refer to Equation \ref{eq:weighted_sum}), much like the works included in Sections \ref{subsec:metaheuristic} and \ref{sec:nia-tetris}. This weights on this function are tweaked using a genetic algorithm; this will be expanded further in Section \ref{sec:ga-implementation}. 
+				
+				\begin{equation}\label{eq:weighted_sum}
+					\sum_{i=1}^{10} w_i f(S)_i
+				\end{equation}
+				
+				\noindent where $S$ is a state, $f_i$ is the feature function of said state, and $w_i$ is the corresponding weight of feature $f_i$. The weights for each feature will be optimised using nature-inspired algorithms.
+				
+				The list of numerical features and their description are as follows:
+				
+				\begin{enumerate}
+					\item \textbf{Pile height:} The row number of the highest occupied cell in the grid.
+					\item \textbf{Hole count:} The number of holes\footnote{A hole is an unoccupied cell with occupied cells above it} on the matrix.
+					\item \textbf{Column transitions:} The sum of all vertical transitions between occupied and unoccupied cells in each column.
+					\item \textbf{Row transitions:} The sum of all horizontal transitions between occupied and unoccupied cells in each row.
+					\item \textbf{Hole depth:}The number of filled cells above holes summed over all columns.
+					\item \textbf{Cumulative well depth:} The sum of accumulated depths of the wells.
+					\item \textbf{Row holes:} The number of rows that contain at least one hole.
+					\item \textbf{Line clears:} The number of lines cleared from the current placement.
+					\item \textbf{Attack:} The number of lines sent to the opponent or cancelled from the current placement.
+					\item \textbf{Back-to-back:} The back-to-back number from the current placement.
+				\end{enumerate}
+				
+				After evaluating each considered placement, the bot simply chooses the one that returns the highest evaluation value.
+			
+			\subsubsection{Taking Actions}
+			
+				After choosing a placement, the bot sees a list of strings that contain the instructions to reach the placement. We simply go through the list and perform the actions based on the strings.
+				
+	\section{Genetic Algorithm Implementation} \label{sec:ga-implementation}
 	
-	\section{Problem Formulation}\label{sec:problem-formulation}
-	
-	In this section, we will formulate the problem of Versus Tetris. Even though multiple different algorithms will be used in order to optimise the decision making process of the game, the parameter tuning for each algorithm addressed in the results section.
-	
-	\subsection{Problem Definition}
-	
-	The problem is to develop a Tetris agent capable of playing Tetris well by effectively evaluating state-action pairs using a weighted feature function and optimising the agent's strategy based on win/loss outcomes.
-	
-	\subsection{States and Actions}
-	
-	In our problem, a state is a comprehensive representation of the Tetris matrix, including:
-	
-	\begin{enumerate}
-		\item \textbf{Matrix configurations}: Information on both matrices, including occupied and unoccupied cells.
-		\item \textbf{Current Tetrominos}: The current Tetrominos each agent is using
-		\item \textbf{Lookahead}: The current five lookahead pieces in the queue of each player.
-		\item \textbf{Hold}: The current piece being held by each player.
-	\end{enumerate}
-	
-	To an agent, an action is simply seen as a legal piece placement. An agent does not need to know how to move a piece from one place to another, they just need to know whether it is possible to get there. Of course, holding the current piece is also a legal action.
-	
-	In order to decide on an action, the agent will be utilising a heuristic which is a weighted sum of numerical features, much like in previous studies (refer to Equation \ref{eq:heuristic}).
-	
-	\begin{equation}\label{eq:heuristic}
-		\sum_{i=1}^{k} w_i f(S)_i
-	\end{equation}
-	
-	\noindent where $S$ is a state, $f_i$ is the feature function of said state, and $w_i$ is the corresponding weight of feature $f_i$. The weights for each feature will be optimised using nature-inspired algorithms.
-	
-	When an action is decided on and taken, the state transitions from one state to the next. The transitional model would place the piece, check for line clears, and update attack potentials as needed.
-	
-	\begin{equation}
-		S_{t+1} = T(S_t, A)
-	\end{equation}
-	
-	When either the agent or an opponent has lost, a termination condition is met.
-	
-	\subsection{Features}\label{subsec:features}
-	
-	Plenty of the literature that utilise any form of meta-heuristics have identified a number of features that describe informative aspects of a Tetris grid that can all be numerically defined. We believe that Versus Tetris is different enough that it will need a different set of features that should be taken into consideration, although there will be some overlapping features. These features include:
-	
-	\begin{enumerate}
-		\item \textbf{Pile height}: The row number of the highest occupied cell in the grid.
-		\item \textbf{Hole count}: A hole is an unoccupied cell with an occupied cell on top of it.
-		\item \textbf{Column transitions}: The sum of all vertical transitions between occupied and unoccupied cells. The bottom of the matrix is considered a row of occupied cells.
-		\item \textbf{Row transitions}: The sum of all horizontal transitions between occupied and unoccupied cells. Matrix borders count as occupied cells.
-		\item \textbf{Landing height}: The height at which the current piece is placed.
-		\item \textbf{Eroded piece count}: The number of cells from the current shape that will be removed by the placement, multiplied by the total number of rows that will be cleared as a result of performing the placement.
-		\item \textbf{Cumulative wells}: The sum of accumulated depths of the wells.
-		\item \textbf{Hole depth}: The number of filled cells above holes summed over all columns.
-		\item \textbf{Row hole}: The number of rows that contain at least one hole.
-		\item \textbf{Potential attack}: The total potential garbage that could be sent to an opponent. This can be calculated using the information provided in Section \ref{sec:rules} and the 5 lookahead pieces.
-		\item \textbf{Stored attack}: The stored attack after making a placement.
-		\item \textbf{Attack/Cancellation}: The number of garbage lines sent or cancelled from playing a move.
-	\end{enumerate}
-	
-	%			\subsection{Training}
-	%			
-	%				In order to simulate Versus gameplay, we will have different individuals from the same algorithm play each other with their corresponding weight vectors. If an individual has a high win-rate it is likely that their weight vectors help them play advantageously.
-	%				
-	%				When an algorithm converges past a certain degree, we terminate it and obtain the weight vectors of the final iteration of the algorithm. From here, we can see what the agents were prioritising.
-	
-	\subsection{Implementation of Nature-inspired Algorithms}
-	
-	The implementation of nature-inspired optimization algorithms for playing Versus Tetris will follow a structured approach, ensuring a fair and comprehensive evaluation of each algorithm's performance. Each Tetris-playing agent will be represented as a weight vector, and each individual in each algorithm will represent a single Tetris-playing strategy. 
-	
-	The fitness of each agent will be determined by its win-rate when playing against other agents that have been trained using the same algorithm. This approach ensures a competitive and dynamic environment, where agents are constantly adapting to outperform their peers. Each algorithm will be implemented and iterated over several generations or cycles, allowing for the emergence of robust and effective Tetris-playing strategies. The comparative analysis of the win-rates will provide insights into the relative effectiveness of each nature-inspired algorithm in optimizing gameplay for Versus Tetris.
+		The goal of the genetic algorithm is to optimise the Tetris bot's decision-making for Tetris gameplay by finding a set of suitable weights that allow the bot to play well.
+		
+		\subsection{Representation}
+		
+			Each individual was represented as a weight vector, where each weight corresponds to a specific feature. These weights collectively determine the bot's decision making process. Each weight served as a chromosome in the genetic algorithm.
+		
+		\subsection{Population Initialisation}
+		
+			The initial population was generated randomly to ensure diversity. Each individual was assigned a unique set of weights, sampled uniformly across a range between -1 and 1. This diversity provided a broad search space for the algorithm to explore. The population was also fixed at 6, to ensure that fitness for the population can be calculated swiftly.
+		
+		\subsection{Fitness Function}
+		
+			To calculate the fitness function, we first had each of the individuals in the population play a game against one another. The fitness is then calculated using the average data from each match.
+			
+			Initially, we used an individual's win-rate as their fitness, but we found this to be an unsuitable metric for Versus Tetris. If an individual was able to outlive its peers, it's win-rate would be incredibly high. The issue is that in the event that all players in a population are playing terribly, the algorithm will settle quickly into a highly suboptimal solution.
+			
+			We then attempted to use average attack efficiency. The metric used to define attack efficiency is attack per piece, which is calculated using Equation \ref{eq:app}. This came with its own problems, most notably, the bots became obsessed with high attack, but ended up with terrible survivability.
+			\begin{equation}\label{eq:app}
+				\text{Attack per Piece (\textit{APP})} = \dfrac{\text{Total Attack}}{\text{Total Pieces Placed}}
+			\end{equation}
+			
+			Finally, the fitness function that we decided on utilised both of these values. Our fitness was calculated using equation \ref{eq:fitness-func}. We believe that this function best describes the goal of the bot. It should be trying to win, have high attack efficiency, all whilst maximising its pieces placed, and therefore its survivability.
+			\begin{equation} \label{eq:fitness-func}
+				\text{Fitness} = \text{Win-rate} + \text{Average Attack Efficiency} + \dfrac{1}{\text{MAX PIECES}} * \text{Pieces Placed}
+			\end{equation}
+			
+		\subsection{Selection}
+		
+			For our implementation, we did ranked based parent selection. Each fitness was sorted into ranks, with higher ranked individuals having higher probabilities of being selected. However, we wanted to make sure that the algorithm explores as much as possible in earlier iterations and exploits as much as possible in later ones. Therefore, the probability value of each ranked individual was scaled depending on the iteration. Later iterations made higher ranked individuals more likely to be selected.
+		
+		\subsection{Crossover}
+		
+			Crossover combined the genetic material of two parent individuals to produce offspring. A uniform crossover method was employed, where each weight in the offspring was randomly selected from one of the parents.
+		
+		\subsection{Mutation}
+		
+			Mutation introduced random changes to the offspring's weights to maintain diversity and prevent premature convergence. Each weight had a small probability of mutation, and the changes were applied by adding a small random value between -0.5 and 0.5. The mutation rate was set at 0.3 to balance exploration and exploitation.
+		
+		\subsection{Termination Criteria}
+		
+			The algorithm terminated after a 100 generations or when no significant improvement in the population's average fitness was observed over a predefined number of generations. These criteria ensured that the GA did not run indefinitely and stopped when further optimization became negligible.
 	
 	\section{Evaluating Gameplay}\label{sec:evaluation}
 	% ui and evaluation framework
 	% attack per piece
 	% in order to obtain data, suggest encoding scheme
 	
-	In this section, we will highlight three methods we will be evaluating the best-performing agents created from our algorithms. The three methods will be used to evaluate attack efficiency, survivability, as well as the agent's ability to win against a diverse set of play-styles.
+	In this section, we will highlight two methods we will be evaluating the best-performing agent created from our algorithm. The two methods will be used to evaluate attack efficiency and survivability.
 	
 	\subsection{Evaluating Attack Efficiency}
 	
-	In modern Versus Tetris games, attack efficiency is calculated with the metric Attack per Minute (\textit{APM}), which is calculated by dividing the lines sent from a player with the number of minutes they have played. In our implementation, since the algorithms and players will have seemingly unlimited time to decide on a move, this metric would be a problem. Therefore, the metric that we will be using is Attack per Piece (\textit{APP}). This metric will be calculated by dividing the lines sent from a player with the number of pieces placed.
-	
-	\begin{equation}
-		\text{Attack per Piece (\textit{APP})} = \dfrac{\text{Total Attack}}{\text{Total Pieces Placed}}
-	\end{equation}
-	
-	In order to test this, we would let each algorithm play normal single-player games of Tetris in isolation, and calculating the potential attacks that would be sent. The higher an algorithm's \textit{APP} is, the more efficient it is at attacking.
+	To evaluate attack efficiency of our bot, we reuse Equation \ref{eq:app} to calculate the Attack per Minute (\textit{APP}). In order to test this, we would let the bot play normal single-player games of Tetris in isolation with limited pieces, and calculating the potential attacks that would be sent. The higher an algorithm's \textit{APP} is, the more efficient it is at attacking.
 	
 	\subsection{Evaluating Survivability}
 	
-	To evaluate the survivability of each algorithm, we let them play a mini-game known as ``Cheese Race''. The goal of the algorithm in this mini-game is to clear 100 groups of garbage, each with randomised wells (refer to Figure \ref{fig:cheese-race}). The garbage refreshes every time a line is cleared, and the goal of the algorithm should be to clear 100 lines as quickly as possible, with as little pieces as possible.
+	To evaluate the survivability of our optimised bot, we let it play a mini-game known as ``Survival''. The goal of the bot in this mini-game is to survive as long as possible with single line garbage being stored in each turn (refer to Figure \ref{fig:cheese-race}). Every time the player plays a piece that does not clear a line, a new garbage line appears at the bottom of the matrix
 	
 	\begin{figure}
 		\centering
@@ -1271,130 +1409,144 @@ hyperref=true
 			\node at ($(ne) + (1,-14)$){\tpiece};
 			\draw[ultra thick] (sw) -- (nw) -- (ne) -- (se) -- cycle;
 		\end{tikzpicture}
-		\caption{A game of cheese race.}
+		\caption{A game of survival.}
 		\label{fig:cheese-race}
 	\end{figure}
 	
-	The metric that would be used for evaluating an algorithm would be the number of pieces placed. In this test, the lower the metric, the higher the survivability of the algorithm.
+	The metric that would be used for evaluating the bot would be the tetrominos placed. In this test, the higher the metric, the higher the survivability of the bot.
 	
-	\subsection{Playing Versus}
+	\chapter{Results and Discussion}
 	
-	Finally, the algorithms will be pitted against one another in a two-player Versus Tetris game with the rules defined in Section \ref{sec:rules}. The outcomes of these games will be recorded to find the best performing algorithm within the three selected.
+%	Results validate most of the research / project objectives.
+%	Analysis and presentation of results are correct, critically analysed and linked to theory.
+%	Significance of results and its deviation from literature is sufficiently discussed.
+
+		In this chapter, we take a look at our objectives and ensure that they have been delivered, the results obtained from the study, including the weight vector optimised by the genetic algorithm according to our fitness function, the outcomes of the two gameplay evaluation methods defined in section \ref{sec:evaluation}, and do a thorough analysis of the results.
 	
-	Furthermore, the best players of each algorithm will also be selected to play against real human opponents, and feedback will be obtained from players. Ideally, there would be a record of these games, and we could look through the games ourselves to find where our algorithms are struggling.
+		\section{Validation of Objectives}
+		
+%			\item Formulate the problem of Versus Tetris for game AI.
+%			\item Develop a playable game of Tetris that simulates gameplay for training and emulation.
+%			\item Utilise a genetic algorithm to optimise gameplay strategies in Versus Tetris.		
+			
+			In this project, we have successfully achieved the three objectives we set out to deliver.
+			
+			\begin{enumerate}
+				\item We successfully formulated the problem of Versus Tetris for game AI in our methodology.
+				\item We successfully developed a playable game of Tetris that simulates gameplay for training and emulation.
+				\item We successfully utilised a genetic algorithm to optimise gameplay strategies in Versus Tetris.
+			\end{enumerate}
+			
+		\section{Genetic Algorithm Results}
+		
+			Figure \ref{fig:fit-over-iter} shows a plot for the fitness values of the best individuals in each iteration from the first to the 75th. Our run resulted in convergence occurring on the 75th run.
+		
+			\begin{figure}
+				\centering
+				\includegraphics[width=\textwidth]{plots/fitness over iterations.png}
+				\caption{Plot for fitness over iterations}
+				\label{fig:fit-over-iter}
+			\end{figure}
+			
+			The fitness value can be seen fluctuating aggressively, even towards the later iterations. This is because of the fact that we use win-rate as part of our fitness function. As the individuals in the population learn to play better and better, the game becomes more difficult, and even the best performing agents end up with a lower win-rate. Although our fitness is fluctuating, the individuals are still learning to play better. 
+			
+			\begin{table}
+				\centering
+				\caption{Weights of best fit individuals in iterations 1, 20, 50, and 75.}
+				\label{tab:weights-1-20-50-75}
+				\begin{tblr}{ c  c  c  c  c }
+					\hline
+					\SetCell[r=2]{c} Feature & \SetCell[c=4]{c} Iteration Weights (5 d.p.) \\
+					\cline{2-5}
+					& 1 & 20 & 50 & 75 \\
+					\hline
+					Pile Height & 0.21960 & 0.03682 & -0.88214 & -0.92416 \\
+					Hole Count & 0.42001 & -0.35693 & 0.18129 & -0.63448 \\
+					Column Transitions & -0.67151 & -0.54675 & -1.00000 & -1.00000 \\
+					Row Transitions & 0.44741 & -0.94860 & -0.06702 & -0.75189 \\
+					Hole Depth & -0.95575 & -0.45945 & -0.51573 & 0.02639 \\
+					Cumulative Well Depth & -0.50302 & -0.16005 & -0.56181 & -0.70165 \\
+					Row Hole & -0.50031 & 0.00446 & -0.17533 & 0.07719 \\
+					Line Clears & 0.37663 & -1.00000 & -0.85188 & 0.48772 \\
+					Attack & -0.51747 & -0.83629 & -1.00000 & -0.36715 \\
+					Back-to-back & -0.30431 & 0.28046 & 0.98861 & 1.00000 \\
+					\hline
+				\end{tblr}
+			\end{table}
+			
+			The weights for the best players from iteration 1, 20, 50, and 75 are listed in Table \ref{tab:weights-1-20-50-75}. Several features experience substantial changes in weight, reflecting their changing importance during the optimisation process. For example, the weight for Pile Height shifts from slightly positive in iteration 1 to strongly negative by the final iteration.
+			
+			Some features can also be seen converging or stabilising at extreme values. For instance, Column Transitions consistently decreases, reaching -1 by iteration 50 and remaining there. However, there also exists some weights that exhibit non-linear trends. Row Transitions, for example, can be seen shifting from positive, to negative, and then again to positive and to negative.
+			
+			Back-to-back weights can be seen increasing over iterations, starting from a low negative value in iteration 1 to the maximum weight by the final iteration. This indicates growing emphasis on performing back-to-back or higher efficiency moves.
+			
+			The evolution reflects the learning process where the model prioritises features most aligned with its objectives, adjusting dynamically based on intermediate feedback. The trends suggest a strategic shift from general stability (e.g., low pile height and hole minimization) to advanced tactics (e.g., maintaining back-to-back sequences and minimizing column transitions). The oscillation in weights during earlier iterations highlights an exploratory phase before settling on optimised priorities.
+			
+			The weights fluctuating between negative and positive values are also due to the fact that win-rate is considered for fitness. Preliminary observations show that there are two classes of players:
+			
+			\begin{enumerate}
+				\item \textbf{Aggressive:} They try to top out an opponent as quickly as possible.
+				\item \textbf{Defensive:} They try to survive as long as possible.
+			\end{enumerate}
+			
+			Sometimes in a generation, aggressive players have more wins, other times, defensive players do. This is why we can see the best fit individuals can have vastly different weights across generations.
+			
+			Although we found that these two classes of players exist, we are still unable to predict the class of player from the weight vectors alone.
+			
+		\section{Evaluating Final Weight Vector}
+		
+			In this section, we run the best individuals in iterations 1, 20, 50, and 75 through the two evaluation methods mentioned in Section \ref{sec:evaluation}. Each individual was given the same seeds to ensure fairness. All individuals were evaluated ten times with different seeds, and their averages calculated and summarised in Tables \ref{tab:attack-1-20-50-75} and \ref{tab:survival-1-20-50-75}.
+			
+			\begin{table}
+				\centering
+				\caption{Average attack efficiency of best fit individuals in iterations 1, 20, 50, and 75.}
+				\label{tab:attack-1-20-50-75}
+				\begin{tblr}{c c c c c}
+					\hline
+					Iteration Individuals & 1 & 20 & 50 & 75 \\
+					\hline
+					Attack Efficiency (5 d.p.) & 0.03984 & 0.09307 & 0.07723 & 0.03564356435\\
+					\hline
+				\end{tblr}
+			\end{table}
+			
+			\begin{table}
+				\centering
+				\caption{Average pieces placed by best fit individuals in iterations 1, 20, 50, and 75 when playing survival.}
+				\label{tab:survival-1-20-50-75}
+				\begin{tblr}{c c c c c}
+					\hline
+					Iteration Individuals & 1 & 20 & 50 & 75 \\
+					\hline
+					Tetrominos Placed & 24.7 & 35.6 & 36.3 & 36.8\\
+					\hline
+				\end{tblr}
+			\end{table}
+			
+			The attack efficiency increases significantly from iteration 1 to iteration 20, suggesting that early in the evolutionary process, individuals evolve to improve offensive capabilities, prioritizing efficient generation of attacks. At iteration 50, we see the attack efficiency begin to drop dramatically. This trend indicates a strategic shift in the optimisation process: from a focus on attack efficiency to a more balanced approach emphasising survival and defensive strategies.
+			
+			The steady increase in Tetromino placements indicates consistent improvement in survival skills over iterations. As the algorithm evolves, individuals are better able to clear lines and avoid topping out.
+			
+			We think that what's happening is that best-performing players are simply outliving their peers. They may not be more efficient at attacking but are able to survive near-loss experiences better.
+			
+			To play with any of the bots mentioned, users can input their respective weight vector into OpenTris and play with them directly.
 	
-	\chapter{Work Plan}
+	\chapter{Conclusion}
 	
-	% Excellent description of all work activities to be performed during the project, relationship among the activities and the resultant work products for each activity.
-	% Scheduled duration for each work activity is justified and supported by the identified project risk factors and work decomposition that each activity requires.
-	% The whole project schedule, milestones and activitiy lists are depicted professionally on the Gantt chart with all dependencies, predecessor and successor work activities denoted clearly.
-	
-	This work plan outlines the comprehensive strategy for this project, providing a detailed breakdown of project activities, their interdependencies, and the estimated timeline for completion. The work plans and Gantt charts of both the planning phase of the project (CP1) and the implementation phase of the project (CP2) is included in this chapter.
-	
-	\begin{longtblr}[
-		caption = {Work Activities, Risk Factors and Time Allocated for CP1},
-		label = {tab:work},
-		]{| c | X | X | X | c |}
-		\hline
-		Phases & Work Activities & Work Product & Risk Factors & {Time \\ Allocated} \\
-		\hline
-		Introduction & Write a comprehensive introduction, including the motivation, problem statement, aim, objectives and scope of the project. & A comprehensive introduction & Misunderstanding of concepts & 1 Week \\
-		\hline
-		{Literature \\ Review} & Find and read a wide variety of literature to write a comprehensive review that (1) justifies the use of non-traditional algorithms and (2) showcase past approaches to the game. & A comprehensive literature review that has a diverse set of sources & Lack of understanding of concepts, misunderstanding concepts & 12 Weeks \\
-		\hline
-		{Methodology} & Come up with a methodology that covers all bases, it should include rule definition, algorithm selection, problem formulation and evaluation metrics & A well-defined methodology & Inadequate explanation of rules, trouble formulating problem formally & 4 Weeks \\
-		\hline
-		{Work Plan} & Create a work plan that includes this table, a Gantt chart summarising what has been done in the planning phase of the project, as well as a similar table and Gantt chart for the implementation phase. & A well-defined work plan with goals to be met & Time constraints, formatting issues & 1 Week \\
-		\hline
-	\end{longtblr}
-	
-	\begin{landscape}
-		\begin{figure}
-			\centering
-			\begin{ganttchart}[x unit=1cm, vgrid=dotted, hgrid = true]{1}{15}
-				\gantttitle{W1}{1}
-				\gantttitle{W2}{1}
-				\gantttitle{W3}{1}
-				\gantttitle{W4}{1}
-				\gantttitle{W5}{1}
-				\gantttitle{W6}{1}
-				\gantttitle{W7}{1} 
-				\gantttitle{W8}{1}
-				\gantttitle{W9}{1}
-				\gantttitle{W10}{1}
-				\gantttitle{W11}{1}
-				\gantttitle{W12}{1}
-				\gantttitle{W13}{1}
-				\gantttitle{W14}{1}
-				\gantttitle{W15}{1}\\
-				\ganttgroup{Introduction}{1}{1}\\
-				\ganttgroup{Literature Review}{1}{12}\\
-				\ganttbar{Research}{1}{10}\\
-				\ganttlinkedbar{Writing}{3}{12}\\
-				\ganttmilestone{Completed Review}{12}\\
-				\ganttgroup{Methodology}{12}{15}\\
-				\ganttbar{Defining Rules}{12}{14}\\
-				\ganttbar{On Implementation}{14}{15}\\
-				\ganttgroup{Work Plan}{15}{15}\\
-			\end{ganttchart}
-			\caption{CP1 Timeline}
-		\end{figure}
-	\end{landscape}
-	
-	
-	\begin{longtblr}[
-		caption = {Work Activities, Risk Factors and Time Allocated for CP2},
-		label = {tab:work},
-		]{| c | X | X | X | c |}
-		\hline
-		Phases & Work Activities & Work Product & Risk Factors & {Time \\ Allocated} \\
-		\hline
-		{Create \\ Functional \\ Tetris \\ Simulation} & Create a functional Versus Tetris simulator. It should follow the rules outlined in Section \ref{sec:rules}. & A functional Tetris game & Difficulty of task & 3 Weeks\\
-		\hline
-		{Algorithm \\ Development} & Implement GA, PSO, and ACO for optimising Tetris gameplay, define parameters and initialise the algorithms. & Algorithms that are able to play Tetris decently. & Difficulty of task, unexpected bugs & 4 Weeks\\
-		\hline
-		{Create \\playable\\ game} & Create a playable game of Tetris for other players to play on it and provide feedback. It will allow players to play against the agents tuned by the algorithms. & Playable Tetris Game & Unexpected bugs, deciding on implementation details (what to develop on, how to collect data, etc.) & 3 Week \\
-		\hline
-		{Collect \\ Data} & Have people with varying skill levels attempt to play the game against the different algorithms. Summarise the data with tables and graphs and find out if any agent is doing significantly better. & Data, tables, and graphs & Lack of responses & 1 Week \\
-		\hline
-		{Write \\Results} & Write all obtained results & Completed results section & Too little data, previous tasks unfinished & 2 Weeks \\
-		\hline
-		{Revisions \\ and\\ Submission} & Make final revisions before submission & Final report & Incomplete work, time constraints due to assignments & 1 Week \\
-		\hline
-		{Prepare \\ for \\ Viva} & Create slides to summarise all work done, practice presentation, prepare for potential questions & Viva Slides and Script & Inadequate preparation & 1 Week\\
-		\hline
-	\end{longtblr}
-	
-	\begin{landscape}
-		\begin{figure}
-			\centering
-			\begin{ganttchart}[x unit=1cm, vgrid=dotted, hgrid = true]{1}{13}
-				\gantttitle{W1}{1}
-				\gantttitle{W2}{1}
-				\gantttitle{W3}{1}
-				\gantttitle{W4}{1}
-				\gantttitle{W5}{1}
-				\gantttitle{W6}{1}
-				\gantttitle{W7}{1} 
-				\gantttitle{W8}{1}
-				\gantttitle{W9}{1}
-				\gantttitle{W10}{1}
-				\gantttitle{W11}{1}
-				\gantttitle{W12}{1}
-				\gantttitle{W13}{1}\\
-				\ganttbar{Create Functional Tetris Simulation}{1}{3}\\
-				\ganttlinkedbar{Algorithm Development}{4}{7}\\
-				\ganttmilestone{Tuned Agents}{7}\\
-				\ganttbar{Create Playable Game}{6}{9}\\
-				\ganttlinkedbar{Collect Data}{10}{10}\\
-				\ganttbar{Write Results}{10}{11}\\
-				\ganttbar{Revisions and Submission}{12}{12}\\
-				\ganttmilestone{Submission}{12}\\
-				\ganttbar{Prepare for Viva}{13}{13}
-			\end{ganttchart}
-			\caption{CP2 Timeline}
-		\end{figure}
-	\end{landscape}
+%	Provide excellent conclusion that is comprehensive.
+%	Future work recommended is related to the research is well described.
+
+		This capstone project demonstrated the application of genetic algorithms to the challenging domain of Versus Tetris, a competitive multiplayer variant of the classic game. By developing a simulation environment and leveraging a genetic algorithm to optimize decision-making, the project effectively tackled the complexities of balancing attack efficiency and survivability in a dynamic, real-time setting. The evaluation metrics showed that the algorithm successfully achieved a nuanced balance between aggressive and defensive strategies, while adapting to the unpredictable nature of gameplay.
+		
+		\section{Limitations}
+		
+		Despite these successes, some limitations remain. The bot's inability to fully leverage the hold mechanic and its exclusion of lookahead beyond the immediate piece restricted its strategic depth. Additionally, while effective in most scenarios, the algorithm struggled with prolonged decision-making in edge cases, highlighting potential areas for improvement.
+		
+		\section{Future Work}
+		
+		Future work could address these limitations by incorporating advanced features such as multi-piece lookahead, dynamic probability-based decision trees, or hybrid algorithms that blend genetic optimization with reinforcement learning techniques. Expanding the scope of research to include alternative nature-inspired methods like ant colony optimization or particle swarm optimization could also yield valuable insights. Finally, transitioning the simulation to a high-speed, real-time implementation would further test the robustness and scalability of the approach in competitive environments.
+		
+		By bridging the gap between computational complexity and practical gaming AI, this project paves the way for future explorations in optimizing not just Tetris but other NP-complete problems that demand adaptability and efficient solutions.
 	
 	\printbibliography[heading={bibnumbered}, title={References}]
 	

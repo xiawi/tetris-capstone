@@ -1,0 +1,20 @@
+\contentsline {chapter}{\numberline {1}Timeline and Activities}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}CP1 Timeline}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}CP1 Weekly Breakdown}{4}{subsection.1.1.1}%
+\contentsline {subsubsection}{Introduction}{4}{subsubsection*.2}%
+\contentsline {subsubsection}{Literature Review}{4}{subsubsection*.3}%
+\contentsline {subsubsection}{Methodology}{6}{subsubsection*.4}%
+\contentsline {subsubsection}{Work Plan}{6}{subsubsection*.5}%
+\contentsline {section}{\numberline {1.2}CP2 Timeline}{7}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}CP2 Weekly Breakdown}{10}{subsection.1.2.1}%
+\contentsline {subsubsection}{Building OpenTris}{10}{subsubsection*.6}%
+\contentsline {subsubsection}{Creating Bot}{10}{subsubsection*.7}%
+\contentsline {subsubsection}{GA Implementation}{11}{subsubsection*.8}%
+\contentsline {subsubsection}{Report Writing}{11}{subsubsection*.9}%
+\contentsline {chapter}{\numberline {2}Meeting Records}{13}{chapter.2}%
+\contentsline {section}{\numberline {2.1}\ignorespaces Meeting 1}{14}{section.2.1}%
+\contentsline {section}{\numberline {2.2}\ignorespaces Meeting 2}{15}{section.2.2}%
+\contentsline {section}{\numberline {2.3}\ignorespaces Meeting 3}{16}{section.2.3}%
+\contentsline {section}{\numberline {2.4}\ignorespaces Meeting 4}{17}{section.2.4}%
+\contentsline {section}{\numberline {2.5}\ignorespaces Meeting 5}{18}{section.2.5}%
+\contentsline {section}{\numberline {2.6}\ignorespaces Meeting 6}{19}{section.2.6}%

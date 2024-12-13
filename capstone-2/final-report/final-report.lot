@@ -3,12 +3,14 @@
 \contentsline {table}{\numberline {2.1}{\ignorespaces Probability of each piece in \blx@tocontentsinit {0}\citeauthor {tetris-drl-2}'s ``hard'' mode.}}{11}{table.caption.11}%
 \contentsline {table}{\numberline {2.2}{\ignorespaces Score table for lines cleared in \blx@tocontentsinit {0}\citeauthor {tetris-ga-lewis}' Tetris game \blx@tocontentsinit {0}\cite {tetris-ga-lewis}.}}{15}{table.caption.14}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces I Tetrimino Wall Kick Data.}}{20}{table.caption.17}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces T, Z, S, L and J Tetrimino Wall Kick Data.}}{20}{table.caption.18}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces I Tetromino Wall Kick Data.}}{20}{table.caption.17}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces T, Z, S, L and J Tetromino Wall Kick Data.}}{20}{table.caption.18}%
 \contentsline {table}{\numberline {3.3}{\ignorespaces Attack Table for Line Clears}}{21}{table.caption.23}%
 \contentsline {table}{\numberline {3.4}{\ignorespaces Attack Table for T-spins}}{24}{table.caption.28}%
 \contentsline {table}{\numberline {3.5}{\ignorespaces Combo Table}}{24}{table.caption.31}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{Work Activities, Risk Factors and Time Allocated for CP1}}{31}{table.4.1}%
-\contentsline {table}{\numberline {4.2}{Work Activities, Risk Factors and Time Allocated for CP2}}{34}{table.4.2}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Weights of best fit individuals in iterations 1, 20, 50, and 75.}}{35}{table.caption.47}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Average attack efficiency of best fit individuals in iterations 1, 20, 50, and 75.}}{36}{table.caption.48}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Average pieces placed by best fit individuals in iterations 1, 20, 50, and 75 when playing survival.}}{36}{table.caption.49}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }

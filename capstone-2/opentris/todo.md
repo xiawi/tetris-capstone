@@ -5,7 +5,6 @@
 - [x] render both boards
 - [x] implement ghost piece
 - [x] better controls (ARR, DAS, etc)
-  - [ ] improve if there's time
 - [x] turn-based logic
 - [x] win/loss condition
 - [x] garbage mechanics
@@ -15,9 +14,9 @@
 
 # Bot behavior
 
-- [ ] come up with eval function, use weighted sum for now
-- [ ] decide on a better copy mechanism than deepcopy
+- [x] come up with eval function, use weighted sum for now
 - [x] add tucks into legal placements
-- [ ] add spins into legal placements
-- [ ] redo hole calculation
-- [ ] add attack feature into eval consideration
+- [x] add spins into legal placements
+- [x] redo hole calculation
+- [x] add attack feature into eval consideration
+- [ ] bot should consider whether hold is appropriate to use
